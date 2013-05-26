@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/1720/trunk/install
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/922/trunk/install/README
+END
+install.sh
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/1720/trunk/install/install.sh
+END
+java0.policy
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/11/trunk/install/java0.policy
+END
+judge.conf
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/1479/trunk/install/judge.conf
+END
+judged
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/1113/trunk/install/judged
+END
+db.sql
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/1596/trunk/install/db.sql
+END
