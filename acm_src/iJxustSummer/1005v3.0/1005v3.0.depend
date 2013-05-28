@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1343035652 source:/home/izumu/CBProject/iJxustSummer/1005v3.0/main.cpp
+	<map>
+	<string>
+	<iostream>
+	<fstream>
+	<string>
+	<cstring>
+

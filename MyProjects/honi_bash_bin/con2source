@@ -1,0 +1,3 @@
+#!/bin/sh
+ssh -t honix,honi@shell.sourceforge.net create
+

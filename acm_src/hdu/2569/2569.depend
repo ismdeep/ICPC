@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1342947731 source:/home/izumu/CBProject/hdu/2569/main.cpp
+	<iostream>
+	<fstream>
+

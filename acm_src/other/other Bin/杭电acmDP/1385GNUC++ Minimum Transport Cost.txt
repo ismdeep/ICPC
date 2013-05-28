@@ -1,0 +1,195 @@
+----------------------------------------------------------------------为核心代码！！！
+不错的一道题
+Dijkstra的典型应用，刚学Dijkstra时对其算法其实不是很清楚，做过一次，一直WA
+今天有兴致，重翻旧题，想想应该可以做的，于是着手
+先前寻路径时想错了，
+导致WA
+后来认为起点就是终点时应该输出 1->1 明显是多虑了
+之后绿色的WA变成了黄色的PE，看到了希望的曙光……
+
+好了，静下心来回顾一下思路，这道题目过的人也不是很多，就写一下解题报告好了
+首先代码分为
+
+lexically(int, int)      回溯路径时用，判断是否是字典序最小
+Dijkstra(int st, int e)  最短路的寻找过程
+
+总思路就是Dijksra，首先对所有能由起点到达的点赋值为当前距离
+dis[i] + cost[i] < Min 和一般最短路有一点点变形的是边权和点权同时存在
+
+dis[i] 表示从源点出发到i点的最少耗费
+cost[i] 表示从源点出发到i点途中经过的城市的税和的最小值
+
+其实不能单独分开来讲，因为dis[i]和cost[i]不一定能同时满足最小
+所以从原点到i的总最小耗费为dis[i] + cost[i]；
+
+然后再由i点出发继续找，思路和Dijksra一样
+随时更新，核心代码如下：
+if(!s[i] && dis[u] + cost[u] + tax[u] + map[u][i] < dis[i] + cost[i])
+{
+    dis[i] = dis[u] + map[u][i];
+    cost[i] = cost[u] + tax[u];
+    pre[i] = u;
+}
+//tax[u]表示u城市的税
+
+把上面的代码的 < 改成 == 就表示要判断字典序了
+if(!s[i] && dis[u] + cost[u] + tax[u] + map[u][i] == dis[i] + cost[i])
+{
+                
+    tp = lexically(u, i);        
+    if(tp == 1)
+    {
+        dis[i] = dis[u] + map[u][i];
+            cost[i] = cost[u] + tax[u];
+            pre[i] = u;
+    }
+}
+注意了：lexically(u, i)的作用是分别找出u和i所有前驱，然后从源点开始判断
+一旦出现，u和i的前驱不同时就返回，u的【第一个和i不同的前驱】小于i 的【第一个和u不同的前驱】时返回1
+表明点需要更新
+
+好了，解决了
+做高数咯~~
+
+-----------------------------------------------------------------------------AC代码！！！
+#include <cstdio>
+const int Max = 105 ;            // 最大顶点数
+const int MaxInt = 0x7ffffff ;  // 最大32位带符整数  
+
+int map[Max][Max];  // 加权有向图
+int dic[Max];      // 源点到 i点 的最短时间 
+int path[Max];      // 最短路径 
+int cost[Max] ;    // 路过城市i所要的缴费 
+
+int N ;
+int a, b ;
+
+void Init( int G[][Max] )
+{
+    int i, j;
+    for( i=0; i<Max; ++i )
+        for( j=0; j<Max ;++j )
+            G[i][j]=MaxInt;
+}
+
+int compare( int i , int j )
+{
+    int x[N], y[N];
+    int k , l  ;
+    
+    k = 0 ;
+    while( i != a && i != -1)
+    {
+        x[k++] = i ;
+        i = path[i] ;
+    }
+    
+    l = 0 ;
+    while( j != a && j != -1)
+    {
+        y[l++] = j ;
+        j = path[j] ;
+    }
+    
+    for( --k, --l ; k >= 0 && l >=0 ; --k, --l  )
+        if( x[k]!=y[l] )
+        {
+            if( x[k] < y[l] ) return 1 ;
+            else return 0;
+        }
+
+    return  0 ;
+}
+
+void Dijkstra( int G[][Max], int k, int D[], int N, int path[] ) // 顶点k到其余顶点i的最短路径 D[i] , 顶点数 N  
+{
+    int i, j, t ;
+    int min ;
+    bool flag[Max];        //  是否已求得源点k到此的最短路径 
+    
+    for( i=0; i<=N ;++i ){
+        flag[i] = false;
+        D[i] = G[k][i];        // 源点到其余点的距离
+        if( D[i] < MaxInt ) path[i] = k ;  // 记录初始路径 
+        else path[i] = -1 ;
+    }
+    D[k] = 0;  flag[k] = true;
+    
+    for( i=1; i<=N; ++i )      //  分别求出 源点k 到其余i顶点 的最短路径  
+    {
+        min = MaxInt ;
+        for( t = j = 1; j <= N; ++j )
+            if( !flag[j] && D[j] + cost[j] < min  ) // 还要计算路过城市缴费 
+            {
+                min = D[j] + cost[j];
+                t = j ;
+            }
+            
+        if( min == MaxInt ) break;
+        
+        flag[t] = true;      // 距离k点最近的顶点 
+        for( j=1; j<=N; ++j )
+            if( !flag[j] && G[t][j]!=MaxInt && min + G[t][j] <= D[j]  ) 
+            {
+                if( min + G[t][j] == D[j] ) // 处理字典顺序 
+                {
+                    if(  compare( t, j ) )  // 比较前驱 
+                        path[j] = t ;
+                }
+                else
+                    path[j] = t ;  // 路径更新
+                D[j] = min + G[t][j]  ;
+            }
+    }
+}
+
+int main( )
+{  
+#ifndef ONLINE_JUDGE
+    freopen("_in.txt","r",stdin); freopen("_out.txt","w",stdout);
+#endif
+    int i, j ;
+    int opt[Max] ; // 输出路径 
+    
+    while( scanf("%d", &N )!=EOF && N!=0 )
+    {
+        for( i = 1; i <= N ; ++i )
+            for( j = 1; j <= N ; ++j )
+            {
+                scanf("%d", &map[i][j] );
+                if( map[i][j] == 0 || map[i][j] == -1 )
+                    map[i][j] = MaxInt ;
+            }
+        for( i = 1; i <= N ; ++i )
+            scanf("%d", &cost[i] );
+        
+        while( scanf("%d %d", &a ,&b ) && a!=-1 )
+        {
+            Dijkstra( map, a, dic, N, path ) ;  
+            
+            printf("From %d to %d :\n", a, b );
+            printf("Path: ");
+            
+            i = b ;  j = 0 ;
+            opt[j++] = b ;
+            while( i != a && i != -1)
+            {
+                opt[j++] = i ; 
+                i = path[i] ;
+            }
+            opt[j] = a ;
+            
+            for( i = j; i > 0; --i )
+            {
+                if( i == j )
+                    printf("%d", opt[i] );
+                else
+                    printf("-->%d", opt[i] );
+            }
+            printf("\nTotal cost : %d\n\n", dic[b] ) ;
+        }
+    }
+    return 0;
+}
+
+

@@ -1,0 +1,131 @@
+先求每个点到终点的最短路，然后对于原来的边重新筛选下,对于原来的边a-b 满足dis[a] > dis[b]的话就留下，最后dfs统计下到终点的路径的条数。
+
+#include <stdio.h>
+#include <vector>
+#include <queue>
+
+using namespace std;
+
+const int INF = 2100000000;
+const int MAXSIZE = 1001;
+
+struct node
+{
+    int value;
+    int tar;
+
+    bool operator<(const node & x) const
+    {
+        if (value>x.value) return true;/*这样定义使值越小，优先权越大*/
+        return false;
+    }
+};
+
+int N, M;
+vector<node> edge[MAXSIZE];/*edge[i]存储一个节点i的邻接节点表*/
+int dis[MAXSIZE];
+
+int num[MAXSIZE];
+priority_queue< node ,vector<node> > q;/*用优先队列实现dijkstra中的选最小边的过程*/
+
+bool used[MAXSIZE];
+
+void dijk(int start)
+{
+    int i, j, k;
+
+    while (!q.empty()) q.pop();
+
+    for (i = 0; i < N; ++i) dis[i]=INF;
+    memset(used,false,sizeof(used));
+
+    node temp,temp2;
+    temp.value=0;/*初始化起始节点，2号节点，但是由于此代码下标从0开始，故是1号节点*/
+    temp.tar=start;
+    q.push(temp);
+
+    while (!q.empty())
+    {
+        while (!q.empty() && used[q.top().tar]) q.pop();
+        if (q.empty()) break;
+        temp=q.top();
+        q.pop();
+
+        used[temp.tar]=true;
+        dis[temp.tar]=temp.value;
+
+        for (k=0;k<edge[temp.tar].size();++k) 
+        {
+            j=edge[temp.tar][k].tar;
+            if (dis[temp.tar]+edge[temp.tar][k].value< dis[j] && !used[j])
+            {
+                dis[j]=dis[temp.tar]+edge[temp.tar][k].value;
+                temp2.tar=j;
+                temp2.value=dis[j];
+                q.push(temp2);
+            }
+        }
+    }
+}
+
+int init()
+{
+    int i, j, k, l;
+
+    scanf("%d",&N);
+    if (N==0)
+    {
+        return 0;
+    }
+    scanf("%d",&M);
+    for (i = 0; i < N; i++)
+    {
+        edge[i].clear();
+    }
+    for (i = 0; i < M; ++i)
+    {
+        scanf("%d%d%d",&j,&k,&l);
+        node t;
+        j--;k--;
+        t.tar = k;t.value = l;
+        edge[j].push_back(t);
+        t.tar = j;
+        edge[k].push_back(t);
+    }
+    return 1;
+}
+
+int dfs(int u)
+{
+    int i, tmp (0);
+
+    if (num[u]!=-1)
+    {/*节点u是1,或者节点u已经被统计过了*/
+        return num[u];
+    }
+    for (i = 0; i < edge[u].size(); i++)
+    {
+        int v = edge[u][i].tar;
+        if (dis[u] > dis[v])
+        {
+            tmp += dfs(v);
+        }
+    }
+    return num[u] = tmp;
+}
+
+int main()
+{
+    int i, j;
+
+    while (init())
+    {
+        dijk(1);
+        memset(num,-1,sizeof(num));
+        num[1] = 1;
+        printf("%d\n",dfs(0));
+    }
+    return 0;
+}
+
+

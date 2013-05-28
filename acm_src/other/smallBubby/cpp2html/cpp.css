@@ -1,0 +1,17 @@
+.comment {
+	color:DarkGray;
+	font-style:italic;
+}
+.macro {
+	color:ForestGreen;
+}
+.literal {
+	color:Red;
+}
+.keyword {
+	color:Black;
+	font-weight:bold;
+}
+.numeric {
+	color:RoyalBlue;
+}

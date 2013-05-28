@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1343549294 source:/home/izumu/CBProject/virtualjudge/各种数论水题/A - Use of Function Arctan/main.cpp
+	<iostream>
+	<stdio.h>
+	<cstring>
+

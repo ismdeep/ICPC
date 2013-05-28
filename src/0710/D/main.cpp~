@@ -1,0 +1,21 @@
+// Project name : D ( Fibonacci ) 
+// File name    : main.cpp
+// Author       : Izumu
+// Date & Time  : Tue Jul 10 14:02:23 2012
+
+
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    
+    return 0;
+}
+
+// end 
+// ism 
+

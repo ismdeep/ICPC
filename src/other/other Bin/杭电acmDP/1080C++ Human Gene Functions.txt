@@ -1,0 +1,72 @@
+
+/* 
+* DP题 
+* 给出两个基因串s[1..n],t[1..m],求相似度 
+* table[][]为scoring matrix,题目给出 
+* score[a][b]表示字符a和b在table中的score 
+* similarity[i][j]表示s[1...i]与t[1...j]的相似度 
+* 则可得 
+*  similarity[i][j] = max {  
+*      similarity[i-1][j]+score[s[i]]['-'],        //仅取s[i],与'-'配  
+*      similarity[i-1][j-1]+score[s[i]][t[j]],  //取s[i],t[j] 
+*      similarity[i][j-1]+score['-'][t[j]]        //仅取t[j],与'-'配 
+*  } 
+* 则最大相似度就为similarity[n][m] 
+* 
+* @author cryboy 
+* @version 1.0 
+*/ 
+#include <iostream> 
+#include <string> 
+using namespace std; 
+
+int table[5][5] = { 
+    {5,-1,-2,-1,-3}, 
+    {-1,5,-3,-2,-4}, 
+    {-2,-3,5,-2,-2}, 
+    {-1,-2,-2,5,-1}, 
+    {-3,-4,-2,-1,0}}; 
+int DP[101][101]; 
+int hash(char ch) 
+{ 
+    int ret = 0; 
+    switch(ch) 
+    { 
+        case'A': ret = 0;break; 
+        case'C': ret = 1;break; 
+        case'G': ret = 2;break; 
+        case'T': ret = 3;break; 
+        case'-': ret = 4;break; 
+    } 
+    return ret; 
+} 
+int max(int a, int b, int c) 
+{ 
+    int max = a; 
+    if(max < b) max = b; 
+    if(max < c) max = c; 
+    return max; 
+} 
+int main() 
+{ 
+    int n; 
+    cin>>n; 
+    while(n--) 
+    { 
+        int sn, tn; 
+        string s, t; 
+        cin>>sn>>s>>tn>>t; 
+        int i, j; 
+        DP[0][0] = 0; 
+        for(i=1; i<=sn; i++) DP[i][0] = DP[i-1][0] + table[hash(s[i-1])][hash('-')]; 
+        for(j=1; j<=tn; j++) DP[0][j] = DP[0][j-1] + table[hash('-')][hash(t[j-1])]; 
+        for(i=1; i<=sn; i++) 
+        { 
+            for(j=1; j<=tn; j++) 
+            { 
+                DP[i][j] = max(DP[i-1][j] + table[hash(s[i-1])][hash('-')],DP[i][j-1] + table[hash('-')][hash(t[j-1])],DP[i-1][j-1] + table[hash(s[i-1])][hash(t[j-1])]); 
+            } 
+        } 
+        cout<<DP[sn][tn]<<endl; 
+    } 
+} 

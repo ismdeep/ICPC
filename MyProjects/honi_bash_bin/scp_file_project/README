@@ -1,0 +1,12 @@
+1. make rm
+2. make clean
+3. make or make scp_file
+4. make install
+
+
+-- using help --
+   scp_file [filename] [path]
+   .. eg ..
+   scp_file Ubuntu10.Ubuntu10.04.iso iso_files/Ubuntu
+
+

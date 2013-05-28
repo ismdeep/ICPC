@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1344222965 source:/home/izumu/CBProject/hdu/1022 - Train Problem I/1022.cpp
+	<iostream>
+	<stdio.h>
+	<string>
+	<cmath>
+	<algorithm>
+	<fstream>
+

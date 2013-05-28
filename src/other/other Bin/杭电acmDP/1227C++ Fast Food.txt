@@ -1,0 +1,56 @@
+#include<iostream>
+
+using namespace std;
+
+const int MAX = 201;
+const int INFINITY = 1000000;
+
+int main()
+{
+    int n,k,case_num=0;
+    while(cin>>n>>k,n!=0||k!=0)
+    {
+        int *local = new int[n+1];
+        int (*dist)[MAX] = new int[n+1][MAX];
+        int (*cost)[MAX] = new int[n+1][MAX];
+
+        int i,j,x;
+
+        for(i=1; i <= n; ++i)
+            cin>>local[i];
+
+        for(i=1; i <= n; ++i)
+            for(j=i; j<=n; ++j)
+            {
+                cost[i][j] = 0;
+                int m = (i+j+1)/2;
+                for(x=i; x<=j; ++x)
+                    cost[i][j] += abs(local[x] - local[m]);
+            }
+
+        for(i=1; i<=k; ++i)
+            for(j=1; j<=n; ++j)
+                dist[i][j] = INFINITY;
+        
+        /*dp初始条件*/
+        for(i=1; i<=n; ++i)
+            dist[1][i] = cost[1][i];
+        
+        /*dist[i][j]=min{dist[i-1][k]+cost[k+1][j]},其中i-1<=k<j*/
+        for(i=2; i<=k; ++i)
+            for(j=i; j<=n; ++j)
+                for(x=i-1; x<j; ++x)
+                {
+                    if(dist[i][j] > dist[i-1][x] + cost[x+1][j])
+                        dist[i][j] = dist[i-1][x] + cost[x+1][j];
+                }
+
+        cout<<"Chain "<<++case_num<<endl;
+        cout<<"Total distance sum = "<<dist[k][n]<<endl<<endl;
+
+        delete [] dist;
+        delete [] cost;
+        delete [] local;
+    }
+    return EXIT_SUCCESS;
+}
