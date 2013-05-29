@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1343180724 source:d:\cbproject\hdu\xhtml\in.cpp
+	<stdio.h>
+
+1343180863 source:d:\cbproject\hdu\xhtml\main.cpp
+	<fstream>
+	<iostream>
+	<string.h>
+
