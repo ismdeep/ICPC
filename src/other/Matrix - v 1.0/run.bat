@@ -1,2 +1,0 @@
-main < in.dat
-
