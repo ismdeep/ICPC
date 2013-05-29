@@ -1,0 +1,62 @@
+/*设d[k]是重量为k时所对应的最小价值，重量不可能凑成k时，置其为-1，表示无穷大
+状态转移方程：
+dp[k] = 0…………k = 0；
+dp[k] = min(value[j] + dp[k - weight[j]])…………k >= weight[j];
+其中，1=< j <= n，若dp[k - weight[j]]) = -1，表示它是无穷大，重量不能达到
+*/
+代码：
+#include <iostream>
+using namespace std;
+
+struct coin
+{
+    int v;
+    int w;
+};
+
+coin cc[501];
+int dp[10001];
+
+int main()
+{
+    int t, e, f, total, n, min;
+    int i, j, k;
+    scanf("%d", &t);
+    while (t--)
+    {
+        scanf("%d%d", &e, &f);
+        total = f - e;
+        scanf("%d", &n);
+        min = 10001;
+        for (i = 0; i < n; i++)
+        {
+            scanf("%d%d", &cc[i].v, &cc[i].w);
+            if (min > cc[i].w)
+                min = cc[i].w;
+        }
+        memset(dp, -1, sizeof(dp));
+        dp[0] = 0;
+        for (k = min; k <= total; k++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                i = k - cc[j].w;
+                if (i < 0 || dp[i] == -1)
+                    continue;
+                
+                
+                if (dp[i] + cc[j].v < dp[k] || dp[k] == -1)
+                {
+                    dp[k] = dp[i] + cc[j].v;
+                }
+            }
+        }
+        
+        if (dp[total] == -1)
+            cout << "This is impossible.\n";
+        else
+            cout << "The minimum amount of money in the piggy-bank is " << dp[total] << ".\n";
+    }
+    
+    return 0;
+}

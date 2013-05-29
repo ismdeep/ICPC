@@ -1,0 +1,62 @@
+// Project name : 1285
+// File name    : main.cpp
+// Author       : Izumu
+// Date & Time  : Sun Jul  8 14:32:46 2012
+
+
+#include <iostream>
+using namespace std;
+
+#define MAXN 505
+
+const bool noway  = false;
+const bool hasway = true;
+
+bool map[MAXN][MAXN];
+
+int n, k;
+
+void CInitMap()
+{
+		for (int i = 0; i <= n; i++)
+				{
+						    for (int j = 0; j <= n; j++)
+										{
+													    map[i][j] = noway;
+																}
+								}
+
+			// input data
+			// 	for (int i = 0; i < k; i++)
+			// 		{
+			// 			    int a, b;
+			// 			    		cin >> a >> b;
+			// 			    				map[a][b] = hasway;
+			// 			    					}
+			// 			    					}
+			//
+			//
+			// 			    					int arr_sort[MAXN]; /* to store the sort membership */
+			// 			    					int top = -1; /* for the arr_sort */
+			//
+			// 			    					void CGotSort()
+			// 			    					{
+			// 			    						
+			// 			    						}
+			//
+			// 			    						int main()
+			// 			    						{
+			// 			    							while (cin >> n >> k)
+			// 			    								{
+			// 			    										CInitMap();
+			// 			    												top = -1;
+			//
+			// 			    														CGotSort();
+			//
+			// 			    															}
+			// 			    															    return 0;
+			// 			    															    }
+			//
+// end 
+// ism 
+

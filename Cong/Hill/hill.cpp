@@ -576,7 +576,7 @@ void hill_decode (char* argv[], string strKey)
 			des_matrix[i] = char_2_int (chTmp);
 		}
 		matrix__des_2_src ();
-		for (int i = 0; i < (file_volume_value % matrix_size); i++)
+		for (int i = 0; i < file_volume_value % matrix_size; i++)
 		{
 			char chTmp;
 			chTmp = int_2_char (src_matrix[i]);
@@ -607,6 +607,27 @@ void hill_decode (char* argv[], string strKey)
 int main (int argc, char* argv[])
 {
 	//---------------------------------------------------------------------------------//
+	/* these are some debug code 
+	
+	matrix_size = 3;
+	encode_matrix[0][0] =  6;encode_matrix[0][1] = 24;encode_matrix[0][2] =  1;
+	encode_matrix[1][0] = 13;encode_matrix[1][1] = 16;encode_matrix[1][2] = 10;
+	encode_matrix[2][0] = 20;encode_matrix[2][1] = 17;encode_matrix[2][2] = 15;
+	src_matrix [0] =  0;
+	src_matrix [1] =  2;
+	src_matrix [2] = 19;
+	matrix__src_2_des ();
+	cout << des_matrix[0] << " "
+		 << des_matrix[1] << " "
+		 << des_matrix[2] << endl;
+	EncodeMatrix_to_DecodeMatrix ();
+	matrix__des_2_src ();
+	cout << src_matrix [0] << " "
+		 << src_matrix [1] << " "
+		 << src_matrix [2] << endl;
+	show_encode_matrix_mul_decode_matrix ();
+	return 0;
+	*/
 	//------------- Judge if the comman is OK. ----------------------------------------//
 	if (argc < 3)
 	{

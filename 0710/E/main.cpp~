@@ -1,0 +1,94 @@
+// Project name : E
+// File name    : main.cpp
+// Author       : Izumu
+// Date & Time  : Tue Jul 10 15:13:33 2012
+
+
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <cmath>
+#include <queue>
+#include <cstring>
+using namespace std;
+
+#define MAX 100000000
+#define NUM 205
+
+int n, m, f;
+int map[NUM][NUM], mark[NUM], pre[NUM];
+
+void init()
+{
+	int a, b, c;
+	memset(map, 0, sizeof(map));
+	f = 0;
+	for (int i = 0; i < m; i++)
+	{
+		cin >> a >> b >> c;
+		map[a][b] = c;
+	}
+}
+
+void max_flow()
+{
+     //不断寻找增广路，知道找不到为止，找不到的标志为 mark[n]==0 
+    while (1)
+    {
+          queue<int> q;
+          memset(mark, 0, sizeof(mark));
+          memset(pre, 0, sizeof(pre));
+          mark[1] = 1;
+          q.push(1);
+          while (!q.empty())
+          {
+               int cur = q.front();
+               q.pop();
+               //找到了增广路，跳出 
+               if (cur == n)     break;
+               for (int i = 1; i <= n; ++ i)
+               {
+                    if (mark[i] == 0 && map[cur][i] > 0)
+                    {
+                         mark[i] = 1;
+                         q.push(i);
+                         pre[i] = cur;
+                    }
+               }
+          }
+          //如果没找到可增广的路，直接跳出 
+          if (mark[n] == 0)   break;
+          int min = MAX;
+          //计算该增广路最大可增加的流量 
+          for (int i = n; i != 1; i = pre[i])
+          {
+               if (min > map[pre[i]][i])
+               {
+                    min = map[pre[i]][i];
+               }
+          }
+          //原路返回，修改路劲上边的权值 
+          for (int i = n; i != 1; i = pre[i])
+          {
+               map[pre[i]][i] -= min;
+               map[i][pre[i]] += min;
+          }
+          //总流量增加 
+          f += min;
+    } 
+}
+
+int main()
+{
+     while (cin >> m >> n)
+     {
+          init();
+          max_flow(); 
+          cout << f << endl;
+     }
+     return 0;
+}
+
+// end 
+// ism 
+

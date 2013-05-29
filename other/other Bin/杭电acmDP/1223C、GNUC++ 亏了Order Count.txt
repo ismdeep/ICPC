@@ -1,0 +1,313 @@
+晕了，这也能AC!!!
+
+
+//C
+#include<stdio.h>
+char s[50][80]={ "1",
+"3",
+"13",
+"75",
+"541",
+"4683",
+"47293",
+"545835",
+"7087261",
+"102247563",
+"1622632573",
+"28091567595",
+"526858348381",
+"10641342970443",
+"230283190977853",
+"5315654681981355",
+"130370767029135901",
+"3385534663256845323",
+"92801587319328411133",
+"2677687796244384203115",
+"81124824998504073881821",
+"2574844419803190384544203",
+"85438451336745709294580413",
+"2958279121074145472650648875",
+"106697365438475775825583498141",
+"4002225759844168492486127539083",
+"155897763918621623249276226253693",
+"6297562064950066033518373935334635",
+"263478385263023690020893329044576861",
+"11403568794011880483742464196184901963",
+"510008036574269388430841024075918118973",
+"23545154085734896649184490637144855476395",
+"1120959742203056268267494209293006882589981",
+"54984904077825684862426868390301049750104843",
+"2776425695289206002630310219593685496163584253",
+"144199280951655469628360978109406917583513090155",
+"7697316738562185268347644943000493480404209089501",
+"421985466101260424678587486718115935844245187819723",
+"23743057231588741419119534567705900419786127935577533",
+"1370159636942236704917645663312384364386256449136591915",
+"81045623051154285047127402304207782853156976521592907421",
+"4910812975389574954318759599939388855544783946694910718603",
+"304646637632091740261982544696657582136519552428876887346813",
+"19338536506753895707368358095646384573117824953447578202397675",
+"1255482482235481041484313695469155949742941807533901307975355741",
+"83318804148028351409201335290659562069258599933450396080176273483",
+"5649570401186486930330812460375430692673276472202704742218853260093",
+"391229145645351175841837029639030040330277058716846008212321196523435",
+"27656793065414932606012896651489726461435178241015434306518713649426461",
+"1995015910118319790635433747742913123711612309013079035980385090523556363"};
+int main()
+{
+  int n,i,m;
+  while(scanf("%d",&n)!=EOF)
+  {
+    for(i=0;i<n;i++)
+      {scanf("%d",&m);
+      printf("%s\n",s[m-1]);
+      }
+  }
+  return 0;
+}
+
+
+----------------------------------------------------------------------
+真正的AC版本！！！                 //GNUC++
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <algorithm>
+#include <stdio.h>
+using namespace std;
+
+#define MAXN 9999
+#define DLEN 4
+
+class BigNum{
+private:
+   int a[100];//DLEN digs for a position
+   int len;
+public:
+   BigNum(){len = 1;memset(a,0,sizeof(a));}
+   BigNum(const int b);
+   BigNum(const BigNum & T);
+
+   bool     Bigger(const BigNum &) const;
+   BigNum & operator=(const BigNum &);
+   BigNum & Add(const BigNum &);
+   BigNum & Sub(const BigNum &);
+   BigNum operator+(const BigNum &) const;
+   BigNum operator-(const BigNum &) const;
+   BigNum operator*(const BigNum &) const;
+   BigNum operator/(const int   &) const;
+   BigNum operator+=(const BigNum &) ;
+   BigNum operator-=(const BigNum &) ;
+   BigNum operator*=(const BigNum &) ;
+   BigNum operator/=(const int   &) ;
+   void Print();
+};
+BigNum::BigNum(const int b)
+{
+   int c,d = b;
+
+   len = 0;
+   memset(a,0,sizeof(a));
+   while(d > MAXN){
+      c = d - d / (MAXN + 1) * (MAXN + 1);
+      d = d / (MAXN + 1);
+      a[len++] = c;
+   }
+   a[len++] = d;
+}
+BigNum::BigNum(const BigNum & T) : len(T.len)
+{
+   int i;
+   memset(a,0,sizeof(a));
+   for(i = 0 ; i < len ; i++)
+      a[i] = T.a[i];
+}
+bool  BigNum::Bigger(const BigNum & T) const
+{
+   int ln;
+   if(len > T.len) return true;
+   else if(len == T.len){
+      ln = len - 1;
+      while(a[ln] == T.a[ln] && ln >= 0) ln--;
+      if(ln >= 0 && a[ln] > T.a[ln]) return true;
+      else return false;
+   }
+   else return false;
+}
+BigNum & BigNum::operator=(const BigNum & n)
+{
+   len = n.len;
+   memset(a,0,sizeof(a));
+   for(int i = 0 ; i < len ; i++)
+      a[i] = n.a[i];
+   return *this;
+}
+BigNum & BigNum::Add(const BigNum & T)
+{
+   int i,big;
+
+   big = T.len > len ? T.len : len;
+   for(i = 0 ; i < big ; i++)
+   {
+      a[i] = a[i] + T.a[i];
+      if(a[i] > MAXN)
+      {
+         a[i + 1]++;
+         a[i] = a[i] - MAXN - 1;
+      }
+   }
+   if(a[big] != 0) len = big + 1;
+   else len = big;
+
+   return *this;
+}
+BigNum & BigNum::Sub(const BigNum & T)
+{
+   int i,j,big;
+
+   big = T.len > len ? T.len : len;
+   for(i = 0 ; i < big ; i++){
+      if(a[i] < T.a[i]){
+         j = i + 1;
+         while(a[j] == 0) j++;
+         a[j--]--;
+         while(j > i) a[j--] += MAXN;
+         a[i] = a[i] + MAXN + 1 - T.a[i];
+      }
+      else a[i] -= T.a[i];
+   }
+   len = big;
+   while(a[len - 1] == 0 && len > 1) len--;
+   return *this;
+}
+BigNum BigNum::operator+(const BigNum & n) const
+{
+   BigNum a = *this;
+
+   a.Add(n);
+   return a;
+}
+BigNum BigNum::operator-(const BigNum & T) const
+{
+   BigNum b = *this;
+
+   b.Sub(T);
+   return b;
+}
+BigNum BigNum::operator*(const BigNum & T) const
+{
+   BigNum ret;
+   int i,j,up;
+   int temp,temp1;
+
+   for(i = 0 ; i < len ; i++){
+      up = 0;
+      for(j = 0 ; j < T.len ; j++){
+         temp = a[i] * T.a[j] + ret.a[i + j] + up;
+         if(temp > MAXN){
+            temp1 = temp - temp / (MAXN + 1) * (MAXN + 1);
+            up = temp / (MAXN + 1);
+            ret.a[i + j] = temp1;
+         }
+         else {
+            up = 0;
+            ret.a[i + j] = temp;
+         }
+      }
+      if(up != 0)
+         ret.a[i + j] = up;
+   }
+   ret.len = i + j;
+   while(ret.a[ret.len - 1] == 0 && ret.len > 1) ret.len--;
+   return ret;
+}
+BigNum BigNum::operator*=(const BigNum & T)
+{
+   BigNum ret;
+   int i,j,up;
+   int temp,temp1;
+
+   for(i = 0 ; i < len ; i++){
+      up = 0;
+      for(j = 0 ; j < T.len ; j++){
+         temp = a[i] * T.a[j] + ret.a[i + j] + up;
+         if(temp > MAXN){
+            temp1 = temp - temp / (MAXN + 1) * (MAXN + 1);
+            up = temp / (MAXN + 1);
+            ret.a[i + j] = temp1;
+         }
+         else {
+            up = 0;
+            ret.a[i + j] = temp;
+         }
+      }
+      if(up != 0)
+         ret.a[i + j] = up;
+   }
+   ret.len = i + j;
+   while(ret.a[ret.len - 1] == 0 && ret.len > 1) ret.len--;
+   *this=ret;
+   return ret;
+}
+BigNum BigNum::operator/(const int & b) const
+{
+   BigNum ret;
+   int i,down = 0;
+
+   for(i = len - 1 ; i >= 0 ; i--){
+      ret.a[i] = (a[i] + down * (MAXN + 1)) / b;
+      down = a[i] + down * (MAXN + 1) - ret.a[i] * b;
+   }
+   ret.len = len;
+   while(ret.a[ret.len - 1] == 0) ret.len--;
+   return ret;
+}
+void BigNum::Print()
+{
+   int i;
+
+   printf("%d",a[len - 1]);
+   for(i = len - 2 ; i >= 0 ; i--){
+      //cout.width(DLEN);
+      //cout.fill('0');
+      printf("%04d",a[i]);
+   }
+   printf("\n");
+}
+
+const int PMAX=1000;
+const int NMAX=50;
+
+int main()
+{
+    int p,n,ca,cb,cc;
+    BigNum frec[NMAX+1]={0},ans;
+    while(scanf("%d",&p)==1)
+    {
+        for(ca=0;ca<p;ca++)
+        {
+            scanf("%d",&n);
+            //frec[1].len=1;
+            //memset(frec,0,sizeof(frec));
+            frec[1]=1;
+            for(cb=2;cb<=n;cb++)
+            {
+                frec[cb]=frec[cb-1];
+                frec[cb]=frec[cb]*cb;
+                for(cc=cb-1;cc>=2;cc--)
+                {
+                    frec[cc].Add(frec[cc-1]);
+                    //frec[cc]=frec[cc]*cc;
+                    frec[cc]*=cc;
+                }
+            }
+
+            ans=0;
+            for(cb=1;cb<=n;cb++)
+                ans.Add(frec[cb]);
+
+            ans.Print();
+        }//for
+    }
+    return 0;
+}
