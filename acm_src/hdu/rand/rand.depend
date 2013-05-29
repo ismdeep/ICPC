@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1343531367 source:d:\cbproject\hdu\rand\main.cpp
-	<iostream>
-	<ctime>
-	<stdlib.h>
-	<stdio.h>
-
