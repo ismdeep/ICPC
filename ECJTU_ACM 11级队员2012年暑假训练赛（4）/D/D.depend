@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1342761585 source:d:\cbproject\hdu\d\main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<queue>
+
