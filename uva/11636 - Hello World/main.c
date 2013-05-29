@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
 int cal_ans (int value)
 {
@@ -18,9 +17,9 @@ int main ()
 {
 	int case_index = 0;
 	int n;
-	while (cin >> n, -1 != n)
+	while (scanf ("%d", &n) != EOF, -1 != n)
 	{
-		cout << "Case " << ++ case_index << ": " << cal_ans (n) << endl;
+		printf ("Case %d: %d\n", ++case_index, cal_ans(n));
 	}
 }
 
