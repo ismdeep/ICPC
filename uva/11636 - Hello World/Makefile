@@ -1,5 +1,5 @@
 all:
 	g++ main.cpp -o main
-	./main < in.dat
+	main < in.dat
 
 
