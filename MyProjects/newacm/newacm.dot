@@ -1,0 +1,12 @@
+digraph g{
+    "main()" -> "set_i_argument()\n show_help_msg()\n get_author_name()\n get_project_name()\n get_lab_name()\n get_oj_name()\n get_problem_name()";
+    
+    "set_i_argument()\n show_help_msg()\n get_author_name()\n get_project_name()\n get_lab_name()\n get_oj_name()\n get_problem_name()" -> "write_msg_main_cpp()";
+    
+    
+    "set_i_argument()\n show_help_msg()\n get_author_name()\n get_project_name()\n get_lab_name()\n get_oj_name()\n get_problem_name()" -> "write_msg_Makefile()";
+    
+    "set_i_argument()\n show_help_msg()\n get_author_name()\n get_project_name()\n get_lab_name()\n get_oj_name()\n get_problem_name()" -> "write_msg_in_dat()";
+}
+
+

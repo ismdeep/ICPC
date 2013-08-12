@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+/********************************************************************/
+/* data section */
+#ifndef MAXN
+#define MAXN 100
+#endif
+
+int n, k;
+
+char iMap[MAXN];
+
+/********************************************************************/
+/* process section */
+
+int main()
+{
+  int a, b;
+
+}
+
+// end 
+// iCoding@CodeLab

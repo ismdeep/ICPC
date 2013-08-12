@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1343274235 source:d:\cbproject\hdu\1166v2\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+

@@ -1,0 +1,50 @@
+// project name 
+#include <stdio.h>
+
+const int M = 1000002<<1;               //2倍空间  
+
+int sum[M],q[M];                        //sum记录前i项和，q记录队列中元素的位置  
+int head ,rear ,ans , n;  
+
+/////////////////////////////////////////////////////////////////////////////
+void In_queue(int i)  
+{  
+    while(head <= rear && sum[i] <= sum[ q[rear] ])//删除队中大于等于它的元素  
+        rear--;  
+    q[++rear] = i;  
+}
+/////////////////////////////////////////////////////////////////////////////
+void Out_queue(int i)  
+{  
+    if(q[head] < i - n + 1)             //如果队首不在区间范围内，删除  
+        head++;  
+    if(sum[ q[head] ] - sum[i-n] >= 0)  //如果最小值都大于等于0，计数  
+        ans++;  
+}  
+/////////////////////////////////////////////////////////////////////////////
+int main()  
+{  
+    while(scanf("%d",&n),n)  
+    {  
+        ans = 0 , head = 0 , rear = -1; //初始队列指针  
+        for(int i=1;i<=n;i++)  
+        {  
+            scanf("%d",&sum[i]);  
+            sum[i+n] = sum[i];        
+        }  
+        for(int i=2;i < 2*n ;i++)  
+            sum[i] += sum[i-1];       
+        for(int i=1;i < n ;i++)  
+            In_queue(i);            //入队  
+        for(int i=n;i < 2*n ;i++)   //依次求区间[i-n+1,i]中的最小值  
+        {  
+            In_queue(i);            //入队  
+            Out_queue(i);           //出队  
+        }  
+        printf("%d\n",ans);  
+    }  
+    return 0;  
+}
+//end
+//ism
+

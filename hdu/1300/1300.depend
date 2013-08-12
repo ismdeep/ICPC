@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1342836391 source:d:\cbproject\hdu\1300\main.cpp
+	<iostream>
+	<algorithm>
+
+1342839816 source:d:\cbproject\hdu\1300\other.cpp
+	<stdio.h>
+	<string.h>
+

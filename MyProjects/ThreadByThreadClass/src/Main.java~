@@ -1,0 +1,34 @@
+
+public class Main {
+    public static void main(String[] args) {
+		/*ShowNumber showNumber1 = new ShowNumber();
+		ShowNumber showNumber2 = new ShowNumber();
+		ShowNumber showNumber3 = new ShowNumber();
+		ShowNumber showNumber4 = new ShowNumber();
+		
+		showNumber1.start();
+		showNumber2.start();
+		showNumber3.start();
+		showNumber4.start();
+		*/
+    	
+    	
+		ShowNumber arrShowNumber[];
+		
+		arrShowNumber = new ShowNumber[100];
+		
+		for (int i = 0; i < 100; i++)
+		{
+			arrShowNumber[i] = new ShowNumber();
+		}
+		
+		for (int i = 0; i < 100; i++)
+		{
+			arrShowNumber[i].start();
+		}
+		
+	}
+}
+
+// end 
+// ism 

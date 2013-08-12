@@ -1,0 +1,4 @@
+digraph g{
+    main -> test;
+}
+

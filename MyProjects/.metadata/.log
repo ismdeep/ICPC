@@ -1,0 +1,129 @@
+!SESSION 2012-08-28 18:46:17.671 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2012-08-28 21:39:48.801
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-08-29 08:37:42.715 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-08-29 08:39:42.731
+!MESSAGE Failed to load properties file for project 'AndroidFirst'
+
+!ENTRY org.eclipse.ui 4 4 2012-08-29 08:42:03.541
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-08-31 15:14:14.665 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2012-08-31 15:14:28.855
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2012-08-31 15:14:38.205
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2012-08-31 15:14:38.205
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2012-08-31 15:14:38.205
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2012-08-31 15:14:38.205
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2012-08-31 15:14:38.205
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2012-08-31 15:14:38.205
+!MESSAGE Unable to restore perspective: Workspace - Resource.
+!SUBENTRY 2 org.eclipse.ui 0 0 2012-08-31 15:14:38.205
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2012-08-31 15:14:38.206
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2012-08-31 15:14:38.206
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2012-08-31 15:14:38.206
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2012-08-31 15:14:38.206
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2012-08-31 15:14:38.206
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2012-08-31 15:14:38.206
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2012-08-31 15:14:38.206
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2012-08-31 15:14:38.206
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2012-08-31 15:14:38.206
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2012-08-31 15:14:38.206
+!MESSAGE OK
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-08-31 15:16:58.397
+!MESSAGE 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/FiveChess/res' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:320)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:194)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:266)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:249)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk$6.run(Sdk.java:1307)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-08-31 15:16:58.399
+!MESSAGE Resource '/FiveChess/res' does not exist.
+
+!ENTRY org.eclipse.ui 4 4 2012-08-31 15:22:13.498
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-08-31 15:52:53.769 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2012-08-31 15:53:47.807
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-09-05 11:17:43.714 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-09-05 11:18:50.635
+!MESSAGE Indexed 'test_cpp_project' (1 sources, 170 headers) in 4.93 sec: 10,398 declarations; 15,620 references; 0 unresolved inclusions; 7 syntax errors; 71 unresolved names (0.27%)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-09-05 11:19:18.373
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-09-05 11:19:18.373
+!MESSAGE Conflict for 'org.eclipse.ltk.ui.refactor.create.refactoring.script':
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.create.refactoring.script,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ltk.ui.refactoring.actions.CreateRefactoringScriptAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.cdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@1429cb2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1429cb2)),sourcePriority=16640)
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.create.refactoring.script,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.jdt.internal.ui.refactoring.actions.CreateRefactoringScriptAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.jdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@1429cb2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1429cb2)),sourcePriority=16640)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-09-05 11:19:18.374
+!MESSAGE Conflict for 'org.eclipse.ltk.ui.refactor.show.refactoring.history':
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.show.refactoring.history,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ltk.ui.refactoring.actions.ShowRefactoringHistoryAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.cdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@1429cb2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1429cb2)),sourcePriority=16640)
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.show.refactoring.history,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.jdt.internal.ui.refactoring.actions.ShowRefactoringHistoryAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.jdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@1429cb2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1429cb2)),sourcePriority=16640)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-09-05 11:19:18.374
+!MESSAGE Conflict for 'org.eclipse.ltk.ui.refactor.apply.refactoring.script':
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.apply.refactoring.script,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.jdt.internal.ui.refactoring.actions.ApplyRefactoringScriptAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.jdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@1429cb2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1429cb2)),sourcePriority=16640)
+HandlerActivation(commandId=org.eclipse.ltk.ui.refactor.apply.refactoring.script,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ltk.ui.refactoring.actions.ApplyRefactoringScriptAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.cdt.ui.CodingActionSet,org.eclipse.ui.internal.WorkbenchWindow@1429cb2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1429cb2)),sourcePriority=16640)
+
+!ENTRY org.eclipse.ui 4 4 2012-09-05 11:19:36.800
+!MESSAGE Invalid preference page path: XML Syntax

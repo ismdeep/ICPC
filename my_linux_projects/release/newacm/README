@@ -1,0 +1,37 @@
+newacm
+
+version:
+    This is newacm version 2.0.
+	Last version is newacm version 1.1.
+	Something is wrong with the last version newacm version 1.1.'Cause it is not convinent for using and re-programming.
+
+What is newacm?
+    newacm is a software develop by ismdeep, using for helping ACMer to create source code that should type every time.It is a useful software.And at the source code file main.cpp that created will contain the project's name , author's name, file name, date and time.
+
+
+How to use it?
+    It is very convinent to use newacm software to create a project for ACM problems.
+    using $ newacm 1000 for default create a newacm project of 1000.
+    using $ newacm 1000 -oj lightoj for default create a newacm project of 1000 which is default project type of lightoj.
+    using $ newacm 1000 -oj hdu     for default create a newacm project of 1000 which is default project type of hdu oj.
+    using $ newacm 1000 -name A + B Problem for creating a newacm project of 1000 and its name is "A + B Problem".
+    if you want to create a project using argument -oj and -name, You should make you -name behand -oj.
+    Thank You For using newacm software.
+
+
+How to install it?
+    You should run the instructions below as su.
+    $ make
+    $ make install
+
+How to uninstall it?
+    If you don't want to use newacm software, that doesn't matter.
+    You just need to run the instuctions below as su so that it will help you to remove all data and program that have wrote into your system.
+    $ make unistall
+
+How to contact me?
+    My email is honi.linux@gmail.com . If you have any problems while using newacm software, email to me.I would like to recieve your email very much.Thank you.
+    My personal blog is www.ism.name . Here you would find other information about me and my projects. Welcome to my blog.
+
+
+

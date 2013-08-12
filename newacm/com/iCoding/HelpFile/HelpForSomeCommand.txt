@@ -1,0 +1,10 @@
+bcrypt filename
+acmhome -- change directory antomantly
+cp -- notepad main.cpp
+netscan
+tar
+usaco ProjectName
+newacm ProjectName
+=================================================
+tar -cvf   file.tar    file
+tar -zcvf  file.tar.gz file
