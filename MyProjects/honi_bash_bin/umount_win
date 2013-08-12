@@ -1,5 +1,0 @@
-#!/bin/sh
-sudo umount /dev/sda2
-sudo umount /dev/sda7
-sudo umount /dev/sda9
-

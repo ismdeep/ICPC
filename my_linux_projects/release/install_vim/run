@@ -1,4 +1,0 @@
-sudo apt-get install vim
-sudo cp vimrc /etc/vim
-sudo cp *.vim /usr/share/vim/vim73/colors
-

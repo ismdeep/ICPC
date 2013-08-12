@@ -1,5 +1,0 @@
-#!/bin/sh
-sudo mount /dev/sda2 /home/honi/winOS
-sudo mount /dev/sda9 /home/honi/winProgram
-sudo mount /dev/sda7 /home/honi/winHome
-

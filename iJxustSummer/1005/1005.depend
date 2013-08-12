@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1343031047 source:/home/izumu/CBProject/iJxustSummer/1005/main.cpp
-	<iostream>
-	<fstream>
-	<stdio.h>
-

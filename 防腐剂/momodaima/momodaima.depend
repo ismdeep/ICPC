@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1342859605 source:d:\cbproject\hdu\momodaima\main.cpp
-	<iostream>
-	<string>
-	<cstring>
-	<stdio.h>
-

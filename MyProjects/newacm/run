@@ -1,3 +1,0 @@
-#!/bin/sh
-newacm 1000 -oj lightoj -name A + B Problem
-
