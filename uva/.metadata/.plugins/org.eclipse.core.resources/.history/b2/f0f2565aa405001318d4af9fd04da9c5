@@ -1,0 +1,40 @@
+
+public class Main
+{
+	public static final int MAX_SIZE = 20000;
+	
+	public class Skyline
+	{
+		private int height_arr[] = new int[Main.MAX_SIZE];
+		private int leftLeft, rightRight;
+		
+		public Skyline ()
+		{
+			// FUCK doing nothing.
+			this.leftLeft = -1;
+			this.rightRight = -1;
+		}
+		
+		public void insert_building (int left_index, int right_index, int height)
+		{
+			 if (-1 == this.leftLeft && -1 == this.rightRight)
+			 {
+				 this.leftLeft = left_index;
+				 this.rightRight = right_index;
+			 }
+			 
+			 for (int index = left_index; index <= right_index; index++)
+			 {
+				 this.height_arr[index] = (height > this.height_arr[index]) ? height : this.height_arr[index];
+			 }
+		}
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}
