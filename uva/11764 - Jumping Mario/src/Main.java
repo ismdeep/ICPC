@@ -34,11 +34,11 @@ public class Main
 			{
 				if (arr[i] > arr[i-1])
 				{
-					jump_up += (arr[i] - arr[i-1]);
+					jump_up++;
 				}
 				if (arr[i] < arr[i-1])
 				{
-					jump_down += (arr[i-1] - arr[i]);
+					jump_down++;
 				}
 			}
 			
