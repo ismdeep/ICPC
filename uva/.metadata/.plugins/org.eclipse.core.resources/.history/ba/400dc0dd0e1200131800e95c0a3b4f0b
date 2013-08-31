@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+
+public class Main
+{
+	public static int coin[] = {50, 25, 10, 5, 1};
+	
+	public int countor;
+	
+	public void CountSolutions (int value, int step)
+	{
+		if (4 == step)
+		{
+			countor++;
+		}
+		else
+		{
+			for (int i = 0; i <= (value / Main.coin[step]); i++)
+			{
+				CountSolutions(value - Main.coin[step] * i, step + 1);
+			}
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNext())
+		{
+			int n;
+			n = scanner.nextInt();
+			Main
+		}
+	}
+
+}
