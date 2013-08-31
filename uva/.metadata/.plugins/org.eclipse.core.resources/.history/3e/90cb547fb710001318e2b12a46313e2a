@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+
+public class Main
+{
+	
+	public int _2_pow_[] = new int[33];
+	
+	public static void main(String[] args)
+	{
+		// TODO Init _2_pow_ value
+		
+		
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		int t;
+		t = scanner.nextInt();
+		for (int case_index = 0; case_index < t; case_index++)
+		{
+			int n, k;
+			n = scanner.nextInt();
+			k = scanner.nextInt();
+			
+			
+			
+			
+		}
+	}
+
+}
