@@ -1,0 +1,18 @@
+
+public class Main
+{
+	public static int coin[] = {50, 25, 10, 5, 1};
+	
+	int countor;
+	
+	public void CountSolutions (int value, int step)
+	{
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+	}
+
+}

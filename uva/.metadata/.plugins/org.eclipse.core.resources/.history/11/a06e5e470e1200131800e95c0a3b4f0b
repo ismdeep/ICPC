@@ -1,0 +1,10 @@
+
+public class Main
+{
+	public static int coin[] = {50, 25, 10, 5, 1};
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+	}
+
+}

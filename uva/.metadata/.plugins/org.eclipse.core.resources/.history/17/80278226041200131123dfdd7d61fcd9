@@ -1,0 +1,43 @@
+
+public class Main
+{
+	public static final int MAX_NUM = 50000;
+	
+	public class PrimeSet
+	{
+		public boolean prime[];
+		
+		public PrimeSet ()
+		{
+			prime = new boolean[Main.MAX_NUM];
+		}
+		
+		public void InitPrimeSet ()
+		{
+			for (int i = 0; i < Main.MAX_NUM; i++)
+			{
+				this.prime[i] = true;
+			}
+			
+			for (int i = 2; i * i < Main.MAX_NUM; i++)
+			{
+				if (this.prime[i])
+				{
+					for (int j = i * i; j < Main.MAX_NUM; j += i)
+					{
+						this.prime[j] = false;
+					}
+				}
+			}
+			
+			this.prime[0] = false;
+			this.prime[1] = false;
+			
+		}
+		
+	}
+	
+	public static void main (String[] args)
+	{
+	}
+}

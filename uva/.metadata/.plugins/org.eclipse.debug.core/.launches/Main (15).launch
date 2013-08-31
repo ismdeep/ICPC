@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<<<<<<< HEAD
 <listEntry value="/11172 - Relational Operator/src/Main.java"/>
+=======
+<listEntry value="/686 - Goldbach's Conjecture (II)/src/Main.java"/>
+>>>>>>> 13628f1957061e76cf096cb3b220a65e98e1e3f0
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Main"/>
+<<<<<<< HEAD
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="11172 - Relational Operator"/>
+=======
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="686 - Goldbach's Conjecture (II)"/>
+>>>>>>> 13628f1957061e76cf096cb3b220a65e98e1e3f0
 </launchConfiguration>

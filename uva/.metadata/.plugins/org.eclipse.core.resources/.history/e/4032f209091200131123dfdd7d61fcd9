@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+
+public class Main
+{
+	public static int Char2Int (char ch)
+	{
+		if ('_' == ch)
+		{
+			return 0;
+		}
+		if (ch >= 'a' && ch <= 'z')
+		{
+			return (int)(ch - 'a' + 1);
+		}
+		if ('.' == ch)
+		{
+			return 27;
+		}
+	}
+	public static char Int2Char(int value)
+	{
+		if (0 == value)
+		{
+			return '_';
+		}
+		if (value >= 1 && value <= 26)
+		{
+			return (char)(value - 1 + 'a');
+		}
+		if (27 == value)
+		{
+			return '.';
+		}
+	}
+	
+	public static void main (String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		
+		int k;
+		k = scanner.nextInt();
+		while (0 != k)
+		{
+			String ciphertext;
+			ciphertext = scanner.next();
+			
+			
+			
+			k = scanner.nextInt();
+		}
+		
+	}
+}

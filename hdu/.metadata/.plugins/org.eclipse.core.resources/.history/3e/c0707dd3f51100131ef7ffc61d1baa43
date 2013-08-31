@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+
+public class Main {
+
+	public class Eddy
+	{
+		public int n;
+		
+		private int arr[];
+		
+		public void show_arr() {
+			for (int i = 1; i <= this.n * 2; i++)
+			{
+				System.out.print(this.arr[i] + " ");
+			}
+			System.out.println();
+		}
+		
+		public Eddy (int n)
+		{
+			this.n = n;
+			this.arr = new int[2*n+1];
+			
+			for (int i = 1; i <= 2 * n; i++)
+			{
+				this.arr[i] = i;
+			}
+			
+		}
+		
+		public boolean judge_as_start ()
+		{
+			boolean flag = true;
+			for (int i = 1;flag && i <= this.n * 2; i++)
+			{
+				if (i != arr[i])
+				{
+					flag = false;
+				}
+			}
+			return flag;
+		}
+		
+		public void self_shift ()
+		{
+			int tmpArr[] = this.arr;
+			
+			for (int i = 1; i <= 2 * this.n; i++)
+			{
+				System.out.print(tmpArr[i] + " ");
+			}
+			
+			for (int i = 1; i <= this.n; i++)
+			{
+				this.arr[i*2  ] = tmpArr[i  ];
+				this.arr[i*2-1] = tmpArr[n+i];
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Main.Eddy eddy = new Main().new Eddy(2);
+		eddy.show_arr();
+		eddy.self_shift();
+		eddy.show_arr();
+		eddy.self_shift();
+		eddy.show_arr();
+		eddy.self_shift();
+		eddy.show_arr();
+		
+	}
+
+}
