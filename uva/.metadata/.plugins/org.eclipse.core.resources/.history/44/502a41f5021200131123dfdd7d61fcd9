@@ -1,0 +1,20 @@
+
+public class Main
+{
+	public static final int MAX_NUM = 50000;
+	
+	public class PrimeSet
+	{
+		public boolean prime[];
+		
+		public PrimeSet ()
+		{
+			prime = new int[Main.MAX_NUM];
+		}
+		
+	}
+	
+	public static void main (String[] args)
+	{
+	}
+}

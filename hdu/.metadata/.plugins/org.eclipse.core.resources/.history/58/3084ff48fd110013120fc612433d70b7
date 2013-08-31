@@ -1,0 +1,14 @@
+
+
+public class Main {
+
+	public static int next_index (int index, int n)
+	{
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub\
+	}
+
+}

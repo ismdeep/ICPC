@@ -1,0 +1,18 @@
+INDEX VERSION 1.126+E:\git_repo\ACM\hdu\.metadata\.plugins\org.eclipse.jdt.core
+2859655447.index
+1837067418.index
+1622348384.index
+977264670.index
+2999349261.index
+655873663.index
+1219415144.index
+2982213245.index
+3018524391.index
+2121776380.index
+3311753438.index
+1477864592.index
+472920187.index
+1423174622.index
+3747707028.index
+3804153921.index
+1813868702.index

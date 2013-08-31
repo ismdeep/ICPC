@@ -1,0 +1,22 @@
+
+
+public class Main {
+
+	public static int next_index (int index, int n)
+	{
+		int indexTmp;
+		if (index <= n)
+		{
+			indexTmp = index * 2;
+		}
+		else
+		{
+			indexTmp = (index * 2 - 1) - n;
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub\
+	}
+
+}

@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+
+public class Main {
+
+	public class Eddy
+	{
+		public int n;
+		
+		private int arr[];
+		
+		public Eddy (int n)
+		{
+			this.n = n;
+			arr = new int[2*n+1];
+		}
+		
+		public void self_shift ()
+		{}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
