@@ -14,10 +14,18 @@
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
+<<<<<<< HEAD
 	<section name="quick_assist_proposal_size">
 	</section>
+=======
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>
 		<item value="true" key="create_unimplemented"/>
 	</section>
+<<<<<<< HEAD
+=======
+	<section name="quick_assist_proposal_size">
+	</section>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 </section>

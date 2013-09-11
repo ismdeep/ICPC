@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?> 
 <fps version="1.1" url="http://code.google.com/p/freeproblemset/">
 	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
@@ -19,6 +20,29 @@
 2 bowl letter]]></sample_input>
 <sample_output><![CDATA[fork chopsticks
 bowl]]></sample_output>
+=======
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[Dinner]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[32]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Little A is one member of ACM team. He had just won the gold in World Final. To celebrate, he decided to invite all to have one meal. As bowl, knife and other tableware is not enough in the kitchen, Little A goes to take backup tableware in warehouse. 	There are many boxes in warehouse, one box contains only one thing, and each box is marked by the name of things inside it. For example, if &quot;basketball&quot; is written on the box, which means the box contains only basketball. With these marks, Little A wants to find out the tableware easily. So, the problem for you is to help him, find out all the tableware from all boxes in the warehouse.</font></p>
+</p>]]></description>
+<input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There are many test cases. Each case contains one line, and one integer N at the first, N indicates that there are N boxes in the warehouse. Then N strings follow, each string is one name written on the box.</font></p>
+</p>]]></input> 
+<output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test of the input, output all the name of tableware.</font></p>
+</p>]]></output>
+<sample_input><![CDATA[3 basketball fork chopsticks
+2 bowl letter]]></sample_input>
+<sample_output><![CDATA[fork chopsticks
+bowl]]></sample_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_input><![CDATA[7 copsticks desk glass hat jacket knife lamp
 2 jacket lamp
 6 bowl copsticks fork glass jacket knife
@@ -29,7 +53,11 @@ bowl]]></sample_output>
 6 arraw copsticks fork glass hat lamp
 7 copsticks desk fork glass hat jacket lamp
 5 arraw copsticks glass hat jacket
+<<<<<<< HEAD
 ]]></test_input>
+=======
+]]></test_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_output><![CDATA[knife
 
 bowl fork knife
@@ -40,11 +68,19 @@ fork knife
 fork
 fork
 
+<<<<<<< HEAD
 ]]></test_output>
 <hint><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">The tableware only contains: bowl, knife, fork and chopsticks.</font></p>
 </p>]]></hint>
 <source><![CDATA[辽宁省赛2010]]></source>
+=======
+]]></test_output>
+<hint><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">The tableware only contains: bowl, knife, fork and chopsticks.</font></p>
+</p>]]></hint>
+<source><![CDATA[辽宁省赛2010]]></source>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <solution language="C++"><![CDATA[#include<stdio.h>
 
 #include<string.h>
@@ -103,6 +139,7 @@ int main()
 
 }
 
+<<<<<<< HEAD
 ]]></solution>
 </item>
 <item>
@@ -114,15 +151,36 @@ int main()
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Little A gets to know a new friend, Little B, recently. One day, they realize that they are family 500 years ago. Now, Little A wants to know whether Little B is his elder, younger or brother.</font></p>
 <h2 lang="zh-CN" style="margin-top: 0.13cm; margin-bottom: 0.13cm;" class="cjk"></h2>
 </p>]]></description>
+=======
+]]></solution>
+</item>
+<item>
+<title><![CDATA[You are my brother]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">h2 { margin-top: 0.05cm; margin-bottom: 0.05cm; color: rgb(0, 0, 0); line-height: 0.78cm; page-break-inside: avoid; }h2.western { font-family: "Times New Roman",serif; font-size: 14pt; }h2.cjk { font-family: "宋体","SimSun"; font-size: 14pt; font-style: normal; }h2.ctl { font-family: "Calibri",sans-serif; font-size: 16pt; }p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Little A gets to know a new friend, Little B, recently. One day, they realize that they are family 500 years ago. Now, Little A wants to know whether Little B is his elder, younger or brother.</font></p>
+<h2 lang="zh-CN" style="margin-top: 0.13cm; margin-bottom: 0.13cm;" class="cjk"></h2>
+</p>]]></description>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There are multiple test cases.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, the first line has a single integer, n (n&lt;=1000). The next n lines have two integers a and b (1&lt;=a,b&lt;=2000) each, indicating b is the father of a. One person has exactly one father, of course. Little A is numbered 1 and Little B is numbered 2.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Proceed to the end of file.</font></p>
+<<<<<<< HEAD
 </p>]]></input> 
 <output><![CDATA[<p><style type="text/css">h2 { margin-top: 0.05cm; margin-bottom: 0.05cm; color: rgb(0, 0, 0); line-height: 0.78cm; page-break-inside: avoid; }h2.western { font-family: "Times New Roman",serif; font-size: 14pt; }h2.cjk { font-family: "宋体","SimSun"; font-size: 14pt; font-style: normal; }h2.ctl { font-family: "Calibri",sans-serif; font-size: 16pt; }p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, if Little B is Little A&rsquo;s younger, print &ldquo;You are my younger&rdquo;. Otherwise, if Little B is Little A&rsquo;s elder, print &ldquo;You are my elder&rdquo;. Otherwise, print &ldquo;You are my brother&rdquo;. The output for each test case occupied exactly one line.</font></p>
 <h2 lang="zh-CN" style="margin-top: 0.13cm; margin-bottom: 0.13cm;" class="cjk"></h2>
 </p>]]></output>
+=======
+</p>]]></input> 
+<output><![CDATA[<p><style type="text/css">h2 { margin-top: 0.05cm; margin-bottom: 0.05cm; color: rgb(0, 0, 0); line-height: 0.78cm; page-break-inside: avoid; }h2.western { font-family: "Times New Roman",serif; font-size: 14pt; }h2.cjk { font-family: "宋体","SimSun"; font-size: 14pt; font-style: normal; }h2.ctl { font-family: "Calibri",sans-serif; font-size: 16pt; }p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, if Little B is Little A&rsquo;s younger, print &ldquo;You are my younger&rdquo;. Otherwise, if Little B is Little A&rsquo;s elder, print &ldquo;You are my elder&rdquo;. Otherwise, print &ldquo;You are my brother&rdquo;. The output for each test case occupied exactly one line.</font></p>
+<h2 lang="zh-CN" style="margin-top: 0.13cm; margin-bottom: 0.13cm;" class="cjk"></h2>
+</p>]]></output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <sample_input><![CDATA[5
 1 3
 2 4
@@ -135,9 +193,15 @@ int main()
 3 5
 4 6
 5 7
+<<<<<<< HEAD
 6 7]]></sample_input>
 <sample_output><![CDATA[You are my elder
 You are my brother]]></sample_output>
+=======
+6 7]]></sample_input>
+<sample_output><![CDATA[You are my elder
+You are my brother]]></sample_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_input><![CDATA[45
 1 501
 501 1170
@@ -94429,7 +94493,11 @@ You are my brother]]></sample_output>
 1477 1643
 1183 1081
 1558 707
+<<<<<<< HEAD
 ]]></test_input>
+=======
+]]></test_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_output><![CDATA[You are my brother
 You are my brother
 You are my elder
@@ -94630,9 +94698,15 @@ You are my elder
 You are my brother
 You are my younger
 You are my elder
+<<<<<<< HEAD
 ]]></test_output>
 <hint><![CDATA[]]></hint>
 <source><![CDATA[辽宁省赛2010]]></source>
+=======
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[辽宁省赛2010]]></source>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <solution language="C++"><![CDATA[#include<stdio.h>
 
 
@@ -94773,6 +94847,7 @@ int main()
 
 } 
 
+<<<<<<< HEAD
 ]]></solution>
 </item>
 <item>
@@ -94783,23 +94858,48 @@ int main()
 <description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Digital clock use 4 digits to express time, each digit is described by 3*3 characters (including&rdquo;|&rdquo;,&rdquo;_&rdquo;and&rdquo; &ldquo;).now given the current time, please tell us how can it be expressed by the digital clock.</font></p>
 <p></p>]]></description>
+=======
+]]></solution>
+</item>
+<item>
+<title><![CDATA[Time]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Digital clock use 4 digits to express time, each digit is described by 3*3 characters (including&rdquo;|&rdquo;,&rdquo;_&rdquo;and&rdquo; &ldquo;).now given the current time, please tell us how can it be expressed by the digital clock.</font></p>
+<p></p>]]></description>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There are several test cases.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Each case contains 4 integers in a line, separated by space.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Proceed to the end of file.</font></p>
+<<<<<<< HEAD
 <p></p>]]></input> 
 <output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, output the time expressed by the digital clock such as Sample Output.</font></p>
 <p></p>]]></output>
 <sample_input><![CDATA[1 2 5 6
 2 3 4 2]]></sample_input>
+=======
+<p></p>]]></input> 
+<output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, output the time expressed by the digital clock such as Sample Output.</font></p>
+<p></p>]]></output>
+<sample_input><![CDATA[1 2 5 6
+2 3 4 2]]></sample_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <sample_output><![CDATA[    _  _  _ 
   | _||_ |_ 
   ||_  _||_|
  _  _     _ 
  _| _||_| _|
 |_  _|  ||_ 
+<<<<<<< HEAD
 ]]></sample_output>
+=======
+]]></sample_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_input><![CDATA[1 7 4 0
 9 4 8 8
 2 4 5 5
@@ -94900,7 +95000,11 @@ int main()
 4 4 4 4
 2 9 3 0
 7 7 8 7
+<<<<<<< HEAD
 ]]></test_input>
+=======
+]]></test_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_output><![CDATA[    _     _ 
   |  ||_|| |
   |  |  ||_|
@@ -95201,14 +95305,23 @@ int main()
  _  _  _  _ 
   |  ||_|  |
   |  ||_|  |
+<<<<<<< HEAD
 ]]></test_output>
+=======
+]]></test_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <hint><![CDATA[<pre>
 The digits showed by the digital clock are as follows:
    _  _     _  _  _  _  _  _ 
  | _| _||_||_ |_   ||_||_|| |
  ||_  _|  | _||_|  ||_| _||_|
+<<<<<<< HEAD
 </pre>]]></hint>
 <source><![CDATA[辽宁省赛2010]]></source>
+=======
+</pre>]]></hint>
+<source><![CDATA[辽宁省赛2010]]></source>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <solution language="C++"><![CDATA[#include <stdio.h>
 
 
@@ -95385,6 +95498,7 @@ int main()
 
 }
 
+<<<<<<< HEAD
 ]]></solution>
 </item>
 <item>
@@ -95392,12 +95506,25 @@ int main()
 <time_limit><![CDATA[1]]></time_limit>
 <memory_limit><![CDATA[128]]></memory_limit>
 
+=======
+]]></solution>
+</item>
+<item>
+<title><![CDATA[SPY]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif"><font color="#444444"><font size="3"><span style="font-weight: normal;"><font size="2" style="font-size: 10pt;">The National Intelligence Council of X Nation receives a piece of credible information that Nation Y will send spies to steal Nation X&rsquo;s </font></span></font></font>confidential paper. So the commander of <font color="#444444"><font size="3"><span style="font-weight: normal;"><font size="2" style="font-size: 10pt;">The National Intelligence Council take measures </font></span></font></font><font color="#000000">immediately, he will </font>investigate people who will come into NationX. At the same time, there are two List in the Commander&rsquo;s hand, one is full of spies that Nation Y will send to Nation X, and the other one is full of spies that Nation X has sent to Nation Y before. There may be some overlaps of the two list. Because the spy may act two roles at the same time, which means that he may be the one that is sent from Nation X to Nation Y, we just call this type a &ldquo;dual-spy&rdquo;. So Nation Y may send &ldquo;dual_spy&rdquo; back to Nation X, and it is obvious now that it is good for Nation X, because &ldquo;dual_spy&rdquo; may bring back NationY&rsquo;s confidential paper without worrying to be detention by NationY&rsquo;s frontier <font color="#000000">So the commander decides to seize those that are sent by NationY, and let the ordinary people and the &ldquo;dual_spy&rdquo; in at the same time .So can you decide a list that should be caught by the Commander?</font></font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font color="#000000"><font face="DejaVu Serif, serif">A:the list contains that will come to the NationX&rsquo;s frontier.</font></font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font color="#000000"><font face="DejaVu Serif, serif">B:the list contains spies that will be sent by Nation Y.</font></font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font color="#000000"><font face="DejaVu Serif, serif">C:the list contains spies that were sent to NationY before.</font></font></p>
+<<<<<<< HEAD
 </p>]]></description>
+=======
+</p>]]></description>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There are several test cases.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Each test case contains four parts, the first part contains 3 positive integers A, B, C, and A is the number which will come into the frontier. B is the number that will be sent by Nation Y, and C is the number that NationX has sent to NationY before. </font></p>
@@ -95406,10 +95533,17 @@ int main()
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">The second part contains C strings, the name list of the &ldquo;dual_spy&rdquo;.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There will be a blank line after each test case.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There won&rsquo;t be any repetitive names in a single list, if repetitive names appear in two lists, they mean the same people.</font></p>
+<<<<<<< HEAD
 </p>]]></input> 
 <output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Output the list that the commander should caught (in the appearance order of the lists B).if no one should be caught, then , you should output &ldquo;No enemy spy&rdquo;.</font></p>
 </p>]]></output>
+=======
+</p>]]></input> 
+<output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Output the list that the commander should caught (in the appearance order of the lists B).if no one should be caught, then , you should output &ldquo;No enemy spy&rdquo;.</font></p>
+</p>]]></output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <sample_input><![CDATA[8 4 3
 Zhao Qian Sun Li Zhou Wu Zheng Wang
 Zhao Qian Sun Li
@@ -95418,9 +95552,15 @@ Zhao Zhou Zheng
 Zhao Qian
 Zhao Qian
 Zhao Qian
+<<<<<<< HEAD
 Qian Sun Li]]></sample_input>
 <sample_output><![CDATA[Qian Sun Li
 No enemy spy]]></sample_output>
+=======
+Qian Sun Li]]></sample_input>
+<sample_output><![CDATA[Qian Sun Li
+No enemy spy]]></sample_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_input><![CDATA[3 3 3
 1 2 3
 4 5 6
@@ -95490,7 +95630,11 @@ No enemy spy]]></sample_output>
 1 2 3 4 5 6 7 8 9 0
 3 5 7 9
 2 3 5 7
+<<<<<<< HEAD
 ]]></test_input>
+=======
+]]></test_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_output><![CDATA[No enemy spy
 No enemy spy
 No enemy spy
@@ -95505,9 +95649,15 @@ No enemy spy
 9
 1 9
 9
+<<<<<<< HEAD
 ]]></test_output>
 <hint><![CDATA[]]></hint>
 <source><![CDATA[辽宁省赛2010]]></source>
+=======
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[辽宁省赛2010]]></source>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <solution language="C++"><![CDATA[//1004
 #include <iostream>
 #include <string>
@@ -95567,6 +95717,7 @@ int main()
  return 0;
 }
  
+<<<<<<< HEAD
 ]]></solution>
 </item>
 <item>
@@ -95574,10 +95725,20 @@ int main()
 <time_limit><![CDATA[1]]></time_limit>
 <memory_limit><![CDATA[128]]></memory_limit>
 
+=======
+]]></solution>
+</item>
+<item>
+<title><![CDATA[Intermediary]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">It is widely known that any two strangers can get to know each other through at most six other people. Now let&rsquo;s prove this.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">In the country Intermediary Conducts Personal Communications (ICPC), there are up to n (2&lt;=n&lt;=100) ordinary people conveniently numbered from 0 to n-1. They don&rsquo;t know each other, or, in other words, they are strangers. The only way they can communicate with each other is through the government, which, in fact, is an intermediary agency. The government consists of up to m (1&lt;=m&lt;=9) employees conveniently numbered from 0 to m-1. Suppose employee z can introduce person x to person y at a cost of d dollars. If this is the first time in a day that employee z introduce one person to another, he will only require d dollars. For the second time, he will require d dollars plus extra e dollars as his tip. For the third time and more, he will require d dollars plus extra f dollars. He is not dared to require any more than that since the strange country is somewhat democratic. And if person x is able to communicate with person t and person t is able to communicate with person y, then person t is always willing to transfer messages from person x to person y, at no charge. Of course, the intermediary fees are all paid by person x. Notice that employee z being able to introduce person x to person y doesn&rsquo;t mean he can introduce person y to person x.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Now person 0 has to send a message to person n-1 in one day. If all employees have just started to work, what is the minimum cost for person 0?</font></p>
+<<<<<<< HEAD
 </p>]]></description>
 <input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, the first line contains three integers, n, m and q, where q is the number of intermediary relationships and q is at most 10,000. The second line has m integers, each indicating the value e of every employee, in the range [0, 100]. The third line has m integers too, each indicating the value f of every employee, in the range [e, 200]. The next q lines each contains four integers, x, y, z and d, indicating that employee z can introduce person x to person y requiring d dollars, where 1&lt;=d&lt;=200. There is a blank line after each test case.</font></p>
@@ -95586,6 +95747,16 @@ int main()
 <output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, print one integer on a single line, giving the minimum cost. If it is impossible, print -1.</font></p>
 </p>]]></output>
+=======
+</p>]]></description>
+<input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, the first line contains three integers, n, m and q, where q is the number of intermediary relationships and q is at most 10,000. The second line has m integers, each indicating the value e of every employee, in the range [0, 100]. The third line has m integers too, each indicating the value f of every employee, in the range [e, 200]. The next q lines each contains four integers, x, y, z and d, indicating that employee z can introduce person x to person y requiring d dollars, where 1&lt;=d&lt;=200. There is a blank line after each test case.</font></p>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Proceed to the end of file.</font></p>
+</p>]]></input> 
+<output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, print one integer on a single line, giving the minimum cost. If it is impossible, print -1.</font></p>
+</p>]]></output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <sample_input><![CDATA[3 2 2
 1 1
 2 2
@@ -95598,9 +95769,15 @@ int main()
 0 1 0 1
 1 2 0 1
 2 3 0 1
+<<<<<<< HEAD
 3 4 0 1]]></sample_input>
 <sample_output><![CDATA[3
 9]]></sample_output>
+=======
+3 4 0 1]]></sample_input>
+<sample_output><![CDATA[3
+9]]></sample_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_input><![CDATA[42 9 6335
 1 70 25 79 59 63 65 6 46
 82 129 130 82 72 137 132 177 197
@@ -180910,7 +181087,11 @@ int main()
 3 43 1 174
 49 46 0 42
 
+<<<<<<< HEAD
 ]]></test_input>
+=======
+]]></test_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_output><![CDATA[10
 38
 3
@@ -180926,9 +181107,15 @@ int main()
 1
 11
 2
+<<<<<<< HEAD
 ]]></test_output>
 <hint><![CDATA[]]></hint>
 <source><![CDATA[辽宁省赛2010]]></source>
+=======
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[辽宁省赛2010]]></source>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <solution language="C++"><![CDATA[#include<cstring>
 
 #include<cstdio>
@@ -181278,6 +181465,7 @@ int main()
 
 }
 
+<<<<<<< HEAD
 ]]></solution>
 </item>
 <item>
@@ -181296,6 +181484,26 @@ int main()
 <p align="LEFT" style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, output the biggest sum weight, if you could not form the string X, output -1.</font></p>
 <h2 lang="zh-CN" style="margin-top: 0.13cm; margin-bottom: 0.13cm;" class="cjk"></h2>
 </p>]]></output>
+=======
+]]></solution>
+</item>
+<item>
+<title><![CDATA[English Game]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">This English game is a simple English words connection game.</font></p>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">The rules are as follows: there are N English words in a dictionary, and every word has its own weight v. There is a weight if the corresponding word is used. Now there is a target string X. You have to pick some words in the dictionary, and then connect them to form X. At the same time, the sum weight of the words you picked must be the biggest.</font></p>
+</p>]]></description>
+<input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There are several test cases. For each test, N (1&lt;=n&lt;=1000) and X (the length of x is not bigger than 10000) are given at first. Then N rows follow. Each row contains a word wi (the length is not bigger than 30) and the weight of it. Every word is composed of lowercases. No two words in the dictionary are the same.  </font></p>
+</p>]]></input> 
+<output><![CDATA[<p><style type="text/css">h2 { margin-top: 0.05cm; margin-bottom: 0.05cm; color: rgb(0, 0, 0); line-height: 0.78cm; page-break-inside: avoid; }h2.western { font-family: "Times New Roman",serif; font-size: 14pt; }h2.cjk { font-family: "宋体","SimSun"; font-size: 14pt; font-style: normal; }h2.ctl { font-family: "Calibri",sans-serif; font-size: 16pt; }p { margin-bottom: 0.21cm; }</style>
+<p align="LEFT" style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, output the biggest sum weight, if you could not form the string X, output -1.</font></p>
+<h2 lang="zh-CN" style="margin-top: 0.13cm; margin-bottom: 0.13cm;" class="cjk"></h2>
+</p>]]></output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <sample_input><![CDATA[1 aaaa
 a 2
 3 aaa
@@ -181314,12 +181522,20 @@ cd 30
 3 abcd
 cd 100
 abc 1000
+<<<<<<< HEAD
 bcd 10000]]></sample_input>
+=======
+bcd 10000]]></sample_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <sample_output><![CDATA[8
 7
 5
 40
+<<<<<<< HEAD
 -1]]></sample_output>
+=======
+-1]]></sample_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_input><![CDATA[700 ogjaicuhkplvdgmjobksxxxoblnwippgnmywwoblnzemztnnreyxikqojnnzwhinjziyikxoucjxmnjixswmhdcoqojjlrxdnqueaxfudukbojvzckvlezbqybrkxjuinhayuwsheajyuutruzkggkpivckwugfohfcetirnsjemizcdgofonhiqywmjqklzesunixcexqrafnyxijyjdxktjghhkcprhwaleqrjjmvpelqsunphfhxxenkxjuhbybigvplslnnxekzoxssqdkdnszhteiuljbcqlbbgzbarzwhmtxdonmxdhmcvpghprdsxwupgvqelbolmjwcrgemwyarnjakjauyastmgqfsfwlcgbjzlnmakqbpkobcdakadrpjovcudiqdgtcmjtfweqojzkqybroonfssqgnndjomtwusnovduqtfzugolkkeimlyavksrlkvzofqjonnhcpatmphknaxtyqcnqjvhrtdksttnrwxfivbtookcofsmouivjxbzsobfutjlhdxpgmexaaxyqyxjffskoseqgcfkuzqrnjmfktsijyvkelnauklyzrvujfiuzozphihzetvcupcfojpybwylgzjhqwbczznbfbgzwdyzlvnbaklhkmsnhwuhbacheorjtvkdyuojqxrxjceusnoegkpoikmqjmpqatsbnlbyrtabdckiqtigofjwytgnwdtsswwpkmajjefkqtavhbergboxfhulhgjbbbfsqaevqoigfwpltzziqlputknitzldinucrobccsmucezsqiypgpxjrfvittzygnpbzzvxudkcthpkqipsnaeshenhzvthzaandwbopnmupzwznenzpayzscyztchjtmwkxhwdlznmstwvvpposrgwwygmzptqneuojnfmsrqkxtmjwxjbgihlbzgolruxdbxvcafrtgpvweanyfmoomeiagaxvlfwjwpbjhwmoqxuxbnjjxdqxpsfhcldhbrhwyijqwygjmrhfzglgyqxnxjytbgziiyuimgdjqwzynthibfjqexoejrgewaxnfklppckoybyaoxiybdzgghnizdngdvhxzgkuyiplufoqskakcyfsvbhmuijqtxnirdbjscyfxpxkojvpkdmwiojjfaewempiaafpjonbbwzmjbpvyhqvutlbtwwupaneddcmmxvhdwwqvhmcspianyikprruplnrfeduyhbhbkepfhpwzpdcgvaaijnngqyadvhsewfoargikpgbyffprdxopmpqdewtfqcgdoaaltybbwwojlkjtfagmbjhkypokbesreirrxvqfpmwtbwwotnwigzymwnzlkshvzxgdfldhcidadzclmuvpjdrzwwmtrvxxeljiaroaqkzdegjrvhdnirbahylvolwkzsgvjfmkuosuphnimyzhmvbaipwxwffcqiqwqqmewctapeitggrgbbdoabpeozneusrcoeibnlbiokqcehnimxtlxmgitjcnaigodquirdovbesgsuihqbxburvsddyeontzyitmtgicenldihigqsehesecwnmstwweohfmqnflncsydbcbikepvbbprfsrwdmifryhcckvojhmyuufgzplkqvkjcoafoxaqwtachrgwwwaguerahggxpvkicukvnuoqqqkjsaffrkdwznkikshsuzydqngherpppehfiswpzmxyandgcrmoplqvbdozgsnmtrmudbinapxijyhgbnbfnyxzpoaysgeqcniuzaqyilrxxhzgklnpeovpghanithzfdsgleaabiqedxlertdyadqjwvwsrjnqyfbyhcmmjyujlforgtxxxrdirqfxrzbexhkybkndjtgjjhyyyruhhvrvwgvxyjqjueyjdevrspltvjrqeyxfgudxuizjqponfcdazariourbznlrhrjtwuaotapcaghlmzyzymgveqjgkdaloejbddahacflmijctmfsrivjgtpfbcpnbjdqbhxjjpjgdmnriubcwqttaqiogabyqmfxrjzqcvhfdiukivmomrleuqkqwhbiqwkkvtjkpyufnajpxfaztkykammhdjfcdriidblysvdzxzbwuarefhvrjunyndonclmuluffmeprjzwjwmehsmgwvcqmehpbylzahdltjqoeewgoathgugewzdwhwxbredsplmwhyfzfnhchrrdofzoewamarmfetyyqbnisarbikzygvhzmultswcizshyexnitwludbvfbycbbtwzfnfosafhpxcxovfxfgwmavtkpjoulizphlhklbnjnphmpzulmxmjxsjwdtbejwuaapjwewwsdldsvmszhdtgzuoogorawmjnipqmmswxezycqulvdoemtswmdoxmgcbsttsfhffhrdudnannickyuczvabcjhsvfzfociybokumsfdyjdzxlofqrvdqzaonfqzseuzesurauzdupeldiczafnkzrezhcyeqojokagaskuzwumgsnurlazmilurvtpgjlrjaoworfyzvxihxbbjplwqlsqhdzyjpsdoxrljvkvrzxtoyjazxbksipcnkvypeyidyetludcsegzxpwjgrcpqohkqnoqqzebwxgzexfucfpmgxdzgvvluttnwoqioccxhecomtzxdmpfjnjeinewkxfrlfakzfdqnajajosodzpxmrxprmbgfvswouihfxugyiamjilkipsphfafbcbgwczsgkrqelooihnmtnhnrolrzwvyhzdxvttyvrtouhcxjhfxpqbaoghomacxwqtwblowgfbjgvhtjygombppoaozgpqzlwfnwtaczjuxsawviyyjvkmblwdivnsytdmheyraqsgyiwhxmtufsojnahvbzdnlcjquxrdrheqeedhuufvzxtfbhvfzuyuffdaoxtfcetatsraxsyixagdeimgvaonoyrehschrpotuhbmkwqegdygzmhzczpdzxjqkmimdcvbuwkeuxxthvqbyrelwjnccxgxzanrnherwnvfwlwggkglxmzubnlzuziamqmdpojgmvvpveogmsfrupldlpaaikthsdmveedhfsvktckkorydpdzsnhimqtsccopcodvplswvygqzuttmaqfmdblcrapqmefrahbbnjlufimumcgnnobddlhxrjbzrygjfgrgevnmlgjoreerybhybfwsrlsuemhjjmdgswugerbeijtffnjumxnjgwkgdjuxxecyyrkljjeldbxjqjotievbuiokdsvoajxpceewdahtdzzthxfkbuakobghglbjuhmedewgwyxhzbmuomuxrtmmhhujvrlrvfpsyquwbvewugyeqkdrjryoxozjzedzgpsqtwdgbgsvefjsoygamgknxalfqihbizvrxmfrsaxthlvpvyureaklegemjnwmwdnvpbhvlnvjetmkdiilwxbwewnoklqclnrvnupdtubkytpskwanbtnbqkbislrixvtbyfpbkbgkimngjdqkvksrgmkrejheowvnnlytgsmkkckkplwelrhuvwqylebrpmmgoqsjmnpvjguxezpafytbsuckbvmarusbjwsqpweuqkhxjsdkejyjbyexcksbqrpcjvgmcmhcrnijpawurwedzekcedtrfbqnnxgqvpqsypsvennpsxvseuyxnkxuxmdjokfvaoenqpkqxnbcsbtippfoxtzvcubovirfzqnogrjdbyeeiplzxlpyidhmbvidsfokdjtwrckucjgeqdiciuacsqbwdkifpaqomghphscalncmaomlrsrkvfkmynwxxxireoumuaqjvkccpalvvprosodfohoktjxuxigmiuvcqjwqljunwgedkgyiykirvpbqordkbudnloylqjrklmkhxflmwfrhqhwavrhbhsuhehlxyucvzdizkqdcgqlhxpemetaqyyddlscgeakdusctorgoysolcwgnlnrsevqwabawulfdideldnkrfnjmkcnmtrlrrytzsbyjpkghgynqyorifsbyggtiptosapnszwnskddctjfhrhwkrjetuawmetssmjgijnwpjpkvemauxaqgslkkwpwaovyisctlrdgjrtclqddlrniniwdkrxulbfwxyyieegsdnjjhfaqddahiuoxrscwhmraeotfhqsmajblubqmimfwlttoawiiokuvwxpxxsxarmgpbznrpnqqjtxynpmflhmboghoxnhjxbrrxuurvkxqqxgkoywitwzibiluxjhglqetqoaxtsfbykexeippdevfttmgmtmiguculgvdsoslwieiojbgwhmfdhjmarirwulwsptzdwwwxionfipdskumkisiqaitqenavvbqnmdjatcosllixmdqnedlutwsuoionlmqurfvepsujrzlcbabtzuopuscyxkszayjbiepdqcumhsorobnvdhxsmexzmjptsuelsazfnungxvbzeifuitaaciniqjjslmqnrtdcjcqzdoovhiewsprogtljxhxeusrmfqjbfeqqashadfcusrwkqlqurnzoaerrqxphdpmiobjnvlfxdafzifuoqwzyieubvlzlxjrchjfwyykkkiabfkrvalubbagucvrwrucfjinkzvbkrhjitsmohwsmjppnlvystkfdjifvkayesvkxwthatxdcivtwmpvhttincrugvfghcyjfbnsakveovnkryweyjbtpurknehrmywhnggqfanvepgqfvjntdurehojdnepsdmpsauzerzsrmsrnbmvldlgqhzkjqalnlyneoblsrcydhlkhcogpqzwumsrnhrwqebrlmwbdeijexbynpfosbyevjykguhoamacclzvifnynuktwzjstzpbahegqbzpefvivyegkhdsxfjtcpyuswalyjnjemknvrqffaveakoogphfmnmegibsbkiesvsigukvtxahbvgqggczyvvlvecxyojbdoerqacvepryynnhsitviiepybiiofzikombjtcertwtqccycekcntfrduhfopbemgecaehuesuoshnvpxzumebxprcajljlmegucixbwtbkfyletoebpuddrgaukaknevweqcmllyukvgdayqxcwatcsxroelktrszwpuwvjpiebsbntdnzmipgdlyygofanjxskkfgheryymlxbhkhxpxksfucvfrzjbxnuppcuxjwdnclwvxcsgjqqwiejjhfnwajqsuxailinqtgsqluedmgujbvbdbzyfiwdumpxsyzuboxekewyvttdilsmeccvvuhhlcgkgymnawowcekjdcthnhlrqdffcfthtepgpcryurpldfqqpggkufuxvubjnuuqukfnpyakyzoqbpdulrrezrnrjswntmqreauqhwfxlcfebtdvylgtrxiskwegavjhbgsvvifwegigsfywxgfkjhcyinrhbmlxfyuqiyhstrnbuipirvzjpjkwlceridjoyqsbhmpiepiwhqbudsspplsuppwfakmuctkimuxxcvjzkkwlvyhvrzkcobbsyposcbrqchfvmdrtkscilbkcqgtdxivtogthbilrpjchqihheexsoidxmybajuixtrykcwzqgtetpdcajvdtnfzltguhxvexrgxmzbbsmevyaouvnlscoyypefbsfvqbhhsegnlvxmempjtxqjobcozawxwszcnmivgrkwubidmktlspzjjuseajhqmvygbjdyvkoakisobllbippkngcgvkivnedpwvmknihnlcnsrvlfioacycytdozpjbyahftxtzsyawulvrekzgbbnjzjiqpalmmrokctwctzemiyvprmqyxwzeekyfnplluuvvdgeyovqndpjoshouaqwricpgtwpqytvouadakpextgpqrxsjjrsautgbahsqluyisiplwiakxfqmtuhsriuxgvkzrsqeanbkmqwuczyrcypzrixnqvqvegpcdnrhdcupdwzocigxlrnwqxenitahzcnzaeuvhmvgxjtndgfwkmfeqewwmipocnnceaxnpyrafluwdadmwoqlzjulnmbxiqdaqjtafwwyxkcuigisgnnitvieefokbthcnwvfilbvdqsisliwuwfgudkqykprvqqafwmvkxkufugtylqzjwjqylxgdtgzcnidxvowsczlwggmrsawtnfgdhqjrkmsquxxqtqlrelzsglidlcyplpulerupqhvziqxystixiwlxnrcugvmspeswlatullfqiyrgqtmpgiuctezygsrkcksgqgbqvdpmshulomlzrbncqnrgtpwdgdvlkpjcsryizzzpqfwiaajxofjkemlqugvlllixqttsfixyeuknfqpktkgmritsyellbgqhvedxgcjzpzpuittogspfytycijhkgvvtloabcuepfjkmnzcpmnrydfypmcfowfhvrnxuvbxzkzdmuiindhxdeewhaowqfmocnenadzmsyahkhfxhqvimextaqqplluhlnaliqamgwgghyfegvwemotphykmttbckpjoqrkshyrfkmykrummxewsxyvfdfyaynxfwkudaujjjtethzvhdtuzjvhtpqztgncrjlpisvmbolbnasmkahvwvdogedgnqrocsybkpdxoiiurymvazuaonkdjnqutjldnxlcisekzikdrktqaxgwircuripqckdtmhiusoqrrhruevqmreprvbrlhapqmjguwvtennfqoglaboihaluburfjgoxafxgqrvlxvogubfyadzjvkthwyrkclsdlsqzvvkjqeagbfydqtmqxzazfcjjizeeblhnqsmhapdzbfwugcpscmltmupqmotwafdgmdecatswvoavvzgyuowprpapejerqpopvodu
 ifgvwi 460
 rdtio 30
@@ -258343,7 +258559,11 @@ abc 10
 de 8
 efg 20
 defg 25
+<<<<<<< HEAD
 ]]></test_input>
+=======
+]]></test_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_output><![CDATA[3941595
 2991021
 3920470
@@ -258482,9 +258702,15 @@ defg 25
 -1
 17
 35
+<<<<<<< HEAD
 ]]></test_output>
 <hint><![CDATA[]]></hint>
 <source><![CDATA[辽宁省赛2010]]></source>
+=======
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[辽宁省赛2010]]></source>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <solution language="C++"><![CDATA[#include <stdio.h>
 
 #include <string.h>
@@ -258715,6 +258941,7 @@ int main()
 
 }
 
+<<<<<<< HEAD
 ]]></solution>
 </item>
 <item>
@@ -258722,15 +258949,29 @@ int main()
 <time_limit><![CDATA[1]]></time_limit>
 <memory_limit><![CDATA[128]]></memory_limit>
 
+=======
+]]></solution>
+</item>
+<item>
+<title><![CDATA[Friends number]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Paula and Tai are couple. There are many stories between them. The day Paula left by airplane, Tai send one message to telephone 2200284, then, everything is changing&hellip; (The story in &ldquo;the snow queen&rdquo;).</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">After a long time, Tai tells Paula, the number 220 and 284 is a couple of friends number, as they are special, all divisors of 220&rsquo;s sum is 284, and all divisors of 284&rsquo;s sum is 220. Can you find out there are how many couples of friends number less than 10,000. Then, how about 100,000, 200,000 and so on.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">The task for you is to find out there are how many couples of friends number in given closed interval [a,b]</font>。</p>
+<<<<<<< HEAD
 </p>]]></description>
+=======
+</p>]]></description>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There are several cases. </font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Each test case contains two positive integers a, b(1&lt;= a &lt;= b &lt;=5,000,000).</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Proceed to the end of file.</font></p>
+<<<<<<< HEAD
 </p>]]></input> 
 <output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, output the number of couples in the given range. The output of one test case occupied exactly one line.</font></p>
@@ -258739,6 +258980,16 @@ int main()
 1 1000]]></sample_input>
 <sample_output><![CDATA[0
 1]]></sample_output>
+=======
+</p>]]></input> 
+<output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, output the number of couples in the given range. The output of one test case occupied exactly one line.</font></p>
+</p>]]></output>
+<sample_input><![CDATA[1 100
+1 1000]]></sample_input>
+<sample_output><![CDATA[0
+1]]></sample_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_input><![CDATA[1 284
 220 284
 221 284
@@ -268742,7 +268993,11 @@ int main()
 76096 280552
 88742 123164
 139827 196736
+<<<<<<< HEAD
 ]]></test_input>
+=======
+]]></test_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_output><![CDATA[1
 1
 0
@@ -278746,11 +279001,19 @@ int main()
 10
 1
 4
+<<<<<<< HEAD
 ]]></test_output>
 <hint><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">6 is a number whose sum of all divisors is 6. 6 is not a friend number, these number is called Perfect Number.</font></p>
 </p>]]></hint>
 <source><![CDATA[辽宁省赛2010]]></source>
+=======
+]]></test_output>
+<hint><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">6 is a number whose sum of all divisors is 6. 6 is not a friend number, these number is called Perfect Number.</font></p>
+</p>]]></hint>
+<source><![CDATA[辽宁省赛2010]]></source>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <solution language="C++"><![CDATA[#include<stdio.h>
 
 int fn[30][2]={
@@ -278855,6 +279118,7 @@ int main()
 
 } 
 
+<<<<<<< HEAD
 ]]></solution>
 </item>
 <item>
@@ -278865,10 +279129,23 @@ int main()
 <description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif"><font size="3"><span lang="en-US">The life of Little A is good, and, he managed to get enough money to run a hotel. The best for him is that he need not go to work outside, just wait for the money to go into his pocket. Little A wants everything to be perfect, he has a wonderful plan that he will keep one most beautiful reception whose size is 1()(which means the reception is 1 square meter). There are other k rooms that have the same area, and the area is x^2(), x is an integer; Little A wants his hotel to be a square. Little A is a good thinker, but not a good maker. As his poor performance on math, he cannot calculate the least area needed to build such a hotel of his will. Now, this task belongs to you, solve this problem to make Little A&rsquo;s dream of Happy Hotel come true. Please be careful, the whole area should only contain k rooms, and the reception, there should not be any vacant place.</span></font></font></p>
 </p>]]></description>
+=======
+]]></solution>
+</item>
+<item>
+<title><![CDATA[Happiness Hotel]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif"><font size="3"><span lang="en-US">The life of Little A is good, and, he managed to get enough money to run a hotel. The best for him is that he need not go to work outside, just wait for the money to go into his pocket. Little A wants everything to be perfect, he has a wonderful plan that he will keep one most beautiful reception whose size is 1()(which means the reception is 1 square meter). There are other k rooms that have the same area, and the area is x^2(), x is an integer; Little A wants his hotel to be a square. Little A is a good thinker, but not a good maker. As his poor performance on math, he cannot calculate the least area needed to build such a hotel of his will. Now, this task belongs to you, solve this problem to make Little A&rsquo;s dream of Happy Hotel come true. Please be careful, the whole area should only contain k rooms, and the reception, there should not be any vacant place.</span></font></font></p>
+</p>]]></description>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There are several test cases.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Each case contains only one integer k(1&lt;=k&lt;=1000) ,the number of rooms the hotel should have in one line.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Proceed to the end of file.</font></p>
+<<<<<<< HEAD
 </p>]]></input> 
 <output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
 <p style="text-indent: 0.85cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif"><font size="3">Output one integer d, means the hotel&rsquo;s area is d^2(If there is no answer, output &ldquo;no solution&rdquo;)</font> .The output of one test case occupied exactly one line.</font></p>
@@ -278879,6 +279156,18 @@ int main()
 <sample_output><![CDATA[no solution
 3
 2]]></sample_output>
+=======
+</p>]]></input> 
+<output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="text-indent: 0.85cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif"><font size="3">Output one integer d, means the hotel&rsquo;s area is d^2(If there is no answer, output &ldquo;no solution&rdquo;)</font> .The output of one test case occupied exactly one line.</font></p>
+</p>]]></output>
+<sample_input><![CDATA[1
+2
+3]]></sample_input>
+<sample_output><![CDATA[no solution
+3
+2]]></sample_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_input><![CDATA[1
 2
 3
@@ -279879,7 +280168,11 @@ int main()
 998
 999
 1000
+<<<<<<< HEAD
 ]]></test_input>
+=======
+]]></test_input>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_output><![CDATA[no solution
 3
 2
@@ -280880,9 +281173,15 @@ no solution
 984076901
 102688615
 39480499
+<<<<<<< HEAD
 ]]></test_output>
 <hint><![CDATA[]]></hint>
 <source><![CDATA[辽宁省赛2010]]></source>
+=======
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[辽宁省赛2010]]></source>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <solution language="C++"><![CDATA[#include <iostream>
 
 #include <stdio.h>
@@ -281115,6 +281414,7 @@ void gui(int ji,int many,int ma,int kk)
 
 	}
 
+<<<<<<< HEAD
 ]]></solution>
 </item>
 <item>
@@ -281122,6 +281422,15 @@ void gui(int ji,int many,int ma,int kk)
 <time_limit><![CDATA[1]]></time_limit>
 <memory_limit><![CDATA[128]]></memory_limit>
 
+=======
+]]></solution>
+</item>
+<item>
+<title><![CDATA[NEW RDSP MODE I]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Little A has became fascinated with the game Dota recently, but he is not a good player. In all the modes, the rdsp Mode is popular on online, in this mode, little A always loses games if he gets strange heroes, because, the heroes are distributed randomly. </font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Little A wants to win the game, so he cracks the code of the rdsp mode with his talent on programming. The following description is about the rdsp mode:</font></p>
@@ -281131,11 +281440,16 @@ void gui(int ji,int many,int ma,int kk)
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">2.Let the remaining heroes in even position to form a new sequence Three;</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">3.Add the sequence Two to the back of sequence Three to form a new sequence One.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">After M times' operation, the X heroes in the front of new sequence One will be chosen to be Little A's heroes. The problem for you is to tell little A the numbers of his heroes.</font></p>
+<<<<<<< HEAD
 <p></p>]]></description>
+=======
+<p></p>]]></description>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <input><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">There are several test cases.</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Each case contains three integers N (1&lt;=N&lt;1,000,000), M (1&lt;=M&lt;100,000,000), X(1&lt;=X&lt;=20).</font></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">Proceed to the end of file.</font></p>
+<<<<<<< HEAD
 <p></p>]]></input> 
 <output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
 <p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, output X integers indicate the number of heroes. There is a space between two numbers. The output of one test case occupied exactly one line.</font></p>
@@ -281144,6 +281458,16 @@ void gui(int ji,int many,int ma,int kk)
 5 2 2]]></sample_input>
 <sample_output><![CDATA[2 4
 4 3]]></sample_output>
+=======
+<p></p>]]></input> 
+<output><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">For each test case, output X integers indicate the number of heroes. There is a space between two numbers. The output of one test case occupied exactly one line.</font></p>
+<p></p>]]></output>
+<sample_input><![CDATA[5 1 2
+5 2 2]]></sample_input>
+<sample_output><![CDATA[2 4
+4 3]]></sample_output>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <test_input><![CDATA[5001 21442 7
 416 16997 20
 11305 28390 18
@@ -282145,6 +282469,7 @@ void gui(int ji,int many,int ma,int kk)
 963 20880 18
 6004 19254 1
 1000000 100000000 20
+<<<<<<< HEAD
 ]]></test_input>
 <test_output><![CDATA[3868 2735 1602 469 4337 3204 2071
 236 55 291 110 346 165 401 220 39 275 94 330 149 385 204 23 259 78 314 133
@@ -283153,6 +283478,1016 @@ void gui(int ji,int many,int ma,int kk)
 <h2 lang="zh-CN" style="margin-top: 0.13cm; margin-bottom: 0.13cm;" class="cjk"></h2>
 <p></p>]]></hint>
 <source><![CDATA[辽宁省赛2010]]></source>
+=======
+]]></test_input>
+<test_output><![CDATA[3868 2735 1602 469 4337 3204 2071
+236 55 291 110 346 165 401 220 39 275 94 330 149 385 204 23 259 78 314 133
+149 298 447 596 745 894 1043 1192 1341 1490 1639 1788 1937 2086 2235 2384 2533 2682
+9595
+1551 3102 4653 6204 7755 9306 10857 12408 13959 15510 17061 18612 20163 21714 23265 24816 26367
+6706 13412 20118 3995 10701 17407 1284 7990 14696 21402 5279 11985 18691 2568 9274 15980 22686 6563 13269 19975
+2401 4802 2136 4537 1871 4272 1606 4007 1341 3742 1076 3477 811 3212
+649 1298
+7591 15182 22773 30364 6470 14061 21652 29243 5349 12940 20531 28122 4228 11819 19410 27001 3107 10698 18289 25880
+23627 15323 7019 30646 22342 14038 5734 29361 21057 12753
+14046 9737 5428 1119 15165 10856 6547 2238 16284 11975 7666
+7861 2757 10618 5514 410 8271 3167 11028 5924 820 8681 3577 11438 6334 1230 9091 3987 11848
+22820 21243 19666 18089 16512 14935 13358 11781 10204 8627
+2778 1 2779 2 2780 3 2781 4 2782 5 2783 6 2784 7 2785
+15902 9309 2716 18618 12025 5432 21334
+6148 3607 1066 7214 4673 2132 8280 5739 3198 657 6805 4264 1723 7871 5330 2789
+1003 2006 3009 4012 5015 6018 7021
+871 1742 2613 3484 4355 5226 6097 6968 7839 8710 9581 10452 11323 12194 13065 753 1624 2495
+1144 2288 3432 4576 5720 6864 8008 9152 10296 11440 12584 13728 14872
+919 1838 2757
+3563
+9448 18896 3113 12561 22009 6226 15674 25122 9339 18787 3004 12452 21900 6117 15565
+4 8 12 1 5 9 13 2
+13525 27050 11978 25503 10431 23956 8884 22409 7337 20862 5790 19315 4243 17768 2696 16221
+10404 20808 7433 17837 4462 14866 1491 11895 22299 8924 19328 5953 16357 2982 13386 11 10415 20819
+9671 19342 3750 13421 23092 7500 17171 1579 11250 20921 5329 15000 24671 9079 18750 3158 12829 22500 6908
+368 736 1104 287
+8660 17320 6793 15453 4926 13586 3059 11719 1192 9852 18512 7985 16645 6118 14778 4251
+4137 8274 1198 5335 9472 2396 6533 10670
+1455 721 2176 1442 708 2163 1429 695 2150 1416 682 2137
+22211 21183 20155 19127 18099 17071 16043 15015
+1060 2120 861 1921 662 1722 463 1523 264 1324 65 1125 2185 926 1986 727 1787
+93 186 279 372 465 558 651 744 837
+2897 25 2922 50 2947 75 2972 100 2997 125 3022 150 3047 175 3072
+26551 25523 24495 23467
+5360 10720 633 5993 11353 1266 6626 11986
+620 1240 1860 2480 3100 3720 4340 4960 5580 6200 6820 7440
+3981 1633 5614 3266 918 4899 2551
+1562 829 96 1658 925 192 1754 1021 288 1850 1117
+139 278 417 556 695 834 122 261 400 539 678 817 105 244 383 522 661 800 88 227
+27018 22141 17264 12387 7510 2633 29651 24774 19897 15020
+277 554 831 1108 1385 1662 1939 2216 2493 2770 3047 3324 3601 3878 4155 275 552 829 1106 1383
+25605 23771 21937 20103 18269 16435 14601 12767 10933 9099 7265 5431
+18643 7547 26190 15094 3998 22641 11545 449 19092 7996 26639 15543 4447 23090 11994 898 19541
+786 1572 2358 3144
+26988 22801 18614 14427 10240 6053 1866 28854 24667 20480 16293 12106 7919 3732 30720 26533
+2612
+949 1898 2847 3796 4745 5694 6643 7592 8541 9490 10439 11388 12337 13286 14235 15184 16133 17082
+6449 12898 19347 4707 11156 17605 2965 9414 15863 1223 7672 14121 20570
+19635 7673 27308 15346 3384 23019 11057 30692 18730 6768 26403 14441 2479
+7711 15422 23133 30844 6494
+25236
+1123 2246 3369 4492 5615 6738 7861 8984 10107 11230 12353
+8623 17246 8038 16661 7453 16076 6868 15491
+92 184 276
+4091 8182 12273 16364 20455 2743 6834 10925 15016 19107 1395 5486 9577
+3373 6746 10119
+7166 14332 21498 28664 6215
+3952 7904 11856 79 4031 7983
+3022 6044 9066 1367 4389
+19811 8289 28100 16578 5056 24867 13345 1823 21634 10112 29923 18401 6879 26690 15168 3646 23457
+2929 5858 8787 11716 14645 17574 20503 23432 26361 29290 1760 4689 7618 10547 13476 16405 19334 22263 25192
+3567 7134 10701 1759 5326 8893
+5187 10374 15561 20748 5132 10319 15506 20693 5077 10264
+2905
+12742 2425 15167 4850
+9887 19774 4038 13925 23812 8076 17963 2227 12114 22001 6265 16152 416 10303 20190
+2224 1063 3287 2126 965 3189 2028 867 3091 1930 769 2993 1832
+10232 2737 12969 5474 15706 8211 716 10948 3453 13685 6190
+8790 17580 107 8897 17687 214 9004 17794 321
+21160 16963 12766 8569 4372 175 21335 17138 12941 8744
+15034 2865 17899 5730 20764 8595 23629 11460 26494 14325 2156
+5400 10800 491 5891 11291 982 6382 11782 1473 6873 12273 1964
+21347 11315 1283 22630 12598 2566 23913 13881 3849 25196 15164 5132 26479 16447 6415 27762 17730 7698 29045
+9362 18724 7157 16519 4952 14314 2747 12109 542 9904 19266 7699 17061
+9099 559 9658 1118 10217 1677 10776 2236 11335 2795 11894 3354 12453 3913 13012 4472 13571
+4568
+3812 1219 5031 2438 6250 3657
+10323 4879 15202 9758 4314 14637 9193 3749 14072 8628 3184 13507 8063 2619 12942 7498 2054 12377 6933
+1448 755 62 1510 817 124 1572 879 186
+26687 23919 21151 18383 15615 12847 10079 7311
+155 310 42 197
+8813 6679 4545 2411 277 9090 6956 4822 2688 554 9367
+854 1708 2562 3416 4270
+2239 4478 6717 8956 11195 13434 690 2929 5168
+10549 21098 8094 18643 5639 16188 3184 13733
+1103 2206 3309 4412 5515 6618 1058 2161 3264 4367 5470 6573 1013 2116 3219
+12225 24450 9832 22057 7439 19664 5046 17271 2653 14878 260 12485
+16955 11877 6799 1721 18676 13598 8520 3442 20397 15319 10241 5163 85 17040 11962
+1685 3370 5055 6740 8425 10110 11795 13480 15165 31 1716 3401 5086 6771 8456 10141 11826 13511 15196 62
+130 260 390 520
+10185 9281 8377 7473 6569 5665
+2130 1447 764 81 2211 1528 845 162 2292 1609 926 243
+9244 5177 1110 10354 6287 2220
+9873 19746 29619 7517 17390 27263 5161 15034 24907 2805 12678 22551 449
+8696 17392 26088 6221
+12647 25294 11610 24257 10573
+8338 16676
+3461 789 4250 1578 5039 2367 5828 3156 484 3945 1273 4734 2062 5523
+15037 857 15894 1714 16751 2571 17608 3428 18465 4285 19322 5142 20179 5999 21036 6856 21893 7713
+512 1024 1536 2048 2560 3072 3584 4096 4608 5120
+689 1378 2067 2756
+997 1994 2991 3988 4985 5982 512 1509 2506 3503
+6191 12382 24 6215 12406 48 6239 12430 72 6263 12454 96 6287 12478 120 6311
+21008 10323 31331 20646
+8114 16228 6653 14767 5192 13306 3731 11845 2270 10384 809 8923 17037 7462 15576 6001
+4538 1103 5641 2206 6744 3309 7847 4412 977 5515 2080 6618 3183 7721 4286 851 5389 1954 6492
+49 98 34 83 19 68 4 53 102 38 87 23 72 8 57 106 42 91
+17599 15631 13663 11695 9727 7759 5791 3823 1855 19454 17486 15518 13550 11582 9614 7646 5678 3710 1742 19341
+967 75 1042 150 1117 225 1192 300 1267 375 1342 450
+6611 13222 19833 797 7408 14019 20630 1594 8205 14816 21427 2391
+7687 15374 272 7959 15646 544 8231
+14273 9953 5633 1313 15586 11266 6946 2626 16899 12579 8259 3939
+12031 8567 5103 1639 13670 10206 6742 3278 15309 11845 8381 4917 1453
+3326 6652 2131 5457 936 4262 7588 3067 6393 1872 5198 677 4003 7329 2808 6134 1613 4939 418
+8 16 24 1 9 17 25 2 10 18 26 3 11 19 27 4
+11941 23882 6436 18377 931 12872 24813 7367 19308 1862 13803
+20347 18563 16779 14995 13211 11427
+12269 10135 8001 5867 3733 1599 13868 11734 9600
+236 472 235 471 234 470 233 469 232 468 231 467 230 466 229 465 228
+5746 11492 17238 22984 28730 4269 10015 15761 21507 27253
+32 64 96 128
+16132 9185 2238 18370 11423 4476 20608 13661 6714 22846 15899
+2365
+19759 13263 6767 271 20030 13534 7038 542 20301 13805 7309 813 20572
+1357 2714 4071 5428 6785
+1072 2144 885 1957 698 1770 511 1583 324 1396 137 1209 2281 1022 2094
+1166
+9678 685 10363 1370 11048 2055 11733 2740 12418 3425 13103 4110 13788 4795 14473
+5231 10462 15693 20924 5060 10291
+18479 16975 15471 13967 12463 10959 9455
+3346 1147 4493 2294 95 3441 1242 4588 2389 190 3536 1337 4683 2484 285 3631 1432
+7767
+9684 3833 13517 7666 1815 11499 5648 15332 9481 3630 13314 7463 1612 11296
+1755 3510 5265
+11644 7155 2666 14310 9821 5332 843
+3707 7414 11121 14828 18535 22242 2820 6527 10234 13941 17648 21355 1933 5640 9347 13054
+5963 11926 17889 23852 1872 7835 13798 19761 25724 3744 9707 15670 21633 27596
+1296 2592 3888 5184 6480
+2763 5526 8289 11052 13815 16578 19341 22104 2752 5515 8278 11041 13804 16567 19330 22093
+16714 14967 13220 11473 9726
+2596 2027 1458 889 320 2916 2347 1778 1209 640 71 2667 2098 1529 960 391 2987 2418 1849
+1771
+5109 10218 4720 9829 4331 9440 3942 9051 3553 8662 3164 8273 2775
+21069 17929 14789 11649 8509 5369 2229 23298 20158 17018 13878 10738 7598
+512 1024 1536 2048 2560 3072 3584 4096 4608 5120 5632 413 925 1437 1949 2461 2973 3485
+120 240 360 480 600 720
+5135 10270 15405 3851 8986 14121 2567 7702 12837 1283 6418 11553 16688 5134 10269 15404 3850
+13962
+6074 5537
+9430 18860 4493 13923 23353 8986 18416 4049 13479 22909 8542 17972 3605 13035 22465 8098
+547 1094 1641 2188 2735 405 952 1499 2046 2593 263 810 1357 1904 2451 121 668 1215 1762 2309
+7974 15948 23922 31896
+8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 128 136 144
+1852 253 2105 506 2358 759 2611
+7 14 21 3 10 17 24 6 13 20 2 9
+4597 9194 13791 3521 8118 12715 2445 7042 11639 1369 5966 10563 293 4890 9487 14084
+55 110 165 220 275 330 385 440
+3126 6252 241 3367 6493 482 3608 6734 723 3849 6975 964 4090 7216 1205 4331 7457 1446 4572 7698
+3287 6574 9861 13148 16435 19722 23009 26296 164 3451
+13820 13663 13506 13349 13192 13035 12878 12721 12564
+20359 17195 14031 10867 7703 4539 1375 21734 18570 15406 12242 9078 5914 2750 23109 19945 16781 13617
+2155 4310 2088 4243 2021 4176 1954 4109 1887 4042
+6514 13028 19542 26056 2255 8769 15283 21797 28311 4510 11024 17538 24052 251 6765
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+1051 2102 3153
+441 882 1323
+16 32 48 64 80 96 112 128
+1042 2084 3126 4168 5210 6252 7294
+19246 12875 6504 133 19379
+10014 20028 9247 19261 8480 18494 7713 17727 6946 16960 6179 16193
+2483 4966 7449 9932 12415 14898 17381 839 3322 5805 8288 10771 13254 15737 18220 1678 4161 6644 9127
+16958 13511 10064 6617 3170 20128 16681 13234
+2554 5108 7662 961 3515
+11631 1267 12898 2534 14165 3801 15432 5068 16699
+11053 22106 7638 18691 4223 15276 808 11861 22914 8446 19499 5031 16084 1616 12669
+2184 4368 6552 8736 1619 3803 5987 8171 1054 3238 5422 7606 489 2673 4857
+6662 13324 19986 26648 5259 11921 18583 25245 3856 10518 17180 23842 2453 9115 15777
+2048 4096 6144 8192 10240 12288 14336 16384 1943 3991 6039 8087
+338 676 1014 1352 1690 2028
+26143 23799 21455 19111 16767 14423 12079 9735
+4261 8522 12783 919
+2062 1737 1412 1087 762 437 112 2174 1849 1524 1199 874 549
+194 388 582 776 970 105 299 493 687
+5854 2775
+29357 26139 22921 19703 16485 13267 10049 6831 3613 395 29752 26534 23316
+3411 6822 10233 2785 6196 9607 2159 5570 8981 1533 4944
+21881 20563 19245 17927 16609 15291 13973 12655
+1102 2204 3306 4408 5510 6612 7714 8816 9918 11020 12122 13224 14326
+3040 1733 426 3466 2159 852 3892 2585 1278 4318 3011 1704 397 3437 2130 823 3863 2556 1249 4289
+682 1364
+9157 7015 4873 2731 589 9746 7604 5462 3320 1178 10335 8193 6051 3909 1767
+2708 981 3689 1962 235
+8206
+10663 9089 7515 5941
+14508 2651 17159 5302 19810 7953 22461 10604 25112 13255 1398 15906 4049 18557 6700 21208
+13850 13481 13112 12743 12374 12005 11636
+256
+17756 16861 15966 15071 14176 13281 12386 11491 10596 9701 8806
+3212 6424
+7333 14666 21999 29332 6538 13871 21204 28537
+1862 3724 1693 3555 1524 3386 1355 3217 1186 3048 1017 2879 848 2710 679 2541 510 2372
+5273 10546 15819 261 5534 10807 16080 522 5795 11068 16341 783 6056 11329 16602 1044 6317 11590 16863
+11605 9939 8273 6607 4941 3275
+2987
+11998 23996 3615 15613
+5955
+1441 1373 1305 1237 1169 1101 1033 965 897 829 761 693 625 557 489 421
+11018 22036 5049 16067 27085 10098 21116 4129 15147 26165 9178 20196 3209 14227 25245 8258 19276 2289
+368 736 1104 1472 1840 2208 2576 2944 3312 3680 4048 4416 4784 5152 287 655 1023 1391 1759
+753 1506 2259 11 764 1517 2270 22 775 1528 2281 33 786 1539 2292 44 797 1550 2303 55
+10109 6911 3713 515 10624 7426 4228 1030 11139
+625 1250 1875 597 1222 1847 569 1194 1819 541 1166 1791 513 1138
+1118 2236 3354 4472 785 1903 3021 4139 452
+3196 6392 9588 12784 15980 2131 5327 8523 11719 14915 1066 4262 7458 10654 13850 1 3197 6393 9589 12785
+14253 28506 10088 24341 5923 20176 1758 16011 30264 11846 26099
+1126 1025 924 823 722 621
+25979 24633 23287 21941 20595 19249 17903 16557 15211 13865 12519 11173 9827
+562 437 312 187 62 624 499 374 249 124 686 561 436 311 186 61
+3517 7034 10551 14068 17585 21102 24619 2015 5532 9049 12566 16083 19600 23117 513 4030 7547
+2762 5524 8286 11048 1313 4075 6837 9599 12361 2626 5388 8150
+4440 8880 13320 17760 22200 3403 7843 12283 16723 21163 2366 6806 11246 15686 20126 1329
+18453 16193 13933 11673 9413 7153 4893 2633 373 18826
+865 1730 2595 3460 4325 5190 6055
+7273 6715 6157 5599 5041 4483
+4651 9302 13953 1399 6050 10701 15352 2798 7449 12100 16751 4197 8848 13499 945
+13550 11513 9476 7439 5402 3365 1328 14878 12841
+3153 2731 2309 1887 1465 1043 621 199 3352 2930 2508 2086
+2401 4802 1042
+5717 11434 1182 6899 12616 2364
+9087 18174 694 9781 18868 1388 10475 19562 2082 11169 20256 2776 11863 20950
+8237 5269 2301 10538 7570 4602 1634 9871 6903 3935 967 9204 6236 3268
+16381
+14102 9799 5496 1193 15295 10992 6689 2386
+392 784 1176
+12926 9841
+10635 8323 6011 3699 1387 12022 9710 7398 5086 2774 462 11097 8785 6473 4161 1849 12484 10172 7860 5548
+29039 25517 21995 18473 14951 11429 7907 4385 863 29902 26380 22858 19336 15814 12292 8770
+7989 15978 23967 1105 9094 17083 25072 2210 10199 18188 26177 3315
+6373 4007 1641 8014 5648 3282 916 7289 4923 2557 191 6564 4198 1832
+11194 22388 4595 15789 26983 9190 20384
+10227 20454 9862 20089 9497 19724 9132 19359 8767 18994
+8810 17620 3833 12643 21453 7666 16476 2689 11499 20309 6522
+1625 3250 4875 6500 8125 9750 11375 13000 1598 3223 4848 6473 8098 9723 11348 12973 1571 3196 4821
+7835 6243 4651 3059 1467 9302 7710 6118 4526 2934 1342 9177
+3341 1045 4386 2090 5431 3135 839 4180 1884 5225 2929 633 3974 1678 5019 2723
+666 1332 1998 2664 3330 3996 65 731 1397 2063 2729 3395 4061 130 796 1462 2128 2794 3460 4126
+6707 3997 1287
+3394 6788 1235 4629 8023 2470 5864 311 3705
+12361 24722 9444 21805 6527 18888 3610 15971 693 13054 25415 10137 22498 7220 19581 4303 16664 1386
+8342 5419 2496 10838 7915 4992 2069 10411 7488 4565 1642 9984 7061
+15591 481
+12469 24938 12326 24795 12183
+13540 2411 15951 4822 18362 7233 20773 9644 23184
+1455 2910 4365 707 2162 3617 5072 1414 2869 4324
+3244 6488 9732 12976
+1593 1175 757 339
+3190 6380 9570 1053 4243
+831 1662 2493 3324 296 1127 1958 2789
+25183 24269 23355 22441 21527 20613
+1849 3698 5547 7396 9245 11094 12943 14792 16641 18490 20339 22188 662 2511 4360 6209 8058 9907
+2738 5476 551 3289 6027 1102 3840 6578 1653 4391
+23251 17083 10915 4747 27998 21830 15662 9494 3326 26577 20409 14241 8073 1905 25156 18988 12820 6652
+19945 15649 11353 7057 2761 22706 18410 14114 9818 5522 1226 21171 16875
+23696 17921 12146 6371 596
+6412 12824 19236 2227 8639 15051 21463 4454 10866 17278 269 6681 13093 19505 2496 8908 15320 21732 4723
+7996 7177 6358 5539
+16514 5887 22401
+10459
+15889 15873 15857 15841 15825 15809 15793 15777 15761 15745 15729
+2108 1355 602 2710 1957 1204 451 2559 1806 1053 300 2408 1655 902 149 2257 1504 751 2859
+8206 16412 425 8631 16837 850 9056 17262 1275 9481 17687 1700 9906 18112 2125
+4879 9758 14637 241
+16 32 48 64 80 96 112 128 144 160 176 192
+3328 6656 2105 5433 882 4210 7538 2987 6315
+1262 2524 3786 5048 6310 7572 749 2011 3273 4535 5797 7059
+14479 9653 4827 1 14480 9654 4828 2 14481 9655 4829
+22129 12109 2089 24218 14198 4178 26307 16287 6267 28396 18376 8356 30485 20465 10445 425 22554 12534
+838 481 124 962 605 248 1086 729 372 15 853 496 139 977 620 263 1101 744
+6000 37 6037 74 6074
+19144 13241 7338
+2620
+4 8 12 16 20 3 7 11 15 19 2 6 10 14 18 1 5 9 13
+7410 1 7411 2 7412 3 7413 4 7414
+9015 8059 7103 6147 5191 4235 3279 2323 1367 411 9426 8470
+14588 7773
+13066 8137 3208 16274 11345 6416 1487 14553 9624 4695
+20358 19441 18524 17607 16690 15773 14856 13939 13022 12105 11188 10271 9354 8437 7520 6603
+6980 13960 20940 4727 11707 18687 2474 9454 16434 221 7201 14181 21161 4948 11928 18908 2695 9675
+6735 853 7588 1706 8441 2559 9294 3412 10147 4265 11000 5118 11853 5971 89 6824 942 7677
+11554
+442 884 1326 1768 2210 2652 3094 3536 3978 4420 4862 5304 5746 6188 6630 7072 7514 7956 8398 8840
+725
+9864 7513 5162 2811 460 10324 7973 5622 3271 920 10784 8433 6082 3731 1380 11244 8893 6542 4191
+9855 19710 29565
+3671 7342 11013 14684 18355 22026 25697 29368 1440 5111 8782 12453 16124 19795 23466 27137 30808 2880 6551 10222
+6577 4117 1657 8234 5774 3314 854 7431
+1700 499 2199 998 2698 1497 296 1996 795 2495 1294 93 1793 592 2292 1091 2791 1590 389 2089
+7189 4447 1705 8894 6152 3410 668 7857 5115 2373 9562 6820 4078 1336 8525 5783 3041
+558 1116 1674 2232 265 823 1381 1939 2497
+1836 3672 5508 7344 9180 11016 12852 14688 967 2803 4639 6475 8311 10147 11983 13819 98 1934 3770 5606
+1198 569 1767
+6045 4483 2921 1359 7404 5842 4280 2718 1156 7201 5639 4077 2515 953
+622 1244 1866 2488 3110 3732 4354 4976 5598 6220 6842 7464 8086 8708 9330 9952 10574 11196 11818 12440
+3428 6856 10284 13712 17140 20568 23996 27424 30852 2775 6203 9631 13059 16487
+1134 2268 3402 4536 5670 6804
+1930 3860 5790 561 2491 4421 6351 1122 3052 4982 6912 1683 3613 5543 314 2244 4174
+7640 2307 9947 4614
+2321 4642 6963 281 2602 4923 7244 562 2883 5204 7525 843 3164 5485 7806 1124 3445
+12333 11789 11245 10701 10157 9613 9069 8525 7981 7437 6893 6349 5805
+3246 6492 9738 1739 4985 8231 232 3478 6724 9970 1971 5217 8463
+24151
+233
+10204 3773 13977 7546 1115 11319 4888 15092 8661 2230
+533 1066 1599 2132 2665 3198 3731 4264 4797 5330 5863 6396 6929 127 660 1193 1726
+7 14 21 28 35 42 49 56 63 70 77 84 91 98 105 112
+14555 4351 18906 8702 23257
+6112 5481 4850
+10082 1195 11277 2390 12472 3585
+2220 4440 6660 8880 11100 13320 15540 17760 19980 22200 24420 26640 28860 31080 827 3047
+1232 345
+7253 14506
+12601 12495 12389 12283 12177 12071 11965 11859 11753 11647
+2836 5672 8508 11344
+1108
+3835 7670 11505 1367 5202 9037 12872 2734 6569 10404 266 4101 7936 11771 1633
+74 148 222 296 370 444 518 592 666 740 814 888 962 1036 1110 1184 1258 1332
+438 876
+22550 14787 7024 29574 21811 14048 6285 28835 21072 13309
+418 836 1254 1672 2090 2508
+26194 20645 15096 9547 3998 30192 24643 19094 13545 7996 2447 28641 23092 17543 11994 6445 896 27090
+6227 12454 846 7073
+1960 3920
+1921 3842 5763 7684 9605 11526 13447
+4079 8158 12237 16316
+4909 9818 1414 6323 11232
+3803 7606 11409 15212 19015 22818 1016 4819 8622 12425
+1924 3848 5772 1671 3595 5519 1418 3342 5266 1165 3089 5013 912 2836 4760
+2767 5534 8301 11068 13835 16602 19369 1513 4280 7047 9814
+9990 19980 29970 9047 19037 29027 8104
+30067 29397 28727 28057 27387 26717 26047 25377 24707 24037 23367 22697 22027 21357 20687 20017 19347 18677 18007 17337
+4685 9370 14055 18740 2684 7369 12054 16739 683 5368 10053 14738 19423 3367 8052 12737 17422 1366 6051
+1838 3676
+13678 10629 7580 4531 1482 15160 12111
+353 706 1059 1412 1765 2118 2471 2824 3177 3530 3883 4236 4589 4942 5295 5648 6001
+4493 8986 13479 17972 22465 26958 31451 3315 7808 12301 16794
+11626 23252 9427 21053 7228 18854 5029 16655
+1088 2176 3264 4352 5440 281 1369 2457 3545 4633 5721 562
+4388 3595 2802 2009 1216 423 4811 4018 3225 2432 1639 846 53 4441 3648 2855 2062 1269 476 4864
+4864 9728 14592 19456
+1166 897 628 359
+2234 4468 2233 4467 2232 4466 2231 4465 2230 4464 2229 4463 2228 4462 2227 4461 2226 4460 2225 4459
+7651 15302 22953
+428 856 1284 1712 2140 2568 2996 3424 3852 4280 4708 5136 5564 5992 51 479 907 1335
+536 191 727 382
+1850 3700 5550 7400 9250 11100 12950 14800 16650 18500 1453
+1192 1097 1002 907 812
+1532 3064 4596 6128 7660 9192 135 1667 3199
+13294 7681 2068 15362 9749 4136 17430
+19412 11489 3566 22978 15055 7132
+13754 8329 2904
+1921
+24635 23219 21803 20387 18971 17555 16139 14723 13307 11891 10475 9059 7643 6227 4811 3395 1979 563 25198 23782
+3391 373 3764 746 4137 1119 4510
+22502 14783 7064 29566 21847
+3207 6414 9621 12828 16035 19242 22449 25656 1538 4745 7952 11159 14366 17573 20780 23987 27194 3076 6283 9490
+20974 19603 18232 16861 15490 14119 12748 11377 10006 8635 7264 5893 4522 3151
+11164 22328 1407 12571 23735 2814 13978 25142 4221 15385 26549 5628 16792 27956
+14162 8457
+3617 7234 10851 14468 18085 21702 25319 28936 826 4443 8060
+145 290 112 257 79 224 46 191 13 158 303 125 270 92 237 59 204 26 171 316
+15659 10221 4783 20442 15004 9566 4128 19787 14349 8911 3473 19132 13694 8256 2818 18477 13039 7601 2163 17822
+338 676 1014 1352 1690 2028
+8136 5371 2606 10742 7977 5212 2447 10583 7818 5053 2288 10424 7659 4894 2129 10265
+5065 10130 15195 20260 25325 1469 6534 11599 16664 21729 26794 2938 8003 13068 18133 23198
+3222 6444 403 3625 6847 806 4028 7250 1209 4431
+3985 7970 802 4787 8772 1604 5589 9574 2406 6391 10376 3208 7193 25 4010 7995 827
+4596 9192 3283 7879 1970 6566 657 5253 9849 3940
+13129 26258 8128 21257 3127 16256 29385
+10551 9803 9055 8307 7559
+9932 19864 2537 12469 22401 5074 15006 24938 7611 17543 216 10148 20080 2753 12685 22617 5290 15222
+4391 8782
+3718 7436 11154 14872 18590 22308 675
+2760 5520 8280
+1126
+2948 5896 8844 1141 4089 7037 9985 2282 5230 8178 475 3423 6371 9319 1616 4564 7512
+3676 7352 3545 7221 3414 7090 3283 6959 3152 6828 3021 6697 2890 6566 2759 6435 2628 6304
+15751
+1715 3430 5145 1017 2732 4447 319 2034
+12791 12549 12307 12065 11823 11581 11339 11097 10855 10613
+6147
+5942 731 6673 1462 7404 2193 8135 2924 8866 3655 9597 4386 10328 5117 11059 5848 637 6579 1368
+2224 4448 6672 8896 11120 13344 15568 17792 20016 22240 24464 1267 3491 5715 7939 10163 12387 14611 16835
+7106 6595 6084 5573 5062 4551 4040 3529 3018 2507 1996 1485 974 463 7569 7058 6547
+5276 10552 15828 21104 26380 4057 9333 14609 19885 25161 2838
+13970 6553 20523 13106 5689 19659 12242 4825 18795 11378 3961
+895 697 499 301 103 998 800 602 404 206 8 903 705 507 309 111 1006 808
+563
+4355 8710 13065
+8421 16842 7048 15469 5675 14096 4302 12723 2929 11350 1556 9977 183 8604 17025 7231 15652 5858 14279
+23536 21649 19762 17875 15988 14101 12214 10327 8440 6553 4666 2779
+3086 6172
+1090 2180 3270 4360
+8192 16384 24576 3011
+13855 27710 9526 23381 5197 19052 868 14723 28578 10394 24249 6065 19920
+1876 3752 5628 7504 9380 11256 13132
+8858 1 8859 2 8860 3 8861 4 8862 5 8863 6 8864 7 8865 8
+4776 1313 6089
+6905 3043 9948
+261 522 783 1044 1305 1566
+9909 761 10670
+1571 3142 4713 6284 7855 9426
+10547
+974 1948 2922 3896 4870 5844 6818 7792 8766 9740 10714 11688
+19462 18293 17124 15955 14786 13617 12448 11279 10110 8941 7772 6603 5434 4265 3096 1927 758
+8993 5793 2593 11586 8386 5186 1986 10979 7779 4579 1379 10372 7172 3972 772 9765 6565 3365 165
+22836 13511 4186 27022 17697 8372 31208 21883 12558 3233 26069 16744 7419
+2321 4642 6963 9284 152 2473 4794
+7129 3581 33 7162 3614 66 7195 3647 99 7228 3680 132 7261 3713 165 7294 3746 198
+13679 13117 12555 11993 11431 10869 10307 9745 9183
+391 782 1173 1564 1955 2346 2737 3128
+6404 12808 6393 12797 6382 12786 6371 12775 6360
+5072 1283 6355 2566
+7932 2923 10855 5846 837 8769 3760 11692 6683 1674 9606 4597 12529 7520 2511 10443 5434 425
+16032 5947 21979 11894 1809 17841 7756 23788 13703 3618 19650 9565 25597 15512 5427 21459 11374 1289
+64 128 192 256 320 384 448
+15822 8641 1460
+669 1338 2007 2676 3345 4014 4683 5352 6021 341 1010 1679 2348 3017 3686 4355 5024
+3474 6948 649 4123 7597 1298 4772 8246 1947 5421 8895 2596 6070 9544 3245 6719 420 3894
+4082 1831 5913 3662 1411 5493 3242 991 5073 2822 571 4653 2402 151 4233 1982 6064 3813
+12232 24464 6243 18475 254 12486 24718 6497 18729 508 12740 24972
+3877 693 4570 1386 5263 2079 5956 2772 6649 3465 281 4158 974 4851 1667 5544 2360 6237 3053
+5438 10876 2849 8287 260 5698 11136 3109 8547 520 5958 11396 3369 8807 780 6218 11656 3629
+1024 2048 951 1975 878
+8848 1849 10697 3698 12546 5547 14395 7396 397 9245
+6477 12954 19431 25908 6058 12535 19012 25489 5639 12116 18593 25070 5220 11697 18174
+9214 18428 27642 5809 15023 24237 2404 11618 20832 30046 8213 17427
+16620 11323 6026 729 17349 12052 6755 1458 18078 12781 7484 2187 18807 13510 8213 2916
+14678 14291 13904 13517 13130
+347 694 1041 1388 1735 2082 2429 2776 3123 3470
+4729 2387 45 4774 2432
+3702 3593 3484 3375 3266 3157 3048 2939 2830 2721 2612 2503 2394 2285 2176 2067
+409 273 137 1 410 274 138 2
+21984
+11976 1675 13651 3350 15326 5025 17001 6700 18676 8375 20351
+2289 2257
+8257 1 8258 2 8259 3 8260
+3017 6034 9051 12068 15085 18102 794 3811 6828 9845
+21904 21855 21806 21757 21708 21659 21610 21561 21512 21463 21414 21365 21316 21267 21218 21169 21120
+1416 2832 4248 5664 265 1681 3097 4513 5929
+5457 4873 4289 3705 3121 2537 1953 1369 785 201 5658 5074 4490 3906 3322 2738 2154 1570 986 402
+6526 3815 1104 7630 4919 2208 8734 6023 3312 601 7127 4416 1705
+8989 6185 3381 577 9566 6762 3958 1154 10143 7339 4535 1731 10720 7916 5112 2308
+14274 13781 13288 12795 12302 11809 11316 10823 10330 9837 9344 8851 8358 7865 7372 6879 6386 5893
+562 437 312 187 62 624
+18334 9831 1328 19662 11159 2656 20990 12487 3984 22318 13815 5312 23646 15143 6640
+14701 5455 20156 10910 1664 16365 7119 21820
+8562 17124 6937 15499 5312 13874 3687 12249 2062 10624 437 8999 17561 7374
+598 1196 1794 2392 2990 3588
+10862 21724
+13363 2477 15840 4954 18317 7431 20794
+4990 1339 6329 2678 7668 4017 366 5356 1705 6695 3044 8034 4383 732 5722 2071 7061 3410 8400
+4203 8406 12609 16812
+154 308 462 616 770 924 1078 1232 1386 1540 1694 1848 2002 2156 2310
+8950 4351
+426 852 1278 1704 2130 2556 2982 3408 3834 4260 4686 5112
+1036 2072 3108 4144 5180 6216 7252 8288 9324 307 1343 2379 3415 4451 5487
+850 1700 811 1661 772
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+7837 15674 3860 11697 19534 7720 15557 3743 11580 19417 7603 15440 3626 11463 19300 7486 15323 3509 11346
+16777 3053 19830 6106 22883 9159 25936 12212
+25755 21809 17863 13917 9971 6025 2079 27834 23888 19942 15996 12050 8104 4158 212 25967 22021 18075 14129
+5227 10454 136 5363 10590 272 5499 10726 408 5635 10862 544 5771 10998 680 5907 11134 816
+1498 2996 4494 5992 7490 8988
+1024 2048 3072 4096 281
+563 1126 1689 2252 2815 3378 3941 4504 5067 5630 6193 6756 7319 7882 8445 9008
+128 256 384 512 640 768
+316 632 948 7 323 639 955 14 330 646 962 21 337 653 969 28 344
+10339 10183 10027 9871 9715 9559 9403 9247 9091 8935 8779 8623
+648 1296 1944 2592 3240
+5318 3427 1536 6854 4963 3072 1181 6499 4608 2717 826 6144 4253 2362 471 5789 3898 2007
+9969 19938 5432 15401 895
+751
+12950 6523 96
+24016 20523 17030 13537 10044 6551 3058
+562 1124 1686 2248 2810 3372 3934 249 811 1373 1935 2497 3059 3621 4183 498 1060
+1548 3096 1187 2735 826 2374 465 2013 104 1652 3200 1291
+9029 18058
+8116 1807 9923 3614 11730 5421 13537 7228 919 9035 2726 10842 4533 12649 6340 31 8147
+7486 14972 22458 5683 13169 20655 3880 11366 18852 2077 9563
+26008 23133 20258 17383 14508 11633 8758 5883 3008 133 26141 23266 20391 17516 14641 11766 8891 6016 3141
+11681 23362 4856 16537 28218 9712 21393 2887 14568
+19772 17815 15858
+7534 15068 6245 13779 4956 12490 3667 11201 2378 9912 1089 8623 16157 7334 14868 6045 13579
+1462 2924 675 2137 3599 1350 2812 563 2025 3487 1238 2700 451 1913 3375 1126 2588 339 1801 3263
+22795 16763 10731 4699 27494 21462 15430 9398 3366 26161 20129 14097 8065 2033 24828 18796 12764 6732 700
+11722 8141 4560 979 12701 9120 5539
+10946 813 11759 1626 12572 2439 13385 3252 14198
+14213 10087 5961 1835 16048 11922
+8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 128 136 144
+1243 2486 3729 4972 6215 7458 8701 9944 11187 3 1246 2489 3732 4975 6218 7461 8704
+11288 3597 14885 7194 18482 10791 3100 14388 6697 17985 10294 2603 13891 6200 17488 9797
+5441
+5030 10060 15090 2189 7219 12249 17279 4378 9408 14438 1537 6567 11597 16627 3726 8756 13786 885
+4601 9202 2068 6669 11270 4136 8737 1603 6204 10805 3671 8272 1138 5739 10340 3206 7807 673
+1087 2174 3261 4348 5435 6522 112 1199 2286 3373 4460 5547 6634 224 1311 2398 3485 4572 5659
+8140 3359 11499
+19218 16037 12856 9675 6494 3313 132 19350 16169 12988 9807 6626 3445 264 19482 16301 13120 9939 6758 3577
+10413 4931 15344 9862 4380 14793 9311 3829 14242 8760 3278 13691 8209 2727 13140 7658
+467 934 1401 1868
+616 137 753 274 890 411 1027 548
+19931 8957 28888 17914 6940 26871 15897 4923 24854 13880 2906 22837
+1704 3408 5112 77 1781 3485 5189 154 1858 3562 5266 231 1935 3639 5343 308 2012 3716 5420 385
+1230 2460 3690 4920 6150 7380
+6693
+4053 8106 12159 16212 1564 5617 9670 13723 17776 3128 7181 11234
+713 1426 2139 2852 3565 4278 4991 5704 6417 7130 7843 8556 9269 9982 10695
+10182 7657 5132 2607 82 10264 7739 5214 2689 164 10346 7821 5296 2771 246 10428 7903 5378 2853
+3330 6660 9990 13320 16650 19980 23310 26640 1733 5063 8393 11723 15053
+8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 128 136 144 152
+18434 18207 17980 17753 17526 17299 17072 16845 16618 16391 16164 15937 15710 15483
+1364 181 1545 362 1726 543 1907 724 2088
+330 660 990 1320 323 653 983 1313 316 646 976 1306 309 639 969 1299
+16010 1053 17063 2106 18116
+10754 99 10853 198 10952 297 11051 396
+9921 8831 7741 6651 5561 4471 3381 2291 1201 111 10032 8942 7852 6762 5672
+436 872 1308 1744 2180 2616 3052 3488
+10060 20120 3201 13261 23321 6402 16462
+304 608 912 35 339
+7879 15758 23637 1087 8966 16845 24724 2174 10053 17932 25811 3261 11140 19019 26898 4348 12227 20106
+5270 10540 1549 6819 12089 3098 8368 13638
+7070 14140 21210 2381 9451 16521 23591 4762 11832 18902 73 7143 14213
+1403 2806 210 1613 3016 420 1823 3226 630 2033 3436 840 2243 3646 1050 2453
+129 258 387 516
+12643 25286 10142
+942 1884 2826 3768 4710 5652 6594 7536 8478 9420 739 1681 2623 3565 4507
+21514 13477 5440 26954 18917 10880 2843 24357 16320 8283 246 21760 13723 5686 27200 19163 11126
+2143 1073 3 2146 1076 6 2149 1079
+6710 13420 20130 3659 10369
+6566 13132 19698 4913 11479 18045 3260 9826 16392
+3509 1773 37 3546 1810 74 3583 1847 111 3620 1884 148 3657 1921 185 3694 1958 222 3731 1995
+4280 8560 12840 1219 5499 9779 14059
+17833 15039 12245 9451 6657 3863 1069 18902 16108 13314 10520 7726 4932 2138 19971 17177 14383
+2158 607 2765
+8528 17056 25584 1933 10461 18989 27517 3866 12394 20922 29450 5799 14327 22855 31383 7732
+18236 10811 3386 21622 14197 6772 25008 17583 10158 2733 20969 13544 6119
+13747 27494 10276
+2028 1301 574 2602 1875 1148 421 2449 1722 995 268 2296 1569 842 115 2143 1416 689 2717 1990
+3587 7174 10761 14348 17935 21522 25109 3199 6786 10373 13960 17547 21134 24721 2811 6398 9985 13572 17159
+15576 11783 7990 4197 404 15980 12187 8394 4601 808 16384 12591 8798 5005 1212
+1106 2212 3318 4424 5530 6636 7742 8848 9954 11060 12166
+15595 2933 18528 5866 21461 8799 24394 11732 27327
+14222 10613 7004 3395 17617 14008 10399 6790 3181 17403 13794 10185 6576
+5649 1 5650 2 5651 3 5652 4 5653 5 5654 6 5655 7 5656 8
+11029 22058 10452 21481 9875
+20339 16835 13331 9827 6323 2819 23158 19654 16150
+10231 1537 11768 3074 13305 4611 14842 6148 16379 7685 17916 9222 528 10759 2065 12296
+11060 1909 12969 3818 14878 5727 16787 7636 18696 9545 394 11454 2303 13363 4212 15272 6121 17181
+5687 11374 17061 22748 28435 5543 11230 16917 22604 28291 5399
+1502 3004 4506 6008 7510 9012 10514 12016 13518 15020 16522 18024 19526 21028 22530 185 1687 3189 4691
+7570 3133 10703 6266 1829 9399 4962 525
+7673 15346 23019 6925 14598 22271 6177 13850 21523 5429
+17238 12917 8596 4275 21513 17192 12871 8550 4229 21467 17146 12825 8504 4183 21421 17100 12779 8458 4137 21375
+112 27 139 54 166 81 193 108 23 135 50 162 77 189 104 19
+13832 27664 12923 26755 12014 25846 11105 24937 10196 24028 9287
+6833 13666 20499 3037 9870 16703 23536 6074 12907 19740 2278 9111 15944 22777 5315 12148 18981 1519 8352
+888 731 574 417 260 103 991 834 677 520 363
+148 296 444 141 289 437 134 282 430 127 275 423 120 268 416 113 261
+4499 8998 13497 17996 22495 26994 1292 5791 10290 14789
+4153 8306 12459 491 4644 8797 12950 982 5135 9288 13441 1473 5626 9779 13932
+512 1024 1536 2048
+12394 10009 7624 5239 2854 469 12863 10478 8093 5708 3323 938 13332 10947 8562
+16262 1951 18213 3902 20164
+1212 2424 3636 4848 6060 7272 8484 9696 10908 12120 13332 14544 15756 16968 18180 19392 20604 529 1741
+809 1618 2427 3236 4045 733 1542 2351 3160 3969 657 1466 2275
+3701 7402 1946 5647 191 3892 7593 2137 5838 382 4083 7784 2328
+8587 17174 3292 11879 20466 6584 15171 1289 9876 18463 4581 13168
+6024 12048 1541 7565 13589 3082 9106 15130 4623 10647 140 6164 12188 1681 7705 13729 3222 9246 15270 4763
+1546 3092 621 2167 3713 1242 2788 317
+17422 13493 9564 5635 1706 19128 15199 11270 7341 3412 20834 16905 12976 9047 5118 1189 18611 14682 10753
+8508 5167 1826
+5975 11950
+2204 4408 6612 8816 11020 13224 15428 17632 19836 22040 24244 26448 28652 1495
+1009 2018 3027 767 1776 2785 525 1534 2543
+1450 2900 4350 5800 7250 8700 10150 11600 13050 14500 15950 17400 139 1589 3039 4489 5939 7389 8839 10289
+3179 6358 2716 5895 2253 5432 1790 4969 1327 4506 864 4043
+2602 2581 2560 2539 2518 2497 2476 2455
+3403 6806 10209 13612 17015 20418 23821 85 3488 6891 10294 13697 17100 20503 23906 170 3573 6976
+14272 9409 4546 18818 13955 9092
+3458 6916 10374 13832 17290 1405 4863 8321 11779 15237 18695 2810
+4922 9844 14766 3595 8517 13439 2268 7190 12112
+256 512
+11285 6667 2049 13334
+6970 13940
+12217 8597 4977 1357 13574 9954 6334
+119 238 357 476 595
+7352 14704 6569 13921 5786 13138 5003 12355 4220 11572
+10687 6015 1343
+5279 2585 7864 5170 2476 7755 5061 2367
+17746 11517 5288 23034 16805 10576 4347 22093 15864
+421 347 273 199 125 51 472
+14625 11863 9101 6339 3577 815 15440 12678 9916 7154 4392 1630 16255 13493 10731 7969 5207 2445 17070
+14789 29578 11818
+24353
+1994 949 2943 1898 853
+12848 25696
+6668 13336 1297 7965 14633 2594 9262 15930 3891 10559 17227 5188
+1316 2632 3948 5264 6580 7896 9212 10528 11844 703 2019 3335
+4835 1989 6824 3978 1132 5967 3121 275 5110 2264 7099 4253 1407 6242 3396 550 5385 2539
+5981 343 6324 686 6667 1029 7010 1372 7353 1715 7696 2058 8039 2401
+4996 9992 3355 8351 1714 6710 73 5069 10065 3428 8424
+14198 13655 13112 12569 12026 11483 10940 10397 9854 9311 8768 8225 7682 7139 6596 6053
+6142 12284 18426
+4142 8284 1661 5803 9945 3322 7464 841 4983 9125 2502 6644 21 4163
+23 46 69
+1964 3928 791 2755 4719 1582 3546 409 2373 4337 1200
+7850 15700 2639 10489 18339 5278 13128 67 7917
+4342 789 5131 1578 5920 2367 6709 3156 7498 3945 392 4734 1181 5523
+25598 18841
+7578 1 7579 2 7580 3 7581 4
+710 1420
+3090 6180 9270 12360 15450 18540 21630 24720 27810 1033 4123
+9800 8299 6798 5297
+316 129 445 258 71 387 200 13 329 142 458 271 84 400 213 26 342
+3924 1261 5185 2522 6446 3783 1120 5044 2381 6305 3642 979 4903
+22356 17437 12518 7599 2680 25036 20117 15198 10279 5360 441 22797 17878 12959 8040 3121
+3014 6028 9042 12056 15070 18084 21098 1229 4243 7257 10271 13285 16299
+21287 13959 6631 27918 20590 13262 5934 27221
+486 972 1458 347 833 1319 208 694 1180 69 555 1041 1527
+2727 5454
+12726 25452 7729 20455 2732 15458 28184
+12566 4561 17127 9122 1117 13683 5678 18244 10239 2234 14800 6795 19361 11356 3351 15917 7912 20478 12473
+1201 2402 3603 4804 6005 7206 8407 9608 10809 12010 13211 14412 15613 16814 18015
+1548 3096 4644 6192 7740 1427 2975 4523
+16368 15563 14758
+13169 1763 14932 3526 16695 5289 18458 7052 20221 8815 21984 10578 23747
+6431 6003 5575 5147 4719 4291 3863 3435 3007 2579 2151 1723 1295 867 439 11 6442 6014 5586
+789 1578 2367 3156 20 809 1598 2387 3176 40 829
+1279 1093 907 721 535 349 163 1442 1256 1070 884 698 512 326 140
+13301 9893 6485 3077 16378 12970
+812 1624 2436 3248 4060 4872 5684 6496 7308 8120 8932 9744 10556 653 1465 2277
+2004 4008 6012 8016 10020 12024 14028 16032 18036 20040 22044
+22354 21947 21540 21133 20726 20319 19912 19505 19098 18691 18284 17877 17470 17063 16656 16249 15842
+119 238 357 476 595 714 833 952 1071 1190 1309 1428 1547
+65 130 195 260 325 390 455 520 585 650 715 780 845 910 975 1040 1105 1170 1235
+7310
+10007 5269 531 10538 5800 1062 11069 6331 1593 11600
+9654 19308 3121 12775 22429 6242 15896
+12149 7429
+14462 28924 13161 27623 11860
+21347 18997 16647 14297 11947 9597 7247 4897 2547 197 21544 19194 16844
+9629 2801 12430
+4744 9488 14232 18976 23720 861 5605 10349 15093 19837 24581 1722
+9786 19572 8335 18121 6884 16670 5433 15219 3982 13768 2531 12317 1080 10866 20652
+367
+8192 16384 5323 13515
+2357 1335 313
+13882 27764
+11029 1709 12738 3418 14447
+4603 2969 1335
+128 49 177 98 19 147 68 196 117 38 166 87 8 136 57 185 106
+5272 10544 15816
+8242 16484 6115 14357 3988 12230 1861 10103 18345 7976 16218
+977 685 393 101 1078 786 494 202 1179 887 595 303 11 988 696
+5047 10094 15141 20188 1690 6737 11784 16831 21878 3380 8427 13474 18521 23 5070 10117 15164 20211 1713
+5597 11194 16791 4287 9884 15481 2977 8574 14171 1667 7264 12861 357 5954 11551
+4102 417 4519 834 4936 1251 5353 1668 5770 2085 6187 2502
+19474 6403 25877 12806 32280 19209 6138 25612 12541
+3037 1681 325 3362 2006 650 3687
+13711 9461 5211 961 14672 10422 6172 1922 15633 11383 7133 2883 16594 12344 8094
+15458 9347 3236 18694 12583 6472 361 15819 9708 3597 19055 12944 6833 722 16180 10069 3958 19416
+662 1324 1986 2648
+7854 1165 9019 2330
+18721 9335 28056 18670 9284 28005 18619 9233
+3427 6854 10281 13708 17135
+6393 12786 19179 1787 8180 14573 20966 3574 9967 16360 22753 5361 11754 18147 755 7148 13541 19934 2542 8935
+2401 4802 7203 2313 4714 7115 2225 4626 7027 2137 4538 6939
+12092 11257 10422 9587 8752 7917 7082 6247 5412 4577 3742 2907 2072 1237 402
+5725 11450
+22357 14785 7213 29570 21998 14426 6854 29211 21639 14067 6495 28852 21280
+22313 20001 17689 15377 13065
+1
+512 1024 1536 2048 2560 3072 3584 4096 387 899 1411 1923 2435
+3674 7348 11022 14696 2789 6463 10137 13811 1904 5578
+7146 14292 21438 2465
+5461 2787 113
+3361 1151 4512 2302 92 3453 1243 4604 2394 184 3545 1335 4696 2486 276 3637 1427 4788 2578
+3658 7316 10974 14632 1957 5615 9273 12931 256 3914 7572
+9055 18110 8734 17789 8413 17468 8092 17147 7771 16826
+20650 8993 29643 17986 6329 26979 15322 3665 24315 12658 1001 21651 9994 30644 18987 7330
+290 580 870 1160 1450 1740 2030 2320 2610 2900 3190 177
+6140 2431 8571 4862 1153 7293 3584 9724 6015 2306 8446 4737 1028
+667 267 934 534 134 801 401 1 668 268 935 535 135 802 402 2 669 269 936 536
+848 623 398 173 1021 796 571 346 121 969 744
+20736 19549 18362 17175 15988
+6889 13778 5676 12565 4463 11352 3250 10139 2037 8926 824 7713 14602 6500 13389 5287 12176 4074 10963 2861
+3805 7610 11415 1143 4948 8753 12558 2286 6091
+6962 3879 796 7758 4675 1592 8554 5471 2388 9350 6267 3184 101 7063 3980
+3902 7804 11706 15608 19510
+6587 13174 1572 8159 14746 3144 9731 16318 4716 11303 17890 6288 12875 1273
+26978 21205 15432 9659 3886
+9017 18034 27051 7755 16772 25789 6493 15510 24527 5231 14248 23265
+13496 8845 4194 17690
+28 56 84 112 140 168 196 224 252 280 308 336 364 392 420 448 476
+8813 17626 26439 7521
+6602 13204 19806 26408 733 7335 13937 20539 27141 1466 8068 14670 21272 27874 2199 8801 15403 22005 28607 2932
+9284 157 9441 314
+24227 20999
+1089 1031 973 915
+724 399 74 798 473 148 872 547 222 946 621 296 1020 695 370 45 769 444
+10520 9579 8638 7697 6756 5815 4874 3933 2992 2051 1110 169 10689 9748 8807 7866 6925 5984 5043 4102
+4106 8212 12318 16424
+7002 14004 21006 5723 12725 19727 4444 11446 18448 3165 10167 17169 1886 8888 15890 607
+1296 2592 3888 5184 6480 7776 9072 10368 11664 12960 14256 15552 16848 18144 19440
+1423 2846 4269 5692 7115 8538 9961 11384 12807 14230 15653 17076 18499 1009 2432 3855 5278 6701
+3860 7720 11580 15440 733 4593 8453 12313 16173 1466 5326
+8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 128 136 144
+17852 15871 13890 11909 9928 7947 5966 3985 2004 23 17875 15894 13913 11932 9951
+12492 11023 9554 8085 6616 5147 3678 2209 740 13232 11763 10294 8825 7356 5887 4418 2949 1480 11 12503
+7361 7085
+21653 19345
+1313 2626 3939 5252 6565 41 1354 2667 3980 5293 6606 82 1395
+13268 9553 5838 2123 15391 11676 7961 4246 531 13799 10084 6369 2654
+2048 4096 335 2383 4431 670 2718 4766 1005 3053 5101 1340 3388 5436 1675 3723 5771
+1102 2204 159 1261 2363 318 1420 2522 477 1579 2681 636 1738 2840 795 1897 2999 954 2056
+19812 17939 16066 14193 12320
+2221 4442 6663 8884 11105 13326 15547 17768 19989
+15145 12819 10493 8167 5841 3515 1189 16334 14008 11682 9356 7030 4704 2378 52 15197
+6273 12546 5174 11447 4075 10348 2976 9249 1877 8150 778 7051 13324 5952
+7298 6491 5684 4877 4070 3263 2456 1649 842 35 7333 6526
+4966 4265 3564 2863 2162 1461 760 59 5025 4324 3623 2922 2221 1520 819 118 5084 4383 3682
+20094 9119 29213 18238 7263 27357 16382 5407
+2362 4724 7086 2257 4619
+1366 2732 4098 727 2093 3459 88 1454 2820 4186 815 2181 3547
+22440 15223 8006 789 23229 16012 8795 1578 24018 16801 9584 2367 24807
+1423 2846 4269 5692 7115 8538 9961 11384 964 2387 3810 5233 6656 8079 9502 10925 505 1928 3351
+5916 11832 17748 4751 10667 16583 3586 9502 15418 2421 8337 14253 1256 7172
+5085 3971 2857 1743
+4276 8552 12828 17104 21380 25656 2059 6335 10611 14887 19163 23439 27715 4118
+1466 2932 4398 5864 7330 8796
+64 128 192 256 320 384 448 512 576 640 704 768
+4142 8284 1227 5369
+22418 15779 9140
+1187 2374 984 2171 781 1968
+9520 5489 1458 10978 6947 2916 12436 8405 4374 343
+1752 3504 5256 7008 737 2489
+25276 18689 12102 5515 30791 24204 17617
+5096 10192 15288 191 5287 10383 15479 382
+6694 13388 20082 3075 9769 16463 23157 6150 12844 19538 2531 9225 15919 22613 5606 12300 18994 1987
+7897 15794 23691 31588 6960 14857 22754
+7460 14920 6447 13907 5434 12894 4421 11881
+6978 13956 6751 13729 6524 13502 6297 13275 6070 13048 5843 12821 5616 12594 5389 12367 5162 12140 4935 11913
+10652 3521 14173 7042 17694 10563 3432 14084 6953 17605 10474 3343 13995 6864 17516
+4862 9724 14586 19448 1129 5991 10853 15715 20577
+11500
+5377 10754 1382 6759 12136 2764 8141 13518 4146 9523 151 5528 10905 1533 6910 12287 2915 8292 13669 4297
+98 196 294 392 490 588 686 784 882 980 1078 1176 1274 1372 1470 1568 1666 1764
+112 224 336 448 560 109 221 333 445 557 106 218 330 442 554 103 215
+8011 1199 9210 2398 10409 3597 11608 4796 12807 5995 14006 7194 382 8393 1581 9592 2780 10791
+2301 2267 2233 2199 2165 2131 2097 2063 2029 1995 1961 1927 1893
+3829 1675 5504 3350 1196 5025 2871 717 4546 2392 238 4067 1913 5742
+778 709 640 571 502 433 364
+1699 3398 5097 151 1850
+2279 4558 6837 9116 222 2501 4780 7059 9338 444 2723 5002 7281 9560
+1564 3128 4692 6256 7820 9384 10948 12512 14076 15640 1179 2743 4307 5871 7435 8999 10563 12127 13691
+5896 11792 17688
+25815 21587 17359
+8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 128 136 144 152 160
+9699
+5041 10082 15123 4665 9706 14747
+8465 16930 192 8657 17122 384
+241 482 150 391 59 300 541 209 450 118 359 27 268 509 177 418 86 327
+17682 13043 8404 3765 21447
+598
+21743 13289 4835 26578 18124 9670 1216 22959 14505 6051 27794 19340
+12240 559 12799 1118 13358 1677 13917 2236 14476
+19576 11425 3274 22850 14699 6548 26124 17973 9822 1671 21247 13096 4945 24521 16370 8219 68 19644 11493
+7312 259 7571 518 7830 777
+24095 23627 23159 22691 22223 21755 21287 20819 20351 19883 19415 18947 18479 18011 17543 17075
+789 1578 2367 3156 3945 767 1556 2345 3134 3923 745 1534 2323 3112 3901 723 1512 2301
+2114 1443 772 101 2215 1544 873 202 2316 1645 974 303
+1545 3090 1474 3019 1403 2948 1332 2877 1261 2806 1190 2735 1119 2664 1048
+1052 2104 827 1879
+6621 13242 19863 26484 3766 10387 17008
+22102 20891
+3370 6740 10110 2127 5497 8867 884 4254 7624 10994 3011 6381 9751 1768 5138 8508
+8398 5493 2588 10986 8081 5176 2271 10669 7764 4859 1954 10352 7447 4542 1637
+1283 2566
+11239 2327 13566 4654 15893 6981 18220 9308 396 11635 2723 13962 5050 16289
+373 361 349 337 325 313 301
+3211 6422 9633 2685
+154 308 462 616 770 924 1078 137 291 445 599 753 907 1061 120 274 428 582 736 890
+211 422
+6529 6521 6513 6505 6497 6489 6481 6473 6465 6457 6449
+1032 1031 1030 1029 1028 1027 1026 1025
+8856 17712 8263 17119 7670 16526 7077 15933 6484 15340 5891 14747 5298 14154 4705 13561 4112 12968
+5668 11336 17004 22672 2633 8301 13969
+9941 19882 29823 9027 18968 28909 8113 18054 27995 7199 17140 27081 6285 16226 26167 5371
+15686 4333 20019 8666 24352 12999 1646
+8513 17026 25539 6611 15124 23637 4709 13222 21735 2807 11320 19833 905 9418
+256 512 768 1024 1280 1536 1792 2048 2304
+12574 725 13299 1450
+514 173 687 346 5
+2 4 6 8
+11174 3445 14619 6890 18064 10335 2606 13780 6051 17225 9496 1767 12941
+735 1470 2205 2940 3675 4410 5145
+617 1234 1851 73 690 1307 1924 146 763 1380 1997 219 836 1453
+494 988 1482 1976 2470 2964 349 843 1337 1831
+7050 14100 21150 6787 13837 20887 6524 13574 20624 6261
+8498 8131 7764 7397 7030 6663 6296
+11960 23920 7193 19153 2426 14386
+6848 6019 5190 4361 3532 2703 1874 1045 216 7064 6235 5406 4577
+12899 11341 9783 8225 6667 5109 3551 1993 435 13334 11776 10218 8660 7102 5544 3986
+78 156 234 312 77 155 233 311
+26101 21655 17209 12763
+11012
+2926 5852 8778 11704 14630 17556 20482 23408 2301 5227 8153 11079 14005 16931 19857 22783 1676
+377 151 528 302 76 453 227 1 378 152 529 303 77 454 228
+1729 3458 5187 1291
+24416 16591 8766 941 25357 17532 9707 1882 26298 18473 10648 2823 27239 19414 11589
+8839 4123 12962 8246 3530 12369 7653 2937 11776 7060 2344 11183 6467 1751 10590 5874 1158
+23059 14513 5967 29026 20480 11934 3388 26447 17901 9355 809 23868
+11663
+8 16 24 32 40 48 56 64 72
+13849 27698 9632 23481 5415 19264 1198 15047 28896 10830 24679 6613 20462 2396 16245 30094
+3304 6608 2315 5619 1326 4630 337 3641 6945 2652 5956 1663
+3431 6862 10293 897 4328 7759 11190 1794 5225 8656 12087
+1475 257 1732 514 1989 771
+10430 8947 7464 5981 4498 3015 1532 49 10479
+25 50 75 100 125 150 175 200 225 250 275 300 325 350 375 400 425 450
+14744 81 14825 162
+21828 14981 8134 1287 23115 16268 9421 2574 24402 17555 10708
+20559 12085 3611 24170 15696 7222
+16339 5763 22102 11526 950 17289 6713 23052 12476 1900 18239 7663 24002 13426 2850 19189 8613 24952
+24481 20733 16985 13237 9489 5741 1993 26474 22726 18978 15230 11482 7734 3986 238 24719 20971 17223
+3941 3373 2805 2237 1669 1101 533 4474 3906 3338 2770 2202 1634 1066 498 4439 3871
+8462 4983 1504 9966 6487 3008 11470 7991 4512 1033
+5231 10462 1506 6737
+14624 29248 11383 26007 8142 22766 4901 19525 1660 16284
+24646 20807 16968 13129 9290 5451 1612 26258 22419 18580 14741 10902 7063 3224 27870 24031 20192 16353 12514 8675
+7115 4651 2187 9302 6838
+15127 8691 2255 17382 10946 4510 19637 13201 6765 329 15456 9020 2584 17711 11275 4839 19966 13530
+20017 12253 4489 24506 16742 8978 1214 21231 13467 5703 25720 17956 10192
+10988 21976 7893 18881 4798 15786 1703 12691 23679 9596 20584 6501 17489 3406 14394 311 11299 22287 8204 19192
+16 32 48 64 80 96 112 128 144 160 176 192 208 224
+1836 3672 5508 7344 1627 3463 5299 7135 1418 3254 5090 6926 1209 3045
+27138 26335 25532 24729 23926 23123 22320 21517 20714 19911 19108
+2212 4424 6636 8848 11060 13272 15484 17696 895 3107 5319 7531 9743 11955 14167 16379 18591 1790 4002
+17811 6601
+6009 12018 1922 7931 13940 3844 9853 15862 5766 11775 1679 7688 13697 3601 9610 15619 5523 11532 1436 7445
+9149 18298 2182 11331 20480 4364 13513 22662 6546 15695 24844 8728
+17362 8985 608 17970 9593 1216 18578 10201 1824 19186 10809 2432 19794 11417 3040
+19205 7737 26942 15474 4006
+7953 15906 4168 12121 383 8336 16289 4551 12504 766 8719 16672 4934 12887 1149 9102 17055 5317 13270
+3095 1941 787 3882 2728 1574 420 3515 2361 1207 53 3148 1994 840 3935 2781 1627 473
+17606 7103 24709 14206 3703 21309 10806 303 17909 7406 25012 14509 4006 21612 11109 606 18212 7709 25315
+10884 21768 2743 13627 24511 5486 16370 27254 8229
+380 760 1140 1520 1900 2280 2660 3040 3420 3800 4180 4560 4940 5320
+13277 8665 4053 17330 12718 8106 3494
+128 256 384 512 640 768 896 1024 1152 1280 1408
+14229 3395 17624 6790 21019 10185 24414 13580 2746 16975 6141 20370 9536 23765
+6918 13836 20754 5759 12677 19595 4600 11518 18436 3441 10359 17277 2282
+4344 8688 13032 3215 7559 11903 2086 6430 10774 957 5301 9645
+29201 26351 23501 20651 17801 14951 12101 9251
+24348 16495 8642 789 25137 17284 9431 1578 25926 18073 10220 2367 26715 18862 11009 3156
+9425 5001
+1447 1369 1291 1213 1135 1057 979 901 823 745
+21934
+4459 8918 13377 17836 22295 1263 5722 10181 14640 19099 23558 2526 6985 11444 15903 20362 24821 3789
+16933 14489 12045 9601 7157 4713 2269 19202 16758 14314 11870
+2874 5748 8622 11496 2633 5507 8381 11255 2392 5266 8140 11014
+13579
+4 8 12
+5626 11252 2985 8611 344 5970 11596 3329 8955 688 6314 11940 3673 9299 1032
+1386 2772 4158 5544 6930 8316 9702 11088 12474 13860 15246 16632 18018 19404 20790 22176
+5245
+162 324 113 275 64 226 15
+15133 8495 1857 16990 10352 3714 18847
+3741 7482 11223 14964 18705
+608 1216 1824 2432
+963 1926 2889 3852 4815 5778 6741
+11876 9325 6774 4223 1672 13548 10997 8446 5895 3344 793 12669 10118 7567
+1472 2944 4416 5888 1465 2937
+1355 607 1962 1214 466 1821 1073 325 1680
+11032 3813 14845 7626
+1108 497 1605 994
+5446 10892 1443 6889 12335 2886
+7601 1289 8890 2578 10179 3867 11468 5156 12757 6445 133 7734 1422 9023 2711 10312
+13418 11827 10236 8645 7054 5463 3872 2281 690 14108 12517 10926 9335 7744 6153 4562 2971 1380
+5020 1569 6589 3138 8158 4707 1256 6276 2825 7845
+4332 8664 3505 7837 2678 7010 1851 6183 1024 5356 197
+3778 7556 3031 6809 2284 6062 1537 5315 790 4568 43 3821 7599 3074 6852 2327 6105
+23452 20409 17366 14323 11280 8237 5194 2151
+4411 4097 3783 3469 3155 2841 2527 2213
+24802 24725 24648 24571 24494 24417 24340 24263 24186 24109 24032
+15024 13961 12898 11835 10772 9709 8646 7583 6520 5457 4394 3331 2268 1205 142 15166 14103 13040 11977 10914
+6608 2071 8679 4142 10750 6213 1676 8284 3747 10355 5818
+1563 3126 4689 461 2024 3587 5150 922 2485 4048 5611 1383 2946 4509 281 1844 3407 4970
+2571 5142 7713 10284 12855 15426 17997 20568
+21192 10099 31291 20198
+25757 24225 22693 21161 19629 18097 16565 15033 13501 11969 10437
+7589 15178 5302 12891 3015 10604 728 8317 15906
+6453 12906 19359 25812 3238 9691 16144 22597 23 6476 12929 19382 25835 3261 9714
+4080 1211 5291 2422 6502 3633 764 4844 1975 6055 3186 317 4397 1528 5608 2739 6819 3950 1081
+20822 15499 10176 4853 25675 20352 15029 9706 4383 25205 19882 14559 9236 3913 24735 19412 14089 8766 3443 24265
+8780 7811 6842 5873
+13246 26492 7651 20897 2056 15302 28548 9707 22953 4112 17358 30604
+9613 19226 9228 18841 8843 18456
+4 8 12 16 20 24 28 32 36
+17536 14673 11810 8947 6084 3221 358 17894 15031
+3208 1185 4393 2370 347 3555 1532 4740 2717 694 3902 1879
+3854 7708 11562 15416 19270 23124 973 4827 8681 12535
+13836 8159 2482 16318 10641 4964
+9012 3421 12433 6842 1251 10263 4672 13684 8093 2502 11514 5923 332 9344 3753 12765 7174 1583
+15647 31294 15276 30923 14905 30552 14534 30181 14163 29810 13792 29439 13421 29068 13050 28697 12679 28326 12308
+293 586 879 1172 1465 1758 2051 2344 2637 2930
+6622 13244 19866 26488 2557 9179 15801 22423
+15658 3233 18891 6466 22124 9699 25357 12932 507 16165 3740 19398 6973 22631 10206 25864 13439 1014 16672 4247
+12798 3203 16001 6406 19204 9609 14
+21940 16857 11774 6691 1608 23548 18465 13382 8299 3216 25156 20073 14990 9907
+100 200
+931 1862 2793 3724 4655 5586 6517 7448 8379 9310 10241
+18906 6731 25637 13462 1287 20193 8018 26924 14749 2574 21480 9305 28211 16036 3861 22767
+4365 3989 3613 3237 2861 2485 2109 1733
+5089 10178 15267 827 5916 11005 16094 1654 6743
+13865 8827 3789 17654 12616 7578 2540
+7182 6509
+7474 14948 22422 29896 7407 14881 22355 29829 7340 14814 22288 29762 7273
+14617 6673 21290 13346 5402 20019 12075
+8646 17292 5701 14347 2756 11402 20048 8457 17103 5512 14158 2567 11213
+1153 2306 3459 4612 5765
+3748 1793 5541 3586 1631 5379 3424 1469 5217 3262 1307 5055 3100 1145
+13224 26448 12619 25843 12014 25238 11409 24633 10804 24028 10199 23423 9594 22818 8989
+3787 7574 11361 15148 2584 6371 10158 13945 1381
+2549 5098 7647 10196 2316 4865 7414 9963
+13087 26174 8006 21093 2925 16012 29099 10931 24018 5850 18937
+10807
+6323 12646 18969 25292 1660 7983 14306 20629 26952 3320 9643
+10871 21742 6722 17593 2573 13444 24315 9295 20166 5146 16017 997 11868 22739 7719 18590
+20963 15685 10407 5129 26092 20814 15536 10258 4980 25943 20665 15387 10109 4831 25794 20516 15238 9960 4682 25645
+11968 23936
+5960 11920 17880 23840 2851 8811 14771 20731 26691 5702 11662 17622 23582 2593 8553
+6583 4377 2171 8754 6548 4342 2136 8719 6513 4307 2101 8684 6478
+32 64 9 41 73 18 50 82 27 59 4 36 68 13 45
+18886 17665 16444 15223 14002
+29306 26019 22732 19445 16158 12871 9584 6297 3010 32316
+7131 6731 6331 5931 5531 5131
+2505 5010 7515 10020 958 3463 5968 8473 10978 1916 4421 6926 9431 369 2874 5379 7884 10389
+11053 22106 404 11457 22510 808 11861 22914 1212 12265 23318 1616 12669 23722 2020 13073
+256 512 768 1024 1280 1536 1792 2048 2304 2560
+13854 8843 3832 17686 12675 7664 2653 16507 11496
+32 64 96 128 160 192 224 256 288 320 352 384 416 448
+23872 21887 19902 17917
+9572 19144 28716 7493 17065 26637 5414 14986 24558 3335
+2755 5510 8265 11020 1332 4087
+22039 16907 11775 6643 1511 23550 18418 13286 8154 3022 25061 19929 14797 9665 4533
+7469 14938 5708
+11359 22718 4998 16357 27716 9996
+1435 2870 4305 5740 7175 8610 1332 2767 4202 5637 7072 8507 1229
+2050 4100 6150 8200 10250
+1420 2840 4260 5680 7100 8520 9940 11360 12780 14200 15620 17040
+4492 2907 1322 5814 4229 2644 1059 5551 3966 2381 796 5288 3703 2118 533 5025
+10056 7633 5210 2787 364 10420 7997 5574 3151 728 10784 8361 5938 3515 1092 11148 8725 6302 3879 1456
+25364 22953 20542 18131 15720 13309 10898 8487 6076 3665 1254 26618 24207 21796
+7688 4423 1158 8846 5581 2316 10004 6739 3474 209 7897 4632
+3182 1891 600 3782 2491 1200 4382 3091 1800 509 3691
+3929 7858 11787 1605 5534 9463 13392 3210 7139 11068 886 4815 8744 12673
+6316 12632 4143 10459 1970 8286 14602 6113 12429 3940 10256 1767 8083 14399 5910 12226 3737
+16819 12597 8375 4153 20972 16750 12528 8306
+26684 26639 26594 26549 26504 26459 26414 26369 26324 26279 26234
+15167 5717 20884 11434 1984 17151 7701 22868 13418 3968 19135 9685 235 15402 5952 21119 11669
+5548 3867 2186
+13829 27658 11302 25131
+4414 8828 533 4947 9361 1066 5480 9894 1599 6013 10427 2132 6546 10960 2665 7079 11493 3198
+11201 22402 4752 15953 27154 9504 20705 3055 14256 25457 7807
+32 64 96 128 160 192 224 256
+21344 20311 19278 18245 17212 16179
+12074
+8457 16914 5680 14137
+116 232 348 464 580 696 812 928 1044 1160 1276 1392 1508
+17528 3041 20569 6082 23610 9123 26651 12164
+14371 5545 19916 11090 2264 16635
+26996 23771 20546 17321 14096
+971 1942 2913 3884 4855 5826 6797 7768
+11616 23232 10651 22267 9686 21302 8721 20337 7756 19372 6791 18407 5826 17442 4861 16477 3896 15512
+16801 2837 19638 5674 22475 8511 25312 11348 28149 14185
+2027 4054 6081 8108 10135 12162 14189 16216 18243 20270 22297 24324
+1369 463 1832 926 20 1389 483 1852 946 40 1409
+636 1272 1908 2544
+2749 5498 8247 10996 548 3297
+7669 6769 5869 4969 4069 3169 2269 1369 469 8138 7238 6338 5438 4538 3638
+4867 655 5522 1310 6177 1965 6832 2620 7487
+2303 4606 834 3137 5440 1668 3971 199 2502 4805
+5605 3779 1953 127 5732 3906
+2714 5428 8142 961 3675 6389 9103 1922 4636 7350 169 2883 5597 8311 1130 3844 6558 9272
+73 146 219 292 365 438 511 584 657 730
+4346
+12338 8327 4316 305 12643 8632 4621
+883 803 723 643 563 483 403 323 243 163 83 3 886 806 726 646 566 486
+729
+605496 210991 816487 421982 27477 632973 238468 843964 449459 54954 660450 265945 871441 476936 82431 687927 293422 898918 504413 109908
+]]></test_output>
+<hint><![CDATA[<p><style type="text/css">h2 { margin-top: 0.05cm; margin-bottom: 0.05cm; color: rgb(0, 0, 0); line-height: 0.78cm; page-break-inside: avoid; }h2.western { font-family: "Times New Roman",serif; font-size: 14pt; }h2.cjk { font-family: "宋体","SimSun"; font-size: 14pt; font-style: normal; }h2.ctl { font-family: "Calibri",sans-serif; font-size: 16pt; }p { margin-bottom: 0.21cm; }</style></p>
+<p style="text-indent: 0.74cm; margin-bottom: 0cm;"><font face="DejaVu Serif, serif">In case two: N=5,M=2,X=2,the initial sequence One is 1,2,3,4,5.After the first operation, the sequence One is 2,4,1,3,5. After the second operation, the sequence One is 4,3,2,1,5.So,output 4 3.</font></p>
+<h2 lang="zh-CN" style="margin-top: 0.13cm; margin-bottom: 0.13cm;" class="cjk"></h2>
+<p></p>]]></hint>
+<source><![CDATA[辽宁省赛2010]]></source>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 <solution language="C++"><![CDATA[#include <stdio.h>
 
 #include <math.h>
@@ -283255,6 +284590,11 @@ int main()
 
 }
 
+<<<<<<< HEAD
 ]]></solution>
 </item>
+=======
+]]></solution>
+</item>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 </fps>

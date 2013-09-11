@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+
+public class Main
+{
+	
+	public class DigitalSet 
+	{
+		public int arr[];
+		public int length;
+		
+		public DigitalSet ()
+		{
+			this.arr = new int[100];
+		}
+		
+	}
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		String str = null;
+		str = scanner.next();
+		
+		while ('0' != str.charAt(0))
+		{
+			
+			
+			str = scanner.next();
+		}
+		
+	}
+
+}

@@ -11,6 +11,7 @@
 <launchGroup id="org.eclipse.debug.ui.launchGroup.debug">
 <mruHistory>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Main (17)&quot;/&gt;&#13;&#10;"/>
 >>>>>>> 13628f1957061e76cf096cb3b220a65e98e1e3f0
@@ -27,12 +28,16 @@
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Main (4)&quot;/&gt;&#13;&#10;"/>
 =======
 >>>>>>> 13628f1957061e76cf096cb3b220a65e98e1e3f0
+=======
+<launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Main (15)&quot;/&gt;&#13;&#10;"/>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 </mruHistory>
 <favorites/>
 </launchGroup>
 <launchGroup id="org.eclipse.debug.ui.launchGroup.run">
 <mruHistory>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Main (17)&quot;/&gt;&#13;&#10;"/>
 >>>>>>> 13628f1957061e76cf096cb3b220a65e98e1e3f0
@@ -49,6 +54,9 @@
 <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Main (4)&quot;/&gt;&#13;&#10;"/>
 =======
 >>>>>>> 13628f1957061e76cf096cb3b220a65e98e1e3f0
+=======
+<launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;Main (15)&quot;/&gt;&#13;&#10;"/>
+>>>>>>> 02663ff90fcbab17f5eb4bac36abf682d3bb8ffc
 </mruHistory>
 <favorites/>
 </launchGroup>
