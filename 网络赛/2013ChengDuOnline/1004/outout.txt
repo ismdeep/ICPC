@@ -1,0 +1,11 @@
+--- 2  1 -> ab
+--- 3  2 -> aab
+--- 4  2 -> aabb
+--- 5  3 -> aaaba
+--- 6  3 -> aaabab
+--- 7  3 -> aaababb 
+--- 8  3 -> aaababbb 
+--- 9  4 -> aaaababba  
+--- 10 4 -> aaaababbaa 
+--- 11 4 -> aaaababbaaa 
+--- 12 4 -> aaaababbaaaa
