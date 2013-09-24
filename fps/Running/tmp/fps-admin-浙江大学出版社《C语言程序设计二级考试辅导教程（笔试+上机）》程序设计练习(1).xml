@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[C二级辅导-进制转换]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">编程，输入一个１０进制正整数，然后输出它所对应的八进制数。</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[10]]></sample_input>
+<sample_output><![CDATA[12]]></sample_output>
+<test_input><![CDATA[64]]></test_input>
+<test_output><![CDATA[100]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include "stdio.h"
+int main()
+{
+ int x;
+ scanf("%d",&x);
+ printf("%o",x);
+}]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-温度转换]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.0.0.1:80/JudgeOnline/admin/../upload/pimg1054_1.png]]></src><base64><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAJMAAAA0CAIAAAABnp0UAAAAA3NCSVQICAjb4U/gAAAAGXRFWHRTb2Z0d2FyZQBnbm9tZS1zY3JlZW5zaG907wO/PgAADCZJREFUeJztnHdcFNcWx8+yBViQLsG7svQmFlAJlvhEJBLBFjWJCsTwQBPBEjExihpFjR+jwWiwR0mMvhALsYBYUEEUC6CIIqhILwu4wC5Lm53ZnfeHortss5AwKN//nDvlzP7uOXPOuRdpJElCD90Qra42oIfXpEe57kqPct0VRlcb8ByiPHb8sFV5yoYGbb6VMMuC/m9bRG2oo9xTDDlWRh1t0rU1YtC6xBoqQy3ldN1XJ576zLwnhL8EPT9Sd6VHue4KtZQj6rN+iwwa5+Fsw+XaOrt7TQ/beOxOPdHVZlESaimHl/75v0K7gB/+SDh/9uj2xaPJlJhF/h98vie3uafRowBJFSQNN3at23mllpA5hj3eN4mLEBqy/EajtMssoyY0ktp9S9GV+e/PON7I9Np765C/aU9t8AJqRUtF9Jy87AEAz00rbutqW6gF1ZXT0jHSpwNAE79Z0tW2UAuqKEe2lGZczqxo6xi6SUzQJAEAPRO2hu6XFMffEm1JAiM0f8KoohzBO/XtrLk78jqGxOaCK0UAwHAeaa2t5nK87NSW2Jy3JAMlas5viUnja5iHmrtfRMO9pENxpy6kZeaX85sJAJaRlfOgISPG+Pr5+wxGOp2YNdQmxKZ/4+Zj+nw64WUntyYIAEynzh9jpnKSkS05OzcX+/w4yUDBFsGZmYNC0zQXhHZLL19cZM98bcufW/L45E/rYrMJMxMtYXkVuH62ZHnwCPMX98Vrru7f+EtCMb23CaOJxyNsJ87/7quxXG05w5kcvy/sI9fGWUUHWqkxSV3iiT+5FjN7KELIfdqSLQcTU65n3bp55ezh7cs+cUMIIYS4oyOvNXZKjisu3OGFEEKWXgv3nL1dVFVdWZBx4qcgN4SQ7YRNNwUSNZcW7AoIT3yi9Awx/3Fuzq2TEW4IIeS3Kz1HgdtnVnmifotuNL/5O2CPYz9xdJp5sBgjSZKUtjzYN80WDf4mpf6ZaVjRH4GuTlO3ZdTjT/9dlvD1UGQzZWd+q6Lhj7Z/Oud4DaEw8ByVykmb7u+d5YJQ3zGRSeVYh0GJIH2VJ0IIua/KVnzq64E35J/btzZsuvcQR0uEEEKWTp5+X6w6cK1arO4yqTB10YcL09TMH2n96c+4CKFhG/M6vgdJkoLzQTbcaSeevHm5KEyZ44DQ0DW3n08C0ZV5jsjy2c2J6qPTucgq4JxAxjRBSpgLsvz4ME9BIrzstym+m/OVWPwMFcqJyw7PdkIIuS08V6tUd4IXNwEh7sykhq6tkCX8xKDhcy4K1ZzSmr1qMELIOvC8srOIplpejUD85m8hFSSH2CNkHZDIb79Z6+0V7gj57C/DSZJszljSHyFk83myjBnSuhOTEXL86mqTwv3Ej2N8Rqy8rdIxlH488NI/F36bLALDyZtX+/RWmtPRjVw87I0HeDnrdWl1TApuxt0xG+uqr/oUiSDvVjUAWA610ZU5jN3/wdNydEyhVK+3hbkh883fgmY4Nib1bFLqnvHtDQOcd+N6DVj7DHuPAQC6Lp8vmOgxbOpEJxkzCEGFEMCIY6iYbzCR5yDsYkIBpuqBSiaPMCXcBSGERv38UG2gogCiq/MGeKiP2E3p4U4IIfvQVLmIKrwQaGsffKlzvtJKEPNSN/i5eIT8nt+s0p+JJ2fDXZFD4JFKXMmopOboRLsxu4pVaKCotZSfsitBCABOAVNsXiXbIvFGfoNCQaY4l3qZGut20s4EvCrjnsh8AWKpOaUmO1cEAH1cDFrr6sTthyXl98oINJ2r0zmGyELWJYV+tPhCVRPD/cttS6c5spX7s1RwM3p22Bnrr+O2T0PKUnwtfStHvYr0x61fWSuTQfESUXZ8JgEAlj4f9HmlNLkpfZFnwHmVzt2OS9T1s6HczlmLx3i5NSxkwVZTlbYUXC8BACiMnuAeLT+k49vf/I0LAUVopn77M/2AEOYdiwz0GXVqy6kd0y3ln0M25R36NnTDg+E/nls/zV5XRahmmtoYY1kP+biPgRIzFX5BrOzmAwwA2P1HctXVvoqwB0b8/keAWIPTaRk6m3fWXiBpS20Nxh6gr+Z+WNnNhzgA2M/buXrki3qPKD+yJDLP/Z9wuXYYhv0+jVqb4PHlivUzxu32fvFsrOTvZV+sKxyz4dzW8Wp/Yrq+uT4IK4UEwMsoh9eX1AEAmLtYvOJr0U0G/GfsgFe7BgA4HM6rXlJZWQkAAFJxsxgYOgzVLicVPsiqAgDkPekj74HPfyayIWmvSMdOhcuJUkPfDzjTqMEI7aGbrv4dgJ7Pmtb8/UtWXrZduj3C0+CZQVqGLsO4kJp9tVTsPUAbAIBsyd8XOvuwdVRi/HiOJn/XYrFZgDVjyn1BSdSi0QAA2MaqnJg60OgMOkgIiWo3bytKLwQAlvMIK7nZrff+utNJvWyVp6T6wzenZK6Vano4y0g2eGCPj+45eaPS5OjDME8PdvtROpMOQLYvpBHVCRHBcQ7R8atHGb9c25EGDBZduQ4Kymn3ce0DZ4qgmd+iynZx2YXD54pJ63EzPrSSzQ2kuBiXasxQtBgspqwx7Q70GtDZZga0VkGryg4fXptzVwAANiMd2LLHaSwz+35mqq6iaRtbIONXtIXZZ4iTNtQO8nGQSfpbS7IrgT1yBJcFAJLa08vX80LifpGTjRRlx+5rmLzIW7G7J8VEGE3PTMXHQOF0pvX4STYAUJqWpbzn2Za/e27wsjX7CnqZyLu7KG2us61mxv9W3mkbS7TfczBp4zWIVY23Fl4rAQBjN/d/IhWRQ8ts3Loob93U79ckVjy1B6++9HPUWemI5StGG9EAiMqE3dn9wqZytQiCIAgCb2vk3U/evcB/Rpy2taEyF5QIKgVave1MlWdzikdZjiFrPzkUdDT7p00XfaPHyRXiUlHugQUzf7ynPfz7A5HDesm7MXvwqvgTYZpUofeysui0TZ7alh62jNQHtWJ/Y2WFgbgi4yEGQHP4wPYfTEXaYVoHxabaxG6KmTv10HsW2qKKCsx64q8Xwp4FJqw8q+hJ8n8HWne8rt8af0ul86qtOr/edJC9gYrAqqzIkzbn/RroihDq//Gy3cdTM3Pu3clMSzywMXy8M0Jcr8VHHrVQZFeIuHi3t/PMMw0dDksxflF+3v1rO30RQmjgwhPZeXl5D8qb1PStqYf40dbRrrOTBSqGVXacJcK8k1siZnq72fd9uizQb7hf0NJtp+41KKv3uwxxwbaxw5d37O41XVvgjDriFqm6CUhBJLXHpw+acVL5GgipRrnuAl6yb8q4TWp66t0UqSA5dGTImTqVwY0qa+IAAEBi5al7ls4a627H4XA4fR0G+wZH/XVXqHZxmMGdOt/lxomHGns33QtpffoRnm/4aBPVpdm/OY/UQtRdjvLhImT90fKDafeLy4pyLuydP5KDkFvY8Qq1nW+8/Mji75Jqu9VHTAPYo93BS8/z1b0SVZSTPDkd4ogQGhhxWfAiQBC8+EB7hCwn7i9Rqx1Rc37TxqQqqq9svCTSptz9y7akN6ifihRRjqg85I8QQh5Rd9vkBkRX5zsjhNyWZbWovwNWlVvY+Ha4nbgm536dxjyQIt85rCyzGACA48aRL8x0LN37AkBtcsIj9TtlWX1cbXtR5G3eEKb5wH4mGmteirwrKSUkAABadC35TzKNyWIAAPBuFTRq6iS+W1BEOZaFSx8AgOoHNbjcAPGkkA8AAA1lDW/JRthOgiLKMS19pzkDQEn8iYeyUbH5fnxiFQAA4C14j8/JQhHlgGkXHB0xkA6lvwQvPpBVKyaBbKu6/uvCkP38p307hm4n7PJ5m6CKckDTc4uIv7hjnrfupcjJ7jZ9OX3tPObG68w5dCzCBQDAiKPwfza821Dp16CxHaasPDhlBdEiqBfiLCNTI106YPfWCQDArL+Dqp75OwqVlHsGjcE2Nm9fCJU2FtzhAeh5+squWPZAoWhJtpRev3S9tEV+TV3KTz96WwrmH4d6GnSRYVSFMsoRNacjgwJXXqqTySClgmvbNqSJDfzXLhmi13WmURPKKAcAAG2Xvg5ZfyyjkFdTUZCVGBM+YebvwuHL/oye0Gkb/d4eKPMX/qQo96+tO/9OzbhbwGuSAIA+x23UhICw8E8Hq9iI8Y5DGeV6eEWoFS17eHn+D1eGk+Bg1OXeAAAAAElFTkSuQmCC]]></base64></img><description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">输入一个华氏温度，要求输出摄氏温度。公式为</font></p>
+<p style="margin-bottom: 0cm;"><font color="#000000"><img width="147" height="52" src="http://127.0.0.1:80/JudgeOnline/admin/../upload/pimg1054_1.png" alt="" /></font></p>
+<p style="margin-bottom: 0cm;">保留两位小数</p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[-40]]></sample_input>
+<sample_output><![CDATA[-40.00]]></sample_output>
+<test_input><![CDATA[100]]></test_input>
+<test_output><![CDATA[37.78]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include"stdio.h"
+int main( )
+{
+  float c,f;
+  scanf("%f",&f);
+  c=(5.0/9.0)*(f-32);
+  printf("%.2f\n",c);
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-分段函数]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.0.0.1:80/JudgeOnline/admin/../upload/pimg1055_1.png]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">有一个函数如下，写一程序，输入<font>x</font>，输出<font>y</font>值。</font></p>
+<p style="margin-bottom: 0cm;"><img width="267" height="85" src="http://127.0.0.1:80/JudgeOnline/admin/../upload/pimg1055_1.png" alt="" /></p>
+<p style="margin-bottom: 0cm;">保留两位小数</p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[1]]></sample_input>
+<sample_output><![CDATA[1.00]]></sample_output>
+<test_input><![CDATA[10]]></test_input>
+<test_output><![CDATA[19.00]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include"stdio.h"
+int main( )
+{ float x,y;
+  
+  scanf("%f",&x);
+  if(x<1)
+  {y=x;
+   printf("%.2f\n",y);
+  }
+  else  if(x<10)
+         {y=2*x-1;
+          printf("%.2f\n",y);
+         }
+        else
+         {y=3*x-11;
+          printf("%.2f\n",y);
+         }
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-求偶数和]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">编制程序，输入<font>n</font></font><font color="#000000">个整数（<font>n</font></font><font color="#000000">从键盘输入，<font>n&gt;0</font></font><font color="#000000">），输出它们的偶数和。</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[2
+1 2]]></sample_input>
+<sample_output><![CDATA[2]]></sample_output>
+<test_input><![CDATA[5
+1 2 3 4 5]]></test_input>
+<test_output><![CDATA[6]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include <stdio.h>
+int main()
+{
+int i,n,x,sum=0;
+while(scanf("%d",&n),n<=0);
+for(i=1;i<=n;i++){
+scanf("%d",&x);
+if(x%2==0) sum+=x;
+}
+printf("%d\n",sum);
+}]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-等差数列]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font><font color="#000000">sum=2+5+8+11+14+</font><font color="#000000">&hellip;</font></font><font color="#000000">，输入正整数<font>n</font></font><font color="#000000">，求<font>sum</font></font><font color="#000000">的前<font>n</font></font><font color="#000000">项和。</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[2]]></sample_input>
+<sample_output><![CDATA[7]]></sample_output>
+<test_input><![CDATA[5]]></test_input>
+<test_output><![CDATA[40]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+  int i,n,x=2,sum=0;
+  scanf("%d",&n);
+  for(i=1;i<=n;i++){
+    sum=sum+x;
+	x=x+3;
+  }
+  printf("%d\n",sum);
+}]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-同因查找]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">求出<font>10</font></font><font color="#000000">至<font>1000</font></font><font color="#000000">之内能同时被<font>2</font></font><font color="#000000">、<font>3</font></font><font color="#000000">、<font>7</font></font><font color="#000000">整除的数，并输出。</font></p>
+<p style="margin-bottom: 0cm;"></p>
+<p style="margin-bottom: 0cm;"><font color="#000000">每行一个。<br />
+</font></p>
+<p style="margin-bottom: 0cm;"></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[]]></sample_input>
+<sample_output><![CDATA[]]></sample_output>
+<test_input><![CDATA[
+]]></test_input>
+<test_output><![CDATA[42
+84
+126
+168
+210
+252
+294
+336
+378
+420
+462
+504
+546
+588
+630
+672
+714
+756
+798
+840
+882
+924
+966
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[//      main.c
+//      
+//      Copyright 2010 zhblue <zhblue@d620>
+//      
+//      This program is free software; you can redistribute it and/or modify
+//      it under the terms of the GNU General Public License as published by
+//      the Free Software Foundation; either version 2 of the License, or
+//      (at your option) any later version.
+//      
+//      This program is distributed in the hope that it will be useful,
+//      but WITHOUT ANY WARRANTY; without even the implied warranty of
+//      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//      GNU General Public License for more details.
+//      
+//      You should have received a copy of the GNU General Public License
+//      along with this program; if not, write to the Free Software
+//      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+//      MA 02110-1301, USA.
+#include"stdio.h"
+#include"math.h"
+int main()
+{
+   int i;
+   for(i=10;i<=1000;i++)
+     if(i%2==0&&i%3==0&&i%7==0)
+       printf("%d\n",i);
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-计负均正]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">从键盘输入任意<font>20</font>个整型数，统计其中的负数个数并求所有正数的平均值。</font></p>
+<p style="margin-bottom: 0cm;"><font color="#000000">保留两位小数<br />
+</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[1 2 3 4 5 6 7 8 9 10
+-1 -2 -3 -4 -5 -6 -7 -8 -9 -10]]></sample_input>
+<sample_output><![CDATA[10
+5.50]]></sample_output>
+<test_input><![CDATA[1 3 40 50 60 70 80 90 100
+-2 -3 -5 100 04 102 -2 -3 50 917 1
+]]></test_input>
+<test_output><![CDATA[5
+111.20
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include"stdio.h"
+int main( )
+{
+  int i,a,b,x;
+  float aver;
+  a=0;b=0;
+  
+  for(i=1;i<=20;i++)
+   {
+	scanf("%d",&x);
+	if(x>0)
+	 { b=b+1;
+	   aver=aver+x;
+	 }
+	else if(x<0)
+	  a=a+1;
+    }
+  aver=aver/b;
+  printf("%d\n%.2f\n",a,aver);
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-公约公倍]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
+<p style="margin-bottom: 0cm;"><font color="#000000">输入两个正整数<font>m</font>和<font>n</font>，求其最大公约数和最小公倍数。</font></p>
+<p></p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[2 3]]></sample_input>
+<sample_output><![CDATA[1
+6]]></sample_output>
+<test_input><![CDATA[135
+999
+]]></test_input>
+<test_output><![CDATA[27
+4995
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include"stdio.h"
+int main()
+{
+  int a,b,m,n,temp;
+  //printf("请输入两个正整数:\n");
+  scanf("%d%d",&m,&n);
+  if(m<n)
+   {temp=m;
+    m=n;
+    n=temp;
+   }
+  a=m;b=n;
+  while(b!=0)
+   {temp=a%b;
+    a=b;
+    b=temp;
+   }
+   printf("%d\n",a);
+   printf("%d\n",m*n/a);
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-统计字符]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
+<p style="margin-bottom: 0cm;"><font color="#000000">输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数。</font></p>
+<p></p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[a 1,
+]]></sample_input>
+<sample_output><![CDATA[1
+1
+1
+1
+]]></sample_output>
+<test_input><![CDATA[129380iisdfoau  adsfoiu9823  &^*(&98234jiksduf1 234i9ujoifdf
+]]></test_input>
+<test_output><![CDATA[30
+5
+20
+5
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include"stdio.h"
+int main()
+{
+  char c;
+  int letters=0,space=0,digit=0,other=0;
+  
+  while((c=getchar( ))!='\n')
+   if(c>='a'&&c<='z'||c>='A'&&c<='Z')
+      letters++;
+   else if(c==' ')
+      space++;
+        else if(c>='0'&&c<='9')
+           digit++;
+             else
+           other++;
+   printf("%d\n%d\n%d\n%d\n",letters,space,digit,other);
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-阶乘数列]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">求<font>1+2!+3!+4!+&hellip;+30!</font>。</font></p>
+<p style="margin-bottom: 0cm;"><font color="#000000">科学计数法，保留两位小数。<br />
+</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[]]></sample_input>
+<sample_output><![CDATA[]]></sample_output>
+<test_input><![CDATA[
+]]></test_input>
+<test_output><![CDATA[2.74e+32
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include<stdio.h>
+int main()
+{ double n,s=0,t=1;
+  for(n=1;n<=30;n++)
+  {t=t*n;
+   s=s+t;
+  }
+  printf("%.2e\n",s);
+}
+
+]]></solution>
+</item>
+</fps>

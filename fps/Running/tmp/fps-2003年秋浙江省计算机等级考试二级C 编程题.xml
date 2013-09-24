@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[2003年秋浙江省计算机等级考试二级C 编程题(1)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>输入10个数，求它们的平均值，并输出大于平均值的数据的个数。</p>]]></description>
+<input><![CDATA[<p>10个数</p>]]></input> 
+<output><![CDATA[<p>大于平均数的个数</p>]]></output>
+<sample_input><![CDATA[1 2 3 4 5 6 7 8 9 10]]></sample_input>
+<sample_output><![CDATA[5]]></sample_output>
+<test_input><![CDATA[1 2 3  4 6 123 345 12 123 1]]></test_input>
+<test_output><![CDATA[3]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include <stdio.h>
+int main(){
+    int count=0,i,a[10];float aver=0;
+    for(i=0;i<10;i++) scanf("%d",&a[i]);
+    for(i=0;i<10;i++) aver=aver+a[i];
+    aver=aver/10;
+    for(i=0;i<10;i++) if(a[i]>aver) count++;
+    printf("%d",count);
+    return 0;
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[2003年秋浙江省计算机等级考试二级C 编程题(2)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>输入两个正整数m和n(m&lt;n)，求m到n之间(包括m和n)所有素数的和，要求定义并调用函数isprime(x)来判断x是否为素数(素数是除1以外只能被自身整除的自然数)。</p>
+<br />
+<p></p>]]></description>
+<input><![CDATA[<p>m n</p>]]></input> 
+<output><![CDATA[<p>素数和</p>]]></output>
+<sample_input><![CDATA[2 3]]></sample_input>
+<sample_output><![CDATA[5]]></sample_output>
+<test_input><![CDATA[1 1000]]></test_input>
+<test_output><![CDATA[76127]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include <stdio.h>
+#include <math.h>
+int main(){
+  int i,m,n,sum;
+  int prime(int m);
+  scanf("%d%d",&m,&n);
+  sum=0;
+  for(i=m;i<=n;i++)
+     if(prime(i)) sum+=i;
+  printf("%d\n",sum);
+  return 0;
+}
+int prime(int m)
+{
+    int i,n;
+    if(m==0||m==1) return 0;
+    n=sqrt(m);
+    for(i=2;i<=n;i++) if(m%i==0) return 0;
+    return 1;
+
+
+}
+]]></solution>
+<![CDATA[]]>
+</item>
+</fps>

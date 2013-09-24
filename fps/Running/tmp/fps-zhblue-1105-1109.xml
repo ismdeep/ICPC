@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fps version="1.0">
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题1.5]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[<p>请参照本章例题，编写一个C程序，输出以下信息：</p>
+<p>**************************</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Very&nbsp;&nbsp;&nbsp; Good!</br>
+**************************</p>
+<p>数＊号可看出，Very前面9空格，Good前面&hellip;&hellip;</p>
+<p>*也是输出的一部分，别光打印Very Good!</p>]]></description>
+<input><![CDATA[<p>无需输入</p>]]></input>
+<output><![CDATA[<p>**************************</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Very&nbsp;&nbsp;&nbsp; Good!</br>
+**************************</p>]]></output>
+<sample_input><![CDATA[]]></sample_input>
+<sample_output><![CDATA[**************************
+         Very    Good!
+**************************]]></sample_output>
+<test_input><![CDATA[1234]]></test_input>
+<test_output><![CDATA[**************************
+         Very    Good!
+**************************
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+main(){
+printf("**************************\n");
+printf("         Very    Good!\n");
+printf("**************************");
+
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题1.6]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[编写一个程序，输入a、b、c三个值，输出其中最大值。]]></description>
+<input><![CDATA[一行数组，分别为a b c]]></input>
+<output><![CDATA[a b c其中最大的数]]></output>
+<sample_input><![CDATA[10 20 30]]></sample_input>
+<sample_output><![CDATA[30]]></sample_output>
+<test_input><![CDATA[1 2 5
+]]></test_input>
+<test_output><![CDATA[5
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#include<stdio.h>
+int max(int a,int b){
+ return a>b?a:b;
+}
+
+int main(){
+ int a,b,c;
+ scanf("%d%d%d",&a,&b,&c);
+ printf("%d",max(a,max(b,c)));
+ return 0;
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题3.7]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[<p>要将&quot;China&quot;译成密码，译码规律是：用原来字母后面的第4个字母代替原来的字母．例如，字母&quot;A&quot;后面第4个字母是&quot;E&quot;．&quot;E&quot;代替&quot;A&quot;。因此，&quot;China&quot;应译为&quot;Glmre&quot;。请编一程序，用赋初值的方法使cl、c2、c3、c4、c5五个变量的值分别为，&rsquo;C&rsquo;、&rsquo;h&rsquo;、&rsquo;i&rsquo;、&rsquo;n&rsquo;、&rsquo;a&rsquo;，经过运算，使c1、c2、c3、c4、c5分别变为&rsquo;G&rsquo;、&rsquo;l&rsquo;、&rsquo;m&rsquo;、&rsquo;r&rsquo;、&rsquo;e&rsquo;，并输出。</p>]]></description>
+<input><![CDATA[<p>China</p>]]></input>
+<output><![CDATA[<p>加密后的China</p>]]></output>
+<sample_input><![CDATA[China]]></sample_input>
+<sample_output><![CDATA[Glmre]]></sample_output>
+<test_input><![CDATA[]]></test_input>
+<test_output><![CDATA[Glmre
+]]></test_output>
+<hint><![CDATA[so easy]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include <stdio.h>  
+main()   
+{
+char c1='C',c2='h',c3='i',c4='n',c5='a';  
+  c1+=4;  
+  c2+=4;  
+  c3+=4;  
+  c4+=4;  
+  c5+=4;  
+  printf("%c%c%c%c%c\n",c1,c2,c3,c4,c5);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题4.8]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[设圆半径r，圆柱高h
+
+求圆周长C1、圆面积Sa、圆球表面积Sb、圆球体积Va、圆柱体积Vb。
+用scanf输入数据，输出计算结果，输出时要求文字说明，取小数点后两位数字。请编程序。
+
+PI＝3.14  ]]></description>
+<input><![CDATA[两个浮点数，r和h]]></input>
+<output><![CDATA[圆周长C1、圆面积Sa、圆球表面积Sb、圆球体积Va、圆柱体积Vb。
+保留两位小数，每个结果后换行。]]></output>
+<sample_input><![CDATA[1.5 3]]></sample_input>
+<sample_output><![CDATA[C1=9.42
+Sa=7.07
+Sb=28.26
+Va=14.13
+Vb=21.19
+
+]]></sample_output>
+<test_input><![CDATA[10.1 20.5
+]]></test_input>
+<test_output><![CDATA[C1=63.43
+Sa=320.31
+Sb=1281.25
+Va=4313.53
+Vb=6566.38
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include <stdio.h>
+main()  
+{float r,h,C1,Sa,Sb,Va,Vb;  
+scanf("%f %f",&r,&h);  
+C1=2*3.14*r;  
+Sa=3.14*r*r;  
+Sb=4*Sa;  
+Va=4*3.14*r*r*r/3;  
+Vb=Sa*h;  
+printf("C1=%.2f\n",C1);  
+printf("Sa=%.2f\nSb=%.2f\nVa=%.2f\nVb=%.2f\n",Sa,Sb,Va,Vb);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题4.9]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[输入一个华氏温度，要求输出摄氏温度。公式为  
+c=5(F-32)/9  
+输出要求有文字说明，取位2小数。]]></description>
+<input><![CDATA[一个华氏温度，浮点数]]></input>
+<output><![CDATA[摄氏温度，浮点两位小数]]></output>
+<sample_input><![CDATA[-40]]></sample_input>
+<sample_output><![CDATA[c=-40.00]]></sample_output>
+<test_input><![CDATA[500
+]]></test_input>
+<test_output><![CDATA[c=260.00
+]]></test_output>
+<hint><![CDATA[零下40度，可以不问是？氏]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+main()  
+{float F,c;  
+scanf("%f",&F);  
+c=5*(F-32)/9;  
+printf("c=%.2f",c);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+</fps>

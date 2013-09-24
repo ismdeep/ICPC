@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.0" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[Rooks]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[<p>You have unexpectedly become the owner of a large chessboard, having fifteen squares to each side. Because you do not know how to play chess on such a large board, you find an alternative way to make use of it.</p>
+<p>In chess, a rook attacks all squares that are in the same row or column of the chessboard as it is. For the purposes of this problem, we define a rook as also attacking the square on which it is already standing.</p>
+<p>Given a set of chessboard squares, how many rooks are needed to attack all of them?</p>]]></description>
+<input><![CDATA[<p>Input consists of a number of test cases. Each test case consists of fifteen lines each containing fifteen characters depicting the chess board. Each character is either a period (<tt>.</tt>) or a hash (<tt>#</tt>). Every chessboard square depicted by a hash must be attacked by a rook. After all the test cases, one more line of input appears. This line contains the word <tt>END</tt>.</p>]]></input> 
+<output><![CDATA[<p>Output consists of exactly one line for each test case. The line contains a single integer, the minimum number of rooks that must be placed on the chess board so that every square marked with a hash is attacked.</p>]]></output>
+<sample_input><![CDATA[...............
+...............
+...............
+...............
+...............
+...............
+...............
+.......#.......
+...............
+...............
+...............
+...............
+...............
+...............
+...............
+END
+]]></sample_input>
+<sample_output><![CDATA[1
+]]></sample_output>
+<test_input><![CDATA[...............
+...............
+...............
+...............
+...............
+...............
+...............
+.......#.......
+...............
+...............
+...............
+...............
+...............
+...............
+...............
+END
+]]></test_input>
+<test_output><![CDATA[1
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+using namespace std;
+
+#define FR(i,a,b) for(int i=(a);i<(b);++i)
+#define FOR(i,n) FR(i,0,n)
+#define CLR(x,a) memset(x,a,sizeof(x))
+#define setmax(a,b) a = max(a,b)
+#define setmin(a,b) a = min(a,b)
+typedef long long ll;
+
+const int R=15,C=15;
+int i;
+char grid[16][16];
+int colset[16];
+void doit() {
+  FOR(r,R) {
+    scanf("%s",grid[r]);
+    if (0==strcmp("END",grid[r])) exit(0);
+  }
+
+  int ans = 15;
+  FOR(S,(1<<R)) {
+    CLR(colset,0);
+
+    FOR(r,R) if (0==((1<<r)&S)) {
+      FOR(c,C) if (grid[r][c]=='#') colset[c]=1;
+    }
+
+    int now = 0;
+    FOR(c,C) now += colset[c];
+    setmax(now, __builtin_popcount(S));
+    setmin(ans, now);
+  }
+
+  printf("%d\n",ans);
+}
+int main() {
+  while (1) doit();
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[Pipes]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[<p><img src="http://acm.zj.cn/upload/2010/3/B-22104525.jpg" alt="" /></p>
+<p>After writing a solver for the &quot;moveable maze&quot; game last week, you have grown tired of it. After all, you already know the optimal solution. To entertain yourself, you find another puzzle game called &quot;Pipes&quot;, and play that for a while. On one puzzle, you have not been able to find a solution by hand, and you think that there is no solution. You decide to write a program to tell you whether this is the case.</p>
+<p>The game is played on a grid with <i>R</i> rows and <i>C</i> columns. Each square of the grid contains a black dot in the centre and black lines in the direction of some, none, or all of its north, east, south, and west neighbouring squares, with the following restriction: if two opposite directions both have lines, then at least one of the other two directions has a line as well. In other words, it is forbidden for a square to consist of a straight line.</p>
+<p>The objective of the game is to rotate each square, as many times as you like, such that for each square, if it has a line going in a compass direction (that is, north, east, south, or west), then it has a neighbour in that compass direction and that neighbour has a line going in the opposite compass direction. In other words, each edge in the grid should either have a line on both sides or neither side.</p>
+<p>Your task is to determine whether a given grid has a solution.</p>
+<h3>&nbsp;</h3>]]></description>
+<input><![CDATA[<p>The input consists of several test cases.</p>
+<p>The first line of each test case contains the two integers <i>R</i> and <i>C</i>, separated by spaces, with 1 &lt;= <i>R</i>,<i>C</i> &lt;= 12.</p>
+<p>The following <i>R</i> lines of input each contain one row of the grid, from north to south. Each of these lines contains exactly <i>C</i> strings of letters, separated by spaces, that correspond to squares of the grid, from west to east. Their format is as follows:</p>
+<ul>
+    <li>If the string is the single character <i>x</i>, then the square      does not contain a line to any of its neighbours.</li>
+    <li>Otherwise, the string contains some of the characters <tt>N</tt>,      <tt>E</tt>, <tt>S</tt>, <tt>W</tt>, which indicate that a black      line extends from this square's centre in the direction of its      north, east, south, or west neighbour, respectively. No character      will appear in the string more than once.</li>
+</ul>
+<p>Input is terminated by a line containing <tt>0 0</tt>. These zeros are not a test case and should not be processed.</p>]]></input> 
+<output><![CDATA[<p>For each test case, output <tt>SOLVABLE</tt> if there is a solution to the puzzle, and <tt>UNSOLVABLE</tt> otherwise.</p>]]></output>
+<sample_input><![CDATA[3 3
+NW NW x
+NES NESW W
+E W x
+2 2
+ES x
+x N
+0 0
+]]></sample_input>
+<sample_output><![CDATA[SOLVABLE
+UNSOLVABLE
+]]></sample_output>
+<test_input><![CDATA[3 3
+NW NW x
+NES NESW W
+E W x
+2 2
+ES x
+x N
+0 0
+]]></test_input>
+<test_output><![CDATA[SOLVABLE
+UNSOLVABLE
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <deque>
+#include <string>
+#include <vector>
+using namespace std;
+
+#define SZ(v) int((v).size())
+#define FR(i,a,b) for(int i=(a);i<(b);++i)
+#define FOR(i,n) FR(i,0,n)
+#define FORI(i,v) FOR(i,SZ(v))
+#define CLR(x,a) memset(x,a,sizeof(x))
+#define setmax(a,b) a = max(a,b)
+#define setmin(a,b) a = min(a,b)
+typedef long long ll;
+
+int R,C;
+char buf[16];
+int deg[16][16];
+int nod[16][16][4];
+const int MAXV = 514;
+bool mark[MAXV];
+int cap[MAXV][MAXV];
+vector<int> edg[MAXV];
+const int s=MAXV-2,t=MAXV-1;
+void connect(int v, int w, int u) {
+  cap[v][w] = u;
+  cap[w][v] = 0;
+  edg[v].push_back(w);
+  edg[w].push_back(v);
+}
+int dr[] = { -1, 0, 1, 0 },
+    dc[] = { 0, 1, 0, -1 };
+const int inf = 123456789;
+int dfs(int v, int flocap=inf) {
+  if (v==t) return flocap;
+
+  if (mark[v]) return 0;
+  mark[v] = 1;
+
+  FORI(i,edg[v]) {
+    int w = edg[v][i];
+    if (cap[v][w]) {
+      int f = dfs(w, min(flocap, cap[v][w]));
+
+      if (f) {
+	cap[v][w] -= f;
+	cap[w][v] += f;
+	return f;
+      }
+    }
+  }
+  return 0;
+}
+void doit() {
+  scanf("%d%d",&R,&C);
+  if (R==0) exit(0);
+
+  FOR(v,MAXV) edg[v].clear();
+  CLR(cap,0);
+
+  FOR(r,R) {
+    FOR(c,C) {
+      scanf(" %s",buf);
+      if (0==strcmp("x",buf)) deg[r][c]=0;
+      else deg[r][c] = strlen(buf);
+    }
+  }
+
+  int next = 0;
+  FOR(r,R) FOR(c,C) {
+    if (deg[r][c] != 2) {
+      FOR(k,4) nod[r][c][k] = next;
+      if ((r+c)%2) connect(s, next, deg[r][c]);
+      else connect(next, t, deg[r][c]);
+      ++next;
+    } else {
+      FOR(k,4) nod[r][c][k] = next + (k%2);
+      if ((r+c)%2) FOR(k,2) connect(s, next+k, 1);
+      else FOR(k,2) connect(next+k, t, 1);
+      next += 2;
+    }
+  }
+
+  FOR(r,R) FOR(c,C) if ((r+c)%2) {
+    FOR(k,4) {
+      int r2 = r+dr[k], c2 = c+dc[k];
+      if (r2<0||r2>=R||c2<0||c2>=C) continue;
+      int k2 = (k+2)%4;
+
+      connect(nod[r][c][k], nod[r2][c2][k2], 1);
+    }
+  }
+
+  while (1) {
+    CLR(mark,0);
+    int f = dfs(s);
+    if (f == 0) break;
+  }
+
+  int ed=0,od=0;
+  FOR(r,R) FOR(c,C) {
+    if ((r+c)%2) od += deg[r][c];
+    else ed += deg[r][c];
+  }
+
+  bool happy = 1;
+  FOR(v,MAXV) if (cap[s][v] || cap[v][t]) happy = 0;
+
+  printf("%s\n", happy ? "SOLVABLE" : "UNSOLVABLE");
+}
+int main() {
+  while (1) doit();
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[Cantor]]></title>
+<time_limit><![CDATA[10]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[<p>&nbsp;</p>
+<p>The ternary expansion of a number is that number written in base 3. A number can have more than one ternary expansion. A ternary expansion is indicated with a subscript 3. For example, 1 = 1<sub>3</sub> = 0.222...<sub>3</sub>, and 0.875 = 0.212121...<sub>3</sub>.</p>
+<p>The Cantor set is defined as the real numbers between 0 and 1 inclusive that have a ternary expansion that does not contain a 1. If a number has more than one ternary expansion, it is enough for a single one to not contain a 1.</p>
+<p>For example, 0 = 0.000...<sub>3</sub> and 1 = 0.222...<sub>3</sub>, so they are in the Cantor set. But 0.875 = 0.212121...<sub>3</sub> and this is its only ternary expansion, so it is not in the Cantor set.</p>
+<p>Your task is to determine whether a given number is in the Cantor set.</p>
+<h3>&nbsp;</h3>
+<p>&nbsp;</p>
+<p><img src="http://acm.zj.cn/upload/2010/3/C-22105053.jpg" alt="" /></p>]]></description>
+<input><![CDATA[<p>The input consists of several test cases.</p>
+<p>Each test case consists of a single line containing a number <i>x</i> written in decimal notation, with 0 &lt;= <i>x</i> &lt;= 1, and having at most 6 digits after the decimal point.</p>
+<p>The last line of input is <tt>END</tt>. This is not a test case.</p>]]></input> 
+<output><![CDATA[<p>For each test case, output <tt>MEMBER</tt> if <i>x</i> is in the Cantor set, and <tt>NON-MEMBER</tt> if <i>x</i> is not in the Cantor set.</p>]]></output>
+<sample_input><![CDATA[0
+1
+0.875
+END
+]]></sample_input>
+<sample_output><![CDATA[MEMBER
+MEMBER
+NON-MEMBER
+]]></sample_output>
+<test_input><![CDATA[0
+1
+0.875
+END
+]]></test_input>
+<test_output><![CDATA[MEMBER
+MEMBER
+NON-MEMBER
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+	int i,t;
+	double x;
+	char a[9];
+	while(gets(a),strcmp(a,"END"))
+	{
+		x=atof(a);
+		t=0;
+		if(x==0||x==1)
+			printf("MEMBER\n");
+		else
+		{
+			i=13;
+			while(i--)
+			{
+				x=(x-(int)x)*3;
+				if((int)x==1)
+				{
+					printf("NON-MEMBER\n");
+					t++;
+					break;
+				}
+			}
+			if(t==0)
+				printf("MEMBER\n");
+		}
+	}
+	return 0;
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[Meltdown]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[<p>A polygon is lowered at a constant speed of <i>v</i> metres per minute from the air into a liquid that dissolves it at a constant speed of <i>c</i> metres per minute from all sides. Given a point <i>(x,y)</i> inside the polygon that moves with the polygon, determine when the liquid reaches the point.</p>
+<p>The border between air and liquid always has y-coordinate 0, and the liquid only eats away from the sides of the polygon in 2 dimensions. The polygon does not rotate as it is lowered into the liquid, and at time 0, it is not touching the liquid.</p>
+<p>Unlike the polygon, which is flat (2-dimensional), the liquid exists in three dimensions. Therefore, the liquid seeps into cavities in the polygon. For example, if the polygon is &quot;cup-shaped&quot;, the liquid can get &quot;inside&quot; the cup, as in the diagram below.</p>
+<p><img src="http://plg1.cs.uwaterloo.ca/%7Eacm00/091003/Ddiag.png" alt="" /></p>]]></description>
+<input><![CDATA[<p>The input consists of several test cases.</p>
+<p>The first line of each test case contains the five integers <i>N</i>, <i>x</i>, <i>y</i>, <i>v</i>, and <i>c</i>, where  3 &lt;= <i>N</i> &lt;= 30, -100 &lt;= <i>x</i> &lt;= 100, 1 &lt;= <i>y</i> &lt;= 100, and 1 &lt;= <i>c</i> &lt; <i>v</i> &lt;= 10.</p>
+<p>The following <i>N</i> lines of the test case each contain one vertex of the polygon. The <i>i</i><sup>th</sup> line contains the two integers <i>x</i>, <i>y</i>, where -100 &lt;= <i>x</i> &lt;= 100, 1 &lt;= <i>y</i> &lt;= 100.</p>
+<p>The vertices of the polygon are given in counter-clockwise order. The border of the polygon does not intersect or touch itself, and the point <i>(x,y)</i> lies strictly inside the polygon&mdash;it does not lie on the border of the polygon.</p>
+<p>Input is terminated by a line containing <tt>0 0 0 0 0</tt>. These zeros are not a test case and should not be processed.</p>]]></input> 
+<output><![CDATA[<p>For each test case, output the first time in minutes that the liquid reaches the specified point, rounded to four decimal places.</p>]]></output>
+<sample_input><![CDATA[4 0 50 2 1
+-1 10
+1 10
+1 90
+-1 90
+0 0 0 0 0
+]]></sample_input>
+<sample_output><![CDATA[25.8660]]></sample_output>
+<test_input><![CDATA[4 0 50 2 1
+-1 10
+1 10
+1 90
+-1 90
+0 0 0 0 0
+]]></test_input>
+<test_output><![CDATA[25.8660
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <deque>
+#include <string>
+#include <vector>
+using namespace std;
+
+#define SZ(v) int((v).size())
+#define FR(i,a,b) for(int i=(a);i<(b);++i)
+#define FOR(i,n) FR(i,0,n)
+#define FORI(i,v) FOR(i,SZ(v))
+#define CLR(x,a) memset(x,a,sizeof(x))
+#define setmax(a,b) a = max(a,b)
+#define setmin(a,b) a = min(a,b)
+typedef long long ll;
+
+int N,x,y,v,c;
+int xs[30],ys[30];
+double sqr(double x) { return x*x; }
+double f(int i, int j, double a) {
+  double x0 = xs[i]*(1-a) + xs[j]*a;
+  double y0 = ys[i]*(1-a) + ys[j]*a;
+
+  return sqrt(sqr(x-x0)+sqr(y-y0))/c + y0/v;
+}
+void doit() {
+  scanf("%d%d%d%d%d",&N,&x,&y,&v,&c);
+  if (N==0) exit(0);
+
+  FOR(i,N) {
+    scanf("%d%d",&xs[i],&ys[i]);
+  }
+
+  double t = 1e100;
+  FOR(i,N) {
+    int j = (i+1)%N;
+    double lo = 0, hi = 1;
+
+    FOR(k,200) {
+      double m1 = (2*lo+hi)/3, m2 = (lo+2*hi)/3;
+      
+      if (f(i,j,m1) < f(i,j,m2)) hi = m2;
+      else lo = m1;
+    }
+
+    setmin(t, f(i,j,lo));
+  }
+
+  printf("%.4lf\n",t);
+}
+int main() {
+  while (1) doit();
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[sqrt log sin]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[<img align="right" src="http://plg1.cs.uwaterloo.ca/%7Eacm00/091003/E.png" alt="" />
+<p>An evil professor has just assigned you the following problem.</p>
+<p>A sequence is defined by the following recurrence:</p>
+<p><img align="center" src="http://plg1.cs.uwaterloo.ca/%7Eacm00/091003/Eeq.png" alt="" /></p>
+<p>Determine</p>
+<i>x<sub>1000000</sub></i>
+<p>.</p>]]></description>
+<input><![CDATA[<p>Input consists of a number of lines, each containing one integer, a value of <i>i</i>, no less than zero and no greater than one million. Input is followed by a single line containing the integer <i>-1</i>. This last line is not a value of <i>i</i> and should not be processed.</p>]]></input> 
+<output><![CDATA[<p>For each value of <i>i</i> in the input (but not the final <tt>-1</tt>), output the corresponding value of <i>x<sub>i</sub></i> modulo 1000000.</p>]]></output>
+<sample_input><![CDATA[0
+-1
+]]></sample_input>
+<sample_output><![CDATA[1
+]]></sample_output>
+<test_input><![CDATA[0
+-1
+]]></test_input>
+<test_output><![CDATA[1
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n,a[1000001];
+	double i,x,y,z;
+	a[0]=1;
+	for(i=1;i<=1000000;i++)
+	{
+		x=i-sqrt(i);
+		y=log(i);
+		z=i*sin(i)*sin(i);
+		a[(int)i]=(a[(int)x]+a[(int)y]+a[(int)z])%1000000;
+	}
+	while(scanf("%d",&n)!=EOF,n!=-1)
+		printf("%d\n",a[n]);
+	return 0;
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+</fps>

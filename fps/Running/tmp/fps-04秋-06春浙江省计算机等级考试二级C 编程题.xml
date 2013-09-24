@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[2004年秋浙江省计算机等级考试二级C 编程题(1)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>输入10个数，找出其中绝对值最小的数，将它和最后一个数交换，然后输出这10个数。</p>]]></description>
+<input><![CDATA[<p>十个数</p>]]></input> 
+<output><![CDATA[<p>交换后的十个数</p>]]></output>
+<sample_input><![CDATA[10 2 30 40 50 60 70 80 90 100]]></sample_input>
+<sample_output><![CDATA[10 100 30 40 50 60 70 80 90 2]]></sample_output>
+<test_input><![CDATA[10 2 -30 40 50 60 70 80 90 100]]></test_input>
+<test_output><![CDATA[10 100 -30 40 50 60 70 80 90 2]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include <stdio.h>
+#include <math.h>
+
+int MinIndex(int *a,int n)
+{
+	int i,minInd = 0;
+	for(i=1;i<n;i++)
+	{
+		if(fabs(a[minInd]) > fabs(a[i]))
+			minInd = i;
+	}
+	
+	return minInd;
+}
+
+int main()
+{
+	int i,minInd;
+	int a[10],tmp;
+	for(i=0;i<10;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	minInd = MinIndex(a,10);
+	tmp = a[minInd];
+	a[minInd] = a[9];
+	a[9] = tmp;
+	for(i=0;i<10;i++)
+	{
+		if(i != 0)
+		{
+			putchar(' ');
+		}
+		printf("%d",a[i]);
+	}
+	putchar('\n');
+
+	return 0;
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[2004年秋浙江省计算机等级考试二级C 编程题(2)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>输入一个正数x和一个正整数n，求下列算式的值。要求顶一个调用2个函数：fact(n)计算n的阶乘；mypow(x,n)计算x的n次幂（即x<sup>n</sup>），两个函数的返回值类型是double。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x - x<sup>2</sup>/2! + x<sup>3</sup>/3! + ... + (-1)<sup>n-1</sup>x<sup>n</sup>/n!</p>
+<p></p>
+<p>&times;输出保留4位小数。</p>
+<p></p>]]></description>
+<input><![CDATA[<p>x n</p>]]></input> 
+<output><![CDATA[<p>数列和</p>]]></output>
+<sample_input><![CDATA[2.0 3]]></sample_input>
+<sample_output><![CDATA[1.3333]]></sample_output>
+<test_input><![CDATA[3.141592654
+20]]></test_input>
+<test_output><![CDATA[0.9568]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include <stdio.h>
+#include <math.h>
+
+double fact(int n)
+{
+	static double res = 1.0;
+	res *= n;
+
+	return res;
+}
+
+double mypow(double x,int n)
+{
+	return pow(x,(double)n);
+}
+
+int main()
+{
+	double x,sum=0;
+	int n;
+	int i;
+	scanf("%lf %d",&x,&n);
+	for(i=1;i<=n;i++)
+	{
+		if(i%2 == 0)
+			sum -= mypow(x,i)/fact(i);
+		else
+			sum += mypow(x,i)/fact(i);
+	}
+	printf("%.4lf\n",sum);
+
+	return 0;
+}]]></solution>
+</item>
+<item>
+<title><![CDATA[2005年春浙江省计算机等级考试二级C 编程题(1)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://oj.acm.zj.cn:80/admin/../upload/pimg1342_1.jpg]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]--><span style="font-size: 10.5pt; font-family: 宋体;">输入<span lang="EN-US">x </span>，计算并输出下列分段函数<span lang="EN-US"> f(x) </span>的值。可以调用数学库函数：平方根函数<span lang="EN-US">sqrt(),</span>绝对值函数<span lang="EN-US">fabs() </span>和幂函数<span lang="EN-US"> pow()</span>。</span></p>
+<p><img src="http://oj.acm.zj.cn:80/admin/../upload/pimg1342_1.jpg" alt="" /></p>
+<p>&nbsp;保留2位小数</p>]]></description>
+<input><![CDATA[<p>x</p>]]></input> 
+<output><![CDATA[<p>f(x)</p>]]></output>
+<sample_input><![CDATA[5]]></sample_input>
+<sample_output><![CDATA[15.00]]></sample_output>
+<test_input><![CDATA[-1]]></test_input>
+<test_output><![CDATA[1.00]]></test_output>
+<test_input><![CDATA[1]]></test_input>
+<test_output><![CDATA[1.41]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	double x,res;
+	scanf("%lf",&x);
+	if(x<0)
+		res = fabs(x);
+	else if(0<=x && x<2)
+		res = sqrt(x+1);
+	else if(2<=x && x<4)
+		res = pow(x+2,5.0);
+	else
+		res = 2*x+5;
+	printf("%.2lf\n",res);
+
+	return 0;
+}]]></solution>
+</item>
+<item>
+<title><![CDATA[2005年春浙江省计算机等级考试二级C 编程题(2)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]--></p>
+<p style="margin-top: 2pt; text-indent: 21pt; line-height: 16pt;" class="MsoNormal"><span style="font-family: 宋体;">输出一张摄氏一华氏温度转换表，摄氏温度的取值区间是<span lang="EN-US">[-100<sup>0</sup> C</span>，<span lang="EN-US">150<sup>0</sup>C</span><span lang="EN-US"> ]</span>，温度间隔<span lang="EN-US">5<sup>0</sup>C</span>。要求定义和调用函数<span lang="EN-US"> ctof(c),</span>将摄氏温度<span lang="EN-US">C</span>转换成华氏温度<span lang="EN-US">F</span>，计算公式：<span lang="EN-US"> </span></span></p>
+<p><span lang="EN-US" style="font-size: 10.5pt; font-family: 宋体;">F = 32 + C* 9/5</span><span style="font-size: 10.5pt; font-family: 宋体;">。</span></p>
+<p>例如</p>
+<p>c=0-&gt;f=32<br />
+c=5-&gt;f=41<br />
+c=10-&gt;f=50<br />
+c=15-&gt;f=59<br />
+c=20-&gt;f=68<br />
+c=25-&gt;f=77<br />
+c=30-&gt;f=86<br />
+c=35-&gt;f=95<br />
+c=40-&gt;f=104<br />
+c=45-&gt;f=113<br />
+c=50-&gt;f=122<br />
+c=55-&gt;f=131<br />
+c=60-&gt;f=140<br />
+c=65-&gt;f=149</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[]]></sample_input>
+<sample_output><![CDATA[]]></sample_output>
+<test_input><![CDATA[?
+]]></test_input>
+<test_output><![CDATA[c=-100->f=-148
+c=-95->f=-139
+c=-90->f=-130
+c=-85->f=-121
+c=-80->f=-112
+c=-75->f=-103
+c=-70->f=-94
+c=-65->f=-85
+c=-60->f=-76
+c=-55->f=-67
+c=-50->f=-58
+c=-45->f=-49
+c=-40->f=-40
+c=-35->f=-31
+c=-30->f=-22
+c=-25->f=-13
+c=-20->f=-4
+c=-15->f=5
+c=-10->f=14
+c=-5->f=23
+c=0->f=32
+c=5->f=41
+c=10->f=50
+c=15->f=59
+c=20->f=68
+c=25->f=77
+c=30->f=86
+c=35->f=95
+c=40->f=104
+c=45->f=113
+c=50->f=122
+c=55->f=131
+c=60->f=140
+c=65->f=149
+c=70->f=158
+c=75->f=167
+c=80->f=176
+c=85->f=185
+c=90->f=194
+c=95->f=203
+c=100->f=212
+c=105->f=221
+c=110->f=230
+c=115->f=239
+c=120->f=248
+c=125->f=257
+c=130->f=266
+c=135->f=275
+c=140->f=284
+c=145->f=293
+c=150->f=302]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+
+double ctof(double c)
+{
+	return 32+c*9.0/5.0;
+}
+
+int main()
+{
+	double c;
+	for(c=-100;c<=150;c+=5)
+	{
+		printf("c=%.0lf->f=%.0lf\n",c,ctof(c));
+	}
+
+	return 0;
+}]]></solution>
+</item>
+<item>
+<title><![CDATA[2005年春浙江省计算机等级考试二级C 编程题(3)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]--><span style="font-size: 10.5pt; font-family: 宋体;">输入一个正整数<span lang="EN-US">n (1&le; n &le;6),</span>再输入一个<span lang="EN-US">n </span>行<span lang="EN-US">n</span>列的矩阵，找出该矩阵中绝对值最大的元素以及它的行下标和列下标。</span></p>]]></description>
+<input><![CDATA[<p>n</p>
+<p>nxn</p>]]></input> 
+<output><![CDATA[<p>数 行 列</p>]]></output>
+<sample_input><![CDATA[2
+1 2
+3 4]]></sample_input>
+<sample_output><![CDATA[4 2 2]]></sample_output>
+<test_input><![CDATA[4
+1 2 3 4
+-9 2 3 4
+12 3 38 53
+23 41 53 56]]></test_input>
+<test_output><![CDATA[56 4 4]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[# include <stdio.h>
+# include <math.h>
+main()
+
+{int n,j,k,t,x,max;
+int a[512][512];
+while(scanf("%d",&n),!(n>=1&&n<=6));
+for(j=0;j<n;j++)
+ for(k=0;k<n;k++)
+  scanf("%d",&a[j][k]);
+max=a[0][0];t=0;x=0;
+for(j=0;j<n;j++)
+ for(k=0;k<n;k++)
+    if(fabs(a[j][k]>max))
+{max=a[j][k];
+t=j;x=k;
+}
+printf("%d %d %d",a[t][x],t+1,x+1);
+}
+
+]]></solution>
+</item>
+<item>
+<title><![CDATA[2006年春浙江省计算机等级考试二级C 编程题(1)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]--></p>
+<p align="left" style="text-align: left;" class="MsoNormal"><span style="font-size: 12pt; font-family: 宋体; color: black;">编写程序，输入一批学生的成绩，遇</span><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;">0</span><span style="font-size: 12pt; font-family: 宋体; color: black;">或负数则输入结束，要求统计并输出优秀（大于</span><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;">85</span><span style="font-size: 12pt; font-family: 宋体; color: black;">）、通过（</span><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;">60</span><span style="font-size: 12pt; font-family: 宋体; color: black;">～</span><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;">84</span><span style="font-size: 12pt; font-family: 宋体; color: black;">）和不及格（小于</span><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;">60</span><span style="font-size: 12pt; font-family: 宋体; color: black;">）的学生人数。</span></p>
+<p align="left" style="text-align: left;" class="MsoNormal"><span style="font-size: 12pt; font-family: 宋体; color: black;">运行示例：</span></p>
+<p align="left" style="text-align: left;" class="MsoNormal"><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;"><br />
+</span></p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[88 71 68 70 59 81 91 42 66 77 83 0]]></sample_input>
+<sample_output><![CDATA[>=85:2
+60-84:7
+<60:2]]></sample_output>
+<test_input><![CDATA[123
+52
+34
+34
+234
+234
+45
+23
+34
+456
+345
+45
+4
+8
+467
+4
+56
+345
+245
+234
+23445
+56
+562
+454
+5
+0]]></test_input>
+<test_output><![CDATA[>=85:12
+60-84:0
+<60:13
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+
+int main()
+{
+	int high=0,mid=0,low=0;
+	int x;
+	while(scanf("%d",&x), x>0)
+	{
+		if(x >= 85)
+			high++;
+		else if(x >= 60)
+			mid++;
+		else
+			low++;
+	}
+	printf(">=85:%d\n60-84:%d\n<60:%d\n",high,mid,low);
+
+	return 0;
+}]]></solution>
+</item>
+<item>
+<title><![CDATA[2006年春浙江省计算机等级考试二级C 编程题(2)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]--></p>
+<p align="left" style="text-align: left;" class="MsoNormal"><span style="font-size: 12pt; font-family: 宋体; color: black;">编写程序，输入一个正整数</span><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;">n</span><span style="font-size: 12pt; font-family: 宋体; color: black;">，求下列算式的值。</span><span style="font-size: 12pt; font-family: 宋体; color: black;">要求定义和调用函数</span><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;">fact(k)</span><span style="font-size: 12pt; font-family: 宋体; color: black;">计算</span><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;">k</span><span style="font-size: 12pt; font-family: 宋体; color: black;">的阶乘，函数返回值的类型是</span><span lang="EN-US" style="font-size: 12pt; font-family: Arial; color: black;">double</span><span style="font-size: 12pt; font-family: 宋体; color: black;">。</span></p>
+<p align="left" style="text-align: left;" class="MsoNormal">1+1/2+ .... +1/n!</p>
+<p align="left" style="text-align: left;" class="MsoNormal"><span style="font-size: 12pt; font-family: 宋体; color: black;">&nbsp;</span></p>
+<p align="left" style="text-align: left;" class="MsoNormal"><span style="font-size: 12pt; font-family: 宋体; color: black;">输出保留5位小数。</span></p>
+<p align="left" style="text-align: left;" class="MsoNormal"></p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[5]]></sample_input>
+<sample_output><![CDATA[sum=1.71667]]></sample_output>
+<test_input><![CDATA[100]]></test_input>
+<test_output><![CDATA[sum=1.71828]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include <stdio.h>
+
+double fact(int n)
+{
+	static double res = 1.0;
+	res *= n;
+	return res;
+}
+
+int main()
+{
+	int n,i;
+	double sum = 0;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		sum += 1.0/fact(i);
+	}
+	printf("sum=%.5lf\n",sum);
+
+	return 0;
+}]]></solution>
+</item>
+</fps>

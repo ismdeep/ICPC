@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fps version="1.0">
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题7.1]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[用筛法求之N内的素数。 ]]></description>
+<input><![CDATA[N]]></input>
+<output><![CDATA[0～N的素数]]></output>
+<sample_input><![CDATA[100]]></sample_input>
+<sample_output><![CDATA[2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97]]></sample_output>
+<test_input><![CDATA[150]]></test_input>
+<test_output><![CDATA[2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+101
+103
+107
+109
+113
+127
+131
+137
+139
+149]]></test_output>
+<hint><![CDATA[数组大小动态定义？函数？]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#include <stdio.h>
+void prim(int n){
+	int i,j,a[n];  
+	for(i=2;i<n;i++)  
+	{ 	a[i]=i;  
+		for(j=2;j<=i;j++)  
+		{
+			if(j<i)  
+			 if(a[i]%j==0)  
+			 break;  
+			if(a[i]-j==0)  
+			 printf("%d\n",a[i]);  
+		}  
+	} 	
+}
+main()  
+{  
+	int  a;
+	scanf("%d",&a);
+	prim(a);
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题7.2]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[用选择法对10个整数从小到大排序。  ]]></description>
+<input><![CDATA[10个整数]]></input>
+<output><![CDATA[排序好的10个整数]]></output>
+<sample_input><![CDATA[4 85  3 234 45 345 345 122 30 12]]></sample_input>
+<sample_output><![CDATA[3
+4
+12
+30
+45
+85
+122
+234
+345
+345]]></sample_output>
+<test_input><![CDATA[89 72 47 68 35 26 73 91 57 36]]></test_input>
+<test_output><![CDATA[26
+35
+36
+47
+57
+68
+72
+73
+89
+91]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+main()  
+{ int i,j,a[10],t;  
+for(i=0;i<10;i++)  
+scanf("%d",&a[i]);  
+for(j=1;j<10;j++)  
+for(i=0;i<=9-j;i++)  
+if(a[i]>a[i+1])   
+{t=a[i+1];a[i+1]=a[i];a[i]=t;}  
+for(i=0;i<10;i++)  
+printf("%d\n",a[i]);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题7.3]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[求一个3×3矩阵对角线元素之和。  ]]></description>
+<input><![CDATA[矩阵]]></input>
+<output><![CDATA[主对角线 副对角线 元素和]]></output>
+<sample_input><![CDATA[1 2 3
+1 1 1
+3 2 1]]></sample_input>
+<sample_output><![CDATA[3 7]]></sample_output>
+<test_input><![CDATA[123 456 789
+888 777 666
+1 2 3]]></test_input>
+<test_output><![CDATA[903 1567]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+main()  
+{int i=0,j=0,a[3][3],s1,s2;  
+for(i=0;i<3;i++)  
+for(j=0;j<3;j++)  
+scanf("%d",&a[i][j]);  
+s1=a[0][0]+a[1][1]+a[2][2];  
+s2=a[0][2]+a[1][1]+a[2][0];  
+printf("%d %d",s1,s2);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题7.4]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[已有一个已排好的9个元素的数组，今输入一个数要求按原来排序的规律将它插入数组中。]]></description>
+<input><![CDATA[第一行，原始数列。
+第二行，需要插入的数字。]]></input>
+<output><![CDATA[排序后的数列]]></output>
+<sample_input><![CDATA[1 7 8 17 23 24 59 62 101
+50]]></sample_input>
+<sample_output><![CDATA[1
+7
+8
+17
+23
+24
+50
+59
+62
+101
+]]></sample_output>
+<test_input><![CDATA[1 5 8 17 23 24 60 62 101
+88]]></test_input>
+<test_output><![CDATA[1
+5
+8
+17
+23
+24
+60
+62
+88
+101
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+main()  
+{
+	int a[10]={1,5,8,17,23,24,60,62,101};
+	int i,j,t;  
+	for(i=0;i<10;i++)
+		scanf("%d",&a[i]);  
+	for(i=9;i>0;i--)  
+	if(a[i]<a[i-1])  
+	{t=a[i-1];a[i-1]=a[i];a[i]=t;}  
+	for(i=0;i<10;i++)  
+	printf("%d\n",a[i]); 
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题7.5]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[输入10个数字，然后逆序输出。]]></description>
+<input><![CDATA[十个整数]]></input>
+<output><![CDATA[逆序输出，空格分开]]></output>
+<sample_input><![CDATA[1 2 3 4 5 6 7 8 9 0]]></sample_input>
+<sample_output><![CDATA[0 9 8 7 6 5 4 3 2 1]]></sample_output>
+<test_input><![CDATA[1 3 5 9 7 6 8 2 4 0]]></test_input>
+<test_output><![CDATA[0 4 2 8 6 7 9 5 3 1
+]]></test_output>
+<hint><![CDATA[数组？堆栈？]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include <stdio.h>
+#include <string.h>
+int main(){	
+	int iInput = 0;
+	int aInput[10] = {0};
+	int i = 0;
+	while(scanf(" %d", &iInput) != EOF)
+	{
+		aInput[i++] = iInput;
+		if (i == 10)
+		{
+			break;
+		}
+	}
+	i--;
+	for(; i != 0; --i)
+	{
+		printf("%d ",aInput[i]);
+	}
+	printf("%d",aInput[i]);
+	return 0;
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+</fps>

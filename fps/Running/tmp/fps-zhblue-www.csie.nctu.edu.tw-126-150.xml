@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[The Errant Physicist]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/126img1.gif]]></src><base64><![CDATA[R0lGODlhgQEUAIAAAAAAAP///yH5BAEAAAEALAAAAACBARQAAAL+jI+py+0Po5x0gQuq1jjvD4ZN54mm2J3qyrZUWbqbd8k2W9+6ZeT7D5TEQDVfUDg8ciZJRVNp8z2hVJwqtcMwjajsFPE9YHXhq5FbTZ/QH9JNyx6VH+N3OM7Ao7TB81wNSPcHkaNHJyhGCHMlRPRlmBgAmdcYMZggBXYZyKnJGDmD2HO3uFbZNjUpOdp2ejhTKrbZyTnLKlWX6UAq64nLZ/JXpstK6ZTxG0NsTOgqJwlTB01LbRla9Di9uiuqvYr95uykrZw6Dk5Z+NpsfYi+a1tdNUuD/Fh4160+rRraLlfPE7Met1LhW4eQm8J3z+Q5HCeLhDRvotBIlHgM2pDVfhovmsvjEVgvinieTDqIKWQcgypBbnkIE9SSU4YucYlXQRg7kh8h7qwpbqBCJDFj0iP3Mx+8kfYIhvs3YmQxHmCQDgUKdWg6GpZwFs3Cgc8wmUIzesPidWdCqtukAtsodt3YrFHh7ev2tRrHjiJB9mXr0o8bGRi1+r0ZLZqmwQAhDWNcNiXkhnn1pn0x127lQTeXBsv8qcXlyoS9UKxLWq2FpgJRhz0dOcTolKnl7c2psXaf3FXxvuCtG3DwWmRuD4eV5CSq2Z2MH4/yPLrh6dJbGSgAADs=]]></base64></img><img><src><![CDATA[http://127.1/v1-htm01/126img2.gif]]></src><base64><![CDATA[R0lGODlh5QETAIAAAAAAAP///yH5BAEAAAEALAAAAADlARMAAAL+jI+pywhw3mtO0osjrLl7LG3fSIbkF4rnmoLWChtmfM30jee1uE21rNJxhsIbrxib+JBAZmcJajopvaCwOs1qGVAp1evsdrcZpZW8GIfRXBSYrdmq4fSk6vU8X4PzIn7Xl/PX0JJlA3foIhiYMIjkyKRXRzPGGKclJrn4xpWoY2G5pPk5aljKeeJjSTS1ygI5SYklUwZxatd42/ZzSThbshOhSNuKWgbzS2Ub9dXbKdxccoT5FJvnddqDyaebNhzAeMcSbOwAvQbebT6efgzO7OucNk34el7sbt0kalKIDQRLWjuAqmyI4qVMGwd+eA5GewbGjIaAIyQSJDIqmy3+HoMc+quXkFgchuFqDUz3x6GRauTe+WnnipaqNRarzXzoSwxMSRtF7or3r+ZLoY0GZoxCtOjNii50JoVX76mwpZRYRlX4aV+3FzHd7ERREGFCjz07JfOm7BKWrh7W8gyLU4HbkCe9jp0mNW7RrznLMc1n1m+uFJ7Yqr1F+GMue3UJJrZiJpPJxigfQ97IDazltMMqWZ7jCm7TzQs7bv2sJ/TZyolBzvssd7UgZPJesqO896HOfCXb8kGDuHZusQgNu3TdWN1wvT+No4XaXPkPqladT8faVvg6nNqoy9V+b55aozSxP+991Wf0VMS7m7faxvt3wdkBr98jv3gYrsCw1D9HXlB+55SS0S8zSFeLgCIRCMh78x33F4BVKIjcaw7mhuB/zG2XYU6ejNbhXYYppqF4J7V2F3Sx1YXiI4Q1yKCIBH5o34onvtifhxQ5hgOOFVoY4jb6XENcX0bESNeQYKlIym1JZrVfHbpY10pZSoq3SpDXZHllk1zugRt8UvphJSLBUFnMjvpg1qVMaLbphpqRoATnmnTW+Y6cUr65jZZk+olnU9boGWgkfO6nQgEAOw==]]></base64></img><description><![CDATA[<p>The well-known physicist Alfred E Neuman is working on problems that  involve multiplying polynomials of x and y.  For example, he may need to  calculate</p>
+<p></p>
+<p><img align="BOTTOM" width="385" height="20" alt="displaymath50" src="http://127.1:80/v1-htm01/126img1.gif" /></p>
+<p></p>
+<p>getting the answer</p>
+<p></p>
+<p><img align="BOTTOM" width="485" height="19" alt="displaymath51" src="http://127.1/v1-htm01/126img2.gif" /></p>
+<p></p>
+<p>Unfortunately, such problems are so trivial that the great man's mind keeps  drifting off the job, and he gets the wrong answers.  As a consequence,  several nuclear warheads that he has designed have detonated prematurely,  wiping out five major cities and a couple of rain forests.</p>
+<p></p>
+<p>You are to write a program to perform such multiplications and save the  world.</p>]]></description>
+<input><![CDATA[<p>The file of input data will contain pairs of lines, with each line containing  no more than 80 characters.  The final line of the input file contains a  <tt>#</tt> as  its first character.  Each input line contains a polynomial written without  spaces and without any explicit exponentiation operator.  Exponents are  positive non-zero unsigned integers.  Coefficients are also integers, but may  be negative.  Both exponents and coefficients are less than or equal to 100  in magnitude.  Each term contains at most one factor in x and one in y.</p>]]></input> 
+<output><![CDATA[<p>Your program must multiply each pair of polynomials in the input, and print  each product on a pair of lines, the first line containing all the exponents,  suitably positioned with respect to the rest of the information, which is in  the line below.</p>
+<p></p>
+<p>The following rules control the output format:</p>
+<ol>
+    <li>Terms in the output line must be sorted in decreasing order of powers  of x and, for a given power of x, in increasing order of powers of y.</li>
+    <li>Like terms must be combined into a single term.  For example,  40x<sup>2</sup>y<sup>3</sup> - 38x<sup>2</sup>y<sup>3</sup> is replaced by 2x<sup>2</sup>y<sup>3</sup>.</li>
+    <li>Terms with a zero coefficient must not be displayed.</li>
+    <li>Coefficients of 1 are omitted, except for the case of a constant term  of 1.</li>
+    <li>Exponents of 1 are omitted.</li>
+    <li>Factors of x<sup>0</sup>  and y<sup>0</sup> are omitted.</li>
+    <li>Binary pluses and minuses (that is the pluses and minuses connecting  terms in the output) have a single blank column both before and after.</li>
+    <li>If the coefficient of the first term is negative, it is preceded by a  unary minus in the first column, with no intervening blank column.   Otherwise, the coefficient itself begins in the first output column.</li>
+    <li>The output can be assumed to fit into a single line of at most 80  charactes in length.</li>
+    <li>There should be no blank lines printed between each pair of output  lines.</li>
+    <li>The pair of lines that contain a product should be the same length--trailing blanks should appear after the last non-blank character of the shorter line to achieve this.</li>
+</ol>]]></output>
+<sample_input><![CDATA[-yx8+9x3-1+y
+x5y+1+x3
+1
+1
+#
+]]></sample_input>
+<sample_output><![CDATA[ 13 2    11      8      6    5     5 2     3    3
+-x  y  - x  y + 8x y + 9x  - x y + x y  + 8x  + x y - 1 + y 
+
+1
+]]></sample_output>
+<test_input><![CDATA[-yx8+9x3-1+y
+x5y+1+9x3
+1
+1
+99x99+99y99
+99x99-99y99
+99x99+99y99
+99x99+99y99
+-yx8+7x7y5-8x3-2x2
+x5y+1+4x3
+#
+]]></test_input>
+<test_output><![CDATA[  13 2     11      8       6    5     5 2     3
+-x  y  - 9x  y + 8x y + 81x  - x y + x y  + 9x y - 1 + y
+
+1
+     198        198
+9801x    - 9801y
+     198         99 99        198
+9801x    + 19602x  y   + 9801y
+  13 2     12 6     11       10 5     8      7      7 5      6     5     3     2
+-x  y  + 7x  y  - 4x  y + 28x  y  - 9x y - 2x y + 7x y  - 32x  - 8x  - 8x  - 2x
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Krypton Factor]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1/v1-htm01/129img1.gif]]></src><base64><![CDATA[R0lGODlhUwAaAIAAAAAAAP///yH5BAEAAAEALAAAAABTABoAAAKXjGGpy50Ao5v0wHZDRHXJmnVeqGSkFHLiB6qi5XqlStMv2b5PzKQc/uiwVrzJ0OGzIClHIrEo/F1OxmYLOgNGd9zDVafB9rTVWVdzE5tL2/Y5pbNm19+yN/wGh7FD9QjqIsW1QbaEQSjHdEg46Kf3CPkUOUlZGYWYCIa5Ydnp+QkaKjpKWmp6ipqqusra6voKGys7S4taAAA7]]></base64></img><description><![CDATA[<p>You have been employed by the organisers of a Super Krypton Factor Contest  in which contestants have very high mental and physical abilities.  In one  section of the contest the contestants are tested on their ability to recall a  sequenace of characters which has been read to them by the Quiz Master.   Many of the contestants are very good at recognising patterns.  Therefore, in  order to add some difficulty to this test, the organisers have decided that  sequences containing certain types of repeated subsequences should not be  used.  However, they do not wish to remove all subsequences that are  repeated, since in that case no single character could be repeated.  This in  itself would make the problem too easy for the contestants.  Instead it is  decided to eliminate all sequences containing an occurrence of two  adjoining identical subsequences.  Sequences containing such an occurrence  will be called ``easy''.  Other sequences will be called ``hard''.</p>
+<p>For example, the sequence ABACBCBAD is easy, since it contains an  adjoining repetition of the subsequence CB.  Other examples of easy  sequences are:</p>
+<p></p>
+<ul>
+    <li>BB</li>
+    <li>ABCDACABCAB</li>
+    <li>ABCDABCD</li>
+</ul>
+<p>Some examples of hard sequences are:</p>
+<p></p>
+<ul>
+    <li>D</li>
+    <li>DC</li>
+    <li>ABDAB</li>
+    <li>CBABCBA</li>
+</ul>]]></description>
+<input><![CDATA[<p>In order to provide the Quiz Master with a potentially unlimited source of  questions you are asked to write a program that will read input lines that  contain integers <i>n</i> and <i>L</i> (in that order), where <i>n</i> &gt; 0 and <i>L</i> is in the  range  <img align="MIDDLE" width="83" height="26" src="http://127.1/v1-htm01/129img1.gif" alt="tex2html_wrap_inline39" /> , and for each input line prints out the <i>n</i>th hard  sequence (composed of letters drawn from the first <i>L</i> letters in  the  alphabet), in increasing alphabetical order (alphabetical ordering here  corresponds to the normal ordering encountered in a dictionary),  followed (on the next line) by the length of that sequence.  The first  sequence in this ordering is A.  You may assume that for given <i>n</i> and <i>L</i>  there do exist at least <i>n</i> hard sequences.</p>
+<p>For example, with <i>L</i> = 3, the first 7 hard sequences are:</p>
+<p></p>
+<blockquote>  A <br />
+AB <br />
+ABA <br />
+ABAC <br />
+ABACA <br />
+ABACAB <br />
+ABACABA </blockquote>
+<p>As each sequence is potentially very long, split it into groups of four (4)  characters separated by a space.  If there are more than 16 such groups,  please start a new line for the 17th group.</p>
+<p>Therefore, if the integers 7 and 3 appear on an input line, the output lines  produced should be</p>
+<p></p>
+<pre>
+ABAC ABA
+7</pre>
+<p>Input is terminated by a line containing two zeroes.  Your program may  assume a maximum sequence length of 80.</p>]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[30 3
+0 0]]></sample_input>
+<sample_output><![CDATA[ABAC ABCA CBAB CABA CABC ACBA CABA
+28]]></sample_output>
+<test_input><![CDATA[7 3
+30 3
+85 3
+80 26
+6 2
+0 0
+]]></test_input>
+<test_output><![CDATA[ABAC ABA
+7
+ABAC ABCA CBAB CABA CABC ACBA CABA
+28
+ABAC ABCA CBAB CABA CABC ACBA CABA CBAB CABA CABC ACBA BCAB ACBA BCAC BACA BACB 
+ABCA BACA BCAC BABC
+80
+ABAC ABAD ABAC ABAE ABAC ABAD ABAC ABAF ABAC ABAD ABAC ABAE ABAC ABAD ABAC ABAG 
+ABAC ABAD ABAC ABAE
+80
+BAB
+3
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Roman Roulette]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>The historian Flavius Josephus relates how, in the Romano-Jewish conflict  of 67 A.D., the Romans took the town of Jotapata which he was commanding.   Escaping, Jospehus found himself trapped in a cave with 40 companions.  The  Romans discovered his whereabouts and invited him to surrender, but his  companions refused to allow him to do so.  He therefore suggested that they  kill each other, one by one, the order to be decided by lot.  Tradition has it  that the means for effecting the lot was to stand in a circle, and, beginning  at some point, count round, every third person being killed in turn.  The  sole survivor of this process was Josephus, who then surrendered to the  Romans.  Which begs the question: had Josephus previously practised quietly  with 41 stones in a dark corner, or had he calculated mathematically that he  should adopt the 31st position in order to survive?</p>
+<p>Having read an account of this gruesome event you become obsessed with  the fear that you will find yourself in a similar situation at some time in  the future.  In order to prepare yourself for such an eventuality you decide  to write a program to run on your hand-held PC which will determine the  position that the counting process should start in order to ensure that you  will be the sole survivor.</p>
+<p>In particular, your program should be able to handle the following variation  of the processes described by Josephus.  <i>n</i> &gt; 0 people are initially  arranged in a circle, facing inwards, and numbered from 1 to <i>n</i>.  The  numbering from 1 to <i>n</i> proceeds consecutively in  a clockwise direction.   Your allocated number is 1.  Starting with person number <i>i</i>, counting  starts in a clockwise direction, until we get to person number <i>k</i> (<i>k</i> &gt; 0),  who is promptly killed.  We then proceed to count a further <i>k</i> people in a  clockwise direction, starting with the person immediately to the left of the  victim.  The person number <i>k</i> so selected has the job of burying the  victim, and then returning to the position in the circle that the victim had  previously occupied.  Counting then proceeeds from the person to his  immediate left, with the <i>k</i>th person being killed, and so on, until only one  person remains.</p>
+<p>For example, when <i>n</i> = 5, and <i>k</i> = 2, and <i>i</i> = 1, the order of execution is  2, 5, 3, and 1.  The survivor is 4.</p>]]></description>
+<input><![CDATA[<p>Your program must read input lines containing values for <i>n</i> and <i>k</i> (in  that order), and for each input line output the number of the person with  which the counting should begin in order to ensure that you are the sole  survivor.  For example, in the above case the safe starting position is 3.   Input will be terminated by a line containing values of 0 for <i>n</i> and <i>k</i>.</p>
+<p>Your program may assume a maximum of 100 people taking part in this  event.</p>]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[1 1
+1 5
+0 0]]></sample_input>
+<sample_output><![CDATA[1
+1]]></sample_output>
+<test_input><![CDATA[1 1
+1 5
+5 2
+100 53
+100 2
+5 4
+11 93
+0 0
+]]></test_input>
+<test_output><![CDATA[1
+1
+3
+13
+83
+5
+2
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[The Psychic Poker Player]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>In 5-card draw poker, a player is dealt a hand of five cards (which may be  looked at).  The player may then discard between zero and five of his or her  cards and have them replaced by the same number of cards from the top of  the deck (which is face down).  The object is to maximize the value of the  final hand.  The different values of hands in poker are given at the end of  this problem.</p>
+<p>Normally the player cannot see the cards in the deck and so must use  probability to decide which cards to discard.  In this problem, we imagine  that the poker player is psychic and knows which cards are on top of the  deck.  Write a program which advises the player which cards to discard so  as to maximize the value of the resulting hand.</p>]]></description>
+<input><![CDATA[<p>Input will consist of a series of lines, each containing the initial five cards in the hand then the first five cards on top of the deck. Each card is represented as a two-character code.  The first character is the face-value (A=Ace, 2-9, T=10, J=Jack, Q=Queen, K=King) and the second character is the suit (C=Clubs, D=Diamonds, H=Hearts, S=Spades).  Cards will be separated by single spaces.  Each input line will be from a single valid deck, that is there will be no duplicate cards in each hand and deck.</p>
+<p>Each line of input should produce one line of output, consisting of the initial hand, the top five cards on the deck, and the best value of hand that is possible.  Input is terminated by end of file.</p>
+<p></p>
+<p>Use the sample input and output as a guide. Note that the order of the cards in the player's hand is irrelevant, but the  order of the cards in the deck is important because the discarded cards must  be replaced from the top of the deck.  Also note that examples of all types  of hands appear in the sample output, with the hands shown in decreasing  order of value.</p>]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[TH JH QC QD QS QH KH AH 2S 6S
+2H 2S 3H 3S 3C 2D 3D 6C 9C TH
+2H 2S 3H 3S 3C 2D 9C 3D 6C TH
+2H AD 5H AC 7H AH 6H 9H 4H 3C
+AC 2D 9C 3S KD 5S 4D KS AS 4C
+KS AH 2H 3C 4H KC 2C TC 2D AS
+AH 2C 9S AD 3C QH KS JS JD KD
+6C 9C 8C 2D 7C 2H TC 4C 9S AH
+3D 5S 2H QD TD 6S KH 9H AD QH]]></sample_input>
+<sample_output><![CDATA[Hand: TH JH QC QD QS Deck: QH KH AH 2S 6S Best hand: straight-flush
+Hand: 2H 2S 3H 3S 3C Deck: 2D 3D 6C 9C TH Best hand: four-of-a-kind
+Hand: 2H 2S 3H 3S 3C Deck: 2D 9C 3D 6C TH Best hand: full-house
+Hand: 2H AD 5H AC 7H Deck: AH 6H 9H 4H 3C Best hand: flush
+Hand: AC 2D 9C 3S KD Deck: 5S 4D KS AS 4C Best hand: straight
+Hand: KS AH 2H 3C 4H Deck: KC 2C TC 2D AS Best hand: three-of-a-kind
+Hand: AH 2C 9S AD 3C Deck: QH KS JS JD KD Best hand: two-pairs
+Hand: 6C 9C 8C 2D 7C Deck: 2H TC 4C 9S AH Best hand: one-pair
+Hand: 3D 5S 2H QD TD Deck: 6S KH 9H AD QH Best hand: highest-card]]></sample_output>
+<test_input><![CDATA[TH JH QC QD QS QH KH AH 2S 6S
+2H 2S 3H 3S 3C 2D 3D 6C 9C TH
+2H 2S 3H 3S 3C 2D 9C 3D 6C TH
+2H AD 5H AC 7H AH 6H 9H 4H 3C
+AC 2D 9C 3S KD 5S 4D KS AS 4C
+KS AH 2H 3C 4H KC 2C TC 2D AS
+AH 2C 9S AD 3C QH KS JS JD KD
+6C 9C 8C 2D 7C 2H TC 4C 9S AH
+3D 5S 2H QD TD 6S KH 9H AD QH
+TH JH QC QD QS QH KH AH 2S 6S
+2D 3D 6C 9C TH 2H 2S 3H 3S 3C
+2D 9C 3D 6C TH 2H 2S 3H 3S 3C
+AH 6H 9H 4H 3C 2H AD 5H AC 7H
+5S 4D KS AS 4C AC 2D 9C 3S KD
+KC 2C TC 2D AS KS AH 2H 3C 4H
+QH KS JS JD KD AH 2C 9S AD 3C
+2H TC 4C 9S AH 6C 9C 8C 2D 7C
+6S KH 9H AD QH 3D 5S 2H QD TD
+]]></test_input>
+<test_output><![CDATA[Hand: TH JH QC QD QS Deck: QH KH AH 2S 6S Best hand: straight-flush
+Hand: 2H 2S 3H 3S 3C Deck: 2D 3D 6C 9C TH Best hand: four-of-a-kind
+Hand: 2H 2S 3H 3S 3C Deck: 2D 9C 3D 6C TH Best hand: full-house
+Hand: 2H AD 5H AC 7H Deck: AH 6H 9H 4H 3C Best hand: flush
+Hand: AC 2D 9C 3S KD Deck: 5S 4D KS AS 4C Best hand: straight
+Hand: KS AH 2H 3C 4H Deck: KC 2C TC 2D AS Best hand: three-of-a-kind
+Hand: AH 2C 9S AD 3C Deck: QH KS JS JD KD Best hand: two-pairs
+Hand: 6C 9C 8C 2D 7C Deck: 2H TC 4C 9S AH Best hand: one-pair
+Hand: 3D 5S 2H QD TD Deck: 6S KH 9H AD QH Best hand: highest-card
+Hand: TH JH QC QD QS Deck: QH KH AH 2S 6S Best hand: straight-flush
+Hand: 2D 3D 6C 9C TH Deck: 2H 2S 3H 3S 3C Best hand: full-house
+Hand: 2D 9C 3D 6C TH Deck: 2H 2S 3H 3S 3C Best hand: full-house
+Hand: AH 6H 9H 4H 3C Deck: 2H AD 5H AC 7H Best hand: flush
+Hand: 5S 4D KS AS 4C Deck: AC 2D 9C 3S KD Best hand: two-pairs
+Hand: KC 2C TC 2D AS Deck: KS AH 2H 3C 4H Best hand: three-of-a-kind
+Hand: QH KS JS JD KD Deck: AH 2C 9S AD 3C Best hand: two-pairs
+Hand: 2H TC 4C 9S AH Deck: 6C 9C 8C 2D 7C Best hand: flush
+Hand: 6S KH 9H AD QH Deck: 3D 5S 2H QD TD Best hand: one-pair
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Bumpy Objects]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1/v1-htm01/132img1.gif]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p><img align="BOTTOM" src="http://127.1/v1-htm01/132img1.gif" alt="picture23" /></p>
+<p></p>
+<p>Consider objects such as these.  They are polygons, specified by the coordinates of a centre of mass and their vertices.  In the figure, centres of mass are shown as black squares.  The vertices will be numbered consecutively anti-clockwise as shown.</p>
+<p></p>
+<p>An object can be rotated to stand stably if two vertices can be found that can be joined by a straight line that does not intersect the object, and, when this line is horizontal, the centre of mass lies above the line and strictly between its endpoints.  There are typically many stable positions and each is defined by one of these lines known as its base line.  A base line, and its associated stable position, is identified by the highest numbered vertex touched by that line.</p>
+<p></p>
+<p>Write a program that will determine the stable position that has the lowest numbered base line.  Thus for the above objects, the desired base lines would be 6 for object 1, 6 for object 2 and 2 for the square.  You may assume that the objects are possible, that is they will be represented as non self-intersecting polygons, although they may well be concave.</p>]]></description>
+<input><![CDATA[<p>Successive lines of a data set will contain: a string of less than 20 characters identifying the object; the coordinates of the centre of mass; and the coordinates of successive points terminated by two zeroes (0 0), on one or more lines as necessary.  There may be successive data sets (objects).  The end of data will be defined by the string '<tt>#</tt>'.</p>
+<p></p>
+<p>Output will consist of the identification string followed by the number of the relevant base line.</p>]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[Object2
+4 3
+3 2  5 2  6 1  7 1  6 3  4 7  1 1  2 1  0 0
+Square 
+2 2
+1 1  3 1  3 3  1 3  0 0
+#]]></sample_input>
+<sample_output><![CDATA[Object2             6
+Square              2]]></sample_output>
+<test_input><![CDATA[Square
+2 2
+1 1  3 1  3 3  1 3 0 0
+Object2
+4 3
+3 2 5 2 6 1 7 1 6 3 4 7 1 1 2 1 0 0
+AlongstringObject12
+4 4
+1 5  2 4  4 5  5 4  4 2  5 1  7 8 0 0
+Star
+4 4
+7 4  5 5  4 7  3 5  1 4  3 3  4 1  5 3 0 0
+Crown
+3 2 
+1 1  2 2  3 1  4 2  5 1  5 3  1 3 0 0
+Crown2
+3 2 
+1 3  1 1  2 2  3 1  4 2  5 1  5 3  0 0
+Crown3
+3 2 
+1 1  3 1  4 2  5 1  5 3  1 3 0 0
+#
+]]></test_input>
+<test_output><![CDATA[Square               2
+Object2              6
+AlongstringObject12  6
+Star                 3
+Crown                5
+Crown2               2
+Crown3               4
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Loglan-A Logical Language]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1/v1-htm01/134img1.gif]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p>Loglan is a synthetic speakable language designed to test some of the fundamental problems of  linguistics, such as the Sapir Whorf hypothesis.  It is syntactically unambiguous, culturally neutral  and metaphysically parsimonious.  What follows is a gross over-simplification of an already very  small grammar of some 200 rules.</p>
+<p></p>
+<p>Loglan sentences consist of a series of words and names, separated by spaces, and are terminated by a  period (.).  Loglan words all end with a vowel; names, which are derived extra-linguistically, end with  a consonant.  Loglan words are divided into two classes--little words which specify the structure of a  sentence, and predicates which have the form CCVCV or CVCCV where C represents a consonant  and V represents a vowel (see examples later).</p>
+<p></p>
+<p>The subset of Loglan that we are considering uses the following grammar:</p>
+<p></p>
+<p><img align="BOTTOM" width="681" height="298" src="http://127.1/v1-htm01/134img1.gif" alt="tabular21" /></p>
+<p></p>
+<p>Write a program that will read a succession of strings and determine whether or not they are correctly formed Loglan sentences.</p>]]></description>
+<input><![CDATA[<p>Each Loglan sentence will start on a new line and will be terminated by a period (.).  The sentence may occupy more than one line and words may be separated by more than one whitespace character.  The input will be terminated by a line containing a single `<tt>#</tt>'.  You can assume that all words will be correctly formed.</p>
+<p>Output will consist of one line for each sentence containing  either `<tt>Good</tt>' or `<tt>Bad!</tt>'.</p>]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[la mutce bunbo mrenu bi ditca.
+la fumna bi le mrenu.
+djan ga vedma le negro ketpi.
+#]]></sample_input>
+<sample_output><![CDATA[Good
+Bad!
+Good]]></sample_output>
+<test_input><![CDATA[le bcade ga fgiho.
+le bcade ge fgiho le bcade.
+le bcade gi fgiho li bcade.
+le bcade go fgiho lo bcade.
+le bcade gu fgiho lu bcade.
+foobar ge juklo li manpi.
+lo qrase ba tviwu a xiyzu.
+lo qrase ba tviwu a xiyzu e futye i
+ futno o blara u jukko.
+da ztoya.
+de ztoya i grota u thomo.	
+di ztoya.
+do ztoya a brute.
+du ztoya.
+la mutce 
+bunbo mrenu ba ditca a ghoto.
+futon be ditca.
+gruton bi ditca.
+le blara bunbo mrenu bo ditca.
+jhqdhjqdwhjqwdhjqdjhwefdjhqwedhjwefz bu ditca.
+djb ba bbaba.
+djan ga vedma le negro ketpi.
+bad starts now.
+la fumna bi le mrenu.
+dja blarg.
+djb ba.
+.
+le bcad ga fgiho.
+le bcade gn fgiho le bcade.
+le bcade gi fgiho ly bcade.
+le bcade go fgiho lo bcadf.
+bcade gu fgiho lu bcade.
+lo qrase ba tviwu x xiyzu.
+lo qrase ba tviwu a xiyzu e futye i
+ futno o blara u jukk.
+la ztoya.
+ge ztoya i grota u thomo.	
+bi ztoya.
+do ztoya a bruten.
+du zaoya.
+futon e ditca.
+gruton li ditca.
+le blar bunbo mrenu bo ditca.
+djan da vedma le negro ketpi.
+#
+]]></test_input>
+<test_output><![CDATA[Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Good
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+Bad!
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Polygons]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1/v1-htm01/137img1.gif]]></src><base64><![CDATA[R0lGODlh0AHPAKEAAAAAAKKiov///wAAACH5BAEAAAIALAAAAADQAc8AAAL+hI+py+0Po5y02ouzpqL7D4biSJbmiabqyrYuCATyTNf2jef6zvf+DwwKh8Si0Qd4KZfMpvMJFcWO1Kr1is1qt8dk9AsOi8emKfeMTqvXbKKXDI/L5yhz+47P6/e/N/0PGAhmx1doeIiI5SfI2OhYlxgpOUl5s/iImelIWNnp+al2qTlKGscJipqqOiRa6vr6dLo6S1sr0wqbq7sia+v7W4m7O0wc0guMnMwnXNw8fKwcLZ3G7Gz9Cj2tvV1Vff2tmc09Tt4Hfq4rXr7OXuONDg+o3k5f/h6Pb1q/zz9znw8wzLx+BJH9C4gwVsGF9hI6nDOQoURVBx9aZBFxokb+TxUvejyRcaNISR0/mpQyMmWtkidbdgipMqYeli5PwpSJkw3Nmh9v5vx5ZifPiz6BGlU0NCnIo0wLCVWasGjTqaygWjVGNavOq1xfav2K5mnXeFLBmrUhdiy6smfbBkirFhxbt2bhxr02l+5Xu3ed5dWblW/fYn8BTxU8+JnhxUgS8yzM2Chix7kgR/45mTK2y5zRam5puXPMzJ9JhRadknTpcKhFq16N6XTrja9hb5rNubZtRrJxS9S9O1Bv3wuBB/8znDhB48chKl/MvLm+54CjSyeTnHo969fFZNfejnv3QeDpih8f5Xv5hujJrm97vr0T9e+5xZfPhH59bff+8SvRv580/fnnAoABKjMggRgdqFWCCqpgIIPAOPggJBIeVqE1EV5oC4UZlrAhh7R4+OEIIYq4CoklYoWiZCsSc2KLqKj4ogcxyvgJjTUKcCOOnehYY48+UrJBkUYeieQEsAg5JEnEechkk4gYoByFUUrpFI/POXglljN5taVpXmr0Rpf0DGjmmGv4kWZ4rKlZ0CJtuhkbnMuxCF58c9qJFJ55PrInn92YWJ94gQpqBC6H0inIoogKIYyj7Fgn6aONgXhgdJVaukM1m67D3KecWmJhpvKMKmAKooKKHKoIQsihbqui+s+srMphq6UH5coeHLwKWtGv5KgmLJwdFTv+DmnIelnSsvZh5+pK//k4mbND0mTtswJFm2J+TQqWbYtChattetzOOB+WdpF7oVjs2pfWu6YqNKa75/5orppPyVvoF/wm28S/5fElcLkvFEwduMAugXCV3iHKUsO+Vftos/dOCW3FBV5siLKcBsvxMtPpumDIebwmca+lmrwVrq7ek/Jlskb7TsyMAWezyiTkXN2p3HrKcijC3csMz25penGkQQfFG8eKLr0Fd0ZPSijUfTYdsihTNwgoy5dsTZWeQctp9aB1jv0B2Ez1pzajbQOFptVevJ1TgnRPSmXZVYlZdt56A2Gl3n7/3QOUgt89EomIg7o4mZUdTjgPNDb+Pizlxe1iObyR5wBk5tsMvrk/MEIeOg1Agim352c2o/o0oEd+uo2khx677H23PixesxNee9qHJwl88MIPT3zxxlMg+I6Eld6t8ooxn0rvL+KunfQrUp+w889DD4r1JWIfpvbpcI+u+I+Tn6P556OPr/qbsd+++6WA77D888Mfv/1v4j+J9x/S/yT98Y1/JBHgKAA4MQPuj4CJ8F+GEIgbB1YIgrOR4IMo2BoLKgiDqNEggTjoGgVmAoSd8aB/SJgbEZ6NgQ1UYddY2EIXNgKFMpPhDGEYQxsODYeHMCF+aBgZH8oHiDfTYaN42EMj7hCJIlNiq5jYRCc6B4p7EGKse4gIHSnSAYuGsSJ6uNgzLbqMil8S48jIeAcvjgeMelFjd9hoHjOeEY0tk+MY4Hg0O2aMjm1w43XwCB893pGPaRTkwwhZR0PmC5FCU6S/GLkmRz4SktSQ5CIpyQU/SgeQZ9FkczhZF0tCAZRg8eRxSLkXUdILk5lUZbpY2UpXeguWUZPlLGmZBVMGB5Vcs+W0cJlLX/4SmFfQ5W54GRhhHux4zGymM58JTeIVAAA7]]></base64></img><description><![CDATA[<p>Given two convex polygons, they may or may not overlap.  If they do overlap, they will do so to differing degrees and in different ways.  Write a program that will read in the coordinates of the corners of two convex polygons and calculate the `exclusive or' of the two areas, that is the area that is bounded by exactly one of the polygons.  The desired area is shaded in the following diagram:</p>
+<p></p>
+<p><img align="BOTTOM" width="464" height="207" src="http://127.1/v1-htm01/137img1.gif" alt="picture23" /></p>]]></description>
+<input><![CDATA[<p>Input will consist of pairs of lines each containing the number of vertices of the polygon, followed by that many pairs of integers representing the x,y coordinates of the corners in a clockwise direction. All the coordinates will be positive integers less than 100. For each pair of polygons (pair of lines in the data file), your program should print out the desired area correct to two decimal places. The input will end with a line containing a zero (0).</p>]]></input> 
+<output><![CDATA[<p>Output will consist of a single line containing the desired area written as a succession of eight (8) digit fields with two (2) digits after the  decimal point.  There will not be enough cases to need more than one line.</p>]]></output>
+<sample_input><![CDATA[3  5 5  8 1  2 3
+3  5 5  8 1  2 3
+4  1 2  1 4  5 4  5 2
+6  6 3  8 2  8 1  4 1  4 2  5 3
+0]]></sample_input>
+<sample_output><![CDATA[    0.00   13.50]]></sample_output>
+<test_input><![CDATA[3  5 5  8 1  2 3
+3  5 5  8 1  2 3
+4  1 2  1 4  5 4  5 2
+6  6 3  8 2  8 1  4 1  4 2  5 3
+4  1 1 1 4 4 4 4 1
+4  2 2 2 3 3 3 3 2
+4  2 3 2 4 3 4 3 3
+4  3 2 3 4 5 4 5 2
+4  1 2 1 3 2 3 2 2
+4  3 2 3 4 5 4 5 2
+8 2 2 1 3 1 4 2 5 3 5 4 4 4 3 3 2
+4 2 1 1 2 3 6 4 5
+8 2 2 1 3 1 4 2 5 3 5 4 4 4 3 3 2
+4 4 3 1 3 1 4 4 4
+16 1 5 1 6 2 8 3 9 5 10 6 10 8 9 9 8 10 6 10 5 9 3 8 2 6 1 5 1 3 2 2 3
+16 2 6 2 7 3 9 4 10 6 11 7 11 9 10 10 9 11 7 11 6 10 4 9 3 7 2 6 2 4 3 3 4
+16 1 5 1 6 2 8 3 9 5 10 6 10 8 9 9 8 10 6 10 5 9 3 8 2 6 1 5 1 3 2 2 3
+7 1 4 5 11 6 12 8 11 9 10 10 8 9 1
+0  
+]]></test_input>
+<test_output><![CDATA[    0.00   13.50    8.00    5.00    5.00    5.33    4.00   24.00   23.08
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Orchard Trees]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1/v1-htm01/143img1.gif]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p>An Orchardist has planted an orchard in a rectangle with trees uniformly spaced in both directions. Thus the trees form a rectangular grid and we can consider the trees to have integer coordinates. The origin of the coordinate system is at the bottom left of the following diagram:</p>
+<p></p>
+<p><img align="BOTTOM" src="http://127.1/v1-htm01/143img1.gif" alt="picture23" /></p>
+<p></p>
+<p>Consider that we now overlay a series of triangles on to this grid. The vertices of the triangle can have any real coordinates in the range 0.0 to 100.0, thus trees can have coordinates in the range 1 to 99. Two possible triangles are shown.</p>
+<p></p>
+<p>Write a program that will determine how many trees are contained within a given triangle. For the purposes of this problem, you may assume that the trees are of point size, and that any tree (point) lying exactly on the border of a triangle is considered to be in the triangle.</p>]]></description>
+<input><![CDATA[<p>Input will consist of a series of lines. Each line will contain 6 real numbers in the range 0.00 to 100.00 representing the coordinates of a triangle. The entire file will be terminated by a line containing 6 zeroes (0 0 0 0 0 0).</p>
+<p></p>
+<p>Output will consist of one line for each triangle, containing the number of trees for that triangle right justified in a field of width 4.</p>]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[1.5 1.5  1.5 6.8  6.8 1.5
+10.7 6.9  8.5 1.5  14.5 1.5
+0 0 0 0 0 0
+]]></sample_input>
+<sample_output><![CDATA[  15
+  17]]></sample_output>
+<test_input><![CDATA[  1.5 1.5  1.5 6.8   6.8  1.5
+  1.5 1.5   6.8  1.5  1.5 6.8
+  10.7 6.9 8.5 1.5 14.5 1.5
+  0.1 0.9 1.9 1.1 1 0.5
+  0.1 0.9 1.9 1.1 1 1.5
+0 100 100 0 0 0
+0 99.99 100 0 0 0
+0 100 100 0 0.01 0.01
+0 100 100 0 100 100
+  0 0  0 0  0 0
+]]></test_input>
+<test_output><![CDATA[  15
+  15
+  17
+   1
+   1
+4950
+4851
+4950
+4950
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Forests]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1/v1-htm01/149img1.gif]]></src><base64><![CDATA[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]]></base64></img><img><src><![CDATA[http://127.1/v1-htm01/149img2.gif]]></src><base64><![CDATA[R0lGODlhDQANAIAAAAAAAP///yH5BAEAAAEALAAAAAANAA0AAAIcjAOZd8tuAHtxUmSfzG1z7GVSOHlk01nnonxnAQA7]]></base64></img><img><src><![CDATA[http://127.1/v1-htm01/149img3.gif]]></src><base64><![CDATA[R0lGODlhDQANAKEAAAAAAKKiov///wAAACH5BAEAAAIALAAAAAANAA0AAAIjlAWZdxn/lgGwBtBsxVRD7m1deI0ehpCoaaFp606OxDCxUQAAOw==]]></base64></img><img><src><![CDATA[http://127.1/v1-htm01/149img4.gif]]></src><base64><![CDATA[R0lGODlh/wAbAIAAAAAAAP///yH5BAEAAAEALAAAAAD/ABsAAAL+jI+py+0Po5wUgoqz3ut24BkgR5bmGYWHioLhiMYBrNAzK4v46eZVz6C5diYhMWajJEW+x7L4bAajuk7zeMU6cVRpV/OVIsJPLdgsCzuMtuVw5YEBx/GhKllfq2/87UqPRoSmNOdWmHfDVfdGN1YF1yfUFxlHWQk589eYqTNStpfpiXUhNzXIWdOCSPqyasmE+VJz+cbWCid3m4hIqdkm2/lIt5fXBfQJKsijy2jUyZvryyKZKMyIag2crbmr+zxtNpcyGG0qofxhd72J7Qy7/W6HifubzgtfH+89P5lw2r9mwr4pFoIsEzapnLV5hvztEHQsIqdc5ZyxmjXx4b+4agZLOeHXQFwqK1Ce8VklMSEpgCdBsjTpCVKxlfr+QIN1E6FAZJdeahuHbmQJURmLxqzJJGdPalHUHaLYzFvEp/TubHQ0S14whyJTEBzW9Yc6k90UsvmGC+xAl2La+jgCysJVt3QF1r2bBmNcr3j7ktjrF4PTdedShf029mvgxXYZO2487MrjyYopW54897JkzZw7e/4MOrTo0aRLmz6NOrXq1axbu34NO7bs2bRr276NO7fu3ZwLAAA7]]></base64></img><img><src><![CDATA[http://127.1/v1-htm01/149img5.gif]]></src><base64><![CDATA[R0lGODlhcwAaAIAAAAAAAP///yH5BAEAAAEALAAAAABzABoAAALdjA15eu0Po5y0wgRqjix0C15b+GCkl30NNpbnK8JiO3WqQy+5TN48usONfIuSCZFj6ZDIHYP1iTIpR4ktiFhtnqhl1/M90rhZbVlJNFqHWPA0LGY3t/I33Xx+trXBa83rZjeE9xUI5KdTVWihqPZ24RVVJ1n0eEPpAtIY85gJpwA6pQS3dCfkdrnXpFnHUZrCdBdaVghrd3a7yKFKqDeWOBoMZVp7VXU8quvYk8LmvPkTLc0DPW19jZ2tvQ08zMsNHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn68PUQAAOw==]]></base64></img><description><![CDATA[<p>The saying ``You can't see the wood for the trees'' is not only a cliche, but is also incorrect. The real problem is that you can't see the trees for the wood. If you stand in the middle of a ``wood'' (in NZ terms, a patch of bush), the trees tend to obscure each other and the number of distinct trees you can actually see is quite small. This is especially true if the trees are planted in rows and columns (as in a pine plantation), because they tend to line up. The purpose of this problem is to find how many distinct trees you can see from an arbitrary point in a pine plantation (assumed to stretch ``for ever'').</p>
+<p></p>
+<p><img align="BOTTOM" width="475" height="333" src="http://127.1/v1-htm01/149img1.gif" alt="picture23" /></p>
+<p></p>
+<p>You can only see a distinct tree if no part of its trunk is obscured by a nearer tree--that is if both sides of the trunk can be seen, with a discernible gap between them and the trunks of all trees closer to you. Also, you can't see a tree if it is apparently ``too small''. For definiteness, ``not too small'' and ``discernible gap'' will mean that the angle subtended at your eye is greater than 0.01 degrees (you are assumed to use one eye for observing). Thus the two trees marked <img align="BOTTOM" width="13" height="13" src="http://127.1/v1-htm01/149img2.gif" alt="picture169" />  obscure at least the trees marked <img align="BOTTOM" width="13" height="13" src="http://127.1/v1-htm01/149img3.gif" alt="picture175" />  from the given view point.</p>
+<p></p>
+<p>Write a program that will determine the number of trees visible under these assumptions, given the diameter of the trees, and the coordinates of a viewing position. Because the grid is infinite, the origin is unimportant, and the coordinates will be numbers between 0 and 1.</p>]]></description>
+<input><![CDATA[<p>Input will consist of a series of lines, each line containing three real numbers of the form 0.nn. The first number will be the trunk diameter--all trees will be assumed to be cylinders of exactly this diameter, with their centres placed exactly on the points of a rectangular grid with a spacing of one unit. The next two numbers will be the x and y coordinates of the observer. To avoid potential problems, say by being too close to a tree, we will guarantee that  <img align="MIDDLE" width="255" height="27" src="http://127.1/v1-htm01/149img4.gif" alt="tex2html_wrap_inline260" /> .  To avoid problems with trees being too small you may assume that  <img align="MIDDLE" width="115" height="26" src="http://127.1/v1-htm01/149img5.gif" alt="tex2html_wrap_inline262" /> . The file will be terminated by a line consisting of three zeroes.</p>]]></input> 
+<output><![CDATA[<p>Output will consist of a series of lines, one for each line of the input. Each line will consist of the number of trees of the given size, visible from the given position.</p>]]></output>
+<sample_input><![CDATA[0.10 0.46 0.38
+0 0 0]]></sample_input>
+<sample_output><![CDATA[128
+]]></sample_output>
+<test_input><![CDATA[0.1 0.5 0.5
+0.1 0.1 0.1
+0.2 0.20 0.80
+0.5 0.5 0.5
+0 0 0
+]]></test_input>
+<test_output><![CDATA[132
+92
+28
+4
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Double Time]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>In 45 BC a standard calendar was adopted by Julius Caesar--each year would have 365 days, and every fourth year have an extra day--the 29th of February. However this calendar was not quite accurate enough to track the true solar year, and it became noticeable that the onset of the seasons was shifting steadily through the year. In 1582 Pope Gregory XIII ruled that a new style calendar should take effect. From then on, century years would only be leap years if they were divisible by 400. Furthermore the current year needed an adjustment to realign the calendar with the seasons. This new calendar, and the correction required, were adopted immediately by Roman Catholic countries, where the day following Thursday 4 October 1582 was Friday 15 October 1582. The British and Americans (among others) did not follow suit until 1752, when Wednesday 2 September was followed by Thursday 14 September. (Russia did not change until 1918, and Greece waited until 1923.) Thus there was a long period of time when history was recorded in two different styles.</p>
+<p></p>
+<p>Write a program that will read in a date, determine which style it is in, and then convert it to the other style.</p>]]></description>
+<input><![CDATA[<p>Input will consist of a series of lines, each line containing a day and date (such as Friday 25 December 1992). Dates will be in the range 1 January 1600 to 31 December 2099, although converted dates may lie outside this range. Note that all names of days and months will be in the style shown, that is the first letter will be capitalised with the rest lower case. The file will be terminated by a line containing a single `<tt>#</tt>'.</p>]]></input> 
+<output><![CDATA[<p>Output will consist of a series of lines, one for each line of the input. Each line will consist of a date in the other style. Use the format and spacing shown in the example and described above. Note that there must be exactly one space between each pair of fields. To distinguish between the styles, dates in the old style must have an asterisk (`*') immediately after the day of the month (with no intervening space). Note that this will not apply to the input.</p>]]></output>
+<sample_input><![CDATA[Saturday 29 August 1992
+Saturday 16 August 1992
+Wednesday 19 December 1991
+Monday 1 January 1900
+#]]></sample_input>
+<sample_output><![CDATA[Saturday 16* August 1992
+Saturday 29 August 1992
+Wednesday 1 January 1992
+Monday 20* December 1899]]></sample_output>
+<test_input><![CDATA[Wednesday 13 September 1752
+Wednesday 2 September 1752
+Thursday 2 July 1992
+Thursday 19 June 1992
+Friday 18 January 1991
+Friday 5 January 1991
+Thursday 18 June 1992
+Saturday 1 January 1600
+Tuesday 1 January 1600
+#
+]]></test_input>
+<test_output><![CDATA[Wednesday 2* September 1752
+Wednesday 13 September 1752
+Thursday 19* June 1992
+Thursday 2 July 1992
+Friday 5* January 1991
+Friday 18 January 1991
+Thursday 5* June 1992
+Saturday 22* December 1599
+Tuesday 11 January 1600
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+</item>
+</fps>
