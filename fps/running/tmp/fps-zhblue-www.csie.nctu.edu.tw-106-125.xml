@@ -1,0 +1,2769 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[Fermat vs. Pythagoras]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/106img1.gif]]></src><base64><![CDATA[R0lGODlhXgAaAIAAAAAAAP///yH5BAEAAAEALAAAAABeABoAAAKgjH8AoegPk1qS0Yjza03Pq4Ud8oWmN2ULBWItNDLyfNbJ/DpdvontbgsagKSU5ci7eY7D1UqounCeO5YzqXRNmxbe5xsrcqfOChTLDKPAJV01MkK72UazGqo1vfFoqRzP5dN0J7LUZUPXJibIwWdICLghpfXlGAUZOYeZScLp+Sn0BzpKWmp6ipqqusra6voKGys7S1tre4ubq7vL22tbAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/106img2.gif]]></src><base64><![CDATA[R0lGODlhKAETAIAAAAAAAP///yH5BAEAAAEALAAAAAAoARMAAALQjI+py+0Po5y02osR2CBH3nkQKJbmiabqeoQba7ghLMP2jef6UtPxzOrthsSicfLCJZXAo/MJvS1tU2ozis1qK69rwovsgFHdrfmM/sYe489a+k7L57nuDNQO5PX3FumUJMNBR1iYIoZokZeoF4b3p/BoOElpUlPl5jDI5/i4qRZXKTrKtafhCen3o2NK6urayrB3F4uB+Yr7yljbMqIqgZr6e5tbbPjHGyrba+Vi/CzqeTErrIJIDJ2trayZvP0NLrLIGF5ufnR9rr5eh21UAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/106img3.gif]]></src><base64><![CDATA[R0lGODlhTgAZAIAAAAAAAP///yH5BAEAAAEALAAAAABOABkAAAKWTICmy+0Po0NJUXBwlbxHKoGWsW3e2YlftmAs6XIm+syQVsJWfNtM4msFJzpS8VUbjio8YVNWjJWeMOpEZLugmMCd96e8fhsqqFeKvlqTx17KKRyTw196Zo1sT0P4UZtv9TQD1Fe1dmH3o8aTlVjFRhMpOZlHaXk5J4OIiNlpWOgZKjpKWmp6ipqqusra6voKGys7e1kAADs=]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/106img4.gif]]></src><base64><![CDATA[R0lGODlhIQAaAIAAAAAAAP///yH5BAEAAAEALAAAAAAhABoAAAJKjI+pwIDtVGgy0RMXq3bmKW1cd4GPOD4GmpWp6q2Y+8ae8901dpra/qFZUBWibSTkDYFFl3EHjUpnkOr0is1qt9yu9wsOi8fkUQEAOw==]]></base64></img><description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000">Background</a></font></h2>
+<p>Computer generated and assisted proofs and verification occupy a small niche in the realm of Computer Science.  The first proof of the four-color problem was completed with the assistance of a computer program and current efforts in verification have succeeded in verifying the translation of high-level code down to the chip level.</p>
+<p>This problem deals with computing quantities relating to part of Fermat's Last Theorem: that there are no integer solutions of  <img align="MIDDLE" width="94" height="26" alt="tex2html_wrap_inline29" src="http://127.1:80/v1-htm01/106img1.gif" />  for <i>n</i> &gt; 2.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000">The Problem</a></font></h2>
+<p>Given a positive integer <i>N</i>, you are to write a program that computes two quantities regarding the solution of</p>
+<p><img align="BOTTOM" width="296" height="19" alt="displaymath22" src="http://127.1:80/v1-htm01/106img2.gif" /></p>
+<p>where <i>x</i>, <i>y</i>, and <i>z</i> are constrained to be positive integers less than or equal to <i>N</i>.   You are to compute the number of triples (<i>x</i>,<i>y</i>,<i>z</i>) such that <i>x</i>&lt;<i>y</i>&lt; <i>z</i>, and they are relatively prime, i.e., have no common divisor larger than 1.  You are also to compute the number of values  <img align="MIDDLE" width="78" height="25" alt="tex2html_wrap_inline51" src="http://127.1:80/v1-htm01/106img3.gif" />  such that <i>p</i> is not part of any triple (not just relatively prime triples).</p>]]></description>
+<input><![CDATA[<p>The input consists of a sequence of positive integers, one per line.  Each integer in the input file will be less than or equal to 1,000,000.  Input is terminated by end-of-file.</p>]]></input> 
+<output><![CDATA[<p>For each integer <i>N</i> in the input file print two integers separated by a space.  The first integer is the number of relatively prime triples (such that each component of the triple is  <img align="MIDDLE" width="33" height="26" alt="tex2html_wrap_inline57" src="http://127.1:80/v1-htm01/106img4.gif" /> ).  The second number is the number of positive integers  <img align="MIDDLE" width="33" height="26" alt="tex2html_wrap_inline57" src="http://127.1:80/v1-htm01/106img4.gif" />  that are not part of any triple whose components are all  <img align="MIDDLE" width="33" height="26" alt="tex2html_wrap_inline57" src="http://127.1:80/v1-htm01/106img4.gif" /> .  There should be one output line for each input line.</p>]]></output>
+<sample_input><![CDATA[10
+25
+100]]></sample_input>
+<sample_output><![CDATA[1 4
+4 9
+16 27]]></sample_output>
+<test_input><![CDATA[25
+42
+643
+]]></test_input>
+<test_output><![CDATA[4 9
+7 12
+102 133
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[SCUD Busters]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/109img1.gif]]></src><base64><![CDATA[R0lGODlhCQASAIAAAAAAAP///yH5BAEAAAEALAAAAAAJABIAAAIaRI4Bm2qK3mGs1bTkNLdz7YBTQ5bmiaZqUgAAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/109img2.gif]]></src><base64><![CDATA[R0lGODlhYAAaAIAAAAAAAP///yH5BAEAAAEALAAAAABgABoAAAK9TICmy+2Gkorg2XtcbPtUjzGdNWbhUk4pKEFV0rbXyoHT6X6zqEvxKHsESZ4ebijkqVzLJgmZtJlmUI2SKf1RdUcsV1ONOn29F0VIe+am4LAVVcZK5Rw3Cs5GfzFfbVZmZ8eWhtaF51XmxxcWJAi3V3No86MYkrbnyAN5I0mm4onDqcmVGVl3xgRo9hna6vq6iFkKS1tre0SRu0mrm3v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tHVoAADs=]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/109img3.gif]]></src><base64><![CDATA[R0lGODlhXgARAIAAAAAAAP///yH5BAEAAAEALAAAAABeABEAAAKMDBCGye18Uny02lvnfChuDCkiSJaZ+DXHYpjSxroyuIYZ29U0DsXz37NRYp0XTRUEKiXI0wt2NEqXQFxu1GJCp80sN6Xw6XpEH/Mctmp4T874m3qHHW95Wot2C/MYsJnqdaEh+OUSB8hR4lE0tEJk4siGuCeY89dHdbmkOdnp+QkaKjpKWmp6ipraWQAAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/109img4.gif]]></src><base64><![CDATA[R0lGODlhNwARAIAAAAAAAP///yH5BAEAAAEALAAAAAA3ABEAAAJZDBCGye0P30kTolljO7xnd4URxyxa6aVWZkrm0p3yWmotTLWzfNuoUnOlYpYf5hVk7ZbIHIuUCy550AvlpJxqowYedzs9dkdEMDOkM6vX7Lb7DY/L5/R6oAAAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/109img5.gif]]></src><base64><![CDATA[R0lGODlhYgEtAIAAAAAAAP///yH5BAEAAAEALAAAAABiAS0AAAL+jI+py+0Po5y02usACBr7D4biSJbmiaaQ1qnuC8fyTMvbtN13zff+DwxaWDtJqyhMKpfMZgi5yuWc1Kr1moQ+Oiys9wsOi7TisvmMppDT7LY7vH7L53RgvI7P601xov/vtyc4WNfXtXVIqLhodpeIyBgpafXHQGQEdRejecH54jkZenAZgQTq0kJyqpIq6prRirPKOtsQ+3P7qjuaC7vUO1SbArzrSorJRCybLFyMctzzuKLA1Uy9s6ZstFBtiz2i7QxzpAUIPRZuYMohxYvRzqFuaj1KzX4vr46vY50uPoytnDlpIM7ZQsAPn0JfCMnlazgmQcJU5BIu9MaN3r/+DxRVmSuVTqCHWw4tCRzIzSSki1EybvRRMghBSykleiLpjqTGeDUh1ssXUuRLHhUzDfQHUg3Cfe6SSsxpNOLSI031Ab0pdCiNbjs5nipCSgdPdpUeLtU3xaZUXlTjga2Xlmwgsz61zgBkZxXFsgo/0pV3SCe6hnMXzt3LNxdSu15mXgtWaixDl26fDo4ctXJLe4zfxFS57edKRIm6/V2cAdnVqrAeoe5MBWw2UK1eK3VsFdwsKV0lw06z1yRWzrQc9c4t67jt38xYsz2KlziuZ0KOM89yEjrf69yd9dIevbt4XcvHmxdX/rz6Vx3Xu4f9lvL7+aLCq91MP//Q9Poo+4MJ6l+AeyBWGH8CHpiMbxghyKAbADYIIRpp+cVShBZiEU5hFwZQAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/109img6.gif]]></src><base64><![CDATA[R0lGODlhVQAbAIAAAAAAAP///yH5BAEAAAEALAAAAABVABsAAAKvjI+pywkNY3uy2kOvXiDvj3ng141gaY5oeq3sVqLui3HPLK0i0t1+3gv2GLsfbhKQTYI1w1EI3SUdzl8VMkxmXLFtiDa1KY48is4T44GpHNWXeHuTo8K2WnmNbM2itPNN05e1B6j2l/fF9Celgga1GFKkGFe2tEY21meJeEgUFmhB+ZmI9omptYYKZHjHVZpawaiXKcsJi3WLlLvL2+v7CxwsPExcbHyMnKy8zLxQAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/109img7.gif]]></src><base64><![CDATA[R0lGODlhCwARAIAAAAAAAP///yH5BAEAAAEALAAAAAALABEAAAIfDBCGaep8VnMHpiqnvajq5UWgxkBZ2ZwmyrbuC8dxAQA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/109img8.gif]]></src><base64><![CDATA[R0lGODlhHQASAIAAAAAAAP///yH5BAEAAAEALAAAAAAdABIAAAI/DBCGye1vlIT0nRXTqXVr5mlYE46jE5LYuqQTuoLg6YpzmV26eVrtnqqhMjYf51VUXY4wpjP5jEqn1Kr16iwAADs=]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/109img9.gif]]></src><base64><![CDATA[R0lGODlhZwAYAIAAAAAAAP///yH5BAEAAAEALAAAAABnABgAAAKNTACmy+2YnJy02sfQvVrvD35QFHKkV6bqQq4SirqyyLYubM9erCsJbxgJgYdT7lYMHlVG4nDYwM1qu2WqRbwapzXf4wmhYK0hKVeJPm+P4FF0e04myaD11OzjhakZL72el1XSkbMXmBGD82fiFqe06BgpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqqloAADs=]]></base64></img><description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000">Background</a></font></h2>
+<p>Some problems are difficult to solve but have a simplification that is easy to solve.  Rather than deal with the difficulties of constructing a model of the Earth (a somewhat oblate spheroid), consider a pre-Columbian flat world that is a 500 kilometer  <img align="MIDDLE" width="9" height="18" src="http://127.1:80/v1-htm01/109img1.gif" alt="tex2html_wrap_inline41" />  500 kilometer square.</p>
+<p>In the model used in this problem, the flat world consists of several warring kingdoms.  Though warlike, the people of the world are strict isolationists; each kingdom is surrounded by a high (but thin) wall designed to both protect the kingdom and to isolate it.  To avoid fights for power, each kingdom has its own electric power plant.</p>
+<p>When the urge to fight becomes too great, the people of a kingdom often launch missiles at other kingdoms.  Each SCUD missile (<u>anitary <u>leansing <u>niversal <u>estroyer) that lands within the walls of a kingdom destroys that kingdom's power plant (without loss of life). </u></u></u></u></p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000">The Problem</a></font></h2>
+<p>Given coordinate locations of several kingdoms (by specifying the locations of houses and the location of the power plant in a kingdom) and missile landings you are to write a program that determines the total area of all kingdoms that are without power after an exchange of missile fire.</p>
+<p>In the simple world of this problem kingdoms do not overlap. Furthermore, the walls surrounding each kingdom are considered to be of zero thickness.  The wall surrounding a kingdom is the minimal-perimeter wall that completely surrounds all the houses and the power station that comprise a kingdom; the area of a kingdom is the area enclosed by the minimal-perimeter thin wall.</p>
+<p>There is exactly one power station per kingdom.</p>
+<p>There may be empty space between kingdoms.</p>]]></description>
+<input><![CDATA[<p>The input is a sequence of kingdom specifications followed by a sequence of missile landing locations.</p>
+<p>A kingdom is specified by a number <i>N</i> ( <img align="MIDDLE" width="96" height="26" src="http://127.1:80/v1-htm01/109img2.gif" alt="tex2html_wrap_inline45" /> ) on a single line which indicates the number of sites in this kingdom.  The next line contains the <i>x</i> and <i>y</i> coordinates of the power station, followed by <i>N</i>-1 lines of <i>x</i>, <i>y</i> pairs indicating the locations of homes served by this power station.  A value of -1 for <i>N</i> indicates that there are no more kingdoms.  There will be at least one kingdom in the data set.</p>
+<p>Following the last kingdom specification will be the coordinates of one or more missile attacks, indicating the location of a missile landing.  Each missile location is on a line by itself.  You are to process missile attacks until you reach the end of the file.</p>
+<p>Locations are specified in kilometers using coordinates on a 500 km by 500 km grid.  All coordinates will be integers between 0 and 500 inclusive.  Coordinates are specified as a pair of integers separated by white-space on a single line.  The input file will consist of up to 20 kingdoms, followed by any number of missile attacks.</p>]]></input> 
+<output><![CDATA[<p>The output consists of a single number representing the total area of all kingdoms without electricity after all missile attacks have been processed.  The number should be printed with (and correct to) two decimal places.</p>]]></output>
+<sample_input><![CDATA[12
+3 3
+4 6
+4 11
+4 8
+10 6
+5 7
+6 6
+6 3
+7 9
+10 4
+10 9
+1 7
+5
+20 20
+20 40
+40 20
+40 40
+30 30
+3
+10 10
+21 10
+21 13
+-1
+5 5
+20 12]]></sample_input>
+<sample_output><![CDATA[70.50]]></sample_output>
+<test_input><![CDATA[10
+400 30
+410 30
+420 30
+430 30
+430 40
+430 50
+430 60
+400 50
+425 34
+428 40
+        20
+        38        26
+        24        23
+        31        15
+        25         3
+         2        11
+        35        28
+        46        48
+        30        32
+         7        47
+        44        41
+         9        17
+        32        34
+         1        23
+         7        38
+        28        39
+        14         3
+        26        16
+        31        38
+        41         7
+        18         6
+        42
+       373       391
+       398       243
+       399       205
+       372       296
+       377       254
+       377       382
+       395       214
+       379       186
+       375       207
+       393       311
+       398       341
+       394       253
+       385       237
+       389       190
+       386       122
+       373       166
+       392       270
+       398       386
+       389       289
+       376       382
+       397       343
+       377       204
+       390       301
+       372       236
+       376       329
+       388       330
+       380       121
+       387       198
+       390       324
+       395       142
+       382       137
+       392       359
+       395       117
+       391       282
+       387       226
+       378       350
+       377       227
+       374       224
+       397       344
+       388       136
+       397       106
+       374       142
+        60
+        90       232
+       104       127
+        89       199
+        73       174
+        36       228
+        30       175
+        20       174
+       110       226
+        76       135
+       112       122
+        20       138
+        64       141
+       115       201
+        98       132
+        35       215
+        78       136
+        31       239
+        70       173
+       105       234
+        91       128
+        66       126
+        63       235
+        90       196
+        91       163
+        50       155
+        57       196
+        96       178
+        18       235
+       123       206
+        55       229
+       121       146
+        23       248
+        55       138
+        11       203
+        91       147
+        40       213
+        78       144
+        99       215
+        16       157
+        74       181
+        16       173
+       109       247
+       108       225
+        64       240
+        97       228
+        13       232
+       107       213
+       108       139
+       100       149
+        61       233
+        76       183
+        87       212
+        60       142
+        63       177
+       115       184
+       114       122
+       124       246
+       100       218
+        88       229
+        87       151
+        30
+       139        36
+       144        52
+       223        67
+       146        70
+       224        48
+       140        47
+       163        36
+       196        57
+       153        55
+       154        13
+       137        18
+       140        17
+       227        14
+       230        63
+       142        43
+       239        45
+       159        23
+       146        17
+       141        17
+       213        30
+       234        69
+       175        62
+       201        25
+       128        11
+       137        63
+       129        24
+       169        20
+       155        17
+       128        25
+       219        18
+        40
+       342        26
+       306        60
+       362        70
+       282        46
+       357        22
+       272        64
+       345        61
+       276        42
+       316        40
+       298        23
+       300        48
+       342        35
+       312        54
+       363        69
+       280        41
+       326        57
+       322        62
+       353        66
+       315        42
+       318        68
+       353        36
+       282        45
+       365        49
+       368        29
+       295        41
+       367        32
+       325        48
+       293        55
+       335        69
+       310        28
+       359        58
+       329        68
+       358        40
+       355        41
+       306        36
+       334        36
+       354        29
+       347        59
+       366        60
+       290        57
+        10
+       202       239
+       237       219
+       238       214
+       200       226
+       208       221
+       208       238
+       232       215
+       210       211
+       205       214
+       230       228
+        62
+       297       253
+       291       212
+       279       204
+       285       182
+       280       150
+       261       170
+       288       219
+       297       274
+       284       228
+       265       272
+       295       253
+       267       188
+       286       234
+       261       203
+       266       247
+       283       247
+       271       150
+       281       186
+       285       245
+       293       159
+       274       157
+       288       261
+       293       148
+       288       225
+       282       199
+       269       257
+       267       199
+       263       198
+       295       254
+       283       157
+       296       143
+       263       160
+       279       162
+       297       227
+       291       153
+       269       242
+       284       157
+       267       268
+       281       197
+       293       262
+       288       149
+       279       147
+       278       264
+       288       221
+       288       186
+       274       178
+       276       222
+       290       202
+       262       264
+       300       232
+       275       257
+       299       168
+       264       278
+       275       159
+       260       229
+       288       170
+       270       240
+       284       166
+       291       242
+       262       180
+       282       206
+       262       197
+        33
+        89       281
+       113       282
+       111       275
+       127       280
+        97       282
+       136       277
+        85       288
+       112       271
+        72       266
+       129       264
+        94       277
+       136       304
+       113       261
+       101       297
+        93       266
+       106       294
+        79       292
+       137       269
+       110       297
+        85       299
+        80       262
+       110       271
+       100       281
+       107       272
+        90       286
+       130       281
+        92       294
+       118       301
+       112       261
+        75       269
+       132       307
+       115       292
+       128       264
+        98
+       114       463
+        70       442
+        70       404
+        54       464
+        27       401
+        52       480
+        54       466
+        27       462
+        55       416
+        24       443
+        69       399
+        44       470
+        98       456
+        44       410
+        44       435
+        21       404
+        82       405
+        43       451
+        39       399
+        33       457
+        62       428
+        16       446
+        32       475
+        14       405
+        84       447
+        82       401
+       109       399
+        92       485
+        17       450
+       123       494
+        20       423
+        63       392
+        78       462
+        97       466
+        47       476
+        27       489
+        59       468
+        69       406
+        45       451
+        22       443
+        80       487
+       125       463
+        73       434
+       122       460
+        80       451
+       111       488
+       117       460
+        46       420
+       124       441
+        41       500
+       117       417
+       124       429
+        71       422
+       111       438
+       119       474
+        88       490
+        79       444
+       115       456
+        40       400
+        87       480
+        95       478
+        63       443
+       100       456
+        20       468
+        95       467
+       123       422
+        88       456
+       115       489
+        51       406
+       118       469
+        85       416
+        96       450
+        29       411
+        45       456
+        61       430
+        32       489
+        57       403
+        97       456
+        48       403
+       108       475
+        21       391
+        83       473
+        88       468
+       111       442
+        35       497
+        36       472
+        46       479
+       129       491
+        72       436
+       104       419
+        32       491
+        17       494
+        75       449
+        89       473
+        73       482
+       110       441
+        38       454
+        46       438
+        51
+       156       484
+       368       390
+       374       365
+       145       424
+       190       396
+       191       479
+       339       371
+       207       353
+       172       366
+       325       433
+       369       452
+       331       396
+       258       386
+       293       355
+       265       312
+       150       340
+       315       407
+       370       481
+       291       419
+       175       478
+       360       453
+       186       364
+       299       427
+       146       385
+       179       445
+       282       445
+       209       311
+       272       361
+       297       442
+       346       325
+       230       322
+       313       464
+       344       309
+       312       415
+       276       378
+       196       458
+       184       379
+       163       377
+       357       454
+       284       321
+       362       302
+       163       325
+       257       329
+       368       418
+       331       316
+       195       438
+       288       321
+       185       474
+       270       376
+       347       466
+       316       310
+-1
+        33       485
+       455       239
+       467       176
+        10       327
+       101       256
+       102       470
+       397       189
+       133       144
+        64       178
+       369       352
+       458       402
+       381       256
+       236       228
+       306       150
+       249        36
+        20       110
+       349       283
+       459       476
+       303       315
+        71       469
+       439       404
+        93       173
+       318       336
+        13       227
+        78       382
+       283       383
+       138        36
+       264       164
+       314       374
+       411        70
+       180        62
+       345       432
+       407        29
+       345       304
+       272       209
+       113       416
+        89       211
+        46       206
+       433       407
+       288        60
+       443        11
+        47        71
+       235        81
+       455       312
+       382        48
+       111       365
+       296        62
+        91       457
+       260       203
+       413       436
+       352        32
+       244        25
+       232       441
+       347       290
+       351       164
+       176       135
+       206       294
+       375       223
+        34       441
+       490       330
+       195       417
+       479       101
+        57       492
+       194        69
+         5       318
+       351       106
+       132       357
+       297        94
+       385       364
+425 35]]></test_input>
+<test_output><![CDATA[84350.00
+]]></test_output>
+<hint><![CDATA[<p>You may or may not find the following formula useful.</p>
+<p>Given a polygon described by the vertices  <img align="MIDDLE" width="94" height="17" src="http://127.1:80/v1-htm01/109img3.gif" alt="tex2html_wrap_inline61" />  such that  <img align="MIDDLE" width="55" height="17" src="http://127.1:80/v1-htm01/109img4.gif" alt="tex2html_wrap_inline63" /> , the signed area of the polygon is given by</p>
+<p><img align="BOTTOM" width="354" height="45" src="http://127.1:80/v1-htm01/109img5.gif" alt="displaymath59" /></p>
+<p>where  the x, y coordinates of  <img align="MIDDLE" width="85" height="27" src="http://127.1:80/v1-htm01/109img6.gif" alt="tex2html_wrap_inline65" /> ; the edges of the polygon are from  <img align="MIDDLE" width="11" height="17" src="http://127.1:80/v1-htm01/109img7.gif" alt="tex2html_wrap_inline67" />  to  <img align="MIDDLE" width="29" height="18" src="http://127.1:80/v1-htm01/109img8.gif" alt="tex2html_wrap_inline69" />  for  <img align="MIDDLE" width="103" height="24" src="http://127.1:80/v1-htm01/109img9.gif" alt="tex2html_wrap_inline71" /> .</p>
+<p>If the points describing the polygon are given in a counterclockwise direction, the value of <i>a</i> will be positive, and if the points of the polygon are listed in a clockwise direction, the value of <i>a</i> will be negative.</p>]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Meta-Loopless Sorts]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/110img1.png]]></src><base64><![CDATA[iVBORw0KGgoAAAANSUhEUgAAABIAAAAeBAAAAAG2kMxnAAAAAnRSTlMAD+Ys0KkAAAB9SURBVHicY/j/gQGIfoPJ/wz3GV4Dyf8g7ncg/g/DDP8/M3wCkv0Mv/eAuVAEkb0MIn/Eg9n//3yAi+Mk80FkBIgdBRb5fB8s/ug+XM3u3fuJMAdKggGMdR/KOioFETtiCZXdmItQVxQH1/FvYv5/FFOWuABB/H9Mk4lnAQDrsQwGHTwvXwAAAABJRU5ErkJggg==]]></base64></img><description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000"> Background</a>&nbsp;</font></h2>
+<p>Sorting holds an important place in computer science.  Analyzing and implementing various sorting algorithms forms an important part of the education of most computer scientists, and sorting accounts for a significant percentage of the world's computational resources.  Sorting algorithms range from the bewilderingly popular Bubble sort, to Quicksort, to parallel sorting algorithms and sorting networks.  In this problem you will be writing a program that creates a sorting program (a meta-sorter).</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000"> The Problem</a>&nbsp;</font></h2>
+<p>The problem is to create several programs whose output is a standard Pascal program that sorts</p>
+<span class="MATH"><i>n</i></span>
+<p>numbers where</p>
+<span class="MATH"><i>n</i></span>
+<p>is the only input to the program you will write. The Pascal programs generated by your program must have the following properties:</p>
+<p></p>
+<ul>
+    <li>They must begin with <tt>program sort(input,output);</tt>
+    <p></p>
+    </li>
+    <li>They must declare storage for exactly <span class="MATH"><i>n</i></span> <tt>integer</tt> variables.  The names of the variables must come from the first <span class="MATH"><i>n</i></span> letters of the alphabet (a,b,c,d,e,f).
+    <p></p>
+    </li>
+    <li>A single <tt>readln</tt> statement must read in values for all the integer variables.
+    <p></p>
+    </li>
+    <li>Other than <tt>writeln</tt> statements, the only statements in the program are <tt>if then else</tt> statements.  The boolean conditional for each <tt>if</tt> statement must consist of one strict inequality (either <span class="MATH">&lt;</span> or <span class="MATH">&gt;</span>) of two integer variables.  Exactly <span class="MATH"><i>n</i>!</span> <tt>writeln</tt> statements must appear in the program.
+    <p></p>
+    </li>
+    <li>Exactly three semi-colons must appear in the programs
+    <ol>
+        <li>after the program header: <tt>program sort(input,output);</tt>
+        <p></p>
+        </li>
+        <li>after the variable declaration: <tt>...: integer;</tt>
+        <p></p>
+        </li>
+        <li>after the <tt>readln</tt> statement: <tt>readln(...);</tt></li>
+    </ol>
+    <p></p>
+    </li>
+    <li>No redundant comparisons of integer variables should be made. For example, during program execution, once it is determined that <span class="MATH"><i>a</i> &lt; <i>b</i></span>, variables <span class="MATH"><i>a</i></span> and <span class="MATH"><i>b</i></span> should not be compared again.
+    <p></p>
+    </li>
+    <li>Every <tt>writeln</tt> statement must appear on a line by itself.
+    <p></p>
+    </li>
+    <li>The programs must compile.  Executing the program with input consisting of any arrangement of any <span class="MATH"><i>n</i></span> distinct integer values should result in the input values being printed in sorted order.</li>
+</ul>
+<p>For those unfamiliar with Pascal syntax, the example at the end of this problem completely defines the small subset of Pascal needed.</p>]]></description>
+<input><![CDATA[<p>The input consist on a number in the first line indicating the number M of programs to make, followed by a blank line. Then there are M test cases, each one consisting on a single integer <span class="MATH"><i>n</i></span> on a line by itself with  <span class="MATH">1 <img border="0" align="MIDDLE" width="18" height="30" alt="$ \leq$" src="http://127.1:80/v1-htm01/110img1.png" /> <i>n</i> <img border="0" align="MIDDLE" width="18" height="30" alt="$ \leq$" src="http://127.1:80/v1-htm01/110img1.png" /> 8</span>. There will be a blank line between test cases.</p>]]></input> 
+<output><![CDATA[<p>The output is M compilable standard Pascal programs meeting the criteria specified above. Print a blank line between two consecutive programs.</p>]]></output>
+<sample_input><![CDATA[1
+
+3
+]]></sample_input>
+<sample_output><![CDATA[program sort(input,output);
+var
+a,b,c : integer;
+begin
+  readln(a,b,c);
+  if a < b then
+    if b < c then
+      writeln(a,b,c)
+    else if a < c then
+      writeln(a,c,b)
+    else
+      writeln(c,a,b)
+  else
+    if a < c then
+      writeln(b,a,c)
+    else if b < c then
+      writeln(b,c,a)
+    else
+      writeln(c,b,a)
+end.
+]]></sample_output>
+<test_input><![CDATA[5
+]]></test_input>
+<test_output><![CDATA[program sort(input,output);
+var
+a,b,c,d,e : integer;
+begin
+  readln(a,b,c,d,e);
+  if a < b then
+    if b < c then
+      if c < d then
+        if d < e then
+          writeln(a,b,c,d,e)
+        else if c < e then
+          writeln(a,b,c,e,d)
+        else if b < e then
+          writeln(a,b,e,c,d)
+        else if a < e then
+          writeln(a,e,b,c,d)
+        else
+          writeln(e,a,b,c,d)
+      else if b < d then
+        if c < e then
+          writeln(a,b,d,c,e)
+        else if d < e then
+          writeln(a,b,d,e,c)
+        else if b < e then
+          writeln(a,b,e,d,c)
+        else if a < e then
+          writeln(a,e,b,d,c)
+        else
+          writeln(e,a,b,d,c)
+      else if a < d then
+        if c < e then
+          writeln(a,d,b,c,e)
+        else if b < e then
+          writeln(a,d,b,e,c)
+        else if d < e then
+          writeln(a,d,e,b,c)
+        else if a < e then
+          writeln(a,e,d,b,c)
+        else
+          writeln(e,a,d,b,c)
+      else
+        if c < e then
+          writeln(d,a,b,c,e)
+        else if b < e then
+          writeln(d,a,b,e,c)
+        else if a < e then
+          writeln(d,a,e,b,c)
+        else if d < e then
+          writeln(d,e,a,b,c)
+        else
+          writeln(e,d,a,b,c)
+    else if a < c then
+      if b < d then
+        if d < e then
+          writeln(a,c,b,d,e)
+        else if b < e then
+          writeln(a,c,b,e,d)
+        else if c < e then
+          writeln(a,c,e,b,d)
+        else if a < e then
+          writeln(a,e,c,b,d)
+        else
+          writeln(e,a,c,b,d)
+      else if c < d then
+        if b < e then
+          writeln(a,c,d,b,e)
+        else if d < e then
+          writeln(a,c,d,e,b)
+        else if c < e then
+          writeln(a,c,e,d,b)
+        else if a < e then
+          writeln(a,e,c,d,b)
+        else
+          writeln(e,a,c,d,b)
+      else if a < d then
+        if b < e then
+          writeln(a,d,c,b,e)
+        else if c < e then
+          writeln(a,d,c,e,b)
+        else if d < e then
+          writeln(a,d,e,c,b)
+        else if a < e then
+          writeln(a,e,d,c,b)
+        else
+          writeln(e,a,d,c,b)
+      else
+        if b < e then
+          writeln(d,a,c,b,e)
+        else if c < e then
+          writeln(d,a,c,e,b)
+        else if a < e then
+          writeln(d,a,e,c,b)
+        else if d < e then
+          writeln(d,e,a,c,b)
+        else
+          writeln(e,d,a,c,b)
+    else
+      if b < d then
+        if d < e then
+          writeln(c,a,b,d,e)
+        else if b < e then
+          writeln(c,a,b,e,d)
+        else if a < e then
+          writeln(c,a,e,b,d)
+        else if c < e then
+          writeln(c,e,a,b,d)
+        else
+          writeln(e,c,a,b,d)
+      else if a < d then
+        if b < e then
+          writeln(c,a,d,b,e)
+        else if d < e then
+          writeln(c,a,d,e,b)
+        else if a < e then
+          writeln(c,a,e,d,b)
+        else if c < e then
+          writeln(c,e,a,d,b)
+        else
+          writeln(e,c,a,d,b)
+      else if c < d then
+        if b < e then
+          writeln(c,d,a,b,e)
+        else if a < e then
+          writeln(c,d,a,e,b)
+        else if d < e then
+          writeln(c,d,e,a,b)
+        else if c < e then
+          writeln(c,e,d,a,b)
+        else
+          writeln(e,c,d,a,b)
+      else
+        if b < e then
+          writeln(d,c,a,b,e)
+        else if a < e then
+          writeln(d,c,a,e,b)
+        else if c < e then
+          writeln(d,c,e,a,b)
+        else if d < e then
+          writeln(d,e,c,a,b)
+        else
+          writeln(e,d,c,a,b)
+  else
+    if a < c then
+      if c < d then
+        if d < e then
+          writeln(b,a,c,d,e)
+        else if c < e then
+          writeln(b,a,c,e,d)
+        else if a < e then
+          writeln(b,a,e,c,d)
+        else if b < e then
+          writeln(b,e,a,c,d)
+        else
+          writeln(e,b,a,c,d)
+      else if a < d then
+        if c < e then
+          writeln(b,a,d,c,e)
+        else if d < e then
+          writeln(b,a,d,e,c)
+        else if a < e then
+          writeln(b,a,e,d,c)
+        else if b < e then
+          writeln(b,e,a,d,c)
+        else
+          writeln(e,b,a,d,c)
+      else if b < d then
+        if c < e then
+          writeln(b,d,a,c,e)
+        else if a < e then
+          writeln(b,d,a,e,c)
+        else if d < e then
+          writeln(b,d,e,a,c)
+        else if b < e then
+          writeln(b,e,d,a,c)
+        else
+          writeln(e,b,d,a,c)
+      else
+        if c < e then
+          writeln(d,b,a,c,e)
+        else if a < e then
+          writeln(d,b,a,e,c)
+        else if b < e then
+          writeln(d,b,e,a,c)
+        else if d < e then
+          writeln(d,e,b,a,c)
+        else
+          writeln(e,d,b,a,c)
+    else if b < c then
+      if a < d then
+        if d < e then
+          writeln(b,c,a,d,e)
+        else if a < e then
+          writeln(b,c,a,e,d)
+        else if c < e then
+          writeln(b,c,e,a,d)
+        else if b < e then
+          writeln(b,e,c,a,d)
+        else
+          writeln(e,b,c,a,d)
+      else if c < d then
+        if a < e then
+          writeln(b,c,d,a,e)
+        else if d < e then
+          writeln(b,c,d,e,a)
+        else if c < e then
+          writeln(b,c,e,d,a)
+        else if b < e then
+          writeln(b,e,c,d,a)
+        else
+          writeln(e,b,c,d,a)
+      else if b < d then
+        if a < e then
+          writeln(b,d,c,a,e)
+        else if c < e then
+          writeln(b,d,c,e,a)
+        else if d < e then
+          writeln(b,d,e,c,a)
+        else if b < e then
+          writeln(b,e,d,c,a)
+        else
+          writeln(e,b,d,c,a)
+      else
+        if a < e then
+          writeln(d,b,c,a,e)
+        else if c < e then
+          writeln(d,b,c,e,a)
+        else if b < e then
+          writeln(d,b,e,c,a)
+        else if d < e then
+          writeln(d,e,b,c,a)
+        else
+          writeln(e,d,b,c,a)
+    else
+      if a < d then
+        if d < e then
+          writeln(c,b,a,d,e)
+        else if a < e then
+          writeln(c,b,a,e,d)
+        else if b < e then
+          writeln(c,b,e,a,d)
+        else if c < e then
+          writeln(c,e,b,a,d)
+        else
+          writeln(e,c,b,a,d)
+      else if b < d then
+        if a < e then
+          writeln(c,b,d,a,e)
+        else if d < e then
+          writeln(c,b,d,e,a)
+        else if b < e then
+          writeln(c,b,e,d,a)
+        else if c < e then
+          writeln(c,e,b,d,a)
+        else
+          writeln(e,c,b,d,a)
+      else if c < d then
+        if a < e then
+          writeln(c,d,b,a,e)
+        else if b < e then
+          writeln(c,d,b,e,a)
+        else if d < e then
+          writeln(c,d,e,b,a)
+        else if c < e then
+          writeln(c,e,d,b,a)
+        else
+          writeln(e,c,d,b,a)
+      else
+        if a < e then
+          writeln(d,c,b,a,e)
+        else if b < e then
+          writeln(d,c,b,e,a)
+        else if c < e then
+          writeln(d,c,e,b,a)
+        else if d < e then
+          writeln(d,e,c,b,a)
+        else
+          writeln(e,d,c,b,a)
+end.
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Climbing Trees]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/115img1.gif]]></src><base64><![CDATA[R0lGODlhGwARAIAAAAAAAP///yH5BAEAAAEALAAAAAAbABEAAAI3jAGBxu2akoLnvUUhxjZ7zllgs0ldFpbnIaVMKEamhsxdndorOcP729P9ULgh0GdMKpfMpvNXAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img2.gif]]></src><base64><![CDATA[R0lGODlhGgARAIAAAAAAAP///yH5BAEAAAEALAAAAAAaABEAAAI4jAGRxn2JWFTLNbiwrPZNNCmdFYIZN1KPyqarGoWuuJroaKNyul9319vMXg7TzDZMKpfMpvM5KwAAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img3.gif]]></src><base64><![CDATA[R0lGODlhGwARAIAAAAAAAP///yH5BAEAAAEALAAAAAAbABEAAAIzjAGBxt2poIrHWbRW1NoeLnWdR13QSEoOSDKo66reu2FtPMv3Te+5v8P0gMSi8YhMKo8FADs=]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img4.gif]]></src><base64><![CDATA[R0lGODlhGQARAIAAAAAAAP///yH5BAEAAAEALAAAAAAZABEAAAIwjAGRxn23EHQUSbtUpjBatnET6IlOKGkmeSbpqjZYKL4tjNs4p+9k7wsKh8Si0VgAADs=]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img5.gif]]></src><base64><![CDATA[R0lGODlhqwEmAIAAAAAAAP///yH5BAEAAAEALAAAAACrASYAAAL+jI+py+0PIQCxzWrNxbz7D4biOE5UtSmXubABm3LmSda2HUuquNE34/vphMRdERV8JDWn3KG3WiopzqP1KjOCpFcu1osNgb9jxLj68pWB67DbnWy3ovC31k6SE9FAiTTV48GHR8iUZqHmYjZDQxU3CBMU+XTIJAnIiOhICXWZOFM0qVGZ9rkIekq6abnjRKfJeWm4qDrr4JKJ+FJotfrXBNyXAPUU3EHXiGscSHm7mfxKvGvW+1wsHT08dwi9PLyczDYrXYlZLBgOacy7p7xd26KyTo5BvzIO3qxLyl2er9/OVj9/BAGe43evID5baJgpJGfuWDouEdkFFHiwFEX+LfbQCUxELdUoZx8zTrsWMtS6kwhFjvxWco6aczGq2MyIDaQMkHwAWTxCj9a1PxxXfngF0CZSMEhfKl31MmAOnalqbpv6DerJpkrjMfyH0Q+tnkZ/4ig7LqW2rQcHRUCltmu/JmxcmWxLZaSet4qSPjJElyVcg8QCc6PqUl9Ee3pqaoXJzyyOu23VhmyEE/OxDEKnFfYszCvDhYGX9C2V1bJln59BG1wdzDDEX83CLfzqETDFx5Lz5JIXZfApYIyIn+abC25xS5mED1XWCXry46gTV2cu/bmj5RqHZ8ceiXtx083Ha1TOvV556r9713Dr/lbnL/Pjrw37A7H9/fL++JfYa18cddznH0tRCSFggQpGtiASDU5RH1D68edYNRE+2Bt8GGK3YV3USeicf+mB+GGHvIRoYooqrshiiy6+mB+AMDYo44w23ighjjNqqGOPPsZY448W8ShkkUZKVOKRZqGoZJNOIjdelFJOSWWVU3poZZZabmnek15+CSWXYo6ZpXZknolmkGCuyWaA37UJZ5xyhsHknHbeiadEee7JZ59+/glooIIOSmihhh6KaItEJspoowFS5mikksa36KSWXsoDb2ZuJwor3WEKaqifioNPl/c0JWqqjOZlIGQFYXalqrI26tBVr8aSlZqz7romMuL4IptTmvFKbKDBaQIKSnioJVtnsVgUAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img6.gif]]></src><base64><![CDATA[R0lGODlhsQEmAIAAAAAAAP///yH5BAEAAAEALAAAAACxASYAAAL+jI+py+0PEwCxzWrNxbz7D4biOE4UiSpmsHXmmcZy1NKquMHzou+ZD9QEab0hRLeqVS5Ko/PJuoWKT6rTCgVhq9usUDLteseootiRPJfJUTbOrVFXJSf5oQkfMrG1l+oFQ9G0YrH3J1jHEqhEGOfHYyiUw9gH6JN2p3hXiWSJgCm5aKZJR8pjujna0hi16lnX1ejJwJT3lkMLG0f7t+uLd4TY9jj5C1aoKSpMivsZZKj8u9xDBZ2q27YprZ3ry0xXzIydzeHqDXlu60KIF07uXGrqXj5eK76diYxaGz5vt37OXjF/6PYJwofPHC9u/g7ee/huyaJ0nyaq02IxniL+YBEt9vngrhO8VCMLfgwIruQMgty+OFKJMOLLfMlELkzHyuaXjP8MUmzZ8yJDK5yISoEYZl9FSMtcomPUsmJTmSki0UT18mQpqFKV7qr0Q9pUnSNXeQCLdWlaoRJ/frsKL9BQEo+uttOVSGZdmne/7tyx1+kgvH+vHd2Wt6baU3OTCa4G1OkDtBznscWQMR6ShXK9mT170zPiwscYi76XtxolaloPy0NNmuq7gS5D8qlHeHZnnpIne7y99rLvwIYBEWVnHBZxIpbqGnf0itU15JOIJYfONGXX6dWV7Xm+sVN0V8+TK18ennxzWevBo89lXTr0oGw5CkezWE/++4/+9UfNQh9/+ggYDIFLuHYJgsKNAgSDYwRooEYRdjMhGmQ1eOF9aF2S4RwV4gBhHrN8eIh8GL53GXjPjAigiSRaaN+LMs5IY4023ohjGSHmqCGPPv4YYYxAVijkkEYeeUWRSKa445JOPimRi1DaguKUVl55lnlabslll16yyN2XYo5JZpNYnmllmWqu+WWYbL65JppyzvlkfGbSiWeeeoKo5J5+/gkoiIEOSmihhh6KaKKKLspoo44+CmmifUZKaaVE/mdpppoSeeemnn6aFDDmpTdWd6Ceimowlf12nWNWpQprqg4Bl1AmW8aKK6zNPPWQXKt1mmuwelrTyzSJHdsTmbDKVvodfH6kgUi00gK77A4FAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img7.gif]]></src><base64><![CDATA[R0lGODlhGAATAIAAAAAAAP///yH5BAEAAAEALAAAAAAYABMAAAJAjI8ZAOrXUnxqQuqs0ZT52TDYJUXidpLIyYYWB7oQWM1LTNLobW/+z0sJPajPpzda4ZJKJJO3e0ah0iDnSawaCgA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img8.gif]]></src><base64><![CDATA[R0lGODlhFQARAIAAAAAAAP///yH5BAEAAAEALAAAAAAVABEAAAIyjI9poN3s4pIHWHavswsGXyHcRH6aeJZhkq3i60IeSK8z2nbjR0VgDwOyhIofMLOjFAAAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img9.gif]]></src><base64><![CDATA[R0lGODlhGgASAIAAAAAAAP///yH5BAEAAAEALAAAAAAaABIAAAJBjI+pAb0PHZxIUmofYDu5vEhixx0NaYwp+XUZu71xxZox2tqmLpfr/vMJdZzTaWXEoS6hJdPjfBIZUk+laktiDQUAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img10.gif]]></src><base64><![CDATA[R0lGODlhGQASAIAAAAAAAP///yH5BAEAAAEALAAAAAAZABIAAAI/jI9pAOrYUnxuHkuhwpn52TCZJkVi4FWbCXLodrWqFC8n/S41ypLgLgq1Tp8PrzdauZI2HrMizD2bwSnwNi0AADs=]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img11.gif]]></src><base64><![CDATA[R0lGODlheAAbAIAAAAAAAP///yH5BAEAAAEALAAAAAB4ABsAAALWjI+py+3fAJw0yANy3TxpenWi8ZHhiEanU6Zc2bryu87Tl9X2rvKbhtP5JDmT50Rc1YI0oyUGJD4huWqVeilOnU6YZxtjgXHHZ1aIsKrR3RAMecYcmSDtO51kDzHufpovV0bSxKVUFOYTuLXY4jcoiMjiBogXZXGzdiVW6PjIqMCkh8d5aWIpKtN5p+j1NRj3oFpqeoaakmmWV2vFxRjEtmo2mkgs+bNjW8yTnIyl/LwQCYoMXe1KZSNtTdycuv0NHi4+Tl5ufo6err7O3u7+Dh8vP79RAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/115img12.gif]]></src><base64><![CDATA[R0lGODlhZgAbAIAAAAAAAP///yH5BAEAAAEALAAAAABmABsAAAKnjI+pywcNo5zqJWCpzrp7yBnYN4Xk6ZmopK5u075LLNdBONpInOdvb8HwHA8aUYj0XRjFoLF0cwZhjmgpiZ0xhaIni2vtMi9eEi/TwiZnaDR1V/6cxTJf+028qsHLrTgO45SngqPTpyVyU5eXmAZnuOPXBSgZFuXICKmoaVhEp0nJ+YUkulm6yMcZejrGmujqsgo7S1tre4ubq7vL2+v7CxwsPEysUAAAOw==]]></base64></img><description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000">Background</a></font></h2>
+<p>Expression trees, B and B* trees, red-black trees, quad trees, PQ  trees; trees play a significant role in many domains of computer  science. Sometimes the name of a problem may indicate that trees are  used when they are not, as in the Artificial Intelligence planning  problem traditionally called the <em>Monkey and Bananas problem</em>.   Sometimes trees may be used in a problem whose name gives no  indication that trees are involved, as in the <em>Huffman code</em>.</p>
+<p></p>
+<p>This problem involves determining how pairs of people who may be part of a ``family tree'' are related.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000">The Problem</a></font></h2>
+<p>Given a sequence of <em>child-parent</em> pairs, where a pair consists of the child's name followed by the (single) parent's name, and a list of query pairs also expressed as two names, you are to write a program to determine whether the query pairs are related. If the names comprising a query pair are related the program should determine what the relationship is.  Consider academic advisees and advisors as exemplars of such a single parent genealogy (we assume a single advisor, i.e., no co-advisors).</p>
+<p></p>
+<p>In this problem the child-parent pair  <img align="MIDDLE" width="27" height="17" src="http://127.1:80/v1-htm01/115img1.gif" alt="tex2html_wrap_inline76" />  denotes that <i>p</i> is the child of <i>q</i>.  In determining relationships between names we use the following definitions:</p>
+<ul>
+    <li><i>p</i> is a <em>0-descendent</em> of <i>q</i> (respectively <em>0-ancestor</em>) if and only if the child-parent pair  <img align="MIDDLE" width="27" height="17" src="http://127.1:80/v1-htm01/115img1.gif" alt="tex2html_wrap_inline76" />  (respectively  <img align="MIDDLE" width="26" height="17" src="http://127.1:80/v1-htm01/115img2.gif" alt="tex2html_wrap_inline88" /> ) appears in the input sequence of child-parent pairs.</li>
+    <li><i>p</i> is a <em>k-descendent</em> of <i>q</i> (respectively <em>k-ancestor</em>) if and only if the child-parent pair  <img align="MIDDLE" width="27" height="17" src="http://127.1:80/v1-htm01/115img3.gif" alt="tex2html_wrap_inline94" />  (respectively  <img align="MIDDLE" width="25" height="17" src="http://127.1:80/v1-htm01/115img4.gif" alt="tex2html_wrap_inline96" /> ) appears in the input sequence and <i>r</i> is a (<i>k</i>-1)-descendent of <i>q</i> (respectively <i>p</i> is a (<i>k</i>-1)-ancestor of <i>r</i>).</li>
+</ul>
+<p>For the purposes of this problem the relationship between a person <i>p</i> and a person <i>q</i> is expressed as exactly one of the following four relations:</p>
+<ol>
+    <li>child -- grand child, great grand child, great great grand child, <em>etc.</em>
+    <p>By definition <i>p</i> is the ``child'' of <i>q</i> if and only if the pair  <img align="MIDDLE" width="27" height="17" src="http://127.1:80/v1-htm01/115img1.gif" alt="tex2html_wrap_inline76" />  appears in the input sequence of child-parent pairs (i.e., p is a 0-descendent of q); <i>p</i> is the ``grand child'' of <i>q</i> if and only if <i>p</i> is a 1-descendent of <i>q</i>; and</p>
+    <p><img align="BOTTOM" width="427" height="38" src="http://127.1:80/v1-htm01/115img5.gif" alt="displaymath33" /></p>
+    <p>if and only if <i>p</i> is an (<i>n</i>+1)-descendent of <i>q</i>.</p>
+    </li>
+    <li>parent -- grand parent, great grand parent, great great grand parent, <em>etc.</em>
+    <p>By definition <i>p</i> is the ``parent'' of <i>q</i> if and only if the pair  <img align="MIDDLE" width="26" height="17" src="http://127.1:80/v1-htm01/115img2.gif" alt="tex2html_wrap_inline88" />  appears in the input sequence of child-parent pairs (i.e., <i>p</i> is a 0-ancestor of <i>q</i>); <i>p</i> is the ``grand parent'' of <i>q</i> if and only if <i>p</i> is a 1-ancestor of <i>q</i>; and</p>
+    <p><img align="BOTTOM" width="433" height="38" src="http://127.1:80/v1-htm01/115img6.gif" alt="displaymath40" /></p>
+    <p>if and only if <i>p</i> is an (<i>n</i>+1)-ancestor of <i>q</i>.</p>
+    </li>
+    <li>cousin --  <img align="BOTTOM" width="24" height="19" src="http://127.1:80/v1-htm01/115img7.gif" alt="tex2html_wrap_inline158" />  cousin,  <img align="BOTTOM" width="21" height="17" src="http://127.1:80/v1-htm01/115img8.gif" alt="tex2html_wrap_inline160" />  cousin,  <img align="BOTTOM" width="26" height="18" src="http://127.1:80/v1-htm01/115img9.gif" alt="tex2html_wrap_inline162" />  cousin, <em>etc.</em>; cousins may be once removed, twice removed, three times removed, <em>etc.</em>
+    <p>By definition <i>p</i> and <i>q</i> are ``cousins'' if and only if they are related (i.e., there is a path from <i>p</i> to <i>q</i> in the implicit undirected parent-child tree).  Let <i>r</i> represent the least common ancestor of <i>p</i> and <i>q</i> (i.e., no descendent of <i>r</i> is an ancestor of both <i>p</i> and <i>q</i>), where <i>p</i> is an <i>m</i>-descendent of <i>r</i> and <i>q</i> is an <i>n</i>-descendent of <i>r</i>.</p>
+    <p>Then, by definition, cousins <i>p</i> and <i>q</i> are `` <img align="BOTTOM" width="25" height="18" src="http://127.1:80/v1-htm01/115img10.gif" alt="tex2html_wrap_inline200" />   cousins'' if and only if  <img align="MIDDLE" width="120" height="27" src="http://127.1:80/v1-htm01/115img11.gif" alt="tex2html_wrap_inline202" /> , and, also by definition, <i>p</i>  and <i>q</i> are ``cousins removed <i>j</i> times'' if and only if  <img align="MIDDLE" width="102" height="27" src="http://127.1:80/v1-htm01/115img12.gif" alt="tex2html_wrap_inline210" /> .</p>
+    </li>
+    <li>sibling --  <img align="BOTTOM" width="24" height="19" src="http://127.1:80/v1-htm01/115img7.gif" alt="tex2html_wrap_inline158" />  cousins removed 0 times are ``siblings'' (they have the same parent).</li>
+</ol>]]></description>
+<input><![CDATA[<p>The input consists of parent-child pairs of names, one pair per line. Each name in a pair consists of lower-case alphabetic characters or periods (used to separate first and last names, for example).  Child names are separated from parent names by one or more spaces. Parent-child pairs are terminated by a pair whose first component is the string ``<em>no.child</em>''.  Such a pair is NOT to be considered as a parent-child pair, but only as a delimiter to separate the parent-child pairs from the query pairs.  There will be no circular relationships, i.e., no name <i>p</i> can be <em>both</em> an ancestor and a descendent of the same name <i>q</i>.</p>
+<p></p>
+<p>The parent-child pairs are followed by a sequence of query pairs in the same format as the parent-child pairs, i.e., each name in a query pair is a sequence of lower-case alphabetic characters and periods, and names are separated by one or more spaces.  Query pairs are terminated by end-of-file.</p>
+<p></p>
+<p>There will be a maximum of 300 different names overall (parent-child and query pairs).  All names will be fewer than 31 characters in length.  There will be no more than 100 query pairs.</p>]]></input> 
+<output><![CDATA[<p>For each query-pair  <img align="MIDDLE" width="27" height="17" src="http://127.1:80/v1-htm01/115img1.gif" alt="tex2html_wrap_inline76" />   of names the output should indicate the relationship <i>p</i> <em>is-the-relative-of</em> <i>q</i> by the appropriate string of the form</p>
+<ul>
+    <li>child, grand child, great grand child, great great ...great grand child</li>
+    <li>parent, grand parent, great grand parent, great great ...great grand parent</li>
+    <li>sibling</li>
+    <li><i>n</i> cousin removed <i>m</i></li>
+    <li>no relation</li>
+</ul>
+<p>If an</p>
+<i>m</i>
+<p>-cousin is removed 0 times then only</p>
+<em>m cousin</em>
+<p>should be printed, i.e.,</p>
+<em>removed 0</em>
+<p>should NOT be printed.  Do not print</p>
+<em>st, nd, rd, th</em>
+<p>after the numbers.</p>]]></output>
+<sample_input><![CDATA[alonzo.church oswald.veblen
+stephen.kleene alonzo.church
+dana.scott alonzo.church
+martin.davis alonzo.church
+pat.fischer hartley.rogers
+mike.paterson david.park
+dennis.ritchie pat.fischer
+hartley.rogers alonzo.church
+les.valiant mike.paterson
+bob.constable stephen.kleene
+david.park hartley.rogers
+no.child no.parent
+stephen.kleene bob.constable
+hartley.rogers stephen.kleene
+les.valiant alonzo.church
+les.valiant dennis.ritchie
+dennis.ritchie les.valiant
+pat.fischer michael.rabin]]></sample_input>
+<sample_output><![CDATA[parent
+sibling
+great great grand child
+1 cousin removed 1
+1 cousin removed 1
+no relation]]></sample_output>
+<test_input><![CDATA[stal.aanderaa hao.wang
+john.addison stephen.kleene
+len.adleman manuel.blum
+al.aho john.hopcroft
+howard.aiken e.l.chaffee
+helmut.alt kurt.mehlhorn
+dana.angluin manuel.blum
+robert.ashenhurst howard.aiken
+bengt.aspvall bob.tarjan
+owen.astrachan don.loveland
+mike.atallah rao.kosaraju
+baruch.awerbuch shimon.even
+paul.axt stephen.kleene
+brenda.baker ron.book
+ted.baker juris.hartmanis
+g.m.baudet h.t.kung
+richard.bellman solomon.lefschetz
+michael.ben-or michael.rabin
+sam.bent bob.tarjan
+jon.bentley donald.stanat
+hans.berliner allen.newell
+fran.berman bob.ritchie
+len.berman juris.hartmanis
+sandeep.bhatt charles.leiserson
+g.d.birkhoff e.h.moore
+meera.blattner shelia.greibach
+peter.bloniarz albert.meyer
+lenore.blum gerald.sacks
+manuel.blum marvin.minsky
+ron.book sheila.greibach
+william.boone alonzo.church
+kelly.booth dick.karp
+allan.borodin juris.hartmanis
+gilles.brassard john.hopcroft
+seth.breidbart ron.book
+fred.brooks howard.aiken
+feliz.browder solomon.lefschetz
+mark.brown don.knuth
+james.burns nancy.lynch
+bob.caviness alan.perlis
+ashok.chandra zohar.manna
+john.cherniavsky bob.constable
+alonzo.church oswald.veblen
+ed.clarke bob.constable
+richard.cole john.hopcroft
+george.collins barkley.rosser
+doug.comer ravi.sethi
+bob.constable stephen.kleene
+steve.cook hao.wang
+richard.courant david.hilbert
+haskell.curry david.hilbert
+robert.daley don.loveland
+john.grefenstette robert.daley
+david.reed don.loveland
+martin.davis alonzo.church
+eliezer.dekel sartaj.sahni
+alan.demers jeff.ullman
+nachum.dershowitz zohar.manna
+danny.dolev zohar.manna
+peter.downey ron.book
+scot.drysdale andy.yao
+cynthia.dwork john.hopcroft
+patrick.dymond steve.cook
+j.c.early bob.floyd
+alan.emerson ed.clarke
+shimon.even hao.wang
+a.m.farley allen.newell
+jean.ferrante albert.meyer
+faith.fich dick.karp
+ion.filotti manuel.blum
+mike.fischer sheila.greibach
+pat.fischer hartley.rogers
+philippe.flajolet jean.vuillemin
+amelia.fong jeff.ullman
+steve.fortune john.hopcroft
+alfred.foster alonzo.church
+mike.fredman don.knuth
+emily.friedman ron.book
+merrick.furst john.hopcroft
+zvi.galil john.hopcroft
+john.gilbert bob.tarjan
+igal.golan michael.rabin
+shafi.goldwasser manuel.blum
+teofilo.gonzalez sartaj.sahni
+dan.greene don.knuth
+albert.greenberg richard.ladner
+sheila.greibach tony.oettinger
+leo.guibas don.knuth
+dan.gusfield dick.karp
+joe.halpern albert.meyer
+marshall.hall oystein.ore
+mike.hammer mike.fischer
+david.harel albert.meyer
+juris.hartmanis r.p.dilworth
+matt.hecht jeff.ullman
+peter.honeyman jeff.ullman
+john.hopcroft r.l.matson
+ned.horvath jeff.ullman
+ellis.horowitz george.collins
+scott.huddleston bob.ritchie
+harry.hunt john.hopcroft
+neil.immerman juris.hartmanis
+jeff.jaffe albert.meyer
+j.h.jou pat.fischer
+john.kam jeff.ullman
+ming.kao dan.gusfield
+oded.kariv shimon.even
+narendra.karmarkar dick.karp
+dick.karp tony.oettinger
+howard.katseff manuel.blum
+john.kemeny alonzo.church
+a.j.kfoury mike.paterson
+c.m.r.kintala pat.fischer
+stephen.kleene alonzo.church
+don.knuth marshall.hall
+dexter.kozen juris.hartmanis
+ken.krohn hao.wang
+richard.ladner r.w.robinson
+shui.lam ravi.sethi
+susan.landau gary.miller
+gene.lawler tony.oettinger
+tom.leighton gary.miller
+charles.leiserson jon.bentley
+tom.lengauer bob.tarjan
+leonid.levin albert.meyer
+harry.lewis burton.dreben
+ralph.london allen.newell
+michael.loui albert.meyer
+don.loveland martin.davis
+mike.luby dick.karp
+david.luckham hartley.rogers
+george.lueker jeff.ullman
+nancy.lynch albert.meyer
+steve.mahaney juris.hartmanis
+david.maier jeff.ullman
+udi.manber richard.ladner
+rachel.manber victor.klee
+ken.manders manuel.blum
+zohar.manna alan.perlis
+john.mccarthy solomon.lefschetz
+ed.mccreight albert.meyer
+kurt.mehlhorn bob.constable
+albert.meyer tom.cheatham
+silvio.micali manuel.blum
+gary.miller manuel.blum
+webb.miller bob.ritchie
+marvin.minsky albert.tucker
+robert.moll albert.meyer
+e.h.moore h.a.newton
+joel.moses marvin.minsky
+steve.muchnick bob.constable
+jean.musinski john.hopcroft
+greg.nelson bob.tarjan
+mike.odonnell bob.constable
+colm.odunlaing ron.book
+tony.oettinger howard.aiken
+derek.oppen steve.cook
+oystein.ore thor.skolem
+sue.owicki david.gries
+rohit.parikh burton.dreben
+david.park hartley.rogers
+tory.parsons albert.tucker
+mike.paterson david.park
+a.paz michael.rabin
+yehoshua.perl shimon.even
+gary.peterson mike.fischer
+ron.pinter charles.leiserson
+david.plaisted bob.floyd
+mike.plass don.knuth
+joan.plumstead manuel.blum
+vaughan.pratt don.knuth
+robert.probert pat.fischer
+michael.rabin alonzo.church
+charles.rackoff albert.meyer
+lyle.ramshaw don.knuth
+robert.reckhow steve.cook
+larry.reeker allen.newell
+john.reif harry.lewis
+ed.reingold juris.hartmanis
+bob.ritchie alonzo.church
+dennis.ritchie pat.fischer
+ron.rivest bob.floyd
+r.w.robinson gerald.sacks
+hartley.rogers alonzo.church
+don.rose garrett.birkhoff
+arnie.rosenberg pat.fischer
+barkley.rosser alonzo.church
+george.sacerdote william.boone
+gerald.sacks barkley.rosser
+yehoshua.sagiv jeff.ullman
+sartaj.sahni ellis.horowitz
+bill.sakoda manuel.blum
+gerard.salton howard.aiken
+walter.savitch steve.cook
+tom.schaefer dick.karp
+martin.schultz garrett.birkhoff
+kurt.schutte david.hilbert
+dana.scott alonzo.church
+bob.sedgewick don.knuth
+joel.seiferas albert.meyer
+alan.selman paul.axt
+warren.semon howard.aiken
+ravi.sethi jeff.ullman
+adi.shamir zohar.manna
+ehud.shapiro dana.angluin
+lloyd.shapley albert.tucker
+mary.shaw alan.perlis
+yossi.shiloach shimon.even
+oded.shmueli nat.goodman
+robert.shostak tom.cheatham
+alan.siegal jeff.ullman
+janos.simon juris.hartmanis
+barbara.simons dick.karp
+mike.sipser manuel.blum
+thor.skolem axel.thue
+dan.sleator bob.tarjan
+steven.smoliar marvin.minsky
+raymond.smullyan alonzo.church
+marv.solomon alan.demers
+paul.spirakis john.reif
+fred.springsteel bob.ritchie
+tom.standish alan.perlis
+norman.steenrod solomon.lefschetz
+hugo.steinhaus david.hilbert
+larry.stockmeyer albert.meyer
+bob.streett albert.meyer
+ray.strong bob.ritchie
+ken.supowit ed.reingold
+bob.tarjan bob.floyd
+clark.thompson h.t.kung
+martin.tompa allan.borodin
+luis.pardo don.knuth
+steve.tate john.reif
+d.m.tsou pat.fischer
+albert.tucker solomon.lefschetz
+john.tukey solomon.lefschetz
+alan.turing alonzo.church
+jeff.ullman arch.mckellar
+jacobo.valdes bob.tarjan
+les.valiant mike.paterson
+chris.van.wyk don.knuth
+vijay.vazirani manuel.blum
+oswald.veblen e.h.moore
+jeff.vitter don.knuth
+jean.vuillemin zohar.manna
+bob.wagner alan.perlis
+mitch.wand mike.fischer
+herman.weyl david.hilbert
+elaine.weyuker ann.yasuhara
+pierre.wolper zohar.manna
+don.woods bob.tarjan
+detlef.wotschke sheila.greibach
+celia.wrathall ron.book
+james.wylie john.hopcroft
+yacov.yacobi shimon.even
+mihalis.yannakakis jeff.ullman
+andy.yao c.l.liu
+frances.yao mike.fischer
+ann.yasuhara william.boone
+paul.young hartley.rogers
+shmuel.zaks c.l.liu
+david.reed don.loveland
+no.child no.parent
+owen.astrachan don.loveland
+owen.astrachan martin.davis
+owen.astrachan alonzo.church
+don.loveland owen.astrachan
+martin.davis don.loveland
+alonzo.church owen.astrachan
+albert.greenberg owen.astrachan
+owen.astrachan albert.greenberg
+owen.astrachan david.reed
+fred ethel
+ed.clarke owen.astrachan
+ed.clarke elaine.weyuker
+alan.emerson richard.ladner
+richard.ladner les.valiant
+les.valiant a.j.kfoury
+stephen.kleene michael.rabin
+gerald.sacks david.luckham
+les.valiant alonzo.church
+les.valiant hartley.rogers
+fred.mertz fred.mertz
+h.a.newton udi.manber
+udi.manber h.a.newton
+martin.davis les.valiant
+owen.astrachan les.valiant
+david.reed john.grefenstette
+no.child no.parent
+]]></test_input>
+<test_output><![CDATA[child
+grand child
+great grand child
+parent
+parent
+great grand parent
+2 cousin removed 2
+2 cousin removed 2
+sibling
+no relation
+2 cousin 
+2 cousin 
+3 cousin 
+3 cousin 
+sibling
+sibling
+1 cousin 
+great great grand child
+great grand child
+sibling
+great great great great great great grand parent
+great great great great great great grand child
+0 cousin removed 3
+2 cousin removed 1
+0 cousin removed 1
+no relation
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Unidirectional TSP]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/116img1.gif]]></src><base64><![CDATA[R0lGODlhLgASAIAAAAAAAP///yH5BAEAAAEALAAAAAAuABIAAAJQjI+ZoMENDXhT1nZPVrc76kWPE5EdM53ayKFsq36rVlq1LM25XaZ3jMtUXrMNBmTSJY9KDM2l9LUWRN6netststyu9wsOi8fksvmMTqvX6gIAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/116img2.gif]]></src><base64><![CDATA[R0lGODlhQwBjAIAAAAAAAP///yH5BAEAAAEALAAAAABDAGMAAAL+jI+pi+APo5yT2Zuo3hR763xiA4xmEJ5fqnpsC5Yw9s5KbWdyfu+8/usFhcMDLnjkJZW+4TL3nEWlTWTVWjRef9NW17uFhsVZw1d1NqXVYy27bG6j0uvRE3Kqi5IRtByGU5H3B9bTNwg3x4Dnl3hU8lAIF+jWONlESJOJaIR12elZlrLpQmoHmcWhusra6voKGxuZaroy66RXmruoKHqrFHe5m1FJOwwa7HuMAqRc20Bk/Gy2sFz9m7c4fcGIFiNcO2ZtaNrWRdq9V2r7la4pC6t9Bh8rn3n+t2H/psmOfb0mCr52/9Z9czFIz5JxOnLx2RZj1yOI+6hEK+LOUjGDjAU5JZPGZQdDEuNGUQR4MthILSMzhlzZUQy9mTRr2mTlKCaglEJa8mzGcGWxkj9JGGWSs1kvj7R6Kiy6keXTpA1d9vtUVac2quTKQf2IkilHXfx82Srb1CzWtGrZusXFdexauW3pvg11N2RcuHP51vWbF2lfvHYBFyaM66aEnIojFAAAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/116img3.gif]]></src><base64><![CDATA[R0lGODlhJQAYAIAAAAAAAP///yH5BAEAAAEALAAAAAAlABgAAAJTDIKHy+0OlInx2TtPlbg3uXncMiZlCY1Vyq4WeFFTQqLm/IKqXWMupfO5Hj/ZLYcj6jhDRhFp2jR7Tps06iPGpp6u9wsOi8fksvmMTqvX7LabUQAAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/116img4.gif]]></src><base64><![CDATA[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]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/116img5.gif]]></src><base64><![CDATA[R0lGODlhJQAIAIAAAAAAAP///yH5BAEAAAEALAAAAAAlAAgAAAIvDBCGuukPVTpTshpzpfJwbkHN4y1fA46Ol6Ur+mpqHJ7xrFkUgsJ47qv1fq1hoAAAOw==]]></base64></img><description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000">Background</a></font></h2>
+<p>Problems that require minimum paths through some domain appear in many different areas of computer science.  For example, one of the constraints in VLSI routing problems is minimizing wire length. The Traveling Salesperson Problem (TSP) -- finding whether all the cities in a salesperson's route can be visited exactly once with a specified limit on travel time -- is one of the canonical examples of an NP-complete problem; solutions appear to require an inordinate amount of time to generate, but are simple to check.</p>
+<p>This problem deals with finding a minimal path through a grid of points while traveling only from left to right.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000">The Problem</a></font></h2>
+<p>Given an  <img align="MIDDLE" width="46" height="18" src="http://127.1:80/v1-htm01/116img1.gif" alt="tex2html_wrap_inline352" />  matrix of integers, you are to write a program that computes a path of minimal weight.  A path starts anywhere in column 1 (the first column) and consists of a sequence of steps terminating in column <i>n</i> (the last column).  A step consists of traveling from column <i>i</i> to column <i>i</i>+1 in an adjacent (horizontal or diagonal) row.  The first and last rows (rows 1 and <i>m</i>) of a matrix are considered adjacent, i.e., the matrix ``wraps'' so that it represents a horizontal cylinder.  Legal steps are illustrated below.</p>
+<p><img align="BOTTOM" width="67" height="99" src="http://127.1:80/v1-htm01/116img2.gif" alt="picture25" /></p>
+<p></p>
+<p>The <em>weight</em> of a path is the sum of the integers in each of the <i>n</i> cells of the matrix that are visited.</p>
+<p>For example, two slightly different  <img align="MIDDLE" width="37" height="24" src="http://127.1:80/v1-htm01/116img3.gif" alt="tex2html_wrap_inline366" />  matrices are shown below (the only difference is the numbers in the bottom row).</p>
+<p></p>
+<p><img align="BOTTOM" width="534" height="175" src="http://127.1:80/v1-htm01/116img4.gif" alt="picture37" /></p>
+<p></p>
+<p>The minimal path is illustrated for each matrix.  Note that the path for the matrix on the right takes advantage of the adjacency property of the first and last rows.</p>]]></description>
+<input><![CDATA[<p>The input consists of a sequence of matrix specifications.  Each matrix specification consists of the row and column dimensions in that order on a line followed by  <img align="BOTTOM" width="37" height="8" src="http://127.1:80/v1-htm01/116img5.gif" alt="tex2html_wrap_inline376" />  integers where <i>m</i> is the row dimension and <i>n</i> is the column dimension.  The integers appear in the input in row major order, i.e., the first <i>n</i> integers constitute the first row of the matrix, the second <i>n</i> integers constitute the second row and so on. The integers on a line will be separated from other integers by one or more spaces.  Note: integers are not restricted to being positive. There will be one or more matrix specifications in an input file. Input is terminated by end-of-file.</p>
+<p>For each specification the number of rows will be between 1 and 10 inclusive; the number of columns will be between 1 and 100 inclusive. No path's weight will exceed integer values representable using 30 bits.</p>]]></input> 
+<output><![CDATA[<p>Two lines should be output for each matrix specification in the input file, the first line represents a minimal-weight path, and the second line is the cost of a minimal path.  The path consists of a sequence of <i>n</i> integers (separated by one or more spaces) representing the rows that constitute the minimal path.  If there is more than one path of minimal weight the path that is <i>lexicographically</i> smallest should be output.</p>]]></output>
+<sample_input><![CDATA[5 6
+3 4 1 2 8 6
+6 1 8 2 7 4
+5 9 3 9 9 5
+8 4 1 3 2 6
+3 7 2 8 6 4
+5 6
+3 4 1 2 8 6
+6 1 8 2 7 4
+5 9 3 9 9 5
+8 4 1 3 2 6
+3 7 2 1 2 3
+2 2
+9 10 9 10]]></sample_input>
+<sample_output><![CDATA[1 2 3 4 4 5
+16
+1 2 1 5 4 5
+11
+1 1
+19]]></sample_output>
+<test_input><![CDATA[4 7
+1 2 -3 4 -2 1 5
+-1 3 5 -2 6 -3 4
+2 1 3 -2 -1 3 1
+3 -3 4 2 -3 4 3
+5 6
+3 4 1 2 8 6
+6 1 8 2 7 4
+5 9 3 9 9 5
+8 4 1 3 2 6
+3 7 2 8 6 4
+5 6
+3 4 1 2 8 6
+6 1 8 2 7 4
+5 9 3 9 9 5
+8 4 1 3 2 6
+3 7 2 1 2 3
+2 2
+9 10
+9 10
+5 6
+1 1 1 1 1 1
+2 2 2 2 2 2
+3 3 3 3 3 3
+4 4 4 4 4 4
+5 5 5 5 5 5
+3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+5 5
+1 5 10 6 3
+5 1 8 4 11
+10 12 5 2 9
+7 3 20 5 8
+4 1 5 12 6
+5 10
+11 53 34 73 18 53 99 52 31 54
+4 72 24 6 46 17 63 82 89 25
+67 22 10 97 99 64 33 45 81 76
+24 71 46 62 18 11 54 40 17 51
+99 8 57 76 7 51 90 92 51 21
+5 10
+11 53 1 73 18 53 99 52 31 54
+4 72 54 6 46 17 63 82 89 25
+67 22 80 97 99 64 33 45 81 76
+24 71 46 62 18 11 54 40 17 51
+99 8 57 76 7 51 90 92 51 21
+5 6
+-3 -4 -1 -2 -8 -6
+-6 -1 -8 -2 -7 -4 -5 -9 -3 -9 -9 -5
+-8 -4 -1 -3 -2 -6 -3 -7 -2 -8 -6 -4
+10 100
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+]]></test_input>
+<test_output><![CDATA[1 4 1 2 1 2 3
+-11
+1 2 3 4 4 5
+16
+1 2 1 5 4 5
+11
+1 1
+19
+1 1 1 1 1 1
+6
+1 1 1 1
+10
+1 2 3 2 1
+14
+2 3 3 2 1 2 3 4 4 5
+188
+1 5 1 2 1 2 3 4 4 5
+172
+4 3 2 3 3 4
+-49
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+100
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Mutant Flatworld Explorers]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000">Background</a></font></h2>
+<p>Robotics, robot motion planning, and machine learning are areas that cross the boundaries of many of the subdisciplines that comprise Computer Science: artificial intelligence, algorithms and complexity, electrical and mechanical engineering to name a few.  In addition, robots as ``turtles'' (inspired by work by Papert, Abelson, and diSessa) and as ``beeper-pickers'' (inspired by work by Pattis) have been studied and used by students as an introduction to programming for many years.</p>
+<p>This problem involves determining the position of a robot exploring a pre-Columbian flat world.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000">The Problem</a></font></h2>
+<p>Given the dimensions of a rectangular grid and a sequence of robot positions and instructions, you are to write a program that determines for each sequence of robot positions and instructions the final position of the robot.</p>
+<p>A robot <em>position</em> consists of a grid coordinate (a pair of integers: x-coordinate followed by y-coordinate) and an orientation (N,S,E,W for north, south, east, and west).  A robot <em>instruction</em> is a string of the letters '<em>L</em>', '<em>R</em>', and '<em>F</em>' which represent, respectively, the instructions:</p>
+<ul>
+    <li><em>Left</em>: the robot turns left 90 degrees and remains on the current grid point.</li>
+    <li><em>Right</em>: the robot turns right 90 degrees and remains on the current grid point.</li>
+    <li><em>Forward</em>: the robot moves forward one grid point in the direction of the current orientation and mantains the same orientation.</li>
+</ul>
+<p>The direction <em>North</em> corresponds to the direction from grid point (<i>x</i>,<i>y</i>) to grid point (<i>x</i>,<i>y</i>+1).</p>
+<p>Since the grid is rectangular and bounded, a robot that moves ``off'' an edge of the grid is lost forever.  However, lost robots leave a robot ``scent'' that prohibits future robots from dropping off the world at the same grid point.  The scent is left at the last grid position the robot occupied before disappearing over the edge.  An instruction to move ``off'' the world from a grid point from which a robot has been previously lost is simply ignored by the current robot.</p>]]></description>
+<input><![CDATA[<p>The first line of input is the upper-right coordinates of the rectangular world, the lower-left coordinates are assumed to be 0,0.</p>
+<p>The remaining input consists of a sequence of robot positions and instructions (two lines per robot).  A position consists of two integers specifying the initial coordinates of the robot and an orientation (N,S,E,W), all separated by white space on one line.  A robot instruction is a string of the letters 'L', 'R', and 'F' on one line.</p>
+<p>Each robot is processed sequentially, i.e., finishes executing the robot instructions before the next robot begins execution.</p>
+<p>Input is terminated by end-of-file.</p>
+<p>You may assume that all initial robot positions are within the bounds of the specified grid.  The maximum value for any coordinate is 50.  All instruction strings will be less than 100 characters in length.</p>]]></input> 
+<output><![CDATA[<p>For each robot position/instruction in the input, the output should indicate the final grid position and orientation of the robot.  If a robot falls off the edge of the grid the word ``LOST'' should be printed after the position and orientation.</p>]]></output>
+<sample_input><![CDATA[5 3
+1 1 E
+RFRFRFRF
+3 2 N
+FRRFLLFFRRFLL
+0 3 W
+LLFFFLFLFL]]></sample_input>
+<sample_output><![CDATA[1 1 E
+3 3 N LOST
+2 3 S]]></sample_output>
+<test_input><![CDATA[40 50
+40 50 N
+R
+25 25 S
+FFFRFFFRFFFRFFFR
+0 0 E
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+3 3 W
+FFFRFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFLLLLRRRRLLLLRRRRRFLFRFLFRFF
+20 20 N
+RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRRRRRL
+10 47 N
+FFF
+40 10 S
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFRF
+10 40 N
+RFLFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+11 40 N
+FFFFFFFFFFLFFFFFFFFFF
+23 37 W
+RFFFFFRRRFFLLLLFFFLLLR
+1 50 E
+FFFFFFFFFFLFRRF
+37 3 S
+FFFLFFF
+]]></test_input>
+<test_output><![CDATA[40 50 E
+25 25 S
+40 0 E LOST
+4 37 E
+20 20 S
+10 50 N
+39 0 W
+11 50 N LOST
+1 50 W
+18 42 E
+11 49 S
+40 0 E
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Pipe Fitters]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/121img1.gif]]></src><base64><![CDATA[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]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/121img2.gif]]></src><base64><![CDATA[R0lGODlhDwAPAIAAAAAAAP///yH5BAEAAAEALAAAAAAPAA8AAAIjjH+Au+DPkjSQqeDoTXdjv2UaR46mFXpltLKfu6oIyD42WwAAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/121img3.gif]]></src><base64><![CDATA[R0lGODlhJQAYAIAAAAAAAP///yH5BAEAAAEALAAAAAAlABgAAAJPjI+pe+DAolxuWltvozGjBymeMSZQhoYcKT0B2KjiKc+ky06l/eK7+fvEUsFKMAeivRieY8iYrN2ATJxGutRot9yu9wsOi8fksvmMTqu1BQA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/121img4.gif]]></src><base64><![CDATA[R0lGODlhJQAYAIAAAAAAAP///yH5BAEAAAEALAAAAAAlABgAAAJPhBGpy+1tnpwv0kttdQgnpDFhMIoHGZVKR05W2qkfyEIsPGe1vX7rbgIuXrGZMCdDGYkSjQxHS45Uh6pHePRot9yu9wsOi8fksvmMTqslBQA7]]></base64></img><description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000">Background</a></font></h2>
+<p>Filters, or programs that pass ``processed'' data through in some changed form, are an important class of programs in the UNIX operating system.  A pipe is an operating system concept that permits data to ``flow'' between processes (and allows filters to be chained together easily.)</p>
+<p>This problem involves maximizing the number of pipes that can be fit into a storage container (but it's a pipe fitting problem, not a bin packing problem).</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000">The Problem</a></font></h2>
+<p>A company manufactures pipes of uniform diameter.  All pipes are stored in rectangular storage containers, but the containers come in several different sizes.  Pipes are stored in rows within a container so that there is no space between pipes in any row (there may be some space at the end of a row), i.e., all pipes in a row are tangent, or touch. Within a rectangular cross-section, pipes are stored in either a <em> grid</em> pattern or a <em>skew</em> pattern as shown below: the two left-most cross-sections are in a grid pattern, the two right-most cross-sections are in a skew pattern.</p>
+<p></p>
+<p><img align="BOTTOM" src="http://127.1:80/v1-htm01/121img1.gif" alt="picture26" /></p>
+<p></p>
+<p>Note that although it may not be apparent from the diagram, there is no space between adjacent pipes in any row.  The pipes in any row are tangent to (touch) the pipes in the row below (or rest on the bottom of the container).  When pipes are packed into a container, there may be ``left-over'' space in which a pipe cannot be packed.  Such left-over space is packed with padding so that the pipes cannot settle during shipping.</p>]]></description>
+<input><![CDATA[<p>The input is a sequence of cross-section dimensions of storage containers.  Each cross-section is given as two real values on one line separated by white space.  The dimensions are expressed in units of pipe diameters.  All dimensions will be less than  <img align="BOTTOM" width="15" height="15" src="http://127.1:80/v1-htm01/121img2.gif" alt="tex2html_wrap_inline133" /> .   Note that a cross section with dimensions  <img align="MIDDLE" width="37" height="24" src="http://127.1:80/v1-htm01/121img3.gif" alt="tex2html_wrap_inline135" />  can also be viewed as a cross section with dimensions  <img align="MIDDLE" width="37" height="24" src="http://127.1:80/v1-htm01/121img4.gif" alt="tex2html_wrap_inline137" /> .</p>]]></input> 
+<output><![CDATA[<p>For each cross-section in the input, your program should print the maximum number of pipes that can be packed into that cross section. The number of pipes is an integer -- no fractional pipes can be packed.  The maximum number is followed by the word ``grid'' if a grid pattern results in the maximal number of pipes or the word ``skew'' if a skew pattern results in the maximal number of pipes.  If the pattern doesn't matter, that is the same number of pipes can be packed with either a grid or skew pattern, then the word ``grid'' should be printed.</p>]]></output>
+<sample_input><![CDATA[3 3
+2.9 10
+2.9 10.5
+11 11]]></sample_input>
+<sample_output><![CDATA[9 grid
+29 skew
+30 skew
+126 skew]]></sample_output>
+<test_input><![CDATA[4 4
+5 5
+10 10
+9 8
+3 3
+2.9 10
+2.9 10.5
+11 11
+29.89 32.85
+101 89
+101 101
+0.9 1
+10 6
+6 10
+1.1 1.3
+1.3 1.5
+2 1.9
+1.9 2
+127.9 127.9
+3 5
+3 6
+3 8
+4 8
+4.4 8
+4.5 8
+5 8
+0 0
+]]></test_input>
+<test_output><![CDATA[16 grid
+25 grid
+105 skew
+77 skew
+9 grid
+29 skew
+30 skew
+126 skew
+1088 skew
+10266 skew
+11658 skew
+0 grid
+61 skew
+61 skew
+1 grid
+1 grid
+3 skew
+3 skew
+18669 skew
+15 grid
+18 grid
+24 grid
+32 grid
+32 grid
+38 skew
+41 skew
+0 grid
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Trees on the level]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/122img1.gif]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000">Background</a></font></h2>
+<p>Trees are fundamental in many branches of computer science.  Current state-of-the art parallel computers such as Thinking Machines' CM-5 are based on <em>fat trees</em>.  Quad- and octal-trees are fundamental to many algorithms in computer graphics.</p>
+<p>This problem involves building and traversing binary trees.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000">The Problem</a></font></h2>
+<p>Given a sequence of binary trees, you are to write a program that prints a level-order traversal of each tree.  In this problem each node of a binary tree contains a positive integer and all binary trees have have fewer than 256 nodes.</p>
+<p>In a <em>level-order</em> traversal of a tree, the data in all nodes at a given level are printed in left-to-right order and all nodes at level <i>k</i> are printed before all nodes at level <i>k</i>+1.</p>
+<p>For example, a level order traversal of the tree</p>
+<p><img align="BOTTOM" width="290" height="226" src="http://127.1:80/v1-htm01/122img1.gif" alt="picture28" /></p>
+<p></p>
+<p>is: 5, 4, 8, 11, 13, 4, 7, 2, 1.</p>
+<p>In this problem a binary tree is specified by a sequence of pairs (<i>n</i>,<i>s</i>) where <i>n</i> is the value at the node whose path from the root is given by the string <i>s</i>.  A path is given be a sequence of <em>L</em>'s and <em>R</em>'s where <em>L</em> indicates a left branch and <em>R</em> indicates a right branch.  In the tree diagrammed above, the node containing 13 is specified by (13,RL), and the node containing 2 is specified by (2,LLR). The root node is specified by (5,) where the empty string indicates the path from the root to itself.  A binary tree is considered to be <em>completely specified</em> if every node on all root-to-node paths in the tree is given a value exactly once.</p>]]></description>
+<input><![CDATA[<p>The input is a sequence of binary trees specified as described above. Each tree in a sequence consists of several pairs (<i>n</i>,<i>s</i>) as described above separated by whitespace.  The last entry in each tree is ().  No whitespace appears between left and right parentheses.</p>
+<p>All nodes contain a positive integer.  Every tree in the input will consist of at least one node and no more than 256 nodes.  Input is terminated by end-of-file.</p>]]></input> 
+<output><![CDATA[<p>For each completely specified binary tree in the input file, the level order traversal of that tree should be printed.  If a tree is not completely specified, i.e., some node in the tree is NOT given a value or a node is given a value more than once, then the string ``not complete'' should be printed.</p>]]></output>
+<sample_input><![CDATA[(11,LL) (7,LLL) (8,R)
+(5,) (4,L) (13,RL) (2,LLR) (1,RRR) (4,RR) ()
+(3,L) (4,R) ()]]></sample_input>
+<sample_output><![CDATA[5 4 8 11 13 4 7 2 1
+not complete]]></sample_output>
+<test_input><![CDATA[(5,L) (6,L) (3,) (4,) ()
+(11,LL) (7,LLL) (8,R)
+(5,) (4,L) (13,RL) (2,LLR) (1,RRR) (4,RR) ()
+(3,L) (4,R) ()
+(8,L) (9,LL) (10,LLLL) (8,LLLL) (7,LLL) (1,) ()
+(8,L) (9,LL) (10,LLLL) (8,LLLLL) (7,LLL) (1,) ()
+(8,L) (9,LL) (10,LLLL) (8,LLLLL) (7,LLL) (1,) 
+(7,R) (8,RR) (9,RRRR)  (7,RRRRR) (6,RRR) ()
+(8,) ()
+(7,) (99,L) ()
+(22,L) ()
+(1,LLLLL)
+(3,LLLL)
+(8,LLLLRL)
+(9,LLLLR)
+(11,LLLLRR)
+(11,LLL)
+(12,LLLRLLL)
+(13,LLLRLLLRLL)
+(16,LLLRLLLRLLR)
+(18,LLLRLLLRL)
+(18,LLLRLLLR)
+(18,LLLRLL)
+(19,LLLRLLR)
+(20,LLLRL)
+(21,LLLR)
+(21,LL)
+(22,LLRL)
+(23,LLRLRL)
+(24,LLRLR)
+(24,LLR)
+(24,L)
+(26,LRLLL)
+(27,LRLLLR)
+(28,LRLL)
+(28,LRL)
+(29,LRLRLLL)
+(36,LRLRLL)
+(36,LRLRL)
+(36,LRLR)
+(37,LR)
+(38,)
+(39,RLLLL)
+(40,RLLLLR)
+(40,RLLL)
+(42,RLLLRL)
+(42,RLLLR)
+(42,RLL)
+(43,RLLRLLL)
+(43,RLLRLL)
+(44,RLLRLLR)
+(45,RLLRLLRRL)
+(45,RLLRLLRR)
+(46,RLLRL)
+(48,RLLRLRL)
+(50,RLLRLRLR)
+(50,RLLRLR)
+(50,RLLR)
+(51,RLLRRLLL)
+(52,RLLRRLL)
+(53,RLLRRLLRL)
+(53,RLLRRLLR)
+(54,RLLRRLLRR)
+(55,RLLRRL)
+(55,RLLRR)
+(57,RLLRRR)
+(57,RL)
+(59,RLRLLLL)
+(59,RLRLLL)
+(60,RLRLLLR)
+(60,RLRLL)
+(60,RLRL)
+(63,RLRLRLLLL)
+(63,RLRLRLLL)
+(64,RLRLRLLLRL)
+(64,RLRLRLLLR)
+(65,RLRLRLL)
+(65,RLRLRL)
+(68,RLRLR)
+(68,RLR)
+(70,RLRRLLL)
+(72,RLRRLLLRLL)
+(72,RLRRLLLRL)
+(74,RLRRLLLRLRL)
+(75,RLRRLLLRLR)
+(77,RLRRLLLRLRR)
+(78,RLRRLLLRLRRR)
+(79,RLRRLLLR)
+(79,RLRRLL)
+(80,RLRRLLRL)
+(81,RLRRLLRLRLL)
+(81,RLRRLLRLRL)
+(82,RLRRLLRLR)
+(84,RLRRLLR)
+(85,RLRRLLRRL)
+(85,RLRRLLRR)
+(86,RLRRLLRRRLL)
+(87,RLRRLLRRRLLRL)
+(87,RLRRLLRRRLLR)
+(90,RLRRLLRRRL)
+(90,RLRRLLRRR)
+(92,RLRRLLRRRRL)
+(92,RLRRLLRRRR)
+(93,RLRRLLRRRRRL)
+(94,RLRRLLRRRRR)
+(96,RLRRL)
+(97,RLRRLRLLL)
+(97,RLRRLRLL)
+(98,RLRRLRL)
+(99,RLRRLRLRL)
+(100,RLRRLRLR)
+(100,RLRRLR)
+(102,RLRR)
+(103,RLRRRLL)
+(103,RLRRRL)
+(104,RLRRR)
+(106,RLRRRRL)
+(109,RLRRRRLRL)
+(111,RLRRRRLR)
+(111,RLRRRR)
+(113,RLRRRRRL)
+(114,RLRRRRR)
+(115,RLRRRRRRLLL)
+(115,RLRRRRRRLL)
+(115,RLRRRRRRL)
+(115,RLRRRRRR)
+(116,R)
+(117,RRL)
+(118,RR)
+(119,RRRLLL)
+(119,RRRLL)
+(119,RRRL)
+(121,RRRLR)
+(123,RRRLRR)
+(125,RRR)
+(126,RRRRLL)
+(126,RRRRL)
+(127,RRRRLR)
+(128,RRRR)
+()
+]]></test_input>
+<test_output><![CDATA[not complete
+5 4 8 11 13 4 7 2 1
+not complete
+not complete
+1 8 9 7 10 8
+1 8 7 9 8 7 6 10 9 8 7
+8
+7 99
+not complete
+38 24 116 21 37 57 118 11 24 28 42 68 117 125 3 21 22 28 36 40 50 60 102 119 128 1 9 20 24 26 36 39 42 46 55 60 68 96 104 119 121 126 8 11 18 23 27 36 40 42 43 50 55 57 59 65 79 100 103 111 119 123 126 127 12 19 29 43 44 48 52 59 60 65 70 84 98 103 106 114 18 45 50 51 53 63 79 80 85 97 100 111 113 115 18 45 53 54 63 64 72 82 85 90 97 99 109 115 13 64 72 75 81 90 92 115 16 74 77 81 86 92 94 115 78 87 93 87
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Searching Quickly]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/123img1.gif]]></src><base64><![CDATA[R0lGODlhSgAbAIAAAAAAAP///yH5BAEAAAEALAAAAABKABsAAAKxjI+JoO0PIVOgGkvjwrrTeVRgwF2jVnoqCYpfeKLxKpszl9Y0beVm+GIFYSNXDpPqzYSXBAN5wrWeVJKTWRL5XM0N1DmFYWPaH3GZHZIn2SoTDPTeosEju1j1jeH2K1yIZ/ZT5vAVlkSW0RQVNogCFMjF9Sc4yQJFqGX5Ziml97bzELiyJBFq6ufxKVoa2kZ62uqqSSqLeorbYJvL2+v7CxwsPExcbHyMnKy8zNzsDFwAADs=]]></base64></img><description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000">Background</a></font></h2>
+<p>Searching and sorting are part of the theory and practice of computer science.  For example, binary search provides a good example of an easy-to-understand algorithm with sub-linear complexity.  Quicksort is an efficient  <img align="MIDDLE" width="74" height="27" src="http://127.1:80/v1-htm01/123img1.gif" alt="tex2html_wrap_inline29" />  [average case] comparison based sort.</p>
+<p>KWIC-indexing is an indexing method that permits efficient ``human search'' of, for example, a list of titles.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000">The Problem</a></font></h2>
+<p>Given a list of titles and a list of ``words to ignore'', you are to write a program that generates a KWIC (Key Word In Context) index of the titles.  In a KWIC-index, a title is listed once for each keyword that occurs in the title.  The KWIC-index is alphabetized by keyword.</p>
+<p>Any word that is not one of the ``words to ignore'' is a potential keyword.</p>
+<p>For example, if words to ignore are ``<code>the, of, and, as, a</code>'' and the list of titles is:</p>
+<pre>
+Descent of Man
+The Ascent of Man
+The Old Man and The Sea
+A Portrait of The Artist As a Young Man</pre>
+<p>A KWIC-index of these titles might be given by:</p>
+<p></p>
+<pre>
+                      a portrait of the ARTIST as a young man 
+                                    the ASCENT of man 
+                                        DESCENT of man 
+                             descent of MAN 
+                          the ascent of MAN 
+                                the old MAN and the sea 
+    a portrait of the artist as a young MAN 
+                                    the OLD man and the sea 
+                                      a PORTRAIT of the artist as a young man 
+                    the old man and the SEA 
+          a portrait of the artist as a YOUNG man</pre>]]></description>
+<input><![CDATA[<p>The input is a sequence of lines, the string <code>::</code> is used to separate the list of words to ignore from the list of titles.  Each of the words to ignore appears in lower-case letters on a line by itself and is no more than 10 characters in length.  Each title appears on a line by itself and may consist of mixed-case (upper and lower) letters. Words in a title are separated by whitespace.  No title contains more than 15 words.</p>
+<p>There will be no more than 50 words to ignore, no more than than 200 titles, and no more than 10,000 characters in the titles and words to ignore combined.  No characters other than 'a'-'z', 'A'-'Z', and white space will appear in the input.</p>]]></input> 
+<output><![CDATA[<p>The output should be a KWIC-index of the titles, with each title appearing once for each keyword in the title, and with the KWIC-index alphabetized by keyword.  If a word appears more than once in a title, each instance is a potential keyword.</p>
+<p>The keyword should appear in all upper-case letters. All other words in a title should be in lower-case letters. Titles in the KWIC-index with the same keyword should appear in the same order as they appeared in the input file.  In the case where multiple instances of a word are keywords in the same title, the keywords should be capitalized in left-to-right order.</p>
+<p>Case (upper or lower) is irrelevant when determining if a word is to be ignored.</p>
+<p>The titles in the KWIC-index need NOT be justified or aligned by keyword, all titles may be listed left-justified.</p>]]></output>
+<sample_input><![CDATA[is
+the
+of
+and
+as
+a
+but
+::
+Descent of Man
+The Ascent of Man
+The Old Man and The Sea
+A Portrait of The Artist As a Young Man
+A Man is a Man but Bubblesort IS A DOG]]></sample_input>
+<sample_output><![CDATA[a portrait of the ARTIST as a young man 
+the ASCENT of man 
+a man is a man but BUBBLESORT is a dog 
+DESCENT of man 
+a man is a man but bubblesort is a DOG 
+descent of MAN 
+the ascent of MAN 
+the old MAN and the sea 
+a portrait of the artist as a young MAN 
+a MAN is a man but bubblesort is a dog 
+a man is a MAN but bubblesort is a dog 
+the OLD man and the sea 
+a PORTRAIT of the artist as a young man 
+the old man and the SEA 
+a portrait of the artist as a YOUNG man]]></sample_output>
+<test_input><![CDATA[the
+and
+as
+for
+this
+that
+with
+of
+is
+a
+i
+an
+at
+at
+an
+it
+on
+of
+in
+to
+::
+Fire in the Streets
+Chaos
+A troubled Feast
+Amerika
+A World of Ideas
+Out of Africa
+Death of a Salesman
+Farewell Anatolia
+Paradise Lost
+Paradise Regained
+The Descent of Man
+The Ascent of Man
+The Scent of a Woman
+Yes I Can
+Airport
+Hotel
+Roots
+Woman On The Edge of Time
+The Bean Trees
+Song of Solomon
+The Phantom Tollbooth
+I Know Why the Caged Bird Sings
+Animal Dreams
+The Old Man and The Sea
+Saint Maybe
+The Sum of All Fears
+Red Storm Rising
+Another Fine Myth
+Penguin Dreams and Stranger Things
+To Kill a Mockingbird
+The Adventures of Huckleberry Finn
+Heart of Darkness
+Anne of Green Gables
+The Lion the Witch and the Wardrobe
+Pride and Prejudice
+The Bell Jar
+Happy Are the Peacemakers
+The Sun Also Rises
+Portrait of The Artist As a Young Man
+Sons and Lovers
+A Dolls House
+The Scarlet Letter
+Second Foundation
+Lucky Star And the Oceans of Venus
+The Gods Themselves
+Robot Visions
+Foundations Edge
+Foundation
+Nightfall and Other Stories
+Very Far Away From Anywhere Else
+Time Enough For Love
+Beyond This Horizon
+Double Star
+The Moon is a Harsh Mistress
+Time for the Stars
+The Unpleasant Profession of Jonathan Hoag
+The Day After Tomorrow
+Citizen of the Galaxy
+Glory Road
+I Will Fear No Evil
+Space Cadet
+The Cat Who Walks Through Walls
+Neuromancer
+Burning Chrome
+Count Zero
+Islands in the Net
+Stranger in a Strange Land
+The Collapsing Universe
+I Sing the Body Electric
+Timeless Stories for Today and Tomorrow
+As On a Darkling Plain
+Still Life With Woodpecker
+The Color Purple
+Curoious George
+The Catcher in the Rye
+The Wizard of Oz
+A Connecticut Yankee in King Arthurs Court
+One Fish Two Fish Red Fish Blue Fish
+Eaters of the Dead
+Communist Manifesto
+Hop On Pop
+Surprised by Joy
+Lost in the Cosmos
+The Universe Next Door
+The Hiding Place
+A Prayer for Owen Meany
+A Tale of Two Cities
+Interview with a Vampire
+The World According to Garp
+On Her Majestys Secret Service
+Slaughterhouse Five
+The Firm
+Go Tell it on the Mountain
+A Man is a Man but Bubblesort IS A DOG
+The Quality School
+The Satanic Verses
+The Bone People
+The Snow Leopard
+]]></test_input>
+<test_output><![CDATA[the world ACCORDING to garp
+the ADVENTURES of huckleberry finn
+out of AFRICA
+the day AFTER tomorrow
+AIRPORT
+the sum of ALL fears
+the sun ALSO rises
+AMERIKA
+farewell ANATOLIA
+ANIMAL dreams
+ANNE of green gables
+ANOTHER fine myth
+very far away from ANYWHERE else
+happy ARE the peacemakers
+a connecticut yankee in king ARTHURS court
+portrait of the ARTIST as a young man
+the ASCENT of man
+very far AWAY from anywhere else
+the BEAN trees
+the BELL jar
+BEYOND this horizon
+i know why the caged BIRD sings
+one fish two fish red fish BLUE fish
+i sing the BODY electric
+the BONE people
+a man is a man but BUBBLESORT is a dog
+BURNING chrome
+a man is a man BUT bubblesort is a dog
+surprised BY joy
+space CADET
+i know why the CAGED bird sings
+yes i CAN
+the CAT who walks through walls
+the CATCHER in the rye
+CHAOS
+burning CHROME
+a tale of two CITIES
+CITIZEN of the galaxy
+the COLLAPSING universe
+the COLOR purple
+COMMUNIST manifesto
+a CONNECTICUT yankee in king arthurs court
+lost in the COSMOS
+COUNT zero
+a connecticut yankee in king arthurs COURT
+CUROIOUS george
+as on a DARKLING plain
+heart of DARKNESS
+the DAY after tomorrow
+eaters of the DEAD
+DEATH of a salesman
+the DESCENT of man
+a man is a man but bubblesort is a DOG
+a DOLLS house
+the universe next DOOR
+DOUBLE star
+animal DREAMS
+penguin DREAMS and stranger things
+EATERS of the dead
+woman on the EDGE of time
+foundations EDGE
+i sing the body ELECTRIC
+very far away from anywhere ELSE
+time ENOUGH for love
+i will fear no EVIL
+very FAR away from anywhere else
+FAREWELL anatolia
+i will FEAR no evil
+the sum of all FEARS
+a troubled FEAST
+another FINE myth
+the adventures of huckleberry FINN
+FIRE in the streets
+the FIRM
+one FISH two fish red fish blue fish
+one fish two FISH red fish blue fish
+one fish two fish red FISH blue fish
+one fish two fish red fish blue FISH
+slaughterhouse FIVE
+second FOUNDATION
+FOUNDATION
+FOUNDATIONS edge
+very far away FROM anywhere else
+anne of green GABLES
+citizen of the GALAXY
+the world according to GARP
+curoious GEORGE
+GLORY road
+GO tell it on the mountain
+the GODS themselves
+anne of GREEN gables
+HAPPY are the peacemakers
+the moon is a HARSH mistress
+HEART of darkness
+on HER majestys secret service
+the HIDING place
+the unpleasant profession of jonathan HOAG
+HOP on pop
+beyond this HORIZON
+HOTEL
+a dolls HOUSE
+the adventures of HUCKLEBERRY finn
+a world of IDEAS
+INTERVIEW with a vampire
+ISLANDS in the net
+the bell JAR
+the unpleasant profession of JONATHAN hoag
+surprised by JOY
+to KILL a mockingbird
+a connecticut yankee in KING arthurs court
+i KNOW why the caged bird sings
+stranger in a strange LAND
+the snow LEOPARD
+the scarlet LETTER
+still LIFE with woodpecker
+the LION the witch and the wardrobe
+paradise LOST
+LOST in the cosmos
+time enough for LOVE
+sons and LOVERS
+LUCKY star and the oceans of venus
+on her MAJESTYS secret service
+the descent of MAN
+the ascent of MAN
+the old MAN and the sea
+portrait of the artist as a young MAN
+a MAN is a man but bubblesort is a dog
+a man is a MAN but bubblesort is a dog
+communist MANIFESTO
+saint MAYBE
+a prayer for owen MEANY
+the moon is a harsh MISTRESS
+to kill a MOCKINGBIRD
+the MOON is a harsh mistress
+go tell it on the MOUNTAIN
+another fine MYTH
+islands in the NET
+NEUROMANCER
+the universe NEXT door
+NIGHTFALL and other stories
+i will fear NO evil
+lucky star and the OCEANS of venus
+the OLD man and the sea
+ONE fish two fish red fish blue fish
+nightfall and OTHER stories
+OUT of africa
+a prayer for OWEN meany
+the wizard of OZ
+PARADISE lost
+PARADISE regained
+happy are the PEACEMAKERS
+PENGUIN dreams and stranger things
+the bone PEOPLE
+the PHANTOM tollbooth
+the hiding PLACE
+as on a darkling PLAIN
+hop on POP
+PORTRAIT of the artist as a young man
+a PRAYER for owen meany
+pride and PREJUDICE
+PRIDE and prejudice
+the unpleasant PROFESSION of jonathan hoag
+the color PURPLE
+the QUALITY school
+RED storm rising
+one fish two fish RED fish blue fish
+paradise REGAINED
+the sun also RISES
+red storm RISING
+glory ROAD
+ROBOT visions
+ROOTS
+the catcher in the RYE
+SAINT maybe
+death of a SALESMAN
+the SATANIC verses
+the SCARLET letter
+the SCENT of a woman
+the quality SCHOOL
+the old man and the SEA
+SECOND foundation
+on her majestys SECRET service
+on her majestys secret SERVICE
+i SING the body electric
+i know why the caged bird SINGS
+SLAUGHTERHOUSE five
+the SNOW leopard
+song of SOLOMON
+SONG of solomon
+SONS and lovers
+SPACE cadet
+lucky STAR and the oceans of venus
+double STAR
+time for the STARS
+STILL life with woodpecker
+nightfall and other STORIES
+timeless STORIES for today and tomorrow
+red STORM rising
+stranger in a STRANGE land
+penguin dreams and STRANGER things
+STRANGER in a strange land
+fire in the STREETS
+the SUM of all fears
+the SUN also rises
+SURPRISED by joy
+a TALE of two cities
+go TELL it on the mountain
+the gods THEMSELVES
+penguin dreams and stranger THINGS
+the cat who walks THROUGH walls
+woman on the edge of TIME
+TIME enough for love
+TIME for the stars
+TIMELESS stories for today and tomorrow
+timeless stories for TODAY and tomorrow
+the phantom TOLLBOOTH
+the day after TOMORROW
+timeless stories for today and TOMORROW
+the bean TREES
+a TROUBLED feast
+one fish TWO fish red fish blue fish
+a tale of TWO cities
+the collapsing UNIVERSE
+the UNIVERSE next door
+the UNPLEASANT profession of jonathan hoag
+interview with a VAMPIRE
+lucky star and the oceans of VENUS
+the satanic VERSES
+VERY far away from anywhere else
+robot VISIONS
+the cat who WALKS through walls
+the cat who walks through WALLS
+the lion the witch and the WARDROBE
+the cat WHO walks through walls
+i know WHY the caged bird sings
+i WILL fear no evil
+the lion the WITCH and the wardrobe
+the WIZARD of oz
+the scent of a WOMAN
+WOMAN on the edge of time
+still life with WOODPECKER
+a WORLD of ideas
+the WORLD according to garp
+a connecticut YANKEE in king arthurs court
+YES i can
+portrait of the artist as a YOUNG man
+count ZERO
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Numbering Paths]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/v1-htm01/125img1.gif]]></src><base64><![CDATA[R0lGODlhHAAZAIAAAAAAAP///yH5BAEAAAEALAAAAAAcABkAAAJBjA9wy5HaEIws0Xst3nI2zWmgo3iYVU4pZzytOZ7xMkeoKbG387HkD8NRRLGar/U62h5CJanpjEqn1Kr1is1qswUAOw==]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/125img2.gif]]></src><base64><![CDATA[R0lGODlhGgAZAIAAAAAAAP///yH5BAEAAAEALAAAAAAaABkAAAI5DB6py4wGmpTvzbtOxBwm23leBF7Ipn0bR6JlOLZwJp9zPN6uunbvrQJmgkJIqshDKpfMpvMJjS4LADs=]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/125img3.gif]]></src><base64><![CDATA[R0lGODlhTwANAIAAAAAAAP///yH5BAEAAAEALAAAAABPAA0AAAJhTICmy+0OnpwwmWSpZijvf0VHlHngJp5fOpYsuqrK27iuSj85PNmpqQFCZCFQ57frJWfEYpCErB2nU0qSihUuLDfc8tIcWaNO4xdM1M6QZDNPpkaDMefa84gbV1vpcExVAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/125img4.gif]]></src><base64><![CDATA[R0lGODlhKwANAIAAAAAAAP///yH5BAEAAAEALAAAAAArAA0AAAJCTICmy+2NgErp2WsqlZnjv3hHNIngcVWjqp6oxZKdW56R17q5s9XQDQSmODGa71GcGXchXJLGnIRGVOMLGeyYdMYCADs=]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/125img5.gif]]></src><base64><![CDATA[R0lGODlhGQANAIAAAAAAAP///yH5BAEAAAEALAAAAAAZAA0AAAIuTICmy5duXlsvSTkPRUDheXWemEVkWJYWR6Zj86liG4Pn7UIm7tJVm2FxdrlMAQA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/125img6.gif]]></src><base64><![CDATA[R0lGODlhugANAIAAAAAAAP///yH5BAEAAAEALAAAAAC6AA0AAALTTICmy+2NwJsUpopfzNzKDh6XSIbYNZoT+qnal7qWEcsLW+b2fbe7MqrZfMJhqygjbmg+TpMRfFakPSB1RYmarjkkdnVc6pzZcIgLRTu42rNTvS5b2yBvtQ63v95btX6fEWHWdwI3AyaGV+iCJGh4KEfX40jpVVSJGfiEWSn3wim46AFqCTN4xvYICXGnCGak0eoK2KXK5HmAivsnC2k71srbmzZnRfhFo/t6OxsHdLx22mHJkyDMgxhaN2W6VebovXz9nL2UuP2D/K3y68bdngtSAAA7]]></base64></img><img><src><![CDATA[http://127.1:80/v1-htm01/125img7.gif]]></src><base64><![CDATA[R0lGODlhcgANAIAAAAAAAP///yH5BAEAAAEALAAAAAByAA0AAAKNTICmy+2NwJsUpopfVOnmf0ghCF4eSZmSd6La0roWJ8pOHbJ4ts9GXOkxdCghjUYkGY+/5esDDKZqEarzdoVlh9tocJuzurxaGbkK5mI6Yi76TR5h4W9ejw6fNpnKa1z/tFfklCRX4kc1CGgIRWjVdijFoThR2JgCM/IH8YVW9CWoNOWZY2ZTYpeWSVIAADs=]]></base64></img><description><![CDATA[<h2><font color="#0070e8"><a name="SECTION0001001000000000000000">Background</a></font></h2>
+<p>Problems that process input and generate a simple ``yes'' or ``no'' answer are called decision problems.  One class of decision problems, the NP-complete problems, are not amenable to general efficient solutions.  Other problems may be simple as decision problems, but enumerating all possible ``yes'' answers may be very difficult (or at least time-consuming).</p>
+<p>This problem involves determining the number of routes available to an emergency vehicle operating in a city of one-way streets.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000">The Problem</a></font></h2>
+<p>Given the intersections connected by one-way streets in a city, you are to write a program that determines the number of different routes between each intersection.  A route is a sequence of one-way streets connecting two intersections.</p>
+<p>Intersections are identified by non-negative integers.  A one-way street is specified by a pair of intersections.  For example,  <img align="MIDDLE" width="28" height="25" src="http://127.1:80/v1-htm01/125img1.gif" alt="tex2html_wrap_inline30" />  indicates that there is a one-way street from intersection  <i>j</i> to intersection <i>k</i>.  Note that two-way streets can be modeled by specifying two one-way streets:  <img align="MIDDLE" width="28" height="25" src="http://127.1:80/v1-htm01/125img1.gif" alt="tex2html_wrap_inline30" />  and  <img align="MIDDLE" width="26" height="25" src="http://127.1:80/v1-htm01/125img2.gif" alt="tex2html_wrap_inline38" /> .</p>
+<p>Consider a city of four intersections connected by the following one-way streets:</p>
+<pre>
+    0  1
+    0  2
+    1  2
+    2  3</pre>
+<p>There is one route from intersection 0 to 1, two routes from 0 to 2 (the routes are</p>
+<img align="BOTTOM" width="79" height="13" src="http://127.1:80/v1-htm01/125img3.gif" alt="tex2html_wrap_inline40" />
+<p>and</p>
+<img align="BOTTOM" width="43" height="13" src="http://127.1:80/v1-htm01/125img4.gif" alt="tex2html_wrap_inline42" />
+<p>),  two routes from 0 to 3, one route from 1 to 2, one route from 1 to 3, one route from 2 to 3, and no other routes.</p>
+<p>It is possible for an infinite number of different routes to exist.  For example if the intersections above are augmented by the street  <img align="BOTTOM" width="25" height="13" src="http://127.1:80/v1-htm01/125img5.gif" alt="tex2html_wrap_inline44" /> , there is still only one route from 0 to 1, but there are infinitely many different routes from 0 to 2.  This is because the street from 2 to 3 and back to 2 can be repeated yielding a different sequence of streets and hence a different route.  Thus the route  <img align="BOTTOM" width="186" height="13" src="http://127.1:80/v1-htm01/125img6.gif" alt="tex2html_wrap_inline46" />  is a different route than  <img align="BOTTOM" width="114" height="13" src="http://127.1:80/v1-htm01/125img7.gif" alt="tex2html_wrap_inline48" /> .</p>]]></description>
+<input><![CDATA[<p>The input is a sequence of city specifications.  Each specification begins with the number of one-way streets in the city followed by that many one-way streets given as pairs of intersections.  Each pair   <img align="MIDDLE" width="28" height="25" src="http://127.1:80/v1-htm01/125img1.gif" alt="tex2html_wrap_inline30" />  represents a one-way street from intersection <i>j</i> to intersection <i>k</i>. In all cities, intersections are numbered sequentially from 0 to the ``largest'' intersection.  All integers in the input are separated by whitespace.  The input is terminated by end-of-file.</p>
+<p>There will never be a one-way street from an intersection to itself. No city will have more than 30 intersections.</p>]]></input> 
+<output><![CDATA[<p>For each city specification, a square matrix of the number of different routes from intersection <i>j</i> to intersection <i>k</i> is printed.  If the matrix is denoted <i>M</i>, then <i>M</i>[<i>j</i>][<i>k</i>] is the number of different routes from intersection <i>j</i> to intersection <i>k</i>.  The matrix <i>M</i> should be printed in row-major order, one row per line.  Each matrix should be preceded by the string ``<code>matrix for city</code> <i>k</i>'' (with <i>k</i> appropriately instantiated, beginning with 0).</p>
+<p>If there are an infinite number of different paths between two intersections a -1 should be printed.  <b>DO NOT</b> worry about justifying and aligning the output of each matrix.  All entries in a row should be separated by whitespace.</p>]]></output>
+<sample_input><![CDATA[7 0 1 0 2 0 4 2 4 2 3 3 1 4 3
+5 
+0 2 
+0 1 1 5 2 5 2 1
+9
+0 1 0 2 0 3
+0 4 1 4 2 1
+2 0
+3 0
+3 1]]></sample_input>
+<sample_output><![CDATA[matrix for city 0
+0 4 1 3 2
+0 0 0 0 0
+0 2 0 2 1
+0 1 0 0 0
+0 1 0 1 0
+matrix for city 1
+0 2 1 0 0 3
+0 0 0 0 0 1
+0 1 0 0 0 2
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+matrix for city 2
+-1 -1 -1 -1 -1
+0 0 0 0 1
+-1 -1 -1 -1 -1
+-1 -1 -1 -1 -1
+0 0 0 0 0]]></sample_output>
+<test_input><![CDATA[7 0 1 0 2 0 4 2 4 2 3 3 1 4 3
+9
+0 1
+0 2
+0 3
+0 4
+1 4
+2 1
+2 0
+3 0
+3 1
+12
+0 1 0 2
+1 3 1 4
+2 4 2 5
+3 6 3 7
+4 7 4 8
+5 8 5 9
+2  0 1 1 0
+4
+4 0 3 0 2 0 1 0
+4
+0 4 0 3 0 2 0 1
+6
+0 1 1 2 2 3 4 2 2 5 5 3
+7
+0 1 1 2 2 3 4 2 2 5 5 3 3 5
+18
+0 1 1 2 2 3 1 5 2 6
+3 7 4 5 8 4 5 8 5 9 6 13 7 15
+10 11 8 12 14 10 11 14 12 13 15 14
+56
+0 1
+0 2
+0 3
+0 4
+0 5
+0 6
+0 7
+0 8
+0 9
+0 10
+1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10
+2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10
+3 4 3 5 3 6 3 7 3 8 3 9 3 10
+4 5 4 6 4 7 4 8 4 9 4 10
+5 6 5 7 5 8 5 9 5 10
+6 7 6 8 6 9 6 10
+7 8 7 9 7 10
+8 9 8 10
+9 10
+10 5
+55
+0 1
+0 2
+0 3
+0 4
+0 5
+0 6
+0 7
+0 8
+0 9
+0 10
+1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10
+2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10
+3 4 3 5 3 6 3 7 3 8 3 9 3 10
+4 5 4 6 4 7 4 8 4 9 4 10
+5 6 5 7 5 8 5 9 5 10
+6 7 6 8 6 9 6 10
+7 8 7 9 7 10
+8 9 8 10
+9 10
+56
+0 1
+0 2
+0 3
+0 4
+0 5
+0 6
+0 7
+0 8
+0 9
+0 10
+1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10
+2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10
+3 4 3 5 3 6 3 7 3 8 3 9 3 10
+4 5 4 6 4 7 4 8 4 9 4 10
+5 6 5 7 5 8 5 9 5 10
+6 7 6 8 6 9 6 10
+7 8 7 9 7 10
+8 9 8 10
+9 10
+7 0
+3
+9 10 10 11 11 12
+121
+0 1
+0 2
+0 3
+0 4
+0 5
+0 6
+0 7
+0 8
+0 9
+0 10
+1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10
+2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10
+3 4 3 5 3 6 3 7 3 8 3 9 3 10
+4 5 4 6 4 7 4 8 4 9 4 10
+5 6 5 7 5 8 5 9 5 10
+6 7 6 8 6 9 6 10
+7 8 7 9 7 10
+8 9 8 10
+9 10
+11 12 11 13 11 14 11 15 11 16 11 17 11 18 11 19 11 20 11 21 11 22
+12 13 12 14 12 15 12 16 12 17 12 18 12 19 12 20 12 21 12 22
+13 14 13 15 13 16 13 17 13 18 13 19 13 20 13 21 13 22
+14 15 14 16 14 17 14 18 14 19 14 20 14 21 14 22
+15 16 15 17 15 18 15 19 15 20 15 21 15 22
+16 17 16 18 16 19 16 20 16 21 16 22
+17 18 17 19 17 20 17 21 17 22
+18 19 18 20 18 21 18 22
+19 20 19 21 19 22
+20 21 20 22
+21 22
+122
+0 1
+0 2
+0 3
+0 4
+0 5
+0 6
+0 7
+0 8
+0 9
+0 10
+1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10
+2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10
+3 4 3 5 3 6 3 7 3 8 3 9 3 10
+4 5 4 6 4 7 4 8 4 9 4 10
+5 6 5 7 5 8 5 9 5 10
+6 7 6 8 6 9 6 10
+7 8 7 9 7 10
+8 9 8 10
+9 10
+11 12 11 13 11 14 11 15 11 16 11 17 11 18 11 19 11 20 11 21 11 22
+12 13 12 14 12 15 12 16 12 17 12 18 12 19 12 20 12 21 12 22
+13 14 13 15 13 16 13 17 13 18 13 19 13 20 13 21 13 22
+14 15 14 16 14 17 14 18 14 19 14 20 14 21 14 22
+15 16 15 17 15 18 15 19 15 20 15 21 15 22
+16 17 16 18 16 19 16 20 16 21 16 22
+17 18 17 19 17 20 17 21 17 22
+18 19 18 20 18 21 18 22
+19 20 19 21 19 22
+20 21 20 22
+21 22
+10 11
+123
+0 1
+0 2
+0 3
+0 4
+0 5
+0 6
+0 7
+0 8
+0 9
+0 10
+1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10
+2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10
+3 4 3 5 3 6 3 7 3 8 3 9 3 10
+4 5 4 6 4 7 4 8 4 9 4 10
+5 6 5 7 5 8 5 9 5 10
+6 7 6 8 6 9 6 10
+7 8 7 9 7 10
+8 9 8 10
+9 10
+11 12 11 13 11 14 11 15 11 16 11 17 11 18 11 19 11 20 11 21 11 22
+12 13 12 14 12 15 12 16 12 17 12 18 12 19 12 20 12 21 12 22
+13 14 13 15 13 16 13 17 13 18 13 19 13 20 13 21 13 22
+14 15 14 16 14 17 14 18 14 19 14 20 14 21 14 22
+15 16 15 17 15 18 15 19 15 20 15 21 15 22
+16 17 16 18 16 19 16 20 16 21 16 22
+17 18 17 19 17 20 17 21 17 22
+18 19 18 20 18 21 18 22
+19 20 19 21 19 22
+20 21 20 22
+21 22
+10 11
+22 11
+]]></test_input>
+<test_output><![CDATA[matrix for city 0
+ 0 4 1 3 2
+ 0 0 0 0 0
+ 0 2 0 2 1
+ 0 1 0 0 0
+ 0 1 0 1 0
+matrix for city 1
+ -1 -1 -1 -1 -1
+ 0 0 0 0 1
+ -1 -1 -1 -1 -1
+ -1 -1 -1 -1 -1
+ 0 0 0 0 0
+matrix for city 2
+ 0 1 1 1 2 1 1 3 3 1
+ 0 0 0 1 1 0 1 2 1 0
+ 0 0 0 0 1 1 0 1 2 1
+ 0 0 0 0 0 0 1 1 0 0
+ 0 0 0 0 0 0 0 1 1 0
+ 0 0 0 0 0 0 0 0 1 1
+ 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0
+matrix for city 3
+ -1 -1
+ -1 -1
+matrix for city 4
+ 0 0 0 0 0
+ 1 0 0 0 0
+ 1 0 0 0 0
+ 1 0 0 0 0
+ 1 0 0 0 0
+matrix for city 5
+ 0 1 1 1 1
+ 0 0 0 0 0
+ 0 0 0 0 0
+ 0 0 0 0 0
+ 0 0 0 0 0
+matrix for city 6
+ 0 1 1 2 0 1
+ 0 0 1 2 0 1
+ 0 0 0 2 0 1
+ 0 0 0 0 0 0
+ 0 0 1 2 0 1
+ 0 0 0 1 0 0
+matrix for city 7
+ 0 1 1 -1 0 -1
+ 0 0 1 -1 0 -1
+ 0 0 0 -1 0 -1
+ 0 0 0 -1 0 -1
+ 0 0 1 -1 0 -1
+ 0 0 0 -1 0 -1
+matrix for city 8
+ 0 1 1 1 -1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 1
+ 0 0 1 1 -1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 1
+ 0 0 0 1 0 0 1 1 0 0 -1 -1 0 1 -1 1
+ 0 0 0 0 0 0 0 1 0 0 -1 -1 0 0 -1 1
+ 0 0 0 0 -1 -1 0 0 -1 -1 0 0 -1 -1 0 0
+ 0 0 0 0 -1 -1 0 0 -1 -1 0 0 -1 -1 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+ 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 -1 1
+ 0 0 0 0 -1 -1 0 0 -1 -1 0 0 -1 -1 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 -1 0
+ 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 -1 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 -1 0
+ 0 0 0 0 0 0 0 0 0 0 -1 -1 0 0 -1 0
+matrix for city 9
+ 0 1 2 4 8 -1 -1 -1 -1 -1 -1
+ 0 0 1 2 4 -1 -1 -1 -1 -1 -1
+ 0 0 0 1 2 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 -1 -1 -1 -1 -1 -1
+matrix for city 10
+ 0 1 2 4 8 16 32 64 128 256 512
+ 0 0 1 2 4 8 16 32 64 128 256
+ 0 0 0 1 2 4 8 16 32 64 128
+ 0 0 0 0 1 2 4 8 16 32 64
+ 0 0 0 0 0 1 2 4 8 16 32
+ 0 0 0 0 0 0 1 2 4 8 16
+ 0 0 0 0 0 0 0 1 2 4 8
+ 0 0 0 0 0 0 0 0 1 2 4
+ 0 0 0 0 0 0 0 0 0 1 2
+ 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0
+matrix for city 11
+ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 1 2
+ 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0
+matrix for city 12
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 1 1
+ 0 0 0 0 0 0 0 0 0 0 0 1 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0
+matrix for city 13
+ 0 1 2 4 8 16 32 64 128 256 512 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 2 4 8 16 32 64 128 256 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 2 4 8 16 32 64 128 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 1 2 4 8 16 32 64 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 2 4 8 16 32 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 1 2 4 8 16 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 2 4 8 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 1 2 4 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 1 2 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64 128 256 512 1024
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64 128 256 512
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64 128 256
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64 128
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+matrix for city 14
+ 0 1 2 4 8 16 32 64 128 256 512 512 512 1024 2048 4096 8192 16384 32768 65536 131072 262144 524288
+ 0 0 1 2 4 8 16 32 64 128 256 256 256 512 1024 2048 4096 8192 16384 32768 65536 131072 262144
+ 0 0 0 1 2 4 8 16 32 64 128 128 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072
+ 0 0 0 0 1 2 4 8 16 32 64 64 64 128 256 512 1024 2048 4096 8192 16384 32768 65536
+ 0 0 0 0 0 1 2 4 8 16 32 32 32 64 128 256 512 1024 2048 4096 8192 16384 32768
+ 0 0 0 0 0 0 1 2 4 8 16 16 16 32 64 128 256 512 1024 2048 4096 8192 16384
+ 0 0 0 0 0 0 0 1 2 4 8 8 8 16 32 64 128 256 512 1024 2048 4096 8192
+ 0 0 0 0 0 0 0 0 1 2 4 4 4 8 16 32 64 128 256 512 1024 2048 4096
+ 0 0 0 0 0 0 0 0 0 1 2 2 2 4 8 16 32 64 128 256 512 1024 2048
+ 0 0 0 0 0 0 0 0 0 0 1 1 1 2 4 8 16 32 64 128 256 512 1024
+ 0 0 0 0 0 0 0 0 0 0 0 1 1 2 4 8 16 32 64 128 256 512 1024
+ 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64 128 256 512 1024
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64 128 256 512
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64 128 256
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64 128
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32 64
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16 32
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8 16
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4 8
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 4
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+matrix for city 15
+ 0 1 2 4 8 16 32 64 128 256 512 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 1 2 4 8 16 32 64 128 256 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 1 2 4 8 16 32 64 128 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 1 2 4 8 16 32 64 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 1 2 4 8 16 32 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 1 2 4 8 16 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 1 2 4 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 1 2 4 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 1 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+</fps>

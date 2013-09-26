@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[2001年秋浙江省计算机等级考试二级C 编程题(1)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>编程，输入n后：输入n个数，根据下式计算并输出y值。</p>
+<p>&nbsp;&nbsp; &nbsp; / x<sup>2-</sup>sinx &nbsp; &nbsp;x&lt;-2</p>
+<p>y={ &nbsp;2<sup>x</sup>+x &nbsp; &nbsp; &nbsp; -2&lt;=x&lt;=2</p>
+<p>&nbsp;&nbsp; &nbsp; | &nbsp; &nbsp;___________</p>
+<p>&nbsp;&nbsp; &nbsp; \&nbsp;<span class="Apple-style-span" style="font-size: 11.6667px; ">&radic; &nbsp;X<sup>2</sup>+X+1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x&gt;2</span></p>
+<p></p>
+<p>* 输出保留两位小数</p>
+<p></p>
+<p><span class="Apple-style-span" style="font-size: 11.6667px; ">&nbsp;&nbsp;</span></p>
+<p></p>
+<p></p>]]></description>
+<input><![CDATA[<p>n</p>
+<p>n个数</p>
+<p></p>]]></input> 
+<output><![CDATA[<p>y</p>
+<p></p>]]></output>
+<sample_input><![CDATA[1
+1]]></sample_input>
+<sample_output><![CDATA[3.00]]></sample_output>
+<test_input><![CDATA[10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+-10]]></test_input>
+<test_output><![CDATA[3.00
+6.00
+3.61
+4.58
+5.57
+6.56
+7.55
+8.54
+9.54
+99.46
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include <stdio.h>
+#include <math.h>
+int main(){
+	int i,n;float x,y;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		scanf("%f",&x);
+		if(x<-2) {
+			y=x*x-sin(x);
+		}else if(x<=2){
+			y=pow(2,x)+x;
+		}else{
+			y=sqrt(x*x+x+1);
+		}
+		printf("%.2f\n",y);
+	}
+	return 0;
+	
+}
+]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[2001年秋浙江省计算机等级考试二级C 编程题(2)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>编制函数，其功能是在float类型一维数组中查找最大值、最小值，并将它们返回到调用程序。</p>
+<p>* 输出保留两位小数</p>
+<p></p>]]></description>
+<input><![CDATA[<p>n</p>
+<p>n个浮点数</p>
+<p></p>]]></input> 
+<output><![CDATA[<p>最大值 最小值</p>
+<p></p>]]></output>
+<sample_input><![CDATA[10
+1.0
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+8.0
+9.0
+10.0]]></sample_input>
+<sample_output><![CDATA[10.00 1.00]]></sample_output>
+<test_input><![CDATA[10
+1.0
+2.0
+3.123
+6.2934
+99.123
+13.123
+-123.01
+12
+3
+4
+]]></test_input>
+<test_output><![CDATA[99.12 -123.01]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include <stdio.h>
+#include <math.h>
+void f(float * a,int n,float * max,float * min){
+   	int i;*max=*min=*a;
+   	for(i=1;i<n;i++){
+		if(a[i]>*max) *max=a[i];
+		if(a[i]<*min) *min=a[i];
+		
+	}
+}
+int main(){
+	int i,n;float a[1024],M,m;
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+		scanf("%f",&a[i]);
+	}
+	f(a,n,&M,&m);
+	printf("%.2f %.2f\n",M,m);
+	return 0;
+	
+}
+]]></solution>
+<![CDATA[]]>
+</item>
+</fps>

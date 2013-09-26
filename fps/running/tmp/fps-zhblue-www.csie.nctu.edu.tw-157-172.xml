@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[Route Finding]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://192.168.2.104/v1-htm01/157img1.gif]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p>Many cities provide a comprehensive public transport system, often integrating bus routes, suburban commuter train services and underground railways. Routes on such systems can be categorised according to the stations or stops along them. We conventionally think of them as forming lines (where the vehicle shuttles from one end of the route to the other and returns), loops (where the two ends of the ``branch'' are the same and vehicles circle the system in both directions) and connections, where each end of the route connects with another route. Obviously all of these can be thought of as very similar, and can connect with each other at various points along their routes. Note that vehicles can travel in both directions along all routes, and that it is only possible to change between routes at connecting stations.</p>
+<p></p>
+<p>To simplify matters, each route is given a designation letter from the set `<tt>A</tt>' to `<tt>Z</tt>', and each station along a route will be designated by another letter from the set  `<tt>a</tt>'  to `<tt>z</tt>'. Connecting stations will have more than one designation. Thus an example could be:</p>
+<p></p>
+<p><img align="BOTTOM" src="http://192.168.2.104/v1-htm01/157img1.gif" alt="picture31" /></p>
+<p></p>
+<p>A common problem in such systems is finding a route between two stations. Once this has been done we wish to find the ``best'' route, where ``best'' means ``shortest time''.</p>
+<p></p>
+<p>Write a program that will read in details of such a system and then will find the fastest routes between given pairs of stations. You can assume that the trip between stations always takes 1 unit of time and that changing between routes at a connecting station takes 3 units of time.</p>]]></description>
+<input><![CDATA[<p>Input will consist of two parts. The first will consist of a description of a system, the second will consist of pairs of stations. The description will start with a number between 1 and 26 indicating how many routes there are in the system. This will be followed by that many lines, each describing a single route. Each line will start with the route identifier followed by a `<tt>:</tt>' followed by the stations along that route, in order. Connections will be indicated by an `<tt>=</tt>' sign followed by the complete alternative designation. All connections will be identified at least once, and if there are more than two lines meeting at a connection, some or of all the alternative designations may be identified together.  That is, there may be sequences such as `<tt>...hc=Bg=Cc=Abd...</tt>'. If the route forms a loop then the last station will be the same as the first. This is the only situation in which station letters will be repeated. The next portion of the input file will consist of a sequence of lines each containing two stations written contiguously. The file will be terminated by a line consisting of a single <tt>#</tt>.</p>]]></input> 
+<output><![CDATA[<p>Output will consist of a series of lines, one for each pair of stations in the input. Each line will consist of the time for the fastest route joining the two stations, right justified in a field of width 3, followed by a colon and a space and the sequence of stations representing the shortest journey. Follow the example shown below. Note that there will always be only one fastest route for any given pair of stations and that the route must start and finish at the named stations (not at any synonyms thereof), hence the time for the route must include the time for any inter-station transfers.</p>
+<p></p>
+<p>The example input below refers to the diagram given above.</p>]]></output>
+<sample_input><![CDATA[4
+A:fgmpnxzabjd=Dbf
+D:b=Adac=Ccf
+B:acd=Azefg=Cbh
+C:bac
+AgAa
+AbBh
+BhDf
+#]]></sample_input>
+<sample_output><![CDATA[  5: Agfdjba
+  9: Abaz=Bdefgh
+ 10: Bhg=Cbac=Dcf]]></sample_output>
+<test_input><![CDATA[5
+A:ab=Bbcdefghijk
+B:abc=Ajdef=Cb
+C:ab
+D:cd=Eg
+E:fg=Bf
+AaAk
+AcAk
+AbBb
+BaDd
+#
+]]></test_input>
+<test_output><![CDATA[  9: Aab=Bbc=Ajk
+  8: Acdefghijk
+  3: Ab=Bb
+  8: Babcdef=Dd
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Calendar]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>Most of us have a calendar on which we scribble details of important events in our lives--visits to the dentist, the Regent 24 hour book sale, Programming Contests and so on. However there are also the fixed dates: partner's birthdays, wedding anniversaries and the like; and we also need to keep track of these. Typically we need to be reminded of when these important dates are approaching--the more important the event, the further in advance we wish to have our memories jogged.</p>
+<p></p>
+<p>Write a program that will provide such a service. The input will specify the year for which the calendar is relevant (in the range 1901 to 1999). Bear in mind that, within the range specified, all years that are divisible by 4 are leap years and hence have an extra day (February 29th) added. The output will specify ``today's'' date, a list of forthcoming events and an indication of their relative importance.</p>]]></description>
+<input><![CDATA[<p>The first line of input will contain an integer representing the year (in the range 1901 to 1999). This will be followed by a series of lines representing anniversaries or days for which the service is requested.</p>
+<p>An anniversary line will consist of the letter `<tt>A</tt>'; three integer numbers (<i>D</i>, <i>M</i>, <i>P</i>) representing the date, the month and the importance of the event; and a string describing the event, all separated by one or more spaces. P will be a number between 1 and 7 (both inclusive) and represents the number of days before the event that the reminder service should start. The string describing the event will always be present and will start at the first non-blank character after the priority.</p>
+<p>A date line will consist of the letter `<tt>D</tt>' and the date and month as above.</p>
+<p>All anniversary lines will precede any date lines. No line will be longer than 255 characters in total. The file will be terminated by a line consisting of a single <tt>#</tt>.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000"></a></font></h2>]]></input> 
+<output><![CDATA[<p>Output will consist of a series of blocks of lines, one for each date line in the input. Each block will consist of the requested date followed by the list of events for that day and as many following days as necessary.</p>
+<p>The output should specify the date of the event (<i>D</i> and <i>M</i>), right justified in fields of width 3, and the relative importance of the event. Events that happen today should be flagged as shown below, events that happen tomorrow should have P stars, events that happen the day after tomorrow should have P-1 stars, and so on. If several events are scheduled for the same day, order them by relative importance (number of stars).</p>
+<p>If there is still a conflict, order them by their appearance in the input stream. Follow the format used in the example below. Leave 1 blank line between blocks.</p>]]></output>
+<sample_input><![CDATA[1993
+A 23 12 5 Partner's birthday
+A 25 12 7    Christmas
+A 20 12 1 Unspecified Anniversary
+D 20 12
+#]]></sample_input>
+<sample_output><![CDATA[Today is: 20 12
+ 20 12 *TODAY* Unspecified Anniversary
+ 23 12 ***     Partner's birthday
+ 25 12 ***     Christmas]]></sample_output>
+<test_input><![CDATA[1993
+A 23 12 5 Partner's birthday
+A 25 12 7 Christmas
+A 20 12 1 Unspecified        Anniversary
+A 1 1 1 Little priority on first day of year
+A 1 1 7 New Year's Day
+A 16 6 7 John's birthday
+A 1 1 6 January
+A 1 2 6 February
+A 1 3 6    March with indent!
+A 1 4 6 April
+A 1 5 6 May
+A 1 6 6 June
+A 1 7 6 July
+A 1 8 6 August
+A    1    9    6     September
+A 1 10 6 October
+A 1 11 6 November
+A 1 12 6 December
+D 20 12
+D 25 12
+D 31 12
+D 1 1
+D 14 6
+D    27    1
+D 27 2
+D 27 3
+D 27 4
+D 27 5
+D 27 6
+D 27 7
+D 27 8
+D 27 9
+D 27 10
+D 27 11
+D 27 12
+#
+]]></test_input>
+<test_output><![CDATA[Today is: 20 12
+ 20 12 *TODAY* Unspecified        Anniversary
+ 23 12 ***     Partner's birthday
+ 25 12 ***     Christmas
+
+Today is: 25 12
+ 25 12 *TODAY* Christmas
+  1  1 *       New Year's Day
+
+Today is: 31 12
+  1  1 ******* New Year's Day
+  1  1 ******  January
+  1  1 *       Little priority on first day of year
+
+Today is:  1  1
+  1  1 *TODAY* Little priority on first day of year
+  1  1 *TODAY* New Year's Day
+  1  1 *TODAY* January
+
+Today is: 14  6
+ 16  6 ******  John's birthday
+
+Today is: 27  1
+  1  2 **      February
+
+Today is: 27  2
+  1  3 *****   March with indent!
+
+Today is: 27  3
+  1  4 **      April
+
+Today is: 27  4
+  1  5 ***     May
+
+Today is: 27  5
+  1  6 **      June
+
+Today is: 27  6
+  1  7 ***     July
+
+Today is: 27  7
+  1  8 **      August
+
+Today is: 27  8
+  1  9 **      September
+
+Today is: 27  9
+  1 10 ***     October
+
+Today is: 27 10
+  1 11 **      November
+
+Today is: 27 11
+  1 12 ***     December
+
+Today is: 27 12
+  1  1 ***     New Year's Day
+  1  1 **      January
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Beggar My Neighbour]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://192.168.2.104/v1-htm01/162img1.gif]]></src><base64><![CDATA[R0lGODlhDAAbAIAAAAAAAP///yH5BAEAAAEALAAAAAAMABsAAAIljA2nCrnX3Itt0gpvRJqG7oHiSIrfyCGp9TBSC8fyTNf2jedGAQA7]]></base64></img><img><src><![CDATA[http://192.168.2.104/v1-htm01/162img2.gif]]></src><base64><![CDATA[R0lGODlhDAAYAIAAAAAAAP///yH5BAEAAAEALAAAAAAMABgAAAImTAB2abjvWJNJHrUszhsj113gBo6TR2mQ2lzh+brxTNf2jed6WAAAOw==]]></base64></img><img><src><![CDATA[http://192.168.2.104/v1-htm01/162img3.gif]]></src><base64><![CDATA[R0lGODlhDAAbAIAAAAAAAP///yH5BAEAAAEALAAAAAAMABsAAAIojA2nCrmX3GuBTjhlZW9XDTVW5i2SyIBnR41myYJvR9f2jef6zvdLAQA7]]></base64></img><img><src><![CDATA[http://192.168.2.104/v1-htm01/162img4.gif]]></src><base64><![CDATA[R0lGODlhDQAbAIAAAAAAAP///yH5BAEAAAEALAAAAAANABsAAAImjA9wa+nc3GNyrppgqBBbD4biiG2jGSKZYlGKpsLyTNf2jef6zhQAOw==]]></base64></img><description><![CDATA[<p>``Beggar My Neighbour'' (sometimes known as ``Strip Jack Naked'') is a traditional card game, designed to help teach beginners something about cards and their values. A standard deck is shuffled and dealt face down to the two players, the first card to the non-dealer, the second to the dealer, and so on until each player has 26 cards. The dealer receives the last card. The non-dealer starts the game by playing the top card of her deck (the second last card dealt) face up on the table. The dealer then covers it by playing her top card face up. Play continues in this fashion until a ``face'' card (Ace, King, Queen or Jack) is played. The next player must then ``cover'' that card, by playing one card for a Jack, two for a Queen, three for a King and four for an Ace. If a face card is played at any stage during this sequence, play switches and the other player must cover that card. When this sequence has ended, the player who exposed the last face card takes the entire heap, placing it face down under her existing deck. She then starts the next round by playing one card face up as before, and play continues until one player cannot play when called upon to do so, because they have no more cards.</p>
+<p></p>
+<p>Write a program that will simulate playing this game. Remember that a standard deck (or pack) of cards contains 52 cards. These are divided into 4 suits--Spades ( <img align="MIDDLE" width="12" height="27" src="http://192.168.2.104/v1-htm01/162img1.gif" alt="tex2html_wrap_inline30" /> ), Hearts ( <img align="MIDDLE" width="12" height="24" src="http://192.168.2.104/v1-htm01/162img2.gif" alt="tex2html_wrap_inline32" /> ), Diamonds ( <img align="MIDDLE" width="12" height="27" src="http://192.168.2.104/v1-htm01/162img3.gif" alt="tex2html_wrap_inline34" /> ) and Clubs ( <img align="MIDDLE" width="13" height="27" src="http://192.168.2.104/v1-htm01/162img4.gif" alt="tex2html_wrap_inline36" /> ). Within each suit there are 13 cards--Ace (A), 2-9, Ten (T), Jack (J), Queen (Q) and King (K).</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001001000000000000000"></a></font></h2>]]></description>
+<input><![CDATA[<p>Input will consist of a series of decks of cards. Each deck will give the cards in order as they would be dealt (that is in the example deck below, the non-dealer would start the game by playing the H2). Decks will occupy 4 lines with 13 cards on each. The designation of each card will be the suit (S, H, D, C) followed by the rank (A, 2-9, T, J, Q, K). There will be exactly one space between cards. The file will be terminated by a line consisting of a single <tt>#</tt>.</p>]]></input> 
+<output><![CDATA[<p>Output will consist of a series of lines, one for each deck in the input. Each line will consist of the number of the winning player (1 is the dealer, 2 is the first to play) and the number of cards in the winner's hand (ignoring any on the stack), right justified in a field of width 3.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001003000000000000000"></a></font></h2>]]></output>
+<sample_input><![CDATA[HA H3 H4 CA SK S5 C5 S6 C4 D5 H7 HJ HQ
+D4 D7 SJ DT H6 S9 CT HK C8 C9 D6 CJ C6
+S8 D8 C2 S2 S3 C7 H5 DJ S4 DQ DK D9 D3
+H9 DA SA CK CQ C3 HT SQ H8 S7 ST H2 D2
+#]]></sample_input>
+<sample_output><![CDATA[1 44]]></sample_output>
+<test_input><![CDATA[HA H3 H4 CA SK S5 C5 S6 C4 D5 H7 HJ HQ
+D4 D7 SJ DT H6 S9 CT HK C8 C9 D6 CJ C6
+S8 D8 C2 S2 S3 C7 H5 DJ S4 DQ DK D9 D3
+H9 DA SA CK CQ C3 HT SQ H8 S7 ST H2 D2
+HA H2 HK H3 HQ H4 HJ H5 H6 H7 H8 H9 DA
+D2 DK D3 DQ D4 DJ D5 D6 D7 D8 D9 CA C2
+CK C3 CQ C4 CJ C5 C6 C7 C8 C9 SA S2 SK
+S3 SQ S4 SJ S5 S6 S7 S8 S9 CT ST HT DT
+HA HJ HK H3 HQ H4 H2 H5 H6 H7 H8 H9 DA
+D2 DK D3 DQ D4 DJ D5 D6 D7 D8 D9 CA C2
+CK C3 CQ C4 CJ C5 C6 C7 C8 C9 SA S2 SK
+S3 SQ S4 SJ S5 S6 S7 S8 S9 CT ST HT DT
+HA H2 H3 H4 H5 H6 H7 H8 H9 HT HJ HQ HK
+DA D2 D3 D4 D5 D6 D7 D8 D9 DT DJ DQ DK
+CA C2 C3 C4 C5 C6 C7 C8 C9 CT CJ CQ CK
+SA S2 S3 S4 S5 S6 S7 S8 S9 ST SJ SQ SK
+HA SA HJ HQ SJ SQ SK CJ CQ CK DJ DQ DK
+HK DA CA H2 H3 H4 H5 H6 H7 H8 H9 HT D2
+D3 D4 D5 D6 D7 D8 D9 DT C2 C3 C4 C5 C6
+C7 C8 C9 CT S2 S3 S4 S5 S6 S7 S8 S9 ST
+#
+
+]]></test_input>
+<test_output><![CDATA[1 44
+2 51
+2 48
+1 49
+1  0
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[City Directions]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://192.168.2.104/v1-htm01/163img1.gif]]></src><base64><![CDATA[R0lGODdhtgF4AfcAAAAAAB4fHjw+PD4/PlpdWlxeXHh8eHp9enx+fJicmJqdmrq9utjc2Pj8+BIB/whAv1Bo4FdO7gkS/0AIv9rcywbv/AL/AUC/QFAE4AEARQAAEgAACEhQSE1XVBIJEghACEjgzFRFTBISEggICATg+fFFTP8SEr8ICLFcSC1UVAMSEkAICEYblk22BBIAAggAQOAETWsAAAgAAALgDQBFAAASAAAIAG6MSgDwAMD/AAO/APkEECwATRAAEkAACOjgPMRF7xYS/1SYGHLwDw7/Awi/CFMElnIABA4AAgwAQFTgTfFFAP8SAL8IAGAEDU0AABIAAEjgSk1FABISAAgIAFCsGFfwTQn/EkC/CCSpPPH57/8B/79AvzjgSsZMDwQSAwMs4ADwRQD/EgC/CBgEg0wAABIAwAgAA0xQSAJXVAAJEgBACFDgTVdFAAkSAEAIAEDgEFhcS9BUAAQSAJAbEku2ABgEDUzgTAJF7wAS/wAIv1Dc3lfwFgn/AxipBEz5dRIBEYwUAfFNAAdcDfPwAAP/AAi/AOgEgHkAwwgADggACABQYABX7wAJ/wBAvwDg1fJFCf8SAwjgwKBFciYSEQBcrPJU9P8S/78IvwgARqAA+iYAAADgYABF8rwo/vFM/P8DAL9ACBAEDSkAAAMAAAiorKDw9Cb//0C/vwAArAAA9AAA/wAAv7YAAAEAAHgA0AEA8QBQAABXAAAJAABAAAAgAATgAPJFAACxAPItAL9AALzorPHE9P8W/0xQkClXSwMJEgjg5KBF7yYS/7YoAgFMAAADAHgEUAEAVwAACQAAQADcAAD/AAC/AKzE/PTw7////7+/vwDLBAD8AAABAADM4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAtgF4AQAI/gAbCBxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsqTJkyhTqlzJsqXLlzBjypxJs6bNmzhz6tzJs6fPn0CDCh1KtKjRo0hDLkDAtGnTBUmjShW61KlTqFNfVkVQQIDXr18LMMWataxZl1W7ggUrduxZk0vVCiBgoK5duwS8tiX7tq/fjWm90r17N69eBHz/aow7l7BjwobFJlZMuXJCxo0fa84r2bJFxoM1i67LebLn04oXdA09erOAzqgfqs7cujYB2LFzm43Lurbo0roXqu7tezTw4MiRziZefHMB08F5N59+G3ry6zuHT29+GzH25dup/j/HTr6n9vDFjyNHIAD99url49887764AATJ6df3DV++f5j67ddaf7kFKGBr9/2nIEsGHvjbeLE16KBzVlVo4YUYZqjhhhx26OGHIIYo4ogklrjhAO1NmF5bHFpHFHsqchdAAGvVaOONOOao44489ujjj0AGKeSQRBaJ44zMxfiYADTuGAB+UkmopGNeTWnllVhmqeWW9VXJJWS0iZagVDB+CWaSZqap5ppscpkXmlp6OdqYSUm5pZxt5qnnnnxuh6eabyIIZVJlthmobUbiCCdeid64KGmN2vioAYZFCtaklVoapnGbqvknlYMeZSeXny45gIkWouibAKeiapWq/rWx6uqrKSLY6qxMwWorrrnWiqCvbB6qGZ1HFZpnqaB6ZKyYoWq07LDNZvTsktFiNG2yHF1LJbBsIlsXsUZpi+il7gnLrLLcUovuqtVeJK5d4EqbLrYbvQvppI9l2mlz3hoQ71CjuhYAAAQTHAC+28barkX2+rtwRQ3/6+68hEnMMMV3WUxRxBgbN3DBANCIcMYYa/xTw44R8DHIBo8Mb8cOF7SAdVvN7NZSUEXc7MyXPVUVVDg3oDNBPCNU888NBC00zDEPVPRBR9/s3dLsEk2zz1LnzHS/v63M8sHhmVvxwyczTSXLX7vsL8zgMkW0zwMAMMDMA8wtNAD4DU2Q/tsyI7ZA3HP/bTcCeFOt8N6hzozz33LTPXjhhguKuNWLA+54zpDrLRDfAiHNeOB1Y5731mYX5jXapZN8rtNPGYR00m69hLLpaLOc+rdsJx76QIQ3fjeUCAw++Na627134YQDL7zWVXe+++aInfr75stvTrzTz/8d/dzJU5+z8ZoLThbjwGdePcfhCVA7yGD7STGdVcUNpeI27y4+TLPDuz7It699OO91G1Twpqa9pMlPaMC7HgClh73CFZB8CLRe84QWQKflDD8PPCDnNBc8BnYveRlEngAVSEEGbg5yIcxbAlfVP/Xtj2AtfJ8AMSg9nPGtgBHEXwtf2DL3/Q96/sHDygCnFsQOqlCCP0RgEDsXPPMtpYJ842Cuxhe7IkJxhBNsit2CtkQrSm+DJNQiWbrnPSPmEH3UOV3tYri6HPLMbU/rItlMkr9v8TBkLuNa02C3FBTm6nFOaZUQSWjDzDElc3jTYhUVWMhB3e93ipxa5OY0P8SQ0XnlC2TsJrm6RvIOcpDM1SJZ6Kc7AoCN0ALgzQIoSfFxziV19NcdUUlJ3tFwfqIz4Kn6CEopGpCGdfOd4CxJMCz+D44MVJz9AsjLUOkNmY7MHjN750wFQvOT0dwlNXlHuveoEXXpkyHrLEe4Uz0vlDGJpQtfSMs2RhF0eUNkPHsZRuXZrIng/kNeMbnZvHfSLZ6ZvBsoOZnKM24xdEX74D75eUx7ntCZ+qQnKUvJw3aOrW+t0mc2TQjL/qnshe2bjh7HhEMQfjGfwBwjIz3Yy5amlKGSKynetPfI7j0SiTFlaTwF+VBd8mVoMg0oNn0K0zl59JsFCym/xNk5IUYPoEQ7oA7R89H19c9/kuMjE4HWuq1Cb2+MJGArx+pUsFZNaUF7ovG0msOingut3qkZ68pq1sPBFStK82pbCbqkq64TbUpdqjtvGcEgKu2SsAxsetQoMvSMdI55dd1PSViRp/GVXkaTpGQLojmKWPayF/3MZCf6HiYBVm2U2te3HPlHrmZNr1rR/lVpTdtYqqo2Y3OUSGedRVneTrBevbUW08TGHdoKxj39Itbr2KqTWJ5pP3rcI3B/69skVjer2QruxOxzVUahVnVtFFUBvqui6JpsIruVF3XVa132Yve6v9oTcXFLpu5OaL5UuhWuZCsm/c6Kv8Pyr6sAbCpe9WpVAjYRgfu6J66dt2x6im5qNfUVTFG4wvy58HHHdWELdzg9tyVVxx7sk4BdCb99SrGKV5wmCVsJxaudinMd5GIW2/jGOA5biLP02KmYWEkqa5KGh0zkIhv5yEh2kmK3FGQnJbhCLqrJj8srZCY9uUOsfNWV//vkLBtYiwn28pf/mKotc7nMXF4w/pa6I2YSRbkmMy5XmAik22q98iN3tuVI8rxXkPCZzx35c24ZsrjxthiDmqXMlAVEXDpDRNB7bheg62XnQTOs0iSB9EXQamg3QSiyiu50lvDraIdoOiSAnrSzMB3pg6h61a62dGb5suhyQQi2lal1aeFUaoac2s+SljV6WS2SXwM71p9JdAMUsGNG33qup9E1iB/Va4UYW1nBbrVBXi0tYqPa2xEBtUAYoABRA/nZb3tzWaQ9oGaTBt0LuXags11scOPZ3thG9kTETTRz3xfe6Y72au674RWp+6vbFnadEcJtd+F73vqud8Qhwm+ZDdxB6unZwX08gNrWJ8hqq3bC/id+b4YrPCLyhvjItc1ZhVfcdR0nL6QCsFbhKPsvCBAyag1DI1urO+WUNjnLJzd0PRcd4bK5udE6XnDqfOVJFFf6W2CUKWqvxTAfB3jLSZ5vrqt860fvc8lX7pCXuy54c7k6hxvDqo0zVzGF0lePBlPjlGnd6GD/ttAlTna99/3Yf1eI2fu2lBTJnUehkZXbBy9jbh1e7RWz77tdBHRYez1bD8f85TUf+FknnXlg0hFx7sP4gMNd8uDdj8gr3+29+z3vryc632Gv8c/jVEAJKj20cY76l2Fc66y3Fr1jj3fiI934Yj/7xvMa59DqvqmnnxCTZI4XgAff4a4HPO3H/r79rnff9A2JbPPpi+vrjB9eA/C3zzvf8Etnn/uyR3773d/53Yc/0eePsf3N3/vVshsy6HZ99Fd/QUeABfh9nIeAzydu+Sddb7ce/Rcz/1cYzyaAEDN82hd/GVh8G3h84EdoN9eA8fJ8ySZWUkd4exaBJKV+VHVrFrgxGAh/HCiDHkiDybeASieC1UKCntVBQHNOwsFReKaCjsSCYQMhLzhs7+d9GmiD83eBXIeD1qGDnkcSJQVZdIVqRNhv1Dd5yfeESrh5loeAB9iETMiBUmhtW1iFezY4cxRFJ/doa+g0Rvgez5GECyeGrWeAY2iGXxd/aaiG0vcwPLhvoQNH/ljzFP5UiA1BhRbXhZRSAEJYg3/oh2U4g2dIiZWIdIEoiDRGNp/lZ4m0PUYEOJZkT4g1XZ8INXWYRpnXh5YIi5qYgLEoi250gijoa3MYW6ykUUt0RlC1LqvIipBYamCYh3wofHq4h2Roi4i4fLjoVl0Shx9BPgrVFLZ0T9MjjAdiMRNYfYlxjCgXg5mYfJtojrSYjdG4f/G2iytxWDMVQIcIPlm2jYHmjo/4ez9FjaZGjucojuO4jMq4bbtkew/hiC1xV7DzWgupOA8IX9AFiq3IHS7Ij43oj+k4i5eokbbYiaaGj/GBkJcxkQbHkQOZjNiHkinZjMxYWevIWSBZ/h4iOZLFOB4AeZAYuZHoqJM3iZOb9pIwOYgLAlp+MmjfOHk9eZFL+I8WqZQqOYD7BpRBOYwKMpOCR5L8IYlNGW856YxbyZUCuZJhiF4xKROhqBJWeZXFCHWzx5JiiYlMmWnUyIi3F5HNVXMrkZZqqY9tWYsn6Zd/CZcZWXZSuW1lmU4DlZeHaTRYaRt3F5iC6ZVyGZZQaZAQs5iyk5hoiZnEyJc2uJMtGZmSGXY253YMx5kMIlUtIYJmhiEx93tjNkAM15oKZme0WZuudpslMolBqJsZomZ+Qpum6SxyU5j3KH2+WSGNOSA0N2bQsRWxuUlvE51XATXUWZ1R918q/iicfSOdTGSCppk8SbldVLlvy2kcjzmU2KGXgpcrDoQ1y4SXvjaKHSWUn3GeDzKc6ukZ7JkQ19Q7xnOF4TZEX7kxqLmXByJy+wmB9vlouERBmiVH4zgWxqmK3biVRxmJ+rmgvNegB8lTENpKhyhsTgGaxXagwoGfzrGhHDp1KMpElrOQ5ySeJIqN43mZHrppKpov6dmiltGf7VlDueQ8FfR5bnOjBpqjOlqTLOqjjaekhOZUBYRYEOSTz8gSrGlgr5mgLOJmmXWdNwed1GkaYmoiplmmYwacIsWdekZTJ2UzQqSZ1nZEJupn2zlmO5oyzTkivBmi0cmbBPqntvlf/iSanCKipvzCpt9pP62jkFYKPAWKci9adnkKgBuaapHqdUg6p5TZnuGZqa42qQ3JjpV1QdCnmFCaERmqoP7ZlaFpkpBZp6WJjFqYqjKxqThanh2xqj1af7iqqaDKfhbJiL8aqraaTsEqqceKEbz6qUs5mMUqrMl2qclaVxfaXNV6kKJKcZVKgW6HqWEXrd13k3QpqxezrLKTrR+JrtayZEe4ceDal7D6lvOqfJU5hOy6muraiNv6aOnHpP34rDy5r3j4kAGZgvmKpfuqiwl7gc3qlE8Jg50qsRFbfmNZq7oKZwsbb1VWJGwpcQ8LlhNLq6L5quZqsYJnGuJqrbi3/rEUC0uGeiF9ynkh26oCO5ryerIkiENuSZ7XmhMr65Mm+3U1e3lB+4UE+4q5SJiASrD9WhJHC7H0yoRF+31HW7AH27M7e4ojq1tPO5npaouVWLVwebVKa7INt7WmWrFk2bBo6bI2mzRXMxaew7VHR7bmaLZdm7V+qbaUGLVAGraCe2f08zmXg07h6q52OBnxKn9Jq4d++7dO67YpEbW+9lJbdaROREFVAbac9a+eWbbqirUOKoaRK7mZ9rWkiRJHWqQRxDMpVFiPm3BF27gdeLIva4mni7oIm7E0YblgKUa6VEXcc0W4e7Ft2q3gKLrhOrvft7u8e6KUy7pwa3Ke/lROPhhKQ7S2OXtDyuuFeTu6ZxurfIaDITi+Ptuy2Io/2DilGjW8zVSvUEh2D2u7Tui8TWi+0EG62jq9JwG8c7qIXyRPAgWpnguI36uh9luOgAtuHimtvfuzOAHA/lmkH5Q3KEVUx0uyHsirfaq3bMvBe/XAECy9vjsTFDybYuVaZIV0DRyFCawyrkq++It3JFzCGCvBN5HCm/dycVTDlIi3INyz93qL0Phz6HuuJ3yr1bu3Icy3cEm2QwyYU3ulhHlw/LuuS4ys+BOzqQLE6Fi1U1yyNHzDSwm4qpuzlduxRPKxjougzraPzXvAqnTEpfvEcui/dNTEhqnHQtuM/jU7xvKbu6Rae3dMxLmqwzbBw328xThLk54pyBsMxVE5nFnMr35Mx6jqyGibW/Urvk78xz2on5fMsJwMS3w8lYp8v5TKpJL8wi5JraGsxav8u6nMsnY5x638ezP7yLd7xfOLyEl6yvo6VcRcxE+4qm7Myqs7q8FMxUpcyyh8y9KIXGAMhng7sJp8f02KtKmbyc1MR2ksssKcNDHcq4Q8yMjLzTT8zcecl9Rcl9O4zeKYze0czvZ6zyYszUxszN3oxR8CqF68pc4WmwINpr2cm4Sq0NeJqPahqN+pbK+zXKKMpXcKpmRqIjG8pwaW0WBamGjqpWeH0BetIbTmnqxV/j8HJZ+X68/qSxT27KT1+c5fxbNkJKAiXLnjzCDn3M0yzY0vfcdFU6Wcu8GMrMpBDdM9/dMoPKnbC6Og5Eond9S4PM/iBbBM7dK5HHUx2hQDRaPrvJngHBMxndVQu61PtD0xSqQJfbPiPNZkvdRmbdGUm1CnuNbOI6ctLTs7DSByPdc6TbnX1FPwONXxTJRr+tEezSsErXpdOiKLPSuL99Fh+tEOjWAtMp3nlFYrHNaBTWMA7SEH/WUbDdCjjSpA6GuhjWWD2tAlnSGJQdGfybp9fcbBWtZxW87W6ay6vM9JvciHHbj6vKt/fcjQbMjGfbtoDNe/TNvMndvHHW7F/h2weIyye929k0vTlRvctQ2sIoHb48qPdAnLuq2s2k29Wm3V2L1niise35rE+ezZ0Jrd/MzFfP3ctt2G082pT1yuk5zc6uy1+H2On13fvoxt4O3NEuHf/13RAW7eBi64Mx3hw11y4I2HC6iy10zfv62x6W3N9AzK5ozV/C3MC9i0Ie7OFF6NHNJmFuLTnrjiyCziIx66+W2ZIIjivZ3DHQ4XLQ7RQL3Vb9yWMW2BUljK5BzdbXve/8vdA47DMmjPApiGSF7iSi7gTL7HH+5YG363+x29nmqQVQ7dZJy+Qg7cW54+XZ6zQny2nTjmN+7bZ+7h953lDt7gUrs37U2R/oyrtB4J594dwT0+zWlelCmuxsEz3ZX3wIAO5fhq59tc4IM+36Q5FsUNdCTc6OGt4pNu3xPe6QdO4HD01yl3w5puhssN6fjM6XPOwDQOdiErb2Z86piY6jIOz4UuUmuOfG31yVEIlC9H62Bup0+uk5Le6nGJ6InT08ZmxsPOzHKu3jvs5Kp+3VcO4B18zjpu3bud5GU+46wu7Whe57eeznhu7fm70cTm7LW+6zyO7P1M7qDeyZW+g/t9Q8C+jsKu4NEO4kBL7eUe1pJsjmKMaHac5w+O7bY+76ic6/zi7p85abVrSQeP8OeO7gnfv9XO68698Vb+7ea+k4FckMB8/ufkfe157PGz/b/d7eiiLpFYze6Bvt6CDu+evpotv+nKTmhf7swKD/GPHvDoLe82H+qDWacJzu0fn/HUXd4pL/RN7vD2AfQvv8tcenDjDd/mvvBFL+E4X+yo/urQjNvluu9mn/Ni2/FQ//P1zq0k3u3PDPJbz+Fd3/BEL+7Q/svY3PMMbvZav+RrD7UAz/BVLPZyX+NXH99xz/QWz/V4b8tSj9kN3dqCqsIh0thZR2sufvmUX/kESdLImdm4fvfItdodEtnR+Zwl8tchDdnWqdiv79qhvyGx3VXTiVfeafHH/vhDmfTqKdzdeUCK4zfZe1N3vvv+7qO+vyDAPzlT/vpUmBTgVF3NXP7Ty/8fzW90sMu9EprTak/4/nH98pH91LNJyyXV8s3yYB9qby/T5A87a238YO396q/yEdLzC/r+MIpBh8vWhh35AGFA4ECCAgUgaJBQ4UKGDR0+hBhR4kSKFS02WFCAQEGOHTsSKLDg4kiSJU2edIhAgEeWLA+SXCCyAQIECwYgRAAAoUKbOkvSRBlUocqWRQu+FJpU6dKSGTcaNQpSJlOqVZkShWoU6UWgNmvetDkgZs2EOXeOBGqV68qsRQXcpBlX7ly6de2Sbbjg7l6+dacy1NtXME2RTtu2BDl471+eih37dRj48eQBbA97fCv4b+ABYjEi/uhcGK9exhXTqjVt+TLHzJMf30wJ1/Vg2LFnzw2d0PBqjgQCyKZ8diHo24prMyReXHBl3h1b82UceCppqqdRT8TanOBW1NaHCrfq/btQ6jw1aico1aT4meDDu29/vaxq9Nzl/4R/Hzl97fbfp8xvKfbiQ6m8hXZDzwD1SGJvwKvgc1BA/przTz+LIrQwuwQrrA7CAJUaEEOJDATsvAQVDIlBD+9r8EMQJ+SNQwuxc1E/DeurUagW5Qsxx4dIzMvEBBe8cEUejbzuxv58nBE5JruDcTUZBURSrR5NAjIyIdEjkqIdjwSQxSgvm7LJh0QU80SDnlyvyv/ChAmviRDk/jJF09x808k01SzTzIbQ5HHMw/rUEc8Oz2Tzs9IiolO7LiP6MklDqxO0LUL9HA/T4SrN6lKUIrUyP0AbW/THwrZ01E6JQA0VziQ5hcpTTGPSdFM1DZC1TVdb3XVOOeesrdHmHu21rERVLLYqJSk8tlZNl42xWa4mpRJRi7KESK/jhOWNWD3/lLbIZCm9NVdna4VWynDvHLfadgH7dcSarON2NW8z/VbSd18sd91zM4RVK39p3LdQa30tNTKyvKv3snsJzLc7aiXs91+LVw3YrYFXnTipK+VNOC+8xGv4sHtZzXO4jSHNuCVzL24yXTJXhgjlQ/fF9kc5GwzgqSFV/lW5YIPB3fPEl2EGuGIwidb33ZwV/qvBAVAdFmhjhQ7KZnL5pBnpq1p2qetkR9W13adFZqzFktt6VOsHsf4UbMzE9tpjuZ2jO2J8eWUa7WvjhTjotbPq0m139Q7vbtbyrjtupZtG/Oa+DwQ828q/HBwqIg0HsWO7H2/8YpkHZXxv05UV1b2z4S010syjspNzjz3XUfGjSg+dQdu3wz3w0yXXe3XKEwb19aLUk33oyLc2uvfcL9x9oKOnhbvsyYUnFVI3jUcspOSzpj3r6Nd8XvTxce39+5M+VvTvkH2/ukSf6zwu6KWX/xr08tE9f3pxJ0+Z/bCnm8pFjj3cY4lv/sL3qQWur3/O2x/G9BfA+EnMWgNsH8EAaJ75pao0ZLOe/V41wQiaaXSWSl8D8YMoDA7QbQj0SNtSWL31PLCEzjphp2a4QeANByzu+x/+MEK1bgENhCvkIfM2BMEbpsSG9xMh35DjmYpgEH5XPBAR7aWqIyIrifnjWhOf9UTIRZGCunnf8NDiORh+JHY7FCK/wihGP+UwVnA0I+rIU0DtCa2NvUlRF9dIw5+QkY4zsqPAWKRCL57Eir8D1B8LIhVBUu+LFJvjIRFpSCn+7m2O5CPH4CbJ9BSgfp2sIJRIqElVZtKCl5wdKNNYswaSciAKXCQhdbdKViaOl4fLYw+B/rg+FdpSIA/rnC7RwsletrJ5uYSl8i7ySB4e0ZgomiUxlbmWXzYTk8+EoieBWcVQsiuaWupg1bKJxDh+zpXetFL/gKOcu5yyLPOkJ13sOaLO5HOfyaFMz9SUmHzW5Z/4LKhcmMMnhNJlnfD8kzwTuhiFTdQuD/1MQhclmdlo0WG/sWhcNhpSg0q0L9ERqchGQxhNJlJjEIUpRa6JzEO61GWJ4oxPYkIabXkmLBiFmU3DFlOiMsqjJrNaM4U6N2R5xam58UoqxbhUvBXVqugcaFJZSdXFeXEsPjHLPUVSyX9x9XZXRWsW01lEoIbOrLxjEFxEM1Yq/pSs53qr9JiY/tZazVSrdMwr+UaiLQBQESP1M8tdcchMvhbVr231WmDRhyXi6CY3POnMPksoWf81toSPVSpjRySTroSGVpj1SUtF69mYgnarq6XlYXFSWMKUJ6yqLVdDLTpSjQ6WpA6tqEUHINATEbQ4vP1tXBZqNN3KZTM0gWpKy0PNoJo0uZX9U3ONY1jTaJeeB/3tUdkG0tmA97qgsS5FKVdOiHIWj+IcpiVf2U4siZdwf9UgfcXXTdZK8J1nvCt1FSvKc9Z3rVtsq/ocyN/+1gy2ySywziA74D5GuCn21Rx+Y2vhGjK4wU70MAO3SV2p6pHDMMEw7DCq4A7/98NeenAsT0xA/siWWJhYvApxf/ZQFhcyxC8eSoylCV/L1djGn9Tvp6Z2YIdp2IDpEzKQbeXiG1uTvflFJY6p5FosE9md4JRyan4cQi+z7lqtw12Pm5ri4znZxorlqEEDIAA619nOd8bzncl70TBPGczzDWaRr6VZCm84ydocIpORmkY1T/G8tNlr7twLzSS3ELszlm+gkczlgx260ziMtFujLOICWzownwYwHjldTX8VmtR9nsmoEU1fKwKFfVl2NapXHUzF5prMUp50OI+sRiDeOtWU5mBW0bxNfJ22jqFuXLDLSGQr2jZ1wtYyhJGj4zotqtEi9LXOWBpuwMr611qu9s6uPe1h/o/znmzu3gcZybSf2ugmsCH3VM3NTk2nO2rrBnSZwQegVX87U6DRLFOiCppTwzrWY+a3J/29vHy/+b1X47TB46dcmdCKpyKVjmTGQhaRDwWsOqn4DaUdcBtPnOJpnvcg6Q3vBHIx5oKbV2oZTpx+giU0OelnT75y77OENbHQrtvKca26K2cviSnXuJeQ5Nqo2xohUZVtXHQ61tnGZSYo37rJu57yze67kWZ0+dNhzmxzRgy0VcfJThh+z5wLx9YoH3tqD4RvsZA9gko/ttPJSTyALx3Zpnss3LF+26j+lFZ3h65edOL4f8fH7/sDvInzlfZxQf3mQcyjX//Z6nl1/lxOp+VpYeb68dU/d9xIj6zZZf4tznd+7ZjO9O9mGoDPt/s61nb4w6mMZJw/VHjG1rym3Y3FXfca9srvb+arXPppXhn50z/8sAtOeotdvnzSJ/5QfhhfAuO+7dCXsRAzzv2yPr+6ED+7+I3fdCx6nu1SxxnNY2hzHXn30ZfuM/BbPmeTKfqrv9vztIjzvURTtgX0lb0YrjyTwAmksz2DDIcTQG2TpdlLQA4UuFdDPwYsrkCCMvj7sAxMP8oCqusLPwccuFLTPzdquBEavuCbDxPMPd9KsMILPHbLNrXKqoT7piWyQZbBQdDTwXP7wRfsQA90Qd2Iwd7gvaIhwiI8/hPZy8HBm7UmRMIn3MIPhEJFYxs3268atEEUHDIt/EIwVMAlZMIQlJ8GdKYqtMKIOsLzU8M19MI2JDs127UhxJE6BDGGejQhFJl+Ug5C87/iMK/rasTX4LZUSa7l2hD/MzJv4qxFVI75663gui7kOi9QdI0onCQLTChKrA9LhBeWWkXTM0CkQUNB7LM/LMM/IyfQ0CmW6qnCuKxyu0NZbCxaXDAzDJPGGwC9Wzz3cxxiBEZYE0YfY0baIy29mwnP8D5lwcJmZK1nXCaIS46puC3L6jtlHEZb1EZB5EbogTjCoqJwLAu8e61fPEe+SkcYM0FtkTtqPKx+isdonMcw/qtH/zLHOSGtfFSdYyTHFhvIf7TCgHQwb7y62mC8kdHHJsrETvybRyuVOPstUUwuj/SnSKyaREyvu3C9y5qulbrExcotf+IuL9HE8hKVmHSNR/wtm0woUkwPU3QMVOwPVVyvlfy7bKSx+Es+ONTDPuy9bNHJWyLDQVxIK4xFQTPKG3PDpLy4q0QxMbyvBCNKz5pKqFHC5dNKPszKinPIIJNHvgpLMxtLDUTKc1PK+xuRpjymp1RLfwyzthS8NmzBPazKuTQ/0xBJtuImvQQ2syMxNqzKsgzMs0yfJZNDe0RMIOPLxWRMJwRMzRRMLiySgOTLF2vLavM2BPRM/BtM/tQ8Tfyrx9A8QVmrttHDNsfkTMiEpnR0zQabynSTTR+kzSzszLi0Hm7MzeiLMn+LuvJbTeXMzNpEtmcsTtZCw4lLzgpLTebcTOcMJ2GMTrCMMZerTkNbTusUTrPMPloEPAZgAKl8sLQLT1Rrzi78TeA8y8JEMKikw4RggAQ4AKFsL9jivPe0PWwLzviUT9CwS2yyQ1faTwUNPvCrPQFVOwK1TQotODJq0Lv0z9Bapdq7IvujS/I0UDzMTvoUwR3zsyrMUKfc0H4cSA/9UNMsT+30wQKNHy6btBUtpRatKWaC0RidTRAdTxEt0QM9C6p7IB2dJLy0KqX7USD1TSGd/lEaZbnAebv+KYAEaDMetUhDelIordL5JFExHVMb9Z3E6x9OoSm0krYvBdMsI9MuK9IyrVAgHEGfpBBYWdMmfSI3fdMzilPsDFRBNdMDSlDfSNMx5FLMmxACoMC1egk//dOjHFE5HVQivVTxlLgEpbPeoEABgNSM2dOY0hBH/VQ7m5+DkNRJtUoprVRLLdQAMaZOvSUBCIA5O9VUbZnEWFRROyZURYw724jMmL91ktCXo9Dsy1T4RLem7FRTrTNFg1ZQNQiwcVQm7SWVgFauTA87+41iNdEoldE5Vc0pDVem5FaXwFU6S9dfZVdaVRfpxNV29dQpJL9yfVVMXVZW/lPWWJ0TUrRVah2WCpSbUW2mjBDYn7kyajrWQHNVcoXVOjUqenVXio0hdm2yXvWaa6pVJxOwpRTUfX2yfpXYiTUZjL0VBUlYFQtGBEhQQEoYEmtYT3pYkR3ZZK2iFHNUi9UclI23YCyAlU1ZDRVLuRxXiMVUf8XZnOXKnR3aSfJZGfTOp5VaYjPaID1apa1RNikZp6Xao4gSg+0ljt3SvjRPcV3aKtXaa9Eir/3abl0rsWUlslWkDALBfNVUvGXWtTW8rfRUnh3YDpJbTaJb2IEumrQLRMQNxH2NhlLcm0Sox4Vcg2LcxqXc8lrXOpuzt00gPOPJk+pRzk2gWz3V/tI13dNF3dRV3dVl3dZ13deFXdW9VcCtj8xdXXttosLtlPMR3d713d8F3uB1Dt49WdqdLH0TXrhN3uVl3uZ13t512+SF12gRI921FOJ93uzV3u192+lN3uidGeR1XvDl3vI13/P9XfIVXu8lndx92f7AXvSVX86d1thNXeMd3uxV3zvqUu1l3/kFYPN9jv9TKOz9X+m9m84yIcWpX8Dd3wCGYOdVYIUcKKFlG2GFX2a5oTZy1AAAgA/+YPvUiviN4BKmXkyRrGodFg8GYQCYM5494Lodym5h4RYOYRgmYRPWYR0ao6GNYcSoYRsW4c6F4YSkTDKxYSG22B/e4Sb+/lqkKDkqNBprDeIklhsmZqqys5cqtmIpyWEnBuOzyimxieIUxhWwEYAkVmIvPuEZRmI1bmE0/uIwpuOXKK2rAyoCFD/sMmMsZg04jmM2jlctfmNAdmGK9WM6VuR4TYvHSxSS4buxIt5EviUu7mIyuWIjxg40NuQbxuRFBuWUtWO5wjjnKjmREw+jA6tJbpk07mQAkOM2ZlQpeeVYDuVbDkR25LrDoi2EI46wAKg/OTmcYOWPqmVBDl9CHpRj/mRcduZB/gx8kztr3LqwGjlh7jrhKxdO7mRbTmY3NhlLBuEhxow5fmYIjtSCbI9r/rqi07va2jucsMZiNmZAJuf8/oXmWd5iQL5icz5nALbjiJRnuPAp04oJg/ZlPUmLPr5ie8ZhWS4fDubiF44Rf/5n+Y3UwxWNmkjJnVKUnWLFxmBFhu4WW03ie/4IC+ZflbsbU/Vgii5p/L1oMIbikKYKAzHjBz4ek57XPNVglh4Slb7emSbqLK4jA7YdnY6VBNbkf5XpDbHooi7fCYZGUY5qIv5poB5foZbqfx5gAoYupM5eSu6q/pXgq+5q7a1f+z3dp1bes16S6n1fh+HqtLbrMCbrp1Xqm/JF5s3ruwZsAN7r7rUdqm4S6z0e0mXrxWbsxnbsx4bsyM6z2V1e37Dd1MVd93VrS8msgpLcwz2v/s8GbUeM3MrtydIuRNQexclGa5XVM8TV2EARXqnATEg6Wpu1bZLVbZJQ0l/d7KVe0thGGsSG2aJ8Q70d0K3dbeUeid6u1d8O1nQaXMKd6/17rkuc2SOrWb7twYpw7rcW3f2d7kMibge12rMN0+0u2e6eiO+GWuh+75/1LMS+l8XM7gNM275lbopw7799270ebzrSXWSSWZDVV/VebrX1kf5OafgebPOmx6B162tNo48N0bxFWgznbkpdQga/2Lo+WRAP7m2MQOPt4JekynOFUwTPb/Z2CA8fXZQOVsrOWHmNVnvR3Cd5pPtmweXbcOyLCBh3mZ7GcYJVp6md1qYF/ta3AFcjxdoW5/Af108theoGjoolZ2BsDV13RV2fIdbqM1YDx3DctrgE1++GEHK3YIu1Ll0vT2otF99u/dR0UlUDdCExZ1YyZ1Ug32+GSHM199Q5Z43dCXBwJkJJ5XEejPL1XvQXp/Li2lw+iZ5C/74+tXP2SvQ893FG53OF+PPuwdOKnkyiatNLf59Mv/C95fS/9I5Przm96B8ZL9uiWrkvRfXrTNpV3/SFcHXr1uZKPFQ4r3T9edJbH1JVN/Me7PWqda+0/LvLZt3MRqPBIrxUT24FT/ZGHyK25iJov92rC9rYlXZv4sjjug89nvbf20jhRneMEG53j4x3b3fUO5so1ysoV8ynd2fIfef3fvf3fwf4gBf4gSf4gjf4g0f4hFf4hWf4hnf4h4f4iJf4iaf4irf4i8d4zwoIADs=]]></base64></img><img><src><![CDATA[http://192.168.2.104/v1-htm01/163img2.gif]]></src><base64><![CDATA[R0lGODlhAgAbAIAAAAAAAP///yH5BAEAAAEALAAAAAACABsAAAIKRIynyesdopxUFgA7]]></base64></img><img><src><![CDATA[http://192.168.2.104/v1-htm01/163img3.gif]]></src><base64><![CDATA[R0lGODlhCwAYAIAAAAAAAP///yH5BAEAAAEALAAAAAALABgAAAIdjG+gmMvhmAJvPmgvprr1/WUa94XTKZbqyrbu2xUAOw==]]></base64></img><description><![CDATA[<p>When driving through a city, an intersection usually offers one the choice of going straight on or turning left or right through 90 degrees. However some cities have diagonal roads, thus at intersections involving these one may be able to turn through 45 degrees (``half'') or through 135 degrees (``sharp'').</p>
+<p></p>
+<p>Consider such a city with Avenues running north-south, Streets running east-west and Boulevards running diagonally. The central Avenue and Street are labelled Zero (A0 and S0). Other roads are labelled relative to these, thus A3W is the third avenue to the west of A0. There are 6 Boulevards--two passing through the centre of the city, and 4 others, one in each quadrant. The diagram below shows the northwest quadrant of a small version of such a city.</p>
+<p></p>
+<p><img align="BOTTOM" src="http://192.168.2.104/v1-htm01/163img1.gif" alt="picture27" /></p>
+<p></p>
+<p>The roads marked in grey are considered to be throughways. These are elevated for most of their length, thus it is possible to cross them easily, however they always intersect each other at a circle, which is shared by all other roads that meet at that intersection. You may only enter or leave them by turning left (sharp left in the case of boulevards). You may not stop on them for any reason. There are no restrictions on turns for other roads.</p>
+<p></p>
+<p>This system allows a very simple method of determining one's current position and a way of arriving at one's destination. Position can be specified in terms of the last intersection you passed through (the numbers of the Avenue and Street that meet there) and your current heading, which can be one of: north (N), northeast (NE), east (E), southeast (SE), south (S), southwest (SW), west (W) and northwest (NW). Directions can then be given in terms of how many intersections to pass through and which turns to make. However, the locals have an infuriating habit of giving incorrect or invalid directions, although it cannot be determined whether this is deliberate or accidental. Directions should (but don't always) conform to the following simple grammar:</p>
+<p></p>
+<blockquote> &lt;command&gt; ::= &lt;turn_command&gt;  <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/163img2.gif" alt="tex2html_wrap_inline231" />  &lt;straight_command&gt; <br />
+&lt;turn_command&gt; ::= TURN [HALF  <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/163img2.gif" alt="tex2html_wrap_inline231" />  SHARP] {LEFT  <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/163img2.gif" alt="tex2html_wrap_inline231" />  RIGHT} <br />
+&lt;straight_command&gt; ::= GO [STRAIGHT] n  <img align="MIDDLE" width="11" height="24" src="http://192.168.2.104/v1-htm01/163img3.gif" alt="tex2html_wrap_inline249" />  n  <img align="MIDDLE" width="11" height="24" src="http://192.168.2.104/v1-htm01/163img3.gif" alt="tex2html_wrap_inline249" />  99 </blockquote>
+<p>Write a program that will simulate driving through such a city, by tracking your position and heading as you follow a set of directions (commands). Each quadrant of the city will be 50 blocks by 50 blocks, thus the entire city will be 100 blocks by 100 blocks, the outer throughways will be labelled Fifty and the major and minor boulevards will cross at roads labelled Twentyfive. You will be told your starting position and heading and then given a series of directions. If a direction does not follow the above grammar, or would involve an illegal or impossible turn then ignore it. At no stage will directions take you out of the confines of the city.</p>]]></description>
+<input><![CDATA[<p>Input will consist of a series of scenarios.</p>
+<p>Each scenario will consist of a position and a heading and will be followed by a series of directions (commands), each on a separate line. If either of the roads involved is one of the central roads (A0, S0), they will be labelled <tt>N</tt> or <tt>E</tt> as appropriate. Note that you may assume that you have just left the intersection specified. The <code>GO &lt;n&gt;</code> command means that you pass through <code>&lt;n&gt;</code> intersections.</p>
+<p>Each scenario will be terminated by a line consisting of the word <tt>STOP</tt>.</p>
+<p>The file will be terminated by a line consisting of the word <tt>END</tt> only.</p>
+<p></p>
+<p>Input data will follow the format shown below, except that more than one space may occur where only one is shown. No line will be longer than 80 characters.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000"></a></font></h2>]]></input> 
+<output><![CDATA[<p>Output will consist of a series of lines, one for each scenario. Each line will consist of a position and a heading in the same format as the input. If the final stopping place is illegal, report `<tt>Illegal stopping place</tt>' as the answer.</p>]]></output>
+<sample_input><![CDATA[A2W S1N E
+TURN SHARP LEFT
+GO 1
+TURN RIGHT
+TURN LEFT
+TURN SHARP LEFT
+GO 1
+TURN LEFT
+STOP
+A2W S1N W
+GO STRAIGHT 2
+TURN LEFT
+GO ON 2
+TURN HALF LEFT
+TURN LEFT
+GO 2
+STOP
+END]]></sample_input>
+<sample_output><![CDATA[A3W S1N E
+Illegal stopping place]]></sample_output>
+<test_input><![CDATA[A2W S1N W
+GO STRAIGHT 2
+TURN LEFT
+TURN LEFT
+GO 2
+TURN LEFT
+STOP
+A2W S1N W
+GO STRAIGHT 2
+TURN LEFT
+TURN LEFT
+GO 1
+TURN LEFT
+STOP
+A2W S1N W
+GO STRAIGHT 2
+TURN LEFT
+TURN LEFT
+GO 2
+STOP
+A2W S1N W
+GO 99999999999999999999
+STOP
+A2W S1N W
+GO 1 SILLY
+STOP
+A2W S1N W
+GO 0
+STOP
+A2W S1N S
+TURN LEFT
+GO 1
+!No stopping on throughways
+STOP
+A2W S1N S
+TURN LEFT
+GO 1
+GO 1
+STOP
+A2W S1N S
+TURN LEFT
+GO 1
+TURN LEFT
+STOP
+A2W S1N S
+TURN LEFT
+GO 1
+TURN RIGHT
+STOP
+A2W S1N S
+TURN LEFT
+GO 1
+TURN HALF LEFT
+STOP
+A2W S1N S
+TURN LEFT
+GO 1
+TURN HALF RIGHT
+STOP
+A2W S1N S
+TURN LEFT
+GO 1
+TURN SHARP LEFT
+STOP
+A2W S1N S
+TURN LEFT
+GO 1
+TURN SHARP RIGHT
+STOP
+A2W S49N N
+GO LEFT
+STOP
+A2W S49N N
+TURN LEFT
+STOP
+A49W S2N W
+TURN LEFT
+STOP
+A12W S49S S
+TURN LEFT
+STOP
+A49E S2N E
+TURN LEFT
+STOP
+A1W S2N W
+TURN SHARP LEFT
+GO 1
+!hit MIDDLE ROUNDABOUT, from boulevard
+STOP
+A1W S2N W
+TURN SHARP LEFT
+GO 1
+GO 1
+TURN SHARP LEFT
+STOP
+A1W S2N W
+TURN SHARP LEFT
+GO 1
+TURN LEFT
+TURN SHARP LEFT
+STOP
+A1W S2N W
+TURN SHARP LEFT
+GO 1
+TURN RIGHT
+TURN SHARP LEFT
+STOP
+A1W S2N W
+TURN SHARP LEFT
+GO 1
+TURN HALF LEFT
+TURN LEFT
+STOP
+A1W S2N W
+TURN SHARP LEFT
+GO 1
+TURN HALF RIGHT
+TURN LEFT
+STOP
+A1W S2N W
+TURN SHARP LEFT
+GO 1
+TURN SHARP LEFT
+TURN LEFT
+STOP
+A1W S2N W
+TURN SHARP LEFT
+GO 1
+TURN SHARP RIGHT
+TURN LEFT
+STOP
+A25E S24N N
+!QUADRANT CENTRE, FROM STREET
+STOP
+A25E S24N N
+GO 1
+STOP
+A25E S24N N
+TURN LEFT
+STOP
+A25E S24N N
+TURN RIGHT
+STOP
+A25E S24N N
+TURN HALF LEFT
+STOP
+A25E S24N N
+TURN HALF RIGHT
+STOP
+A25E S24N N
+TURN SHARP LEFT
+STOP
+A25E S24N N
+TURN SHARP RIGHT
+STOP
+A25W S26N W
+TURN SHARP LEFT
+!QUADRANT CENTRE, ON BOULE
+STOP
+A25W S26N W
+TURN SHARP LEFT
+GO 1
+TURN SHARP LEFT
+STOP
+A25W S26N W
+TURN SHARP LEFT
+TURN LEFT
+TURN SHARP LEFT
+STOP
+A25W S26N W
+TURN SHARP LEFT
+TURN RIGHT
+TURN SHARP LEFT
+STOP
+A25W S26N W
+TURN SHARP LEFT
+TURN HALF LEFT
+TURN SHARP LEFT
+STOP
+A25W S26N W
+TURN SHARP LEFT
+TURN HALF RIGHT
+TURN SHARP LEFT
+STOP
+A25W S26N W
+TURN SHARP LEFT
+TURN SHARP LEFT
+STOP
+A25W S26N W
+TURN SHARP LEFT
+TURN SHARP RIGHT
+TURN SHARP LEFT
+STOP
+A26W S24N NE
+!QUADRANT CENTRE, FROM MINOR
+STOP
+A26W S24N NE
+GO 1
+STOP
+A26W S24N NE
+TURN LEFT
+STOP
+A26W S24N NE
+TURN RIGHT
+STOP
+A26W S24N NE
+TURN HALF LEFT
+STOP
+A26W S24N NE
+TURN HALF RIGHT
+STOP
+A26W S24N NE
+TURN SHARP LEFT
+STOP
+A26W S24N NE
+TURN SHARP RIGHT
+STOP
+A49W S48S W
+TURN LEFT
+GO 1
+!CORNER ROUNDABOUT
+STOP
+A49W S48S W
+TURN LEFT
+GO 1
+TURN LEFT
+STOP
+A49W S48S W
+TURN LEFT
+GO 1
+TURN SHARP LEFT
+STOP
+A49E S1S NE
+!SIDE ROUNDABOUT
+STOP
+A49E S1S NE
+TURN LEFT
+STOP
+A49E S1S NE
+TURN HALF LEFT
+STOP
+A49E S1S NE
+TURN SHARP LEFT
+STOP
+A49E S1S NE
+TURN SHARP RIGHT
+STOP
+A3W S1N N
+!ORDINARY CORNER
+STOP
+A3W S1N N
+GO 1
+STOP
+A3W S1N N
+TURN LEFT
+STOP
+A3W S1N N
+TURN RIGHT
+STOP
+A3W S1N N
+TURN HALF LEFT
+STOP
+A3W S1N N
+TURN HALF RIGHT
+STOP
+A3W S1N N
+TURN SHARP LEFT
+STOP
+A3W S1N N
+TURN SHARP RIGHT
+STOP
+A49W S1N NE
+!ORDINARY BOULEVARD
+STOP
+A49W S1N NE
+GO 1
+STOP
+A49W S1N NE
+TURN LEFT
+STOP
+A49W S1N NE
+TURN RIGHT
+STOP
+A49W S1N NE
+TURN HALF LEFT
+STOP
+A49W S1N NE
+TURN HALF RIGHT
+STOP
+A49W S1N NE
+TURN SHARP LEFT
+STOP
+A49W S1N NE
+TURN SHARP RIGHT
+STOP
+A49W S1N NE
+GO 23
+TURN SHARP LEFT
+STOP
+A49W S1N NE
+GO STRAIGHT 23
+GO SHARP LEFT
+STOP
+A49W S1N NE
+TURN HALF SILLY
+STOP
+A49W S1N NE
+TURN LEFT SILLY
+STOP
+A49W S1N NE
+TURN HALF SHARP LEFT
+STOP
+A49W S1N NE
+silly stop
+GO 1 STOP
+STOP
+A48W S2N N
+GO 1
+STOP
+A48W S2N NE
+GO 1
+STOP
+A48W S2N E
+GO 1
+STOP
+A48W S2S SE
+GO 1
+STOP
+A48W S2N S
+GO 1
+STOP
+A48W S2N SW
+GO 1
+STOP
+A48W S2N W
+GO 1
+STOP
+A48W S2S NW
+GO 1
+STOP
+A3W S1N S
+!MEET MAIN DRAG FROM ORDINARY
+STOP
+A3W S1N S
+GO 1
+STOP
+A3W S1N S
+TURN LEFT
+STOP
+A3W S1N S
+TURN RIGHT
+STOP
+A3W S1N S
+TURN HALF LEFT
+STOP
+A3W S1N S
+TURN HALF RIGHT
+STOP
+A3W S1N S
+TURN SHARP LEFT
+STOP
+A3W S1N S
+TURN SHARP RIGHT
+STOP
+A3W S1N N
+!ORDINARY CORNER
+STOP
+A3W S1N N
+GO 1
+STOP
+A3W S1N N
+TURN LEFT
+STOP
+A3W S1N N
+TURN RIGHT
+STOP
+A3W S1N N
+TURN HALF LEFT
+STOP
+A3W S1N N
+TURN HALF RIGHT
+STOP
+A3W S1N N
+TURN SHARP LEFT
+STOP
+A3W S1N N
+TURN SHARP RIGHT
+STOP
+A25E S24N N
+A25E S24N S
+STOP
+A49W S1N W
+TURN LEFT
+TURN LEFT
+GO STRAIGHT 99
+TURN LEFT
+TURN LEFT
+STOP
+END
+]]></test_input>
+<test_output><![CDATA[A2W S0N N
+A3W S0N N
+Illegal stopping place
+A2W S1N W
+A2W S1N W
+A2W S1N W
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+A2W S49N N
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+A1E S1S N
+A1E S1N W
+A1W S1S E
+A1E S0N N
+A0E S1S E
+A0E S1N W
+A1W S0N S
+A25E S24N N
+A25E S25N N
+A25E S25N W
+A25E S25N E
+A25E S25N NW
+A25E S24N N
+Illegal stopping place
+A25E S25N SE
+Illegal stopping place
+A24W S24N N
+A25W S25N N
+A25W S25N N
+A25W S25N N
+A25W S25N N
+A25W S25N N
+A25W S25N N
+A26W S24N NE
+A25W S25N NE
+A26W S24N NE
+A26W S24N NE
+A25W S25N N
+A25W S25N E
+A25W S25N W
+A25W S25N S
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+A49E S1S NE
+A50E S0N NW
+Illegal stopping place
+Illegal stopping place
+Illegal stopping place
+A3W S1N N
+A3W S2N N
+A3W S2N W
+A3W S2N E
+A3W S1N N
+A3W S1N N
+A3W S1N N
+A3W S1N N
+A49W S1N NE
+A48W S2N NE
+A49W S1N NE
+A49W S1N NE
+A48W S2N N
+A48W S2N E
+A48W S2N W
+A48W S2N S
+A25W S25N W
+A26W S24N NE
+A49W S1N NE
+A49W S1N NE
+A49W S1N NE
+A49W S1N NE
+A48W S3N N
+A47W S3N NE
+A47W S2N E
+A47W S3S SE
+A48W S1N S
+A49W S1N SW
+A49W S2N W
+A49W S1S NW
+A3W S1N S
+A3W S0N S
+Illegal stopping place
+A3W S1N S
+A3W S1N S
+A3W S1N S
+A3W S1N S
+A3W S1N S
+A3W S1N N
+A3W S2N N
+A3W S2N W
+A3W S2N E
+A3W S1N N
+A3W S1N N
+A3W S1N N
+A3W S1N N
+A25E S24N N
+A50E S1N W
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[String Computer]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://192.168.2.104/v1-htm01/164img1.gif]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p>Extel have just brought out their newest computer, a string processing computer dubbed the X9091. It is hoped that it will have some value in cryptography and related fields. (It is rumoured that the Taiwanese are working on a clone that will correct Stage 1 essays, but we will ignore such vapourware). This computer will accept input strings and produce output strings from them, depending on the programs loaded into them at the time. The chip is the ultimate in RISC technology--it has only three transformation instructions:</p>
+<p></p>
+<ul>
+    <li>Delete a character at a particular position.</li>
+    <li>Insert a character at a particular position.</li>
+    <li>Change the character at a particular position to a different character.</li>
+</ul>
+<p>Programs for this machine are written in a form of machine code where each instruction has the format <tt>ZXdd--Z</tt> represents the code for the instruction (<tt>D</tt>, <tt>I</tt> or <tt>C</tt>), <tt>X</tt> is a character and <tt>dd</tt> represents a two digit number. A program is terminated by a special halt instruction consisting of the letter `<tt>E</tt>'. Note that each instruction works on the string in memory at the time the instruction is executed.</p>
+<p>To see how this all works consider the following example. It is desired to transform the string `<tt>abcde</tt>' to the string `<tt>bcgfe</tt>'. This could be achieved by a series of Change commands, but is not minimal. The following program is better.</p>
+<p></p>
+<p><img align="BOTTOM" width="610" height="103" src="http://192.168.2.104/v1-htm01/164img1.gif" alt="tabular32" /></p>
+<p>Write a program that will read in two strings (the input string and the target string) and will produce a <em>minimal</em> X9091 program necessary to transform the input string into the target string. Since there may be multiple solutions, only one should be produced. Any solution that satisfies these criteria will be accepted.</p>]]></description>
+<input><![CDATA[<p>Input will consist of a series of lines, each line containing two strings separated by exactly one space. The strings will consist of no more than 20 lower case characters. The file will be terminated by a line consisting of a single <tt>#</tt>.</p>
+<p>Output will consist of a series of lines, one for each line of the input. Each will consist of a program in X9091 language.</p>]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[abcde bcgfe
+#]]></sample_input>
+<sample_output><![CDATA[Da01Cg03If04E]]></sample_output>
+<test_input><![CDATA[abcde bcgfe
+abcdefg abcdefg
+abcdef abccdef
+abccdef abcdef
+aabbcc adbc
+adbc aabbcc
+ab abcd
+abcd ab
+a bcd
+b bcd
+b dbc
+b cdb
+bcd b
+cbd b
+cdb b
+cdb a
+abc zbc
+bac bzc
+acb acz
+cab crab
+cab cob
+crab cab
+abcd xbcdzyxabcd
+xbcdzyxabcd abcd
+xbcdzyxakbkckdk abcd
+abcd xbcdzyxakbkckdk
+xbcdzyxakbkckdk abcld
+abcld xbcdzyxakbkckdk
+abcxdefxghixxjklxxmn abcyydefyyghiyjklymn
+abcdefghijklmnopqrst tsrqponmlkjihgfedcba
+abababababababababab abababababababababab
+aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa
+abab azaz
+ababab azazaz
+abababab azazazaz
+ababababab azazazazaz
+abcabc acbacb
+abcabcabc acbacb
+acbacb abcabcabc
+abcabcabc acbacbacb
+abcdabcdabcdabcdabcd dbcadbcadbcadbcadbca
+abcdabcdabcdabcdabcd dcbadcbadcbadcbadcba
+abababababababababab azazazazazazazazazaz
+abcabcabcabcabcabcab acbacbacbacbacbacbac
+ashdfkh saxugjsdfkjg
+ljhlkhaskdf lkshljhsalkdh
+iuryiuywroiuyr oiewoiwyeiyiu
+ljhlkjhhjhjhjl ljhhkjhkhljhjl
+#
+]]></test_input>
+<test_output><![CDATA[Da01Cg03If04E
+E
+Ic04E
+Dc04E
+Da01Cd02Dc05E
+Ia01Cb03Ic06E
+Ic03Id04E
+Dc03Dd03E
+Cb01Ic02Id03E
+Ic02Id03E
+Id01Ic03E
+Ic01Id02E
+Dc02Dd02E
+Dc01Dd02E
+Dc01Dd01E
+Ca01Dd02Db02E
+Cz01E
+Cz02E
+Cz03E
+Ir02E
+Co02E
+Dr02E
+Ix01Ib02Ic03Id04Iz05Iy06Ix07E
+Dx01Db01Dc01Dd01Dz01Dy01Dx01E
+Dx01Db01Dc01Dd01Dz01Dy01Dx01Dk02Dk03Dk04Dk05E
+Ix01Ib02Ic03Id04Iz05Iy06Ix07Ik09Ik11Ik13Ik15E
+Dx01Db01Dc01Dd01Dz01Dy01Dx01Dk02Dk03Cl04Dk06E
+Ix01Ib02Ic03Id04Iz05Iy06Ix07Ik09Ik11Ck13Ik15E
+Cy04Iy05Cy09Iy10Cy14Dx15Cy18Dx19E
+Ct01Cs02Cr03Cq04Cp05Co06Cn07Cm08Cl09Ck10Cj11Ci12Ch13Cg14Cf15Ce16Cd17Cc18Cb19Ca20E
+E
+E
+Cz02Cz04E
+Cz02Cz04Cz06E
+Cz02Cz04Cz06Cz08E
+Cz02Cz04Cz06Cz08Cz10E
+Cc02Cb03Cc05Cb06E
+Cc02Cb03Db05Da06Dc07E
+Cb02Cc03Ib05Ia07Ic09E
+Cc02Cb03Cc05Cb06Cc08Cb09E
+Cd01Ca04Cd05Ca08Cd09Ca12Cd13Ca16Cd17Ca20E
+Cd01Db02Cb03Cd05Cb07Cd09Cb11Cd13Cb15Cd17Cb19Ia20E
+Cz02Cz04Cz06Cz08Cz10Cz12Cz14Cz16Cz18Cz20E
+Cc02Cb03Cc05Cb06Cc08Cb09Cc11Cb12Cc14Cb15Cc17Cb18Cc20E
+Is01Cx03Cu04Ig05Ij06Is07Cj11Ig12E
+Ck02Is03Cj06Is08Cl10Ch13E
+Io01Ce03Cw04Co05Cw07Ce09Ci10Cy11Dy14Dr14E
+Ch04Ck08Ch09Cl10E
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Stamps]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>The government of Nova Mareterrania requires that various legal documents have stamps attached to them so that the government can derive revenue from them. In terms of recent legislation, each class of document is limited in the number of stamps that may be attached to it. The government wishes to know how many different stamps, and of what values, they need to print to allow the widest choice of values to be made up under these conditions. Stamps are always valued in units of $1.</p>
+<p></p>
+<p>This has been analysed by government mathematicians who have derived a formula for <i>n</i>(<i>h</i>,<i>k</i>), where <i>h</i> is the number of stamps that may be attached to a document, <i>k</i> is the number of denominations of stamps available, and <i>n</i> is the largest attainable value in a continuous sequence starting from $1. For instance, if <i>h</i>=3, <i>k</i>=2 and the denominations are $1 and $4, we can make all the values from $1 to $6 (as well as $8, $9 and $12). However with the same values of <i>h</i> and <i>k</i>, but using $1 and $3 stamps we can make all the values from $1 to $7 (as well as $9). This is maximal, so <i>n</i>(3,2) = 7.</p>
+<p></p>
+<p>Unfortunately the formula relating <i>n</i>(<i>h</i>,<i>k</i>) to <i>h</i>, <i>k</i> and the values of the stamps has been lost--it was published in one of the government reports but no-one can remember which one, and of the three researchers who started to search for the formula, two died of boredom and the third took a job as a lighthouse keeper because it provided more social stimulation.</p>
+<p>The task has now been passed on to you. You doubt the existence of a formula in the first place so you decide to write a program that, for given values of <i>h</i> and <i>k</i>, will determine an optimum set of stamps and the value of <i>n</i>(<i>h</i>,<i>k</i>).</p>]]></description>
+<input><![CDATA[<p>Input will consist of several lines, each containing a value for <i>h</i> and <i>k</i>. The file will be terminated by two zeroes (0 0). For technical reasons the sum of <i>h</i> and <i>k</i> is limited to 9. (The President lost his little finger in a shooting accident and cannot count past 9).</p>]]></input> 
+<output><![CDATA[<p>Output will consist of a line for each value of <i>h</i> and <i>k</i> consisting of the <i>k</i> stamp values in ascending order right justified in fields 3 characters wide, followed by a space and an arrow (<code>-&gt;</code>) and the value of <i>n</i>(<i>h</i>,<i>k</i>) right justified in a field 3 characters wide.</p>]]></output>
+<sample_input><![CDATA[3 2
+0 0]]></sample_input>
+<sample_output><![CDATA[  1  3 ->  7]]></sample_output>
+<test_input><![CDATA[1 8
+2 7
+3 6
+4 5
+5 4
+6 3
+7 2
+8 1
+1 7
+2 6
+3 5
+4 4
+5 3
+6 2
+7 1
+1 1
+0 0
+
+]]></test_input>
+<test_output><![CDATA[  1  2  3  4  5  6  7  8 ->  8
+  1  3  5  7  8 17 18 -> 26
+  1  4  6 14 17 29 -> 52
+  1  3 11 15 32 -> 70
+  1  5 12 28 -> 71
+  1  7 12 -> 52
+  1  5 -> 23
+  1 ->  8
+  1  2  3  4  5  6  7 ->  7
+  1  3  5  7  9 10 -> 20
+  1  4  6 14 15 -> 36
+  1  3 11 18 -> 44
+  1  6  7 -> 35
+  1  5 -> 18
+  1 ->  7
+  1 ->  1
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[The Sultan's Successors ]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>The Sultan of Nubia has no children, so she has decided that the country will be split into up to <i>k</i> separate parts on her death and each part will be inherited by whoever performs best at some test. It is possible for any individual to inherit more than one or indeed all of the portions. To ensure that only highly intelligent people eventually become her successors, the Sultan has devised an ingenious test. In a large hall filled with the splash of fountains and the delicate scent of incense have been placed <i>k</i> chessboards. Each chessboard has numbers in the range 1 to 99 written on each square and is supplied with 8 jewelled chess queens. The task facing each potential successor is to place the 8 queens on the chess board in such a way that no queen threatens another one, and so that the numbers on the squares thus selected sum to a number at least as high as one already chosen by the Sultan. (For those unfamiliar with the rules of chess, this implies that each row and column of the board contains exactly one queen, and each diagonal contains no more than one.)</p>
+<p></p>
+<p>Write a program that will read in the number and details of the chessboards and determine the highest scores possible for each board under these conditions. (You know that the Sultan is both a good chess player and a good mathematician and you suspect that her score is the best attainable.)</p>]]></description>
+<input><![CDATA[<p>Input will consist of <i>k</i> (the number of boards), on a line by itself, followed by <i>k</i> sets of 64 numbers, each set consisting of eight lines of eight numbers. Each number will be a positive integer less than 100. There will never be more than 20 boards.</p>]]></input> 
+<output><![CDATA[<p>Output will consist of <i>k</i> numbers consisting of your <i>k</i> scores, each score on a line by itself and right justified in a field 5 characters wide.</p>]]></output>
+<sample_input><![CDATA[1
+ 1  2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15 16
+17 18 19 20 21 22 23 24
+25 26 27 28 29 30 31 32
+33 34 35 36 37 38 39 40
+41 42 43 44 45 46 47 48
+48 50 51 52 53 54 55 56
+57 58 59 60 61 62 63 64]]></sample_input>
+<sample_output><![CDATA[  260]]></sample_output>
+<test_input><![CDATA[9
+1 0 0 0 0 0 0 0
+0 0 0 0 1 0 0 0
+0 0 0 0 0 0 0 1
+0 0 0 0 0 1 0 0
+0 0 1 0 0 0 0 0
+0 0 0 0 0 0 1 0
+0 1 0 0 0 0 0 0
+0 0 0 1 0 0 0 0
+ 78 53 31 36 98 52 79 36
+ 2 91 87 53 68 18 96 41
+ 44 43 71 48 94 46 17 56
+ 4 35 27 39 61 80 43 9
+ 49 56 95 3 33 16 45 54
+ 82 16 96 12 43 50 83 59
+ 48 79 21 66 29 19 89 72
+ 85 98 81 97 91 14 71 82
+ 3 27 94 76 98 96 68 55
+ 99 26 86 91 24 92 32 66
+ 35 51 60 34 18 77 59 31
+ 11 36 83 59 33 52 40 99
+ 8 55 16 29 74 96 64 56
+ 63 78 85 61 78 23 63 94
+ 69 10 82 45 51 4 72 97
+ 28 19 10 62 25 6 45 88
+ 28 57 60 77 66 83 14 69
+ 63 56 33 38 15 91 56 66
+ 4 31 92 40 56 57 34 33
+ 74 40 58 96 36 62 53 68
+ 2 67 33 85 20 3 52 10
+ 75 67 76 85 73 22 49 6
+ 67 14 1 8 95 63 15 96
+ 64 16 28 3 76 83 77 65
+ 56 45 53 62 12 65 75 78
+ 61 37 70 11 26 9 43 29
+ 83 75 30 78 61 24 39 42
+ 1 81 32 59 87 98 97 89
+ 3 70 44 67 54 59 40 83
+ 65 10 81 74 81 19 94 53
+ 55 60 13 37 84 9 90 24
+ 71 98 90 96 43 9 53 60
+ 38 47 43 2 92 43 59 24
+ 17 61 89 77 82 91 23 91
+ 67 29 87 6 30 65 18 91
+ 47 50 36 95 52 88 41 88
+ 39 97 97 21 12 45 12 96
+ 27 79 75 71 6 35 3 53
+ 93 65 5 65 93 10 22 87
+ 85 34 6 76 62 85 17 78
+ 73 68 61 19 25 67 27 97
+ 94 79 35 51 63 33 71 44
+ 92 80 23 34 10 24 68 59
+ 24 76 49 10 47 19 96 39
+ 89 28 96 45 79 84 4 19
+ 3 97 72 62 2 40 26 66
+ 99 98 11 80 43 75 77 46
+ 85 28 27 17 27 75 57 67
+ 0 0 0 0 0 10 0 0
+ 0 10 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 10 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 12 56 12 98 36 1 4 9
+ 23 98 2 5 47 8 17 94
+ 8 2 3 6 8 4 76 3
+ 46 7 45 43 6 67 23 54
+ 8 65 4 2 46 2 7 46
+ 24 45 67 87 4 2 76 8
+ 3 3 6 8 7 4 3 6
+ 94 2 2 76 67 43 4 42
+
+]]></test_input>
+<test_output><![CDATA[    8
+  663
+  575
+  583
+  666
+  593
+  574
+   30
+  428
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Xenosemantics]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>Contact with extra-terrestrial intelligence has been made at last!! A stream of messages has been discovered, apparently emanating from Procyon IV. After intensive study by the world's best xenosemanticists, the following definite conclusions on the format of the messages have been reached. The messages are streams of bits divided into groups of 8. Somewhat coincidentally the meaningful parts of the message map onto the lower case alphabet, although other characters sometimes intervene. Letters are organised into words separated by spacer letters. The spacer letter varies within a message, but a word which is delimited by a particular spacer pair does not contain that spacer letter within it. In addition the message is conceptually bounded by a pair of `joker' letters or `wild spacers' that can match any letter. For example, a message segment <tt> xwrxwtx</tt> contains 3 words--<tt>wr</tt>, <tt>wt</tt>, and <tt>rx</tt>; <tt>wrxwt</tt> is not a word in this segment of the message. If this segment appeared at the start of a message then <tt>xw</tt> and <tt>xwrxw</tt> could also be words. The words <tt>wr</tt> and <tt>rx</tt> overlap, while <tt>wt</tt> does not overlap any words in this message segment. While a word contains the same letters each time it appears in one message, the order of the letters may vary in different occurrences of the same word. Each message contains many words which are not ``true'' words in that they carry no meaning (like err.., umm.., etc in English). Every true word in the message contains at least two and no more than 250 letters, overlaps with another true word, and is repeated somewhere in the message (possibly with the letters in a different order). In the example above, <tt>wr</tt> and <tt>rx</tt> would both be true words if <tt> wr</tt> or <tt>rw</tt>, and <tt>rx</tt> or <tt>xr</tt>, occurred as words elsewhere in the message. The word <tt>wt</tt> would be a true word if <tt>wt</tt> or <tt>tw</tt> occurred elsewhere in the message, overlapping another true word.</p>
+<p></p>
+<p>Write a program that will read in messages and print out a list of the different true words contained in each message (using the spelling which occurs first), in the order the words first appear in the message. If the first appearances of two words overlap, then the word that finishes first precedes the other. Remember that both the start and the end of the message count as spacer letters. Your program must be able to process messages of up to 1000 letters.</p>]]></description>
+<input><![CDATA[<p>Input will consist of one or more messages. Each message will consist of one or more lines. Each line will be no more than 60 characters long and will contain a mixture of lower case letters and other characters. If the last character of a line is a dash (<tt>-</tt>) then the message continues on the next line. All characters other than lower case `<tt>a</tt>' to `<tt>z</tt>' form no part of the message. The file will be terminated by a line consisting of a single <tt>#</tt>.</p>]]></input> 
+<output><![CDATA[<p>Output will consist of the true words for each message, in the correct order as specified above, one word per line. Terminate the list for each message by a line consisting of a single *.</p>]]></output>
+<sample_input><![CDATA[dyj@ttdi%sdort^jdyt*rFnn  trlnsvkGHoalexotrjxzasvs-
+ozgpsi<>:pkelaovo,.;'slnxt'][-prsjlntrjo
+aaaaaaa
+#]]></sample_input>
+<sample_output><![CDATA[dyj
+ortj
+lnsvkoalexot
+*
+*]]></sample_output>
+<test_input><![CDATA[
+abcdedcba
+azbczdezaxazbczdez
+dyj@ttdi%sdort^jdyt*rFnn   trlnsvkGHoalexotrjxzasvs-
+ozgpsi<>:pkelaovo,.;'slnxt'[]-prsjlntrjo
+-
+1263123-
+----
+-
+
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+thyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy yyyyyyyyyy -
+12345-
+
+#-
+xmeanxmeanxaxna
+trickyxickytr-
+
+toughxughto-
+1#
+aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa -
+aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa -
+cccccccccc cccccccccc cccccccccc cccccccccc cccccccccc -
+cccccccccc cccccccccc cccccccccc cccccccccc cccccccccc -
+eeeeeeeeee eeeeeeeeee eeeeeeeeee eeeeeeeeee -
+f -
+eeeeeeeeee eeeeeeeeee eeeeeeeeee eeeeeeeeee -
+cccccccccc cccccccccc cccccccccc cccccccccc cccccccccc -
+cccccccccc cccccccccc cccccccccc cccccccccc cccccccccc -
+aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa -
+aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa
+
+ajhflkshjhdfivixertouw,sicn cu9novn2ruhpo;fq-
+.lauslnfslihlwkepiusxmnxcvhpowrn1wnAcpuhn24r-
+;owjfdsvh,mnrtpquh;lnvaskvnpohstnk1nwrfuhgd;;fd-
+pqwertyuiopasdfghjklzxcvbnm,-
+qwertyuiopasdfghjklzxcvbnm-
+abcdefghijklmnopqrstuvwxyz-
+aabbccddeeffgghhiijjkkllmmnnooppqq-
+rrssttuuvvwwxxyyzz-
+asdclkh23iernqnc.sancipqwnciwuehncpq3ncp-
+qwjncqpncqpwncpqnpiencl;ksdc;lkjhfpwncq-
+ALkjwqncoe]nckljnclkjhdclkjhsclnwviqwqkjncsas-
+scojnwpcn wkp i;  ,mnA<ncoahd;owjdp wjdo;q  jd-
+aljhlkjhslkhwoupie.,mnxc0,mnwefdouw;las;lAHdoid-
+mxniwnpwnnipnwxipnwxipnwxinwinxiwniwnxinww;lkjsc-
+skcnwonpwqcx;lwjc;ljdc;ljsdjc;luywdciuwhco;wc-
+opuyqpisc,nsluhfwp]uypw piou;lkjsdf,mnxc;lkjhw  efdiow-
+wojowycopwtcowtcioywpodhsc;lkdscpi;owc-
+wcionwoncpwhdnowmncip;h'sahclkwncinc;kS;lkjsfd-
+SAl;lw cowyc;luwdc;lndc;lkjnc;ljS;lj;LDf-
+sa;jlnwcklj;DKj;lKJFweur;wefns.dmncsojcwcm;oi
+abcdx-
+abcex-
+abcfx-
+abcgx-
+abchx-
+abcix-
+abcjx-
+abckx-
+abclx-
+abcmx-
+abcnx-
+abcox-
+abcpx-
+abcqx-
+abcrx-
+abcsx-
+abctx-
+abcux-
+abcvx-
+abcwx-
+abcxx-
+abcyx-
+abczx-
+abdex-
+abdfx-
+abdgx-
+abdhx-
+abdix-
+abdjx-
+abdkx-
+abdlx-
+abdmx-
+abdnx-
+abdox-
+abdpx-
+abdqx-
+abdrx-
+abdsx-
+abdtx-
+abdux-
+abdvx-
+abdwx-
+abdxx-
+abdyx-
+abdzx-
+abefx-
+abegx-
+abehx-
+abeix-
+abejx-
+abekx-
+abelx-
+abemx-
+abenx-
+abeox-
+abepx-
+abeqx-
+aberx-
+abesx-
+abetx-
+abeux-
+abevx-
+abewx-
+abexx-
+abeyx-
+abezx-
+abfgx-
+abfhx-
+abfix-
+abfjx-
+abfkx-
+abflx-
+abfmx-
+abfnx-
+abfox-
+abfpx-
+abfqx-
+abfrx-
+abfsx-
+abftx-
+abfux-
+abfvx-
+abfwx-
+abfxx-
+abfyx-
+abfzx-
+abghx-
+abgix-
+abgjx-
+abgkx-
+abglx-
+abgmx-
+abgnx-
+abgox-
+abgpx-
+abgqx-
+abgrx-
+abgsx-
+abgtx-
+abgux-
+abgvx-
+abgwx-
+abgxx-
+abgyx-
+abgzx-
+abhix-
+abhjx-
+abhkx-
+abhlx-
+abhmx-
+abhnx-
+abhox-
+abhpx-
+abhqx-
+abhrx-
+abhsx-
+abhtx-
+abhux-
+abhvx-
+abhwx-
+abhxx-
+abhyx-
+abhzx-
+abijx-
+abikx-
+abilx-
+abimx-
+abinx-
+abiox-
+abipx-
+abiqx-
+abirx-
+abisx-
+abitx-
+abiux-
+abivx-
+abiwx-
+abixx-
+abiyx-
+abizx-
+abjkx-
+abjlx-
+abjmx-
+abjnx-
+abjox-
+abjpx-
+abjqx-
+abjrx-
+abjsx-
+abjtx-
+abjux-
+abjvx-
+abjwx-
+abjxx-
+abjyx-
+abjzx-
+abklx-
+abkmx-
+abknx-
+abkox-
+abkpx-
+abkqx-
+abkrx-
+abksx-
+abktx-
+abkux-
+abkvx-
+abkwx-
+abkxx-
+abkyx-
+abkzx-
+ablmx-
+ablnx-
+ablox-
+ablpx-
+ablqx-
+ablrx-
+ablsx-
+abltx-
+ablux-
+ablvx-
+ablwx-
+ablxx
+#
+[EOB]
+
+]]></test_input>
+<test_output><![CDATA[*
+ab
+abc
+abcd
+*
+bc
+de
+zbczdez
+*
+dyj
+ortj
+lnsvkoalexot
+*
+*
+th
+hyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyt
+*
+xmea
+mean
+nx
+*
+tr
+tricky
+*
+to
+tough
+*
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+*
+*
+sdfghjklzxcvbnmqwertyuiop
+wertyuiopasdfghjklzxcvbnmabcdefghijklmnop
+cpq
+pqn
+qnc
+ncp
+kljn
+dclkj
+cnwk
+iw
+pnwx
+nwxi
+wxip
+xipn
+ipnw
+wxi
+nw
+ni
+wo
+cln
+*
+abc
+wxab
+*
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Car Trialling]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://192.168.2.104/v1-htm01/171img1.gif]]></src><base64><![CDATA[R0lGODlhAgAbAIAAAAAAAP///yH5BAEAAAEALAAAAAACABsAAAIKRIynyesdopxUFgA7]]></base64></img><description><![CDATA[<p>Car trialling requires the following of carefully worded instructions. When setting a trial, the organiser places traps in the instructions to catch out the unwary.</p>
+<p></p>
+<p>Write a program to determine whether an instruction obeys the following rules, which are loosely based on real car trialling instructions. <b>BOLD-TEXT</b> indicates text as it appears in the instruction (case sensitive),  <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />  separates options of which exactly one must be chosen, and .. expands, so <b>A</b>..<b>D</b> is equivalent to <b>A</b> <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" /> <b>B</b> <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" /> <b>C</b> <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" /> <b>D</b> .</p>
+<p>instruction = navigational   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   time-keeping   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   navigational <b>AND</b> time-keeping</p>
+<p>navigational = directional   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   navigational <b>AND THEN </b>directional</p>
+<p>directional = how direction   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   how direction where</p>
+<p>how = <b>GO</b>   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   <b>GO</b> when   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   <b>KEEP</b></p>
+<p>direction = <b>RIGHT</b>   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   <b>LEFT</b></p>
+<p>when = <b>FIRST </b>  <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   <b>SECOND</b>   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   <b>THIRD</b></p>
+<p>where = <b>AT</b> sign</p>
+<p>sign = <b><tt>&quot;</tt></b>signwords<b><tt>&quot;</tt></b></p>
+<p>signwords = s-word   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   signwords s-word</p>
+<p>s-word = letter   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   s-word letter</p>
+<p>letter = <b>A</b>..<b>Z</b>   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   <b>.</b></p>
+<p>time-keeping = record   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   change</p>
+<p>record = <b>RECORD TIME</b></p>
+<p>change = cas <b>TO</b> nnn <b>KMH</b></p>
+<p>cas = <b>CHANGE AVERAGE SPEED</b>   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   <b>CAS</b></p>
+<p>nnn = digit   <img align="MIDDLE" width="2" height="27" src="http://192.168.2.104/v1-htm01/171img1.gif" alt="tex2html_wrap_inline61" />   nnn digit</p>
+<p>digit = <b>0</b>..<b>9</b> Note that <em>s-word</em> and <em>nnn</em> are sequences of letters and digits respectively, with no intervening spaces. There will be one or more spaces between items except before a period (.), after the opening speech marks or before the closing speech marks.</p>]]></description>
+<input><![CDATA[<p>Each input line will consist of not more than 75 characters. The input will be terminated by a line consisting of a single <tt>#</tt>.</p>]]></input> 
+<output><![CDATA[<p>The output will consist of a series of sequentially numbered lines, either containing the valid instruction, or the text <tt>Trap!</tt> if the line did not obey the rules. The line number will be right justified in a field of 3 characters, followed by a full-stop, a single space, and the instruction, with sequences of more than one space reduced to single spaces.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001003000000000000000"></a></font></h2>]]></output>
+<sample_input><![CDATA[KEEP LEFT AND THEN GO RIGHT
+CAS TO 20 KMH
+GO FIRST       RIGHT AT "SMITH ST."  AND   CAS TO 20 KMH
+GO 2nd RIGHT
+GO LEFT AT "SMITH STREET AND RECORD TIME
+KEEP RIGHT AND THEN RECORD TIME
+#]]></sample_input>
+<sample_output><![CDATA[  1. KEEP LEFT AND THEN GO RIGHT
+  2. CAS TO 20 KMH
+  3. GO FIRST RIGHT AT "SMITH ST." AND CAS TO 20 KMH
+  4. Trap!
+  5. Trap!
+  6. Trap!]]></sample_output>
+<test_input><![CDATA[KEEP LEFT AND THEN GO RIGHT
+CAS TO 20 KMH
+GO FIRST        RIGHT    AT "SMITH ST."    AND      CAS TO 20 KMH
+GO 2nd RIGHT
+GO LEFT AT "SMITH STREET AND RECORD TIME
+KEEP RIGHT AND THEN RECORD TIME
+GO FIRST LEFT
+GO   THIRD   RIGHT
+SO SECOND LEFT
+GO FOURTH RIGHT
+GO LEFT
+KEEP RIGHT
+GO LEFT AND THEN KEEP RIGHT
+SILLY
+Lower case SHould be inbalid
+go left
+Co RIGHT
+KEEP FIRST RIGHT
+GO FIRST LEFT AT "SMITH ST."
+KEEP RIGHT AT "A LOT OF WORDS IN A SIGN"
+KEEP LEFT AT A "TRAP
+GO RIGHT AT ""
+KEEP LEFT AT "   "
+GO RIGHT AT "22 SMITH STREET"
+GO THIRD LEFT AT "AN.UNLIKELY.BUT.VALID.SIGN"
+BLANK LINE FOLLOWS
+
+GO LEFT AT "SMITH St"
+GO RIGHT AND THEN KEEP LEFT AT "SMITH" AND THEN GO THIRD RIGHT
+RECORD TIME
+GO LEFT AND THEN GO FIRST RIGHT AND THEN KEEP LEFT AND RECORD TIME
+CAS TO 26 KMH
+CAS TO KMH
+RECORD DATE
+GO LEFT AND RECORD TIME
+CHANGE AVERAGE SPEED TO 3456 KMH
+CAS TO 23 KMH AND RECORD TIME
+RCORD TIME AND THEN RECORD TIME
+KEEP RIGHT AT "ALBERT..." AND THEN CAS TO 3 KMH
+KEEP RIGHT AT "ALBERT..." AND CAS TO 3 KMH
+CAS TO 40 KPH
+CAS OT 40 KMH
+CHANGE A S TO 30 KMH
+#GO LEFT AT "MEAN TRAP"
+GO RIGHT AT ANOTH "MEAN #
+#
+]]></test_input>
+<test_output><![CDATA[  1. KEEP LEFT AND THEN GO RIGHT
+  2. CAS TO 20 KMH
+  3. GO FIRST RIGHT AT "SMITH ST." AND CAS TO 20 KMH
+  4. Trap!
+  5. Trap!
+  6. Trap!
+  7. GO FIRST LEFT
+  8. GO THIRD RIGHT
+  9. Trap!
+ 10. Trap!
+ 11. GO LEFT
+ 12. KEEP RIGHT
+ 13. GO LEFT AND THEN KEEP RIGHT
+ 14. Trap!
+ 15. Trap!
+ 16. Trap!
+ 17. Trap!
+ 18. Trap!
+ 19. GO FIRST LEFT AT "SMITH ST."
+ 20. KEEP RIGHT AT "A LOT OF WORDS IN A SIGN"
+ 21. Trap!
+ 22. Trap!
+ 23. Trap!
+ 24. Trap!
+ 25. GO THIRD LEFT AT "AN.UNLIKELY.BUT.VALID.SIGN"
+ 26. Trap!
+ 27. Trap!
+ 28. Trap!
+ 29. GO RIGHT AND THEN KEEP LEFT AT "SMITH" AND THEN GO THIRD RIGHT
+ 30. RECORD TIME
+ 31. GO LEFT AND THEN GO FIRST RIGHT AND THEN KEEP LEFT AND RECORD TIME
+ 32. CAS TO 26 KMH
+ 33. Trap!
+ 34. Trap!
+ 35. GO LEFT AND RECORD TIME
+ 36. CHANGE AVERAGE SPEED TO 3456 KMH
+ 37. Trap!
+ 38. Trap!
+ 39. Trap!
+ 40. KEEP RIGHT AT "ALBERT..." AND CAS TO 3 KMH
+ 41. Trap!
+ 42. Trap!
+ 43. Trap!
+ 44. Trap!
+ 45. Trap!
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+<item>
+<title><![CDATA[Calculator Language]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://192.168.2.104/v1-htm01/172img1.gif]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p>Calculator Language (CL) supports assignment, positive and negative integers and simple arithmetic. The allowable characters in a CL statement are thus:</p>
+<p></p>
+<p></p>
+<p><img align="BOTTOM" width="240" height="189" src="http://192.168.2.104/v1-htm01/172img1.gif" alt="tabular20" /></p>
+<p></p>
+<p></p>
+<p>All operators have the same precedence and are right associative, thus 15 - 8 - 3 = 15 - (8 - 3) = 10. As one would expect, brackets will force the expression within them to be evaluated first. Brackets may be nested arbitrarily deeply. An expression never has two operators next to each other (even if separated by a bracket), an assignment operator is always immediately preceded by a variable and the leftmost operator on a line is always an assignment. For readability, spaces may be freely inserted into an expression, except between a negative sign and a number. A negative sign will not appear before a variable. All variables are initialised to zero (0) and retain their values until changed explicitly.</p>
+<p></p>
+<p>Write a program that will accept and evaluate expressions written in this language. Each expression occupies one line and contains at least one assignment operator, and maybe more.</p>]]></description>
+<input><![CDATA[<p>Input will consist of a series of lines, each line containing a correct CL expression. No line will be longer than 100 characters. The file will be terminated by a line consisting of a single <tt>#</tt>.</p>]]></input> 
+<output><![CDATA[<p>Output will consist of a series of lines, one for each line of the input. Each line will consist of a list of the final values of all variables whose value changes as a result of the evaluation of that expression. If more than one variable changes value, they should be listed in alphabetical order, separated by commas. If a variable changes value more than once in an expression, only the final value is output. A variable is said to change value if its value after the expression has been evaluated is different from its value before the expression was evaluated. If no variables change value, then print the message `<tt>No Change</tt>'. Follow the format shown below exactly.</p>]]></output>
+<sample_input><![CDATA[A = B = 4
+C = (D = 2)*_2
+C = D = 2 * _2
+F = C - D
+E = D * _10
+Z = 10 / 3
+#]]></sample_input>
+<sample_output><![CDATA[A = 4, B = 4
+C = -4, D = 2
+D = -4
+No Change
+E = 40
+Z = 3]]></sample_output>
+<test_input><![CDATA[A = B = 4
+B=B-6+B=100
+C = (D = 2) * _2
+C = D = 2 * _2
+E = D * _10
+F = 15 - 8 - 3
+F = 15 - 8 + _3
+F=1+F=F-1
+A=((3))
+Z=Y=X=A=B=C=1+D=E=F=G=2-H=K=J=I=L=M=O=N=P=Q=R=S=T=V=U=W=3
+A=100/2
+A=100/_2
+B=(_1+A*2)/2
+B=(1+A*_2)/2
+A=(((1-2)*3)+4)
+A=((1-(2*3))+4)
+A=((1-2)*(3+4))
+A=(1-(2*(3+4)))
+A=1+2+1+1+1+1+1+1+1+1+1+1+1+1+1+11+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+3
+#
+]]></test_input>
+<test_output><![CDATA[A = 4, B = 4
+B = -6
+C = -4, D = 2
+D = -4
+E = 40
+F = 10
+No Change
+No Change
+A = 3
+A = 0, B = 0, C = 0, D = -1, E = -1, F = -1, G = -1, H = 3, I = 3, J = 3, K = 3, L = 3, M = 3, N = 3, O = 3, P = 3, Q = 3, R = 3, S = 3, T = 3, U = 3, V = 3, W = 3
+A = 50
+A = -50
+B = -50
+B = 50
+A = 1
+A = -1
+A = -7
+A = -13
+A = 62
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[www.csie.nctu.edu.tw]]></source>
+</item>
+</fps>

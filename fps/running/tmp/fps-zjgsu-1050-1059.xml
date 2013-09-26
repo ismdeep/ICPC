@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.0" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[Error Correction]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[A boolean matrix has the parity property when each row and each column has an even sum, i.e. contains an even number of bits which are set. Here's a 4 x 4 matrix which has the parity property: 
+1 0 1 0 
+0 0 0 0 
+1 1 1 1 
+0 1 0 1 
+
+The sums of the rows are 2, 0, 4 and 2. The sums of the columns are 2, 2, 2 and 2. 
+
+Your job is to write a program that reads in a matrix and checks if it has the parity property. If not, your program should check if the parity property can be established by changing only one bit. If this is not possible either, the matrix should be classified as corrupt. ]]></description>
+<input><![CDATA[The input will contain one or more test cases. The first line of each test case contains one integer n (n < 100), representing the size of the matrix. On the next n lines, there will be n integers per line. No other integers than 0 and 1 will occur in the matrix. Input will be terminated by a value of 0 for n. ]]></input> 
+<output><![CDATA[For each matrix in the input file, print one line. If the matrix already has the parity property, print "OK". If the parity property can be established by changing one bit, print "Change bit (i,j)" where i is the row and j the column of the bit to be changed. Otherwise, print "Corrupt". ]]></output>
+<sample_input><![CDATA[4
+1 0 1 0
+0 0 0 0
+1 1 1 1
+0 1 0 1
+4
+1 0 1 0
+0 0 1 0
+1 1 1 1
+0 1 0 1
+4
+1 0 1 0
+0 1 1 0
+1 1 1 1
+0 1 0 1
+0]]></sample_input>
+<sample_output><![CDATA[OK
+Change bit (2,3)
+Corrupt]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1050/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+int main()
+{
+	int n,a[100][100];
+	int i,j,col,line,m,s,sum;
+
+	while(scanf("%d",&n),n)
+	{
+		for(i=0;i<n;i++)
+			for(j=0;j<n;j++)
+				scanf("%d",&a[i][j]);
+			m=0;s=0;
+		for(i=0;i<n;i++)
+		{
+			sum=0;
+			for(j=0;j<n;j++)
+			{
+				sum+=a[i][j];
+			}
+			if(sum%2!=0&&m==0)
+			{
+				m=1;
+				line=i;
+			}
+			else if(sum%2!=0&&m==1)
+			{
+				m=2;
+				break;
+			}
+		}
+		if(m==2)
+		{
+			printf("Corrupt\n");
+			continue;
+		}
+		else
+		{
+			for(i=0;i<n;i++)
+			{
+				sum=0;
+				for(j=0;j<n;j++)
+				{
+					sum+=a[j][i];
+				}
+				if(sum%2!=0&&s==0)
+				{
+					s=1;
+					col=i;
+				}
+				else if(sum%2!=0&&s==1)
+				{
+					s=2;
+					break;
+				}
+			}
+			if(m==1&&s==1)
+			{
+				printf("Change bit (%d,%d)\n",line+1,col+1);
+				continue;
+			}
+			else if(m==0&&s==0)
+			{
+				printf("OK\n");continue;
+			}
+			else
+			{
+				printf("Corrupt\n");
+				continue;
+			}
+		}
+			
+	
+	}
+	return 0;
+
+
+
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[A × B problem]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[Redraiment碰到了一个难题，需要请你来帮忙：给你两个整数，请你计算A × B。]]></description>
+<input><![CDATA[数据的第一行是整数T(1 ≤ T ≤ 20)，代表测试数据的组数。
+接着有T组数据，每组数据只有一行，包括两个正整数A和B。
+但A和B非常大，Redraiment能保证这些数用long来保存一定会溢出。
+但A和B的位数最大不会超过100位。]]></input> 
+<output><![CDATA[对应每组测试数据，你都要输出两行：
+第一行为："Case #:", # 代表这是第几组测试数据。
+第二行是一个等式："A * B = Sum", Sum 代表 A × B 的结果。
+你要注意这个等式里包含了几个空格。
+要求每组数据之间都需要保留一个空行。]]></output>
+<sample_input><![CDATA[2
+1 2
+123456789 987654321]]></sample_input>
+<sample_output><![CDATA[Case 1:
+1 * 2 = 2
+
+Case 2:
+123456789 * 987654321 = 121932631112635269]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1051/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[]]></hint>
+<source><![CDATA[Redraiment]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+struct node{
+	char a[200];
+	char b[200];
+	struct node *link;
+};
+size=sizeof(struct node);
+int multi(char a[200],char b[200],int c[1000])
+{
+	int d=strlen(a)-1,e=strlen(b)-1,i,n,t=0,k=0,j=999,m=999,x=0;
+	int gg=0,mm=0,kk;
+	if(a[0]=='-')
+		gg=1;
+	if(b[0]=='-')
+		mm=1;
+	for(i=e;i>=mm;i--)
+	{
+		j=m;
+		for(n=d;n>=gg;n--)
+		{
+			c[j]+=(k+x);
+			x=0;
+			t=(a[n]-48)*(b[i]-48);
+			k=t/10;
+			t=t%10;
+			c[j]+=t;
+			x=c[j]/10;
+			c[j]=c[j]%10;
+			j--;
+		}
+		c[j]=k+x;
+		x=0;
+		k=0;
+		m--;
+	}
+	kk=gg+mm;
+	if(a[0]=='0'||b[0]=='0')
+		kk=0;
+	return kk;
+}
+
+		
+
+
+
+int main()
+{
+	char a[200],b[200];
+	int c[1000]={0};
+	int i=0,line,n,k=0;
+	struct node *head=NULL,*tail=NULL,*tp;
+	scanf("%d",&line);
+	getchar();
+	for(n=0;n<line;n++)
+	{
+		scanf("%s",a);
+		scanf("%s",b);
+		tp=(struct node*)malloc(size);
+		strcpy(tp->a,a);
+		strcpy(tp->b,b);
+		if(head==NULL)
+			head=tp;
+		else
+			tail->link=tp;
+		tail=tp;
+	}
+	tail->link=NULL;
+	tp=head;
+	n=1;
+	while(tp)
+	{
+	printf("Case %d:\n",n);
+	if(multi(tp->a,tp->b,c)==1)
+	printf("%s * %s = -",tp->a,tp->b);
+	else
+	printf("%s * %s = ",tp->a,tp->b);
+	while(c[i]==0)
+		i++;
+	for(;i<1000;i++)
+	{
+		printf("%d",c[i]);
+		c[i]=0;
+		k=1;
+	}
+	if(k==0)
+		printf("0");
+	printf("\n");
+	if(tp->link)
+		printf("\n");
+	n++;
+	i=0;
+	k=0;
+	tp=tp->link;
+	}
+	return 0;
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[Redraiment的走法]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[Redraiment是个聪明人，总是以奇怪的思考方法思考问题，但不知道为什么，他的解答总是最最巧妙，我们隆重地称他为诡异人！ 
+有一天Jesse不经意中发现，诡异人的走路方法很特别，于是特别关注了他的走路规则。他发现诡异人总是往高处走，但走的步数总是最多，不知道为什么？你能替Jesse研究研究他最多走的步数吗？ 
+发现了你也会是个聪明人!^_^ ]]></description>
+<input><![CDATA[There has several test cases. Each case start with an integer n(0 < n ≤10000), then follows n lines.Each line has an integer h( 1 ≤ h ≤ 100),which represents the height of the place.]]></input> 
+<output><![CDATA[For each case output a line with the max number of the steps he can go . ]]></output>
+<sample_input><![CDATA[5
+1 2 3 4 5
+6
+2 5 1 5 4 5]]></sample_input>
+<sample_output><![CDATA[5
+3]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1052/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[Example: 
+6个点的高度各为 2 5 1 5 4 5 
+如从第1格开始走,最多为3步, 2 4 5 
+从第2格开始走,最多只有1步,5 
+而从第3格开始走最多有3步,1 4 5 
+从第5格开始走最多有2步,4 5]]></hint>
+<source><![CDATA[Jesse]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+#include<memory.h>
+#include<stdlib.h>
+void main()
+{
+	int a[10002];int n,b[10003];
+	int i,j;
+	while(scanf("%d",&n)!=EOF)
+	{
+		for(i=1;i<=n;i++)
+			scanf("%d",&a[i]);
+
+		b[1]=1;
+		for(i=2;i<=n;i++)
+		{
+			int t=0;
+		for(j=1;j<i;j++)
+			if(a[i]>a[j])
+			{
+				if(t<b[j])
+					t=b[j];
+			}
+			b[i]=t+1;
+		}
+		int max=-1;
+		for(i=1;i<=n;i++)
+			if(max<b[i])
+				max=b[i];
+			printf("%d\n",max);
+	}
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[Word Encoding]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[In any language, certain combinations of letters do not appear (or at least appear so seldom that they can be considered non-existent). For instance, there are no English words containing the three letter combination buv as a substring. Given a list of letter combinations that do not exist, the number of possible "words" in a language can be reduced a lot (a "word" here means any combination of letters that doesn't contain any of the given letter combinations as a substring). If we order all such words by increasing length, ordering words of the same length alphabetically, we can enumerate them starting from 1. Assume that the alphabet always consists of the lower case letters 'a' to 'z'. 
+For instance, if the list only contains the combinations q, ab and aaa, the words would be enumerated like this: 
+
+1. a 
+2. b 
+... 
+16. p 
+17. r 
+... 
+26. aa 
+27. ac 
+... 
+649. zz 
+650. aac 
+
+Given the list of letter combinations, write a program that for a given word outputs its number, and for a given number ouputs its word. You can assume that none of the words will exceed 20 characters and no number will be greater than 2 000 000 000 (for both input and output).]]></description>
+<input><![CDATA[The input will contain several test cases. The number of test cases T appears on a line by itself. Then follow T test cases. Each test case starts with a line containing two integers,N (the number of letter combinations, non-negative, at most 1 000) and M (the number of queries for this list, positive, at most 100). Then follow N lines, each containing a lower case letter combination (between 1 and 3 letters, inclusive). After that follow M lines, each containing either a positive integer or a lower case word. If it's a word, it will not contain any of the combinations of letters in the list for this test case. If it's a number, it will not be greater than the number of words in the language. ]]></input> 
+<output><![CDATA[For each query, output a single line containing either the word's corresponding number, or the number's corresponding word. ]]></output>
+<sample_input><![CDATA[2
+3 4
+q
+ab
+aaa
+16
+r
+27
+aac
+7 2
+a
+b
+c
+d
+ef
+ghi
+ijk
+102345678
+ksvfuw]]></sample_input>
+<sample_output><![CDATA[p
+17
+ac
+650
+xexgun
+39174383]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1053/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+
+using namespace std;
+
+const int Lo = 'z' - 'a' + 1;
+const int Limit = 30;
+const char base = 'a';
+
+bool exist[Lo + 1][Lo + 1][Lo + 1];
+int f[Limit + 10][Lo + 1][Lo + 1] , cnt[Limit + 5][Lo + 1];
+long long  sum[Limit + 10] , Up;
+int n , m , L;
+
+void sign(int L , int c1 , int c2 , int c3)
+{
+  int c;
+
+  exist[c1][c2][c3] = 1;
+  if (L > 2)  return;
+  else if (L == 1)
+    for (c = 0 ; c < 26 ; ++c)
+      {
+ sign(L + 1 , c , c1 , c3);
+ sign(L + 1 , c1 , c , c3);
+      }
+  else 
+    for (c = 0 ; c < 26 ; ++c)
+      {
+ sign(L + 1 , c , c1 , c2);
+ sign(L + 1 , c1 , c2 , c);
+      }
+}
+
+void init()
+{
+  int i , L;
+  char s[10];
+
+  memset(exist , 0 , sizeof(exist));
+  for (i = 0 ; i < 10 ; ++i)
+    s[i] = 'z' + 1;
+  scanf("%d %d",&n , &m);
+  for (i = 0 ;i < n ; ++i)
+    {
+      scanf("%s",s);
+      L = strlen(s);
+      if (L == 1)
+ sign(L , s[0] - base , s[9] - base , s[9] - base);
+      else if (L == 2)
+ sign(L , s[0] - base , s[1] - base , s[9] - base);
+      else sign(L , s[0] - base , s[1] - base , s[2] - base);
+    }
+}
+
+void prepare()
+{
+  int i , j , k , t;
+
+  memset(f , 0 , sizeof(f));
+  memset(sum , 0 , sizeof(sum));
+  memset(cnt , 0 , sizeof(cnt));
+  f[0][Lo][Lo] = 1;
+  for (i = 1 ; i < 25; ++i)
+    {
+      sum[i] = sum[i - 1];
+      for (j = 0 ; j < Lo ; ++j)
+ for (k = 0 ; k <= Lo ; ++k)
+   {
+     for (t = 0 ; t <= Lo ; ++t)
+       if (f[i - 1][k][t] && !exist[j][k][t])
+  f[i][j][k] += f[i - 1][k][t];
+     sum[i] += f[i][j][k];
+     cnt[i][j] += f[i][j][k];
+   }
+      if (sum[i] > Up) break;
+    }
+}
+
+void find_1(int input)
+{
+  int i , L , first , second , Len;
+  long long start;
+  char ans[100];
+
+  for (i = 1 ; i < Limit ; ++i)
+    if (sum[i] >= input)
+      break;
+  start = sum[i - 1];
+  L = i;
+
+  for (i = 0 ; i < Lo ; ++i)
+    if (cnt[L][i] + start >= input)
+      break;
+    else start += cnt[L][i];
+  first = Lo;
+  second = i;
+  Len = L;
+
+  while (start < input && Len > 0)
+    {
+      ans[Len] = second + base;
+      for (i = 0 ; i <= Lo ; ++i)
+ if (!exist[first][second][i])
+   {
+     if (f[Len][second][i] + start >= input)
+       break;
+     else start += f[Len][second][i];
+   }
+      first = second;
+      second = i;
+      --Len;
+    }
+
+  for (i = L; i > 0 ; --i)
+    printf("%c",ans[i]);
+  printf("\n");
+}
+
+void find_2(char s[100])
+{
+  int i , j , ans , Len , first , second;
+
+  ans = sum[L - 1];
+  s[L] = Lo;
+  Len = L;
+  first = s[0] - base;
+  second = s[1] - base;
+
+  for (i = 0 ; i <= s[0] - base ; ++i)
+    for (j = 0 ; j <= Lo ; ++j)
+      if (i < s[0] - base || j < s[1] - base)
+ ans += f[Len][i][j];
+  --Len;
+  for (i = 2 ; i < L ; ++i)
+    {
+      for (j = 0 ; j < s[i] - base ; ++j) 
+ if (!exist[first][second][j])
+   ans += f[Len][second][j];
+      first = second;
+      second = s[i] - base;
+      --Len;
+    }
+  ++ans;
+  printf("%d\n",ans);
+}
+
+void work()
+{
+  int i , j , input;
+  char s[100];
+
+  for (i = 0 ; i < m ; ++i)
+    {
+      scanf("%s",s);
+      L = strlen(s);
+      if (isdigit(s[0]))
+ {
+   for (j = 0 , input = 0 ; j < L ; ++j)
+     input = input * 10 +  s[j] - '0';
+   find_1(input);
+ }
+      else find_2(s);
+    }
+}
+
+int main()
+{
+  int tot , i;
+
+  Up = 1;
+  for (i = 0 ; i < 31 ; ++i)
+    Up *= 2;
+  scanf("%d",&tot);
+  while (tot--)
+    {
+      init();
+      prepare();
+      work();
+    }
+}
+
+
+]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[Jesse's Code]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[Jesse是个数学迷，他最喜欢研究“哥德巴赫猜想”，因此他的计算机密码也都采用素数。 
+但一直用同一个密码是不安全的，所以他要经常更换他的密码。但他只允许自己的密码中出现某些数字，且密码的每一位都不相同。比如1 2 4，则有6种情况124 142 214 241 412 421。其中241 和 421为素数。为了获得他的密码（他的机器上存放了第4届舜禹杯大学生程序设计竞赛的题目！），需要生成一个字典来帮助我们破解。 
+请你来编写一个程序帮助我们（因为众所周知的原因我们迫切需要获得这些题目）。 ]]></description>
+<input><![CDATA[<ul><li>Line 1:密码的位数n (1 ≤ n ≤ 9)。
+<li>Line 2:1->n个不重复的整数序列 (1 ≤ x[i] ≤ 9).</ul>输入0结束。]]></input> 
+<output><![CDATA[按从小到大顺序输出所有的结果。
+如果一个结果也没有，输出“NONE”。
+每组数据后面跟随一个空行。]]></output>
+<sample_input><![CDATA[3
+1 2 4
+0]]></sample_input>
+<sample_output><![CDATA[241
+421]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1054/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[]]></hint>
+<source><![CDATA[Redraiment]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+#define swap(x,y,t) ((t)=(x),(x)=(y),(y)=(t))
+static int bit=0;
+int d_prime(long n,int prime[])
+{
+        register int j;
+		if(n==1) return 0;
+         for(j=0;prime[j]*prime[j]<=n;j++)
+			if(n%prime[j]==0)
+                   return 0;
+         return 1;
+}
+int next(int *A, int len)
+{
+        int i, j, t, l;
+        for (j = len-1; j && A[j-1] >= A[j]; j--);
+        if (!j) return 0;
+        i = j-1;
+        for (j = len-1; A[i] >= A[j]; j--);
+        swap(A[i], A[j], t);
+        A += ++i;
+        l = (len-i)/2 + (len-i)%2;
+        len -= i;
+        for (j = 0; j < l; j++)
+                swap(A[j], A[len-j-1], t);
+        return 1;
+}
+void perm(int num[],int n,long a[],int prime[])
+{
+	int i;
+	long s;
+	do{
+		s=0;
+		for(i=0;i<n;i++)
+			s=s*10+num[i];
+		if(d_prime(s,prime))
+			a[bit++]=s;
+      } while(next(num, n));
+}
+int comp(const void *a,const void *b)
+{
+     return *(int *)a-*(int *)b;
+}
+int main()
+{
+	int gab=2;
+	int j=3,n,g[10],sum=0,prime[3401]={2,3,5};
+	long a[5000],i;
+	for(i=7;i<=31623;i+=gab) {
+		gab=6-gab;
+		if(d_prime(i,prime)) 
+			prime[j++]=i;
+	}
+	while((scanf("%d",&n))!=EOF&&n) {
+		sum=0;bit=0;
+		for(i=0;i<n;i++)
+		{
+			scanf("%d",&g[i]);
+			sum+=g[i];
+		}
+		if(sum%3==0&&sum!=3) printf("NONE\n\n");
+		else {
+			qsort(g,n,sizeof(int),comp);			
+			perm(g,n,a,prime);
+			if(bit==0) printf("NONE\n\n");
+			else
+			{ 
+				for(i=0;i<bit;i++)
+					printf("%ld\n",a[i]);
+				printf("\n");
+			}
+		}
+	}
+	return 0;
+}
+]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[简单密码破解]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[    密码是我们生活中非常重要的东东，我们的那么一点不能说的秘密就全靠它了。哇哈哈.
+    接下来渊子要在密码之上再加一套密码，虽然简单但也安全。
+    假设渊子原来一个BBS上的密码为zvbo941987,为了方便记忆，他通过一种算法把这个密码变换成YUANzi1987，这个密码是他的名字和出生年份，怎么忘都忘不了，而且可以明目张胆地放在显眼的地方而不被别人知道真正的密码。
+    他是这么变换的，大家都知道手机上的字母： 1--1， abc--2, def--3, ghi--4, jkl--5, mno--6, pqrs--7, tuv--8 wxyz--9, 0--0,就这么简单，渊子把密码中出现的小写字母都变成对应的数字，数字和其他的符号都不做变换，声明：密码中没有空格，而密码中出现的大写字母则边成小写之后往后移一位，如：X，先边成小写，再往后移一位，不就是y了嘛，简单吧。记住，z往后移是a哦。]]></description>
+<input><![CDATA[输入包括多个测试数据。输入是一个明文，密码长度不超过100个字符，输入直到文件结尾。]]></input> 
+<output><![CDATA[输出渊子真正的密文。]]></output>
+<sample_input><![CDATA[YUANzi1987]]></sample_input>
+<sample_output><![CDATA[zvbo941987]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1055/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[]]></hint>
+<source><![CDATA[王晓渊]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+void main()
+{
+	char x[100];
+	int i;
+	while(scanf("%s",x)!=EOF){
+	for(i=0;x[i]!='\0';i++){
+		if(x[i]>='a'&&x[i]<='c')
+			x[i]='2';
+		else if(x[i]>='d'&&x[i]<='f')
+			x[i]='3';
+		else if(x[i]>='g'&&x[i]<='i')
+			x[i]='4';
+        else if(x[i]>='j'&&x[i]<='l')
+			x[i]='5';
+        else if(x[i]>='m'&&x[i]<='o')
+			x[i]='6';
+        else if(x[i]>='p'&&x[i]<='s')
+			x[i]='7';
+        else if(x[i]>='t'&&x[i]<='v')
+			x[i]='8';
+        else if(x[i]>='w'&&x[i]<='z')
+			x[i]='9';
+		else if(x[i]=='Z')
+			x[i]='a';
+		else if(x[i]>='A'&&x[i]<'Z')			
+			x[i]=x[i]+'b'-'A';
+	}
+	puts(x);
+	}
+}
+
+
+
+]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[英文金曲大赛]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[     我们在“渊子数”的题目中已经了解了渊子是个什么样的人了，他在大一的时候参加过工商学院的“英语聚乐部”。告诉你个秘密，这个俱乐部是个好地方，不但活动精彩而且有MM。
+     这不，英语俱乐部举办了一个叫做“英文金曲大赛”的节目。这个节目有好多人参加，这不，成绩出来了，渊子当是很勇敢，自告奋勇接下了算出大家的总得分的任务。
+     当时有7个评委，每个评委都要给选手打分，现在要求去掉一个最高分和去掉一个最低分，再算出平均分。结果精确到小数点后两位。]]></description>
+<input><![CDATA[测试数据包括多个实例。
+每组数据包括7个实数，代表评委们对该选手的评分。紧接着是选手的名字，名字的长度不超过30个字符。
+输入直到文件结束。]]></input> 
+<output><![CDATA[算出每位选手名字和最终得分，结果保留两位有效数字。]]></output>
+<sample_input><![CDATA[10 10 10 10 10 10 9 xiaoyuanwang
+0 0 0 0 0 0 0 beast]]></sample_input>
+<sample_output><![CDATA[xiaoyuanwang 10.00
+beast 0.00]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1056/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[]]></hint>
+<source><![CDATA[王晓渊]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+void main()
+{
+	int i,j;
+	float a[10],t,k;
+	double x;
+	char s[30];
+	while(scanf("%f%f%f%f%f%f%f%s",&a[0],&a[1],&a[2],&a[3],&a[4],&a[5],&a[6],s)!=EOF)
+	{
+		k=0;
+		for(i=0;i<7;i++)
+			for(j=0;j<6-i;j++)
+				if(a[j]>a[j+1])
+				{t=a[j];a[j]=a[j+1];a[j+1]=t;}
+				for(i=1;i<6;i++)
+					k=k+a[i];
+				x=k/5.0;
+				printf("%s %.2f\n",s,x);
+	}	
+		
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[有假币]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[居然有假币！！！
+事情是这样的，现在猪肉涨了，但是农民的工资却不见涨啊，没钱怎么买猪肉啊。渊子这就去买猪肉，结果找来的零钱中有假币！！！可惜渊子一不小心把它混进了一堆真币里面去了。现在知道假币的重量比真币的质量要轻。给你一个天平，请用最快的时间把那个可恶的假币找出来。]]></description>
+<input><![CDATA[1≤n≤2<sup>30</sup>,输入0结束程序。]]></input> 
+<output><![CDATA[最少要称几次一定能把那个假币找出来。]]></output>
+<sample_input><![CDATA[3
+12
+0]]></sample_input>
+<sample_output><![CDATA[1
+3]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1057/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[示例1中共有3枚硬币，所以任意取2个放天平上称量一下。
+因为假币的重量比较轻。
+<ul><li>如果天平不平衡，则较轻的那枚就是假币。
+<li>如果天平平衡，则说明这两枚硬币都是真的，而剩下那枚是假币。</ul>]]></hint>
+<source><![CDATA[王晓渊]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+int main()
+{
+	int n,m,sum,n1;
+
+	while(scanf("%d",&n)!=EOF&&n!=0)
+	{
+		sum=0;
+		while(n>1)
+		{
+			if(n==2||n==3) {sum+=1;break;}
+			else
+			{
+				if((n-1)%3==0) n=n/3+1;
+				else n=(n+1)/3;
+				sum++;
+			}
+		}
+		printf("%d\n",sum);
+	}
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[寄居蟹与海葵]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[<img src="Image/1058/1.bmp" align="right">
+寄居蟹与海葵是一对合作互助的共栖伙伴。海葵是寄居蟹最称职的门卫。它用有毒的触角去蜇那些敢来靠近它们的所有动物，保护寄居蟹。而寄居蟹则背着行动困难的海葵，四出觅食，有福同享。
+但并不是所有寄居蟹和海葵都可以做搭档的。那就要看海葵的身体是不是符合寄居蟹的螺壳。
+海葵的身体是有褶皱的，而寄居蟹的螺壳同样凹凸不平，我们可以用一个大写字母组成的字符串来表示它们的高低程度，其中A代表0，B代表1，依次类推。我们称两者相加等于25的就算是吻合，比如A和Z相吻合，B与Y吻合，依次类推。
+只要海葵身体的部分序列与寄居蟹外壳的序列相吻合，就称他们可以一起生活。
+比如:
+1.海葵的褶皱是"ABCDEFG"，寄居蟹是"ZYXWVUT"。这样，它们就可以完全吻合了。
+2.海葵的褶皱是"AHBICJDKELFMGN"，寄居蟹是"ZYXWVUT"。这样，寄居蟹可以和海葵的部分序列"ABCDEFG"相吻合 <font color=Red>(注意:部分序列不改变字符原来的先后顺序，比如"ACB"就不是它的部分序列)</font>。
+3.海葵的褶皱是"ABCD"，寄居蟹是"ZYXWVUT"。这样，虽然海葵可以和寄居蟹前面一段完全吻合，但它比寄居蟹要小，不能完全保护寄居蟹的安全，所有它们是不适合的。
+4.海葵的褶皱是"HIJKLMNOPQ"，寄居蟹是"ZYXWVUT"。这样，它们就可以完全不吻合了。
+现给你两段字符串S1、S2，分别代表海葵和寄居蟹的外壳，为了它们以后各都能快乐地生活，请你帮忙计算一下它们是不是吻合的。 
+</img>]]></description>
+<input><![CDATA[输入包括多组测试数据。
+每组测试数据包括两个字符串H、J，分别代表海葵的外壳和寄居蟹的外壳。可以保证它们的长度都小于100000。
+输入以0 0结束。 ]]></input> 
+<output><![CDATA[如果寄居蟹和海葵的外壳能吻合，就输出"Yes"，否则输出"No"。]]></output>
+<sample_input><![CDATA[ABCDEFG ZYXWVUT
+AHBICJDKELFMGN ZYXWVUT
+ABCD ZYXWVUT
+HIJKLMNOPQ ZYXWVUT
+0 0]]></sample_input>
+<sample_output><![CDATA[Yes
+Yes
+No
+No]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1058/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[]]></hint>
+<source><![CDATA[Redraiment]]></source>
+<solution language="C"><![CDATA[#include <stdio.h>
+
+char A[1000001], B[1000001];
+
+int main(void)
+{
+	int ida, idb;
+
+	while (scanf("%s%s", A, B), A[0] - '0')
+	{
+		for (ida = idb = 0; A[ida] && B[idb];)
+		{
+			if (A[ida] + B[idb] - 'A' == 'Z')
+			{
+				ida++;
+				idb++;
+			}
+			else
+			{
+				ida++;
+			}
+		}
+		puts(B[idb] ? "No" : "Yes");
+	}
+
+	return 0;
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[天仙配]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[64]]></memory_limit>
+<description><![CDATA[<img src="Image/1059/1.gif" align="right">
+今年的七夕异常的热闹，很多对新人都把结婚日子选在了那天。于是，他们决定一起举办“天上地下姻缘一线牵”活动，在广场上举行集体婚礼。
+为了活跃气氛，司仪想出了一个很有意思的游戏：会场有n(1≤n≤10000)对新人，司仪在地上画出一排(共2n个)格子，每个格子里都写着一个随机的整数Ai(1≤Ai≤10000)。
+游戏开始后，让新人们任意地站成一排(可能会有两个人站在了同一个格子里)。等他们都站好以后，司仪开始计算他们每个人自己的得分，记分规则是：男方的分数等于把从自己所站的位置开始一直累加到开头，女方的分数等于从自己所站位置开始一直累加到末尾。如果某一对新人的得分数是相同的，那你们就获胜。可以得到一份司仪精心准备的礼物。^_^
+比如，有3对新人，地上的那一排数字为:3，6，2，4，5，2。
+如果男方站在第三个位置(2)，他的得分为：3+6+2=11；女方站在第4个位置(4)，她的得分为4+5+2=11。两人得分相同，可以获胜。
+或者男方站第6个位置(2)，女方站第1个位置(3)，他们的得分都等于22，也可以获胜。
+这么高兴的日子不能太扫兴，所以我们发现，无论地上的数字填成什么样子，女方站在开头和男方站在末尾就一定可以获奖。我们不得不感叹司仪的用心良苦。呵呵。
+碰巧，redraiment的姐姐和姐夫也在那天结婚，为了帮姐姐夺得奖品，redraiment来请你帮忙，计算一下他姐姐获得奖品有多少种站法。
+</img>]]></description>
+<input><![CDATA[输入包括多组测试数据。
+每组测试数据包括两行。
+第一行为一个数据n，即新人的对数。
+第二行有2n个数据，代表地上的数字。
+输入以0结束，这一行不做处理。]]></input> 
+<output><![CDATA[每组输出占一行。
+输出共有几种站法。]]></output>
+<sample_input><![CDATA[3
+3 6 2 4 5 2
+0]]></sample_input>
+<sample_output><![CDATA[2]]></sample_output>
+<br />
+<b>Warning</b>:  opendir(/home/judge/data//1059/) [<a href='function.opendir'>function.opendir</a>]: failed to open dir: Permission denied in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>21</b><br />
+<br />
+<b>Warning</b>:  readdir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  closedir() expects parameter 1 to be resource, boolean given in <b>/var/www/JudgeOnline/admin/problem_export_xml.php</b> on line <b>37</b><br />
+<hint><![CDATA[]]></hint>
+<source><![CDATA[Redraiment]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+void main()
+{
+	int n,a[20000],sum1,sum2,i,count,j;
+	scanf("%d",&n);
+	while(n!=0)
+	{
+		sum1=sum2=count=0;
+		for(i=0;i<2*n;i++)
+			scanf("%d",&a[i]);
+		for(i=0,j=2*n-1;i<2*n&&j>=0;)
+		{
+		
+			if(sum1==sum2)
+			{
+				count++;
+				sum1=sum1+a[i];
+				sum2=sum2+a[j];
+				j--;
+				i++;
+			}
+			else if(sum1<sum2)
+			{
+				sum1=sum1+a[i];
+				i++;
+			}
+			else
+			{
+				sum2=sum2+a[j];
+				j--;
+			}
+		}
+		printf("%d\n",count);
+		scanf("%d",&n);
+	}
+}]]></solution>
+<![CDATA[]]>
+</item>
+</fps>

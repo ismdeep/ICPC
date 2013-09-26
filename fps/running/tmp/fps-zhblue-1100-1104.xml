@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fps version="1.0">
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题5.4]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[有三个整数a b c,由键盘输入，输出其中的最大的数。]]></description>
+<input><![CDATA[一行数组，分别为a b c]]></input>
+<output><![CDATA[a b c其中最大的数]]></output>
+<sample_input><![CDATA[10 20 30]]></sample_input>
+<sample_output><![CDATA[30]]></sample_output>
+<test_input><![CDATA[1 2 3
+]]></test_input>
+<test_output><![CDATA[3
+]]></test_output>
+<hint><![CDATA[max ?
+if(a>b) ?
+
+int main(){
+
+  return 0;
+}]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+int max(int a,int b){
+ return a>b?a:b;
+}
+
+int main(){
+ int a,b,c;
+ scanf("%d%d%d",&a,&b,&c);
+ printf("%d",max(a,max(b,c)));
+ return 0;
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题5.5]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[<p>有一个函数<br />
+y={ x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x&lt;1<br />
+&nbsp;&nbsp; &nbsp;| 2x-1&nbsp;&nbsp; 1&lt;=x&lt;10<br />
+&nbsp;&nbsp;&nbsp; \ 3x-11&nbsp; x&gt;=10</p>
+<p>写一段程序，输入x，输出y</p>]]></description>
+<input><![CDATA[<p>一个数x</p>]]></input>
+<output><![CDATA[<p>一个数y</p>]]></output>
+<sample_input><![CDATA[14
+]]></sample_input>
+<sample_output><![CDATA[31]]></sample_output>
+<test_input><![CDATA[-10
+]]></test_input>
+<test_output><![CDATA[-10
+]]></test_output>
+<hint><![CDATA[使用函数]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+int f(int x){
+  if(x<1) return x;
+  if(x>=1&&x<10) return x*2-1;
+  return x*3-11;
+}
+int main(){
+  int a;
+  scanf("%d",&a);
+  printf("%d",f(a));
+  return 0;
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题5.6]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[给出一百分制成绩，要求输出成绩等级‘A’、‘B’、‘C’、‘D’、‘E’。
+90分以上为A
+80-89分为B
+70-79分为C
+60-69分为D
+60分以下为E
+]]></description>
+<input><![CDATA[一个整数0－100以内]]></input>
+<output><![CDATA[一个字符，表示成绩等级]]></output>
+<sample_input><![CDATA[90]]></sample_input>
+<sample_output><![CDATA[A]]></sample_output>
+<test_input><![CDATA[100
+]]></test_input>
+<test_output><![CDATA[A
+]]></test_output>
+<hint><![CDATA[分段函数返回字符]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+char f(int x){
+  if(x<60) return 'E';
+  if(x>=60&&x<70) return 'D';
+  if(x>=70&&x<80) return 'C';
+  if(x>=80&&x<90) return 'B';
+  return 'A';
+}
+int main(){
+  int a;
+  scanf("%d",&a);
+  printf("%c",f(a));
+  return 0;
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题5.7]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[给出一个不多于5位的整数，要求
+1、求出它是几位数
+2、分别输出每一位数字
+3、按逆序输出各位数字，例如原数为321,应输出123]]></description>
+<input><![CDATA[一个不大于5位的数字]]></input>
+<output><![CDATA[三行
+第一行 位数
+第二行 用空格分开的每个数字，注意最后一个数字后没有空格
+第三行 按逆序输出这个数]]></output>
+<sample_input><![CDATA[12345]]></sample_input>
+<sample_output><![CDATA[5
+1 2 3 4 5
+54321]]></sample_output>
+<test_input><![CDATA[12345
+]]></test_input>
+<test_output><![CDATA[5
+1 2 3 4 5
+54321
+]]></test_output>
+<hint><![CDATA[哈姆雷特：数字还是字符？这是一个问题！]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include <stdio.h>
+#include <string.h>
+int main(){
+  char a[10];
+  int i,l;
+  scanf("%s",a);
+  l=strlen(a);
+  printf("%d\n",l);
+  for(i=0;i<l-1;i++)
+  printf("%c ",a[i]);
+  printf("%c\n",a[i]);
+  for(i=l-1;i>=0;i--)
+  printf("%c",a[i]);
+  
+  
+  return 0;
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题5.8]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[<p>企业发放的奖金根据利润提成。利润低于或等于100000元的，奖金可提10%;<br />
+利润高于100000元，低于200000元（100000&lt;I&le;200000）时，低于100000元的部分按10％提成，高于100000元的部分，可提成 7.5%;<br />
+200000&lt;I&le;400000时，低于200000元部分仍按上述办法提成，（下同），高于200000元的部分按5％提成；<br />
+400000&lt;I&le;600000元时，高于400000元的部分按3％提成；600000&lt;I&le;1000000时，高于600000元的部分按1.5%提成；<br />
+I&gt;1000000时，超过1000000元的部分按1%提成。从键盘输入当月利润I,求应发奖金总数。</p>]]></description>
+<input><![CDATA[<p>一个整数，当月利润。</p>]]></input>
+<output><![CDATA[<p>一个整数，奖金。</p>]]></output>
+<sample_input><![CDATA[900]]></sample_input>
+<sample_output><![CDATA[90]]></sample_output>
+<test_input><![CDATA[900
+]]></test_input>
+<test_output><![CDATA[90
+]]></test_output>
+<hint><![CDATA[用Switch要比用if的看起来更清晰。]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#include <stdio.h>
+int main()
+{
+	int n;
+	double m=0;
+	scanf("%d",&n);
+
+	if(n>1000000)
+	{
+		m += (n-1000000)*0.01;
+		n = 1000000;
+	}
+	if(n>600000)
+	{
+		m += (n-600000)*0.015;
+		n = 600000;
+	}
+	if(n>400000)
+	{
+		m += (n-400000)*0.03;
+		n = 400000;
+	}
+	if(n>200000)
+	{
+		m += (n-200000)*0.05;
+		n = 200000;
+	}
+	if(n>100000)
+	{
+		m += (n-100000)*0.075;
+		n = 100000;
+	}
+	m += n*0.1;
+	printf("%d\n",(int)m);
+	return 0;
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+</fps>

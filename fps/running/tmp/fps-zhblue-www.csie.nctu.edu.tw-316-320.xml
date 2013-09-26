@@ -1,0 +1,2082 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[Stars]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>On a clear moon-less night, you can see millions of stars glimmering in the sky. Faced with this overwhelming number, the Greeks started nearly 2,000 years ago to bring some order to the chaos. They identified groups of stars, called constellations, and gave them names, mostly from the Greek mythology, that are still in use today. Examples are ``Ursa Minor'', ``Pisces'', ``Cancer'', and many others.</p>
+<p></p>
+<p>Given a sketch of the constellation, it is not easy for the amateur to actually find the constellation in the sky. Moreover, simple constellations, such as ``Triangulum'' (triangle,) which consists of only three stars, may appear several times in the sky. Again, singling out the ``correct'' occurrence is not easy.</p>
+<p>Traditionally, maps were printed for just this purpose. But in this problem, we will see how the computer can help us find constellations in the sky.</p>
+<p></p>
+<p>You will be given a star map; for simplicity this will be a collection of points in the plane, each having a certain brightness associated with it. Then, given a constellation, also as a set of points in the plane, you are to determine:</p>
+<p></p>
+<ul>
+    <li>the number of occurrences of the constellation in the star map, and</li>
+    <li>the position of the brightest occurrence, if one exists. (The rationale behind this is as follows: if a constellation seems to appear several times in the sky, the brightest one is most likely to be the real one, since it is the most eye-catching one.)</li>
+</ul>
+<p>An occurrence is a subset of stars from the map that forms a (possibly) arbitrarily rotated and/or scaled copy of the stars in the constellation.</p>
+<p>The brightness of an occurrence is the average brightness of the stars it consists of, i.e. the sum of individual brightnesses divided by the number of stars in the constellation.</p>]]></description>
+<input><![CDATA[<p>On a clear moon-less night, you can see millions of stars glimmering in the sky. Faced with this overwhelming number, the Greeks started nearly 2,000 years ago to bring some order to the chaos. They identified groups of stars, called constellations, and gave them names, mostly from the Greek mythology, that are still in use today. Examples are ``Ursa Minor'', ``Pisces'', ``Cancer'', and many others.</p>
+<p></p>
+<p>Given a sketch of the constellation, it is not easy for the amateur to actually find the constellation in the sky. Moreover, simple constellations, such as ``Triangulum'' (triangle,) which consists of only three stars, may appear several times in the sky. Again, singling out the ``correct'' occurrence is not easy.</p>
+<p>Traditionally, maps were printed for just this purpose. But in this problem, we will see how the computer can help us find constellations in the sky.</p>
+<p></p>
+<p>You will be given a star map; for simplicity this will be a collection of points in the plane, each having a certain brightness associated with it. Then, given a constellation, also as a set of points in the plane, you are to determine:</p>
+<p></p>
+<ul>
+    <li>the number of occurrences of the constellation in the star map, and</li>
+    <li>the position of the brightest occurrence, if one exists. (The rationale behind this is as follows: if a constellation seems to appear several times in the sky, the brightest one is most likely to be the real one, since it is the most eye-catching one.)</li>
+</ul>
+<p>An occurrence is a subset of stars from the map that forms a (possibly) arbitrarily rotated and/or scaled copy of the stars in the constellation.</p>
+<p>The brightness of an occurrence is the average brightness of the stars it consists of, i.e. the sum of individual brightnesses divided by the number of stars in the constellation.</p>]]></input> 
+<output><![CDATA[<p>For each star map first output the number of the map (<tt>`Map #1'</tt>, <tt>`Map #2'</tt>, etc.) on a line of its own.</p>
+<p>For each constellation, in the same order as in the input, output first its name and how many times it occurs in the map on one line, as shown in the output sample.</p>
+<p>If there is at least one occurrence, output the position of the brightest occurrence by listing the positions of the stars that form the brightest occurrence. The star positions have to be printed in ascending <i>x</i>-order. Positions having the same <i>x</i>-coordinates must be sorted in ascending <i>y</i>-order. If there are several equally bright solutions, output only one of them. Adhere to the format shown in the sample output.</p>
+<p>Output a blank line before each constellation and a line of 5 dashes (<tt>`-----'</tt>) after every star map.</p>]]></output>
+<sample_input><![CDATA[6
+1 2 1
+2 1 4
+2 4 3
+3 2 1
+4 1 5
+4 3 2
+2
+3 Triangulum
+1 1
+3 1
+2 4
+4 Cancer
+1 3
+4 3
+6 1
+7 5
+
+0]]></sample_input>
+<sample_output><![CDATA[Map #1
+
+Triangulum occurs 2 time(s) in the map.
+Brightest occurrence: (1,2) (4,1) (4,3)
+
+Cancer occurs 0 time(s) in the map.
+-----]]></sample_output>
+<test_input><![CDATA[6       // the sample input
+1 2 1
+2 1 4
+2 4 3
+3 2 1
+4 1 5
+4 3 2
+2
+3 Triangulum
+1 1
+3 1
+2 4
+4 Cancer
+1 3
+4 3
+6 1
+7 5
+
+20        // test, whether scaled, translated, rotated copies of simple figures
+-3 -1 6   // (triangle, square) are found
+-3 -16 10
+16 -4 4
+16 2 17
+4 -16 3
+-5 -1 0
+-5 -2 5
+-5 -3 11
+-5 0 14
+10 -4 12
+-3 -9 3
+-3 0 1
+10 2 12
+7 1 10
+7 3 9
+9 1 0
+4 -9 17
+-3 -2 5
+-3 -3 17
+9 3 16
+2
+3 Triangle
+1 1
+1 2
+2 1
+4 Square
+4 7
+7 7
+7 10
+4 10
+
+6     // make sure that we are not counting constellations that
+0 0 1 // are scaled differently in the direction of x- and y-axis
+0 1 3 // respectively
+1 0 5
+1 1 6
+1 2 4
+2 1 2
+2
+3 Long_Triangle
+1 1
+1 3
+2 1
+4 Rectangle
+0 0
+0 2
+1 2
+1 0
+
+19        // make sure that we are not (!) counting flipped (mirrored)
+-11 -4 8  // constellations
+-11 0 4
+-11 4 17
+-15 0 13
+-17 -4 4
+-6 1 18
+-7 -14 15
+-7 -4 10
+-7 1 1
+-7 2 11
+-7 3 2
+-7 6 4
+-8 2 3
+10 -4 16
+3 -14 12
+6 -2 8
+8 -2 1
+8 -4 3
+8 -6 9
+2
+5 Asymetric_Constellation_original
+1 0
+1 1
+1 2
+0 2
+2 1
+5 Asymetric_Constellation_flipped
+1 0
+1 1
+1 2
+2 2
+0 1
+
+
+10       // check whether single points work as constellations
+-1 -5 16
+-1 10 2
+-2 8 4
+-2 9 19
+-5 5 3
+0 -8 10
+10 2 16
+2 -2 2
+4 0 7
+4 6 18
+3
+1 Point_1
+1 9 
+1 Point_2
+-7 0
+1 Point_3
+0 17
+
+10       // check if lines work as constellations
+-1 -9 1
+-4 8 9
+-5 5 16
+-5 6 17
+-7 3 18
+10 4 8
+2 -6 10
+2 2 16
+7 2 18
+9 6 9
+3
+2 Line_1
+0 0
+-1 -17
+2 Line_2
+3 8
+9 8
+2 Line_3
+-1 -7
+-1 13
+
+28         // now test for a constellation where four points
+-3 -27 2   // lie on a line
+-3 -54 1
+-3 -9 16
+-3 0 0
+-9 12 14
+-9 18 11
+-9 27 0
+-9 9 4
+1 -11 2
+1 -5 13
+1 -6 16
+1 -8 19
+2 -10 1
+2 -15 5
+2 -23 6
+2 -25 10
+2 -40 14
+2 -8 6
+2 2 15
+2 7 4
+0 0 5
+0 1 13
+0 3 7
+0 6 4
+0 9 19
+1 0 15
+3 0 2
+6 0 7
+2
+4 4_Points_On_A_Line
+0 0
+0 1
+0 3
+0 6
+4 4_Points_On_A_Line_(again)
+0 6
+0 0
+0 3
+0 1
+
+24     // make sure that we are not make too large
+-2 0 1 // rounding errors
+2 0 2
+3 0 3
+0 0 1
+0 1 1
+0 2 1
+0 3 1
+0 4 1
+0 5 1
+0 6 1
+-1 0 2
+-1 1 1
+-1 2 1
+-1 3 1
+-1 4 1
+-1 5 1
+-1 6 1
+1 0 1
+1 1 1
+1 2 2
+1 3 1
+1 4 1
+1 5 1
+1 6 1
+5
+3 Triangle1
+0 0
+0 1000
+500 500
+3 Triangle2
+0 0
+0 999
+500 500
+3 Triangle3
+0 0
+0 1000
+499 500
+3 Triangle4
+0 0
+0 1000
+500 499
+3 Triangle5
+0 0
+0 1001
+500 500
+
+5        // make sure that names of 40 characters are ok
+-6 -8 11
+-8 -10 1
+3 -4 18
+8 -1 5
+9 6 14
+2
+1 Point_with_a_very_long_name_901234567890
+6 7
+2 Line_with_a_name_of_the_maximum_length_!
+5 6
+6 5
+
+1      // any problems if the star map contains only one point?
+1 1 1
+4
+1 Point
+7 8
+2 Line
+1 4
+3 9
+3 Triangulum
+1 1
+3 1
+2 4
+4 Cancer
+1 3
+4 3
+6 1
+7 5
+
+2      // any problems if the star map contains only two points?
+1 1 1
+5 6 2
+4
+1 Point
+7 8
+2 Line
+1 4
+3 9
+3 Triangulum
+1 1
+3 1
+2 4
+4 Cancer
+1 3
+4 3
+6 1
+7 5
+
+3      // any problems if the star map contains only three points?
+1 1 1
+5 1 2
+3 7 3
+4
+1 Point
+7 8
+2 Line
+1 4
+3 9
+3 Triangulum
+1 1
+3 1
+2 4
+4 Cancer
+1 3
+4 3
+6 1
+7 5
+
+101      // first large test: a constellation of 101 stars
+0 0 17
+-1 -7 6
+-10 -6 2
+-11 -47 4
+-11 1 19
+-13 -3 18
+-13 -6 19
+-13 0 9
+-14 -5 15
+-15 -6 17
+-15 30 8
+-15 48 10
+-17 37 19
+-18 -12 12
+-18 24 11
+-2 7 18
+-20 -51 15
+-24 -69 1
+-27 -12 1
+-27 24 15
+-27 42 16
+-3 -4 17
+-3 -6 12
+-3 0 15
+-33 57 19
+-36 -43 10
+-36 -75 18
+-4 -4 16
+-4 0 16
+-4 5 17
+-41 -29 2
+-44 13 3
+-45 51 2
+-47 55 7
+-5 -1 9
+-5 -2 0
+-5 -5 7
+-5 0 9
+-5 19 13
+-5 31 2
+-6 -6 17
+-6 0 16
+-6 30 15
+-60 -19 5
+-60 -43 10
+-60 5 18
+-68 -35 17
+-69 -42 19
+-78 84 14
+-8 -7 1
+-81 -48 14
+-9 -12 14
+-9 -3 2
+-9 6 19
+-90 78 11
+0 -12 7
+1 -5 11
+1 19 19
+12 -27 9
+12 -6 17
+12 5 16
+13 -5 18
+18 51 11
+20 -27 5
+20 -43 6
+20 5 7
+25 37 1
+28 61 0
+3 -6 18
+3 12 6
+3 3 12
+3 4 14
+30 57 11
+36 -51 13
+36 42 4
+37 31 9
+4 -10 4
+4 -11 10
+4 -3 10
+4 5 6
+43 -11 2
+45 -21 7
+48 48 12
+55 -5 18
+55 13 16
+55 31 6
+57 -15 7
+61 25 3
+63 -12 13
+63 15 6
+63 42 11
+68 37 8
+7 -5 19
+7 1 10
+7 7 17
+72 33 7
+75 -6 17
+75 21 0
+75 48 18
+76 -75 15
+84 39 18
+2
+20 Big_Constellation
+-1 -1
+-1 3
+-2 -1
+-2 3
+-2 5
+-3 -8
+-4 6
+-8 -5
+-9 9
+0 -1
+0 0
+0 1
+1 -1
+3 6
+5 5
+6 -2
+8 -1
+8 2
+8 5
+9 4
+5 Part_of_Big_Constellation
+-1 3
+-2 -1
+-2 3
+-2 5
+-3 -8
+
+150     // second big test: 150 points, with all kinds of constellations
+8 76 45 // this is just a big, rotated and scaled 13x13 matrix with 19
+8 71 91 // points missing
+8 66 31
+8 61 11 // and... we meet again all the constellations from the rest of
+8 51 64 // test file
+8 41 76
+8 36 75 // if this test runs too long, it may be shortened somewhat. A
+8 31 67 // faulty program probably has already failed before.
+8 26 23
+8 21 60
+8 16 23
+3 76 40
+3 71 38
+3 61 80
+3 56 50
+3 51 83
+3 46 13
+3 41 62
+3 36 46
+3 31 58
+3 26 16
+3 21 50
+3 16 63
+18 76 5
+18 71 39
+18 66 33
+18 61 52
+18 56 88
+18 51 9
+18 46 95
+18 41 62
+18 36 23
+18 31 25
+18 26 2
+18 16 68
+13 76 45
+13 71 36
+13 66 81
+13 61 50
+13 56 14
+13 51 74
+13 41 22
+13 36 3
+13 31 24
+13 26 91
+13 21 77
+13 16 13
+-7 76 10
+-7 71 14
+-7 66 27
+-7 61 34
+-7 56 1
+-7 51 46
+-7 46 32
+-7 41 38
+-7 36 35
+-7 31 54
+-7 26 72
+-7 21 22
+-7 16 75
+-42 76 95
+-42 71 88
+-42 66 37
+-42 61 61
+-42 51 97
+-42 46 30
+-42 36 63
+-42 31 40
+-42 26 72
+-42 21 80
+-42 16 35
+-37 76 1
+-37 71 76
+-37 66 65
+-37 61 65
+-37 56 33
+-37 51 91
+-37 46 87
+-37 41 83
+-37 36 0
+-37 31 62
+-37 21 72
+-37 16 33
+-32 76 86
+-32 71 11
+-32 66 61
+-32 61 33
+-32 51 8
+-32 46 16
+-32 41 60
+-32 36 52
+-32 31 37
+-32 26 36
+-32 16 58
+-27 76 59
+-27 71 3
+-27 66 25
+-27 61 68
+-27 56 89
+-27 51 75
+-27 46 31
+-27 41 78
+-27 36 77
+-27 21 32
+-27 16 17
+-22 71 21
+-22 66 10
+-22 61 26
+-22 51 71
+-22 46 14
+-22 41 71
+-22 36 4
+-22 31 15
+-22 26 34
+-22 21 67
+-22 16 79
+-2 76 77
+-2 71 43
+-2 66 45
+-2 61 85
+-2 56 49
+-2 51 89
+-2 46 56
+-2 41 4
+-2 36 31
+-2 31 42
+-2 26 9
+-2 21 12
+-2 16 84
+-17 76 4
+-17 71 93
+-17 66 18
+-17 56 25
+-17 46 38
+-17 41 33
+-17 36 4
+-17 31 96
+-17 21 73
+-17 16 14
+-12 76 45
+-12 71 54
+-12 66 68
+-12 56 57
+-12 46 40
+-12 41 16
+-12 36 7
+-12 31 17
+-12 26 7
+-12 21 90
+-12 16 42
+17
+1 Lonely_Point
+-12 -1
+2 Cuddly_Line
+0 0
+1 1000
+3 Pytagoras'_Triangle
+0 3
+0 0
+4 0
+3 Triangulum
+1 1
+3 1
+2 4
+3 Triangle1
+0 0
+0 1000
+500 500
+3 Triangle2
+0 0
+0 999
+500 500
+3 Triangle3
+0 0
+0 1000
+499 500
+3 Triangle4
+0 0
+0 1000
+500 499
+3 Triangle5
+0 0
+0 1001
+500 500
+4 Cancer
+1 3
+4 3
+6 1
+7 5
+4 Little_Square
+0 0
+0 1
+1 0
+1 1
+4 Rotated_Square
+0 1
+1 0
+2 1
+1 2
+4 Another_Rotated_Square
+15 7
+7 -15
+-15 -7
+-7 15
+5 Part_of_Big_Constellation
+-1 3
+-2 -1
+-2 3
+-2 5
+-3 -8
+5 Asymetric_Constellation_original
+1 0
+1 1
+1 2
+0 2
+2 1
+5 Asymetric_Constellation_flipped
+1 0
+1 1
+1 2
+2 2
+0 1
+20 Big_Constellation
+-1 -1
+-1 3
+-2 -1
+-2 3
+-2 5
+-3 -8
+-4 6
+-8 -5
+-9 9
+0 -1
+0 0
+0 1
+1 -1
+3 6
+5 5
+6 -2
+8 -1
+8 2
+8 5
+9 4
+
+0
+
+]]></test_input>
+<test_output><![CDATA[Map #1
+
+Triangulum occurs 2 time(s) in the map.
+Brightest occurrence: (1,2) (4,1) (4,3)
+
+Cancer occurs 0 time(s) in the map.
+-----
+Map #2
+
+Triangle occurs 23 time(s) in the map.
+Brightest occurrence: (10,-4) (10,2) (16,2)
+
+Square occurs 5 time(s) in the map.
+Brightest occurrence: (10,-4) (10,2) (16,-4) (16,2)
+-----
+Map #3
+
+Long_Triangle occurs 1 time(s) in the map.
+Brightest occurrence: (0,0) (0,1) (2,1)
+
+Rectangle occurs 0 time(s) in the map.
+-----
+Map #4
+
+Asymetric_Constellation_original occurs 4 time(s) in the map.
+Brightest occurrence: (-15,0) (-11,-4) (-11,0) (-11,4) (-7,-4)
+
+Asymetric_Constellation_flipped occurs 0 time(s) in the map.
+-----
+Map #5
+
+Point_1 occurs 10 time(s) in the map.
+Brightest occurrence: (-2,9)
+
+Point_2 occurs 10 time(s) in the map.
+Brightest occurrence: (-2,9)
+
+Point_3 occurs 10 time(s) in the map.
+Brightest occurrence: (-2,9)
+-----
+Map #6
+
+Line_1 occurs 45 time(s) in the map.
+Brightest occurrence: (-7,3) (7,2)
+
+Line_2 occurs 45 time(s) in the map.
+Brightest occurrence: (-7,3) (7,2)
+
+Line_3 occurs 45 time(s) in the map.
+Brightest occurrence: (-7,3) (7,2)
+-----
+Map #7
+
+4_Points_On_A_Line occurs 7 time(s) in the map.
+Brightest occurrence: (1,-11) (1,-8) (1,-6) (1,-5)
+
+4_Points_On_A_Line_(again) occurs 7 time(s) in the map.
+Brightest occurrence: (1,-11) (1,-8) (1,-6) (1,-5)
+-----
+Map #8
+
+Triangle1 occurs 146 time(s) in the map.
+Brightest occurrence: (-1,0) (1,2) (3,0)
+
+Triangle2 occurs 0 time(s) in the map.
+
+Triangle3 occurs 0 time(s) in the map.
+
+Triangle4 occurs 0 time(s) in the map.
+
+Triangle5 occurs 0 time(s) in the map.
+-----
+Map #9
+
+Point_with_a_very_long_name_901234567890 occurs 5 time(s) in the map.
+Brightest occurrence: (3,-4)
+
+Line_with_a_name_of_the_maximum_length_! occurs 10 time(s) in the map.
+Brightest occurrence: (3,-4) (9,6)
+-----
+Map #10
+
+Point occurs 1 time(s) in the map.
+Brightest occurrence: (1,1)
+
+Line occurs 0 time(s) in the map.
+
+Triangulum occurs 0 time(s) in the map.
+
+Cancer occurs 0 time(s) in the map.
+-----
+Map #11
+
+Point occurs 2 time(s) in the map.
+Brightest occurrence: (5,6)
+
+Line occurs 1 time(s) in the map.
+Brightest occurrence: (1,1) (5,6)
+
+Triangulum occurs 0 time(s) in the map.
+
+Cancer occurs 0 time(s) in the map.
+-----
+Map #12
+
+Point occurs 3 time(s) in the map.
+Brightest occurrence: (3,7)
+
+Line occurs 3 time(s) in the map.
+Brightest occurrence: (3,7) (5,1)
+
+Triangulum occurs 1 time(s) in the map.
+Brightest occurrence: (1,1) (3,7) (5,1)
+
+Cancer occurs 0 time(s) in the map.
+-----
+Map #13
+
+Big_Constellation occurs 5 time(s) in the map.
+Brightest occurrence: (-78,84) (-69,-42) (-33,57) (-24,-69) (-15,-6) (-15,30) (-15,48) (-6,-6) (-6,30) (3,-6) (3,3) (3,12) (12,-6) (30,57) (48,48) (57,-15) (75,-6) (75,21) (75,48) (84,39)
+
+Part_of_Big_Constellation occurs 5 time(s) in the map.
+Brightest occurrence: (-4,-4) (-3,-6) (-3,-4) (-3,0) (-2,7)
+-----
+Map #14
+
+Lonely_Point occurs 150 time(s) in the map.
+Brightest occurrence: (-42,51)
+
+Cuddly_Line occurs 11175 time(s) in the map.
+Brightest occurrence: (-42,51) (-17,31)
+
+Pytagoras'_Triangle occurs 587 time(s) in the map.
+Brightest occurrence: (-42,71) (-17,21) (-2,51)
+
+Triangulum occurs 2637 time(s) in the map.
+Brightest occurrence: (-42,51) (-42,76) (-27,56)
+
+Triangle1 occurs 8061 time(s) in the map.
+Brightest occurrence: (-37,51) (-17,31) (-17,71)
+
+Triangle2 occurs 0 time(s) in the map.
+
+Triangle3 occurs 0 time(s) in the map.
+
+Triangle4 occurs 0 time(s) in the map.
+
+Triangle5 occurs 0 time(s) in the map.
+
+Cancer occurs 226 time(s) in the map.
+Brightest occurrence: (-42,71) (-27,36) (-27,56) (-2,51)
+
+Little_Square occurs 1415 time(s) in the map.
+Brightest occurrence: (-37,51) (-17,31) (-17,71) (3,51)
+
+Rotated_Square occurs 1415 time(s) in the map.
+Brightest occurrence: (-37,51) (-17,31) (-17,71) (3,51)
+
+Another_Rotated_Square occurs 1415 time(s) in the map.
+Brightest occurrence: (-37,51) (-17,31) (-17,71) (3,51)
+
+Part_of_Big_Constellation occurs 0 time(s) in the map.
+
+Asymetric_Constellation_original occurs 1907 time(s) in the map.
+Brightest occurrence: (-37,51) (-37,71) (-27,41) (-27,61) (-17,71)
+
+Asymetric_Constellation_flipped occurs 1905 time(s) in the map.
+Brightest occurrence: (-42,21) (-27,56) (-17,31) (8,41) (18,16)
+
+Big_Constellation occurs 0 time(s) in the map.
+-----
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+</item>
+<item>
+<title><![CDATA[Hexagon]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://d620/v3-htm01/317img3.gif]]></src><base64><![CDATA[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]]></base64></img><img><src><![CDATA[http://d620/v3-htm01/317img1.gif]]></src><base64><![CDATA[R0lGODlhPAANAIAAAAAAAP///yH5BAEAAAEALAAAAAA8AA0AAAJZTICmy4vQopTPpAMnu1d7VSVd543ZV56QiWLg2VIqTMZ13LAWbPPOA6zkZhhhLhKUBZMb4m/oe+ImIqPruJFOU7pP97cEDl9fTXm7S3OisjR6TLK25G+yogAAOw==]]></base64></img><img><src><![CDATA[http://d620/v3-htm01/317img2.gif]]></src><base64><![CDATA[R0lGODlhTwAMAIAAAAAAAP///yH5BAEAAAEALAAAAABPAAwAAAJpjA2ny5H9mpwsLnswdaDfrm1iJmneeJXoioRn9rKhw6JgFdPzNu+1kjDRSMNajwJKJlVFhLP1hEyOU6UVF+VEI70csfJDfosPq7eZkoYhZs4VGKaWzMspM228r+1q2M2m5Pe3B1TXAlIAADs=]]></base64></img><description><![CDATA[<p>Consider a game board consisting of 19 hexagonal fields, as shown in the figure below. We can easily distinguish three main directions in the shape of the board: from top to bottom, from top-left to bottom-right, and from top-right to bottom-left. For each of these primary directions, the board can be viewed as a series of rows, consisting of 3, 4, 5, 4, and 3 fields, respectively.</p>
+<p></p>
+<center><img src="http://d620/v3-htm01/317img3.gif" alt="" /></center>
+<p>The game board has to be completely covered using a set of hexagonal pieces. Each piece carries three numbers, one for every primary board direction. Only three different numbers are used for each direction. Every possible combination of three numbers for all three directions is assigned to a piece, leading to a set of 27 unique pieces. (The board in the above figure is still in the process of being covered.)</p>
+<p></p>
+<p>The score of a board is calculated as the sum of all 15 row scores (5 rows for each primary direction). The row scores are calculated as follows: if all pieces in a row carry the same number for the direction of the row, the row score is this number multiplied by the number of pieces in the row. Otherwise (the pieces carry different numbers in the row direction) the row score is zero. Note that the pieces may not be rotated. For example, the score of the leftmost row in the figure is  <img align="BOTTOM" width="60" height="13" src="http://d620/v3-htm01/317img1.gif" alt="tex2html_wrap_inline31" /> , the score of the row to its right is  <img align="BOTTOM" width="79" height="12" src="http://d620/v3-htm01/317img2.gif" alt="tex2html_wrap_inline33" /> .</p>
+<p></p>
+<p>While in the real game the pieces are chosen randomly and the set of pieces is fixed, we are interested in the highest possible score for a given set of numbers for each direction, when all pieces in a row carry  the same number for the direction of the row. This means you have to  choose those 19 pieces that result in the highest score.</p>]]></description>
+<input><![CDATA[<p>The first line of the input file contains an integer <i>n</i> which indicates the number of test cases. Each test case consists of three lines containing three integers each. Each of these three line contains the numbers for a single primary direction. From these numbers the set of pieces is generated.</p>
+<p></p>
+<h2><font color="#0070e8"><a name="SECTION0001002000000000000000"></a></font></h2>]]></input> 
+<output><![CDATA[<p>For each test case output a line containing the number of the case (<tt>`Test #1'</tt>, <tt>`Test #2'</tt>, etc.), followed by a line containing the highest possible score for the given numbers. Add a blank line after each test case.</p>]]></output>
+<sample_input><![CDATA[1
+9 4 3
+8 5 2
+7 6 1]]></sample_input>
+<sample_output><![CDATA[Test #1
+308]]></sample_output>
+<test_input><![CDATA[7
+9 4 3
+8 5 2
+7 6 1
+9 8 7
+6 5 4
+3 2 1
+1 2 3
+1 2 3
+1 2 3
+1 100 10000
+2 200 20000
+3 300 30000
+1 2 3
+100 200 300
+10000 20000 30000
+1 2 3
+11 12 13
+21 22 100000
+567 98765 123
+45678 838 777
+964 45 75431]]></test_input>
+<test_output><![CDATA[Test #1
+308
+
+Test #2
+292
+
+Test #3
+121
+
+Test #4
+453930
+
+Test #5
+414040
+
+Test #6
+800507
+
+Test #7
+1658624
+
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+</item>
+<item>
+<title><![CDATA[Domino Effect]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://d620/v3-htm01/318img1.gif]]></src><base64><![CDATA[R0lGODlhWgAZAIAAAAAAAP///yH5BAEAAAEALAAAAABaABkAAAKpjGGpy+0PHToLWGZnnlHlDobJxgXXNSIoFX7i25XpbHKr/KywqFfNrbHZYr1csFX0/IQHJkuSlNSaERfk5Jxqt7hUdIn6Wqs0IPVsqn4xQ/DubOa2iaBwt3lnl53xNDIPp2IEiGa3R+PHIzaSaER2GDhDQuiz5FU35qGig6W59Qb6B9WVWUMZipqq6jW5tvoKGys7S1tre4ubq7vL2+v7CxwsPExcbExbAAA7]]></base64></img><description><![CDATA[<p>Did you know that you can use domino bones for other things besides playing Dominoes? Take a number of dominoes and build a row by standing them on end with only a small distance in between. If you do it right, you can tip the first domino and cause all others to fall down in succession (this is where the phrase ``domino effect'' comes from).</p>
+<p></p>
+<p>While this is somewhat pointless with only a few dominoes, some people went to the opposite extreme in the early Eighties. Using millions of dominoes of different colors and materials to fill whole halls with elaborate patterns of falling dominoes, they created (short-lived) pieces of art. In these constructions, usually not only one but several rows of dominoes were falling at the same time. As you can imagine, timing is an essential factor here.</p>
+<p></p>
+<p>It is now your task to write a program that, given such a system of rows formed by dominoes, computes when and where the last domino falls. The system consists of several ``key dominoes'' connected by rows of simple dominoes. When a key domino falls, all rows connected to the domino will also start falling (except for the ones that have already fallen). When the falling rows reach other key dominoes that have not fallen yet, these other key dominoes will fall as well and set off the rows connected to them. Domino rows may start collapsing at either end. It is even possible that a row is collapsing on both ends, in which case the last domino falling in that row is somewhere between its key dominoes. You can assume that rows fall at a uniform rate.</p>]]></description>
+<input><![CDATA[<p>The input file contains descriptions of several domino systems. The first line of each description contains two integers: the number <i>n</i> of key dominoes ( <img align="MIDDLE" width="90" height="25" src="http://d620/v3-htm01/318img1.gif" alt="tex2html_wrap_inline29" /> ) and the number <i>m</i> of rows between them. The key dominoes are numbered from 1 to <i>n</i>. There is at most one row between any pair of key dominoes and the domino graph is connected, i.e. there is at least one way to get from a domino to any other domino by following a series of domino rows.</p>
+<p>The following <i>m</i> lines each contain three integers <i>a</i>, <i>b</i>, and <i>l</i>, stating that there is a row between key dominoes <i>a</i> and <i>b</i> that takes <i>l</i> seconds to fall down from end to end.</p>
+<p></p>
+<p>Each system is started by tipping over key domino number 1.</p>
+<p></p>
+<p>The file ends with an empty system (with <i>n</i> = <i>m</i> = 0), which should not be processed.</p>]]></input> 
+<output><![CDATA[<p>For each case output a line stating the number of the case (<tt>`System #1'</tt>, <tt>`System #2'</tt>, etc.). Then output a line containing the time when the last domino falls, exact to one digit to the right of the decimal point, and the location of the last domino falling, which is either at a key domino or between two key dominoes. Adhere to the format shown in the output sample. If you find several solutions, output only one of them. Output a blank line after each system.</p>]]></output>
+<sample_input><![CDATA[2 1
+1 2 27
+3 3
+1 2 5
+1 3 5
+2 3 5
+0 0]]></sample_input>
+<sample_output><![CDATA[System #1
+The last domino falls after 27.0 seconds, at key domino 2.
+
+System #2
+The last domino falls after 7.5 seconds, between key dominoes 2 and 3.]]></sample_output>
+<test_input><![CDATA[2 1     // sample input
+1 2 27
+
+3 3     // sample input
+1 2 5
+1 3 5
+2 3 5
+
+2 1    // Make sure that the direction of an edge is not an issue
+2 1 27
+
+1 0   // Minimal graph
+ 
+4 3    // three rows in succession
+1 2 3
+2 3 4
+3 4 5
+
+4 4   // a branching path, same length of branches
+1 2 5
+1 3 4
+2 4 4
+3 4 5
+
+4 4   // a branching path, different length of branches
+1 2 5
+1 3 5
+2 4 4
+3 4 5
+
+5 7   // key stones 2,3,4,5 are reached by two rows at
+1 2 1 // the same time: make sure that is no problem
+1 3 2
+1 4 3
+1 5 4
+2 3 1
+3 4 1
+4 5 1
+
+5 7   // a variant of the problem before
+1 2 1
+1 3 2
+1 4 3
+1 5 5
+2 3 1
+3 4 1
+4 5 1
+
+3 3  // make sure that there are no rounding errors
+1 2 1000000  // and that the programs do not simulate
+1 3 1000001  // the system second by second...
+2 3 999998
+
+100 350 // a large test case to finish this off
+1 14 87 // in the real test data one could use even
+1 26 92 // larger cases (250,500,1000,...). A good
+1 28 62 // program should not use more than a few
+1 30 75 // seconds on them, while a very bad one can
+1 43 44 // be disqualified by 'runtime limit exceeded'
+1 51 85
+1 55 29
+1 73 70
+2 18 74
+2 19 74
+2 26 70
+2 41 26
+2 61 70
+2 70 100
+2 75 20
+3 36 33
+3 37 66
+3 54 37
+3 78 58
+3 96 12
+4 20 100
+4 23 44
+4 26 55
+4 47 85
+4 68 66
+4 85 40
+4 90 4
+4 97 5
+4 100 37
+5 19 30
+5 27 79
+5 34 5
+5 36 18
+5 40 75
+5 54 95
+5 63 76
+5 71 36
+5 74 11
+5 80 97
+6 24 14
+7 30 80
+7 47 2
+7 59 73
+7 67 81
+7 77 25
+7 89 72
+8 29 66
+8 42 15
+8 46 28
+8 70 61
+8 77 55
+8 92 30
+9 11 72
+9 22 12
+9 54 19
+9 74 51
+10 13 28
+10 28 20
+10 36 52
+10 52 97
+10 65 25
+10 69 62
+10 73 19
+10 84 1
+11 37 5
+11 64 52
+11 69 36
+11 93 87
+11 94 68
+11 95 12
+12 85 31
+12 91 95
+12 92 92
+13 39 70
+13 53 29
+13 70 86
+13 88 59
+13 100 63
+14 22 88
+14 44 71
+14 48 93
+14 56 42
+14 61 60
+14 80 84
+14 98 27
+15 18 10
+15 31 63
+15 43 58
+15 48 30
+15 66 94
+15 69 77
+15 100 85
+16 17 2
+16 21 67
+16 26 100
+16 28 29
+16 46 91
+16 62 80
+16 96 5
+17 27 73
+17 60 31
+17 65 73
+17 84 85
+17 86 94
+18 32 95
+18 35 6
+18 39 25
+18 43 34
+18 81 42
+18 92 93
+19 33 44
+19 40 15
+19 50 24
+19 88 46
+20 27 79
+20 34 21
+20 39 46
+20 40 22
+20 41 4
+20 46 54
+20 66 66
+20 89 50
+20 100 3
+21 39 48
+21 62 70
+21 70 99
+21 86 78
+22 39 31
+22 52 12
+22 70 52
+22 73 85
+22 75 16
+22 97 37
+23 57 22
+23 75 27
+23 81 75
+23 97 15
+24 55 83
+24 67 54
+24 69 82
+24 80 77
+24 92 84
+24 97 12
+25 33 85
+25 42 44
+25 45 94
+25 61 21
+25 75 93
+25 79 46
+26 72 24
+26 74 67
+27 30 17
+27 32 56
+27 47 20
+27 58 57
+27 60 19
+27 77 17
+27 85 28
+28 35 2
+28 57 96
+28 69 52
+28 71 77
+28 74 27
+28 82 53
+28 83 43
+28 85 72
+28 88 23
+29 31 19
+29 33 54
+29 45 82
+29 47 94
+29 84 50
+29 91 77
+30 33 6
+30 41 47
+30 56 20
+30 60 31
+30 88 79
+31 35 74
+31 39 25
+31 58 59
+32 60 66
+32 69 81
+32 85 50
+32 86 97
+32 90 26
+33 47 50
+33 54 28
+33 59 29
+33 70 77
+33 74 10
+33 80 5
+34 46 56
+34 49 41
+34 53 50
+34 89 89
+35 36 42
+35 50 49
+35 72 99
+35 83 68
+36 39 35
+36 43 41
+36 52 48
+36 57 12
+36 84 85
+37 50 19
+37 71 70
+37 74 81
+37 80 96
+37 84 84
+37 88 96
+37 92 81
+38 51 9
+38 57 58
+38 64 77
+38 67 10
+38 75 64
+38 99 51
+39 44 38
+39 56 46
+39 62 70
+39 69 84
+39 70 91
+40 48 40
+40 51 26
+40 54 100
+40 61 90
+40 65 27
+40 66 85
+40 72 54
+40 73 34
+40 96 70
+41 57 3
+41 76 51
+41 98 99
+42 59 16
+42 76 75
+42 82 70
+43 56 67
+43 64 64
+43 83 74
+43 100 62
+44 55 86
+44 63 82
+44 82 40
+45 54 25
+45 60 35
+45 67 57
+45 99 79
+46 52 72
+46 54 28
+46 76 97
+46 100 74
+47 50 47
+47 55 67
+47 69 8
+47 84 73
+47 89 54
+47 90 53
+49 68 80
+49 86 81
+49 90 21
+51 52 34
+51 73 31
+51 76 38
+52 56 47
+52 80 19
+52 99 89
+53 68 97
+53 95 88
+54 65 12
+54 66 48
+54 70 90
+54 91 16
+55 56 76
+55 75 11
+55 81 48
+55 95 74
+55 98 44
+56 80 46
+57 63 25
+57 85 22
+57 91 60
+57 92 75
+58 62 6
+58 69 82
+58 88 34
+59 63 36
+59 74 59
+59 93 51
+59 95 10
+60 61 91
+60 68 24
+60 87 5
+60 95 33
+61 67 65
+61 77 22
+61 78 42
+61 81 96
+61 95 84
+62 64 14
+62 75 32
+62 89 1
+62 99 44
+63 81 41
+63 87 42
+64 78 98
+65 71 74
+66 68 65
+66 81 22
+66 90 13
+67 81 25
+67 82 29
+67 90 5
+67 98 37
+68 91 21
+68 100 36
+69 89 69
+70 73 33
+70 85 74
+70 96 83
+71 85 76
+71 94 97
+71 95 41
+72 81 95
+72 83 62
+73 98 78
+75 87 55
+75 93 17
+75 97 52
+76 94 18
+76 96 1
+77 80 74
+77 83 35
+77 92 12
+77 99 73
+78 84 54
+78 86 75
+78 91 73
+80 93 55
+81 89 41
+81 100 37
+82 96 91
+85 97 88
+86 90 98
+88 94 48
+91 97 28
+91 99 9
+93 94 70
+94 95 13
+
+
+0 0
+
+]]></test_input>
+<test_output><![CDATA[System #1
+The last domino falls after 27.0 seconds, at key domino 2.
+
+System #2
+The last domino falls after 7.5 seconds, between key dominoes 2 and 3.
+
+System #3
+The last domino falls after 27.0 seconds, at key domino 2.
+
+System #4
+The last domino falls after 0.0 seconds, at key domino 1.
+
+System #5
+The last domino falls after 12.0 seconds, at key domino 4.
+
+System #6
+The last domino falls after 9.0 seconds, at key domino 4.
+
+System #7
+The last domino falls after 9.5 seconds, between key dominoes 3 and 4.
+
+System #8
+The last domino falls after 4.0 seconds, at key domino 5.
+
+System #9
+The last domino falls after 4.5 seconds, between key dominoes 1 and 5.
+
+System #10
+The last domino falls after 1499999.5 seconds, between key dominoes 2 and 3.
+
+System #11
+The last domino falls after 200.5 seconds, between key dominoes 32 and 86.
+
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+</item>
+<item>
+<title><![CDATA[Pendulum]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://d620/v3-htm01/319img1.gif]]></src><base64><![CDATA[R0lGODlhWgAZAIAAAAAAAP///yH5BAEAAAEALAAAAABaABkAAAKpjGGpy+0PHToLWGZnnlHlDobJxgXXNSIoFX7i25XpbHKr/KywqFfNrbHZYr1csFX0/IQHJkuSlNSaERfk5Jxqt7hUdIn6Wqs0IPVsqn4xQ/DubOa2iaBwt3lnl53xNDIPp2IEiGa3R+PHIzaSaER2GDhDQuiz5FU35qGig6W59Qb6B9WVWUMZipqq6jW5tvoKGys7S1tre4ubq7vL2+v7CxwsPExcbExbAAA7]]></base64></img><description><![CDATA[<p>Consider a pendulum hanging on a string from a hook on a wall. When pushed, this pendulum will swing back and forth. Now imagine other hooks on the wall, placed in the path of our pendulum's string. The pendulum will bend around them, possibly even loop around them. In general, it will follow a much more complex path than before. After some time, the pendulum's motion will repeat, the pendulum will follow a <i>periodic orbit</i>. What we would like you to do is to compute the distance travelled by the pendulum as it completes one cycle of the orbit.</p>
+<p></p>
+<p>More formally, we place a cartesian coordinate system on the wall. The pendulum's string is affixed at the origin (0,0). As usual, the <i>x</i>-axis points to the right and the <i>y</i>-axis points upwards. The string of the pendulum has a length of <i>r</i>. The pendulum is released at position (-<i>r</i>,0) and therefore starts swinging to the right. Furthermore, there are <i>n</i> additional hooks distributed over the plane which may influence the path of the pendulum.</p>
+<p></p>
+<p>In our ideal world, the following assumptions are true:</p>
+<p></p>
+<ul>
+    <li>The diameters of the hooks and of the string are zero.</li>
+    <li>The pendulum loses no energy (e.g. by friction).</li>
+    <li>The pendulum will never hit a hook, only its string will.</li>
+    <li>The pendulum's string is made of some futuristic material that only bends where it touches a hook but is otherwise rigid.</li>
+</ul>
+<p>Your program should simulate the movement of the pendulum and output the spatial length of the periodic orbit that it finally enters. As you may remember from physics: due to gravity, the pendulum will never reach a height greater than the one it started from! That is, it will never get above the <i>x</i>-axis. It will either reach its initial height again or circle endlessly around a hook in the wall.</p>]]></description>
+<input><![CDATA[<p>The input file contains several test cases. Each case begins with a line containing an integer <i>n</i> (the number of hooks,  <img align="MIDDLE" width="90" height="25" src="http://d620/v3-htm01/319img1.gif" alt="tex2html_wrap_inline44" /> ) and a real <i>r</i> (the length of the pendulum's string). The following <i>n</i> lines each contain two integers specifying the <i>x</i>- and <i>y</i>-coordinate of the corresponding hook.</p>
+<p>The file ends with a case having <i>r</i> = 0, which should not be processed.</p>]]></input> 
+<output><![CDATA[<p>For each case output a line containing the number of the case (<tt>`Pendulum #1'</tt>, <tt>`Pendulum #2'</tt>, etc.).</p>
+<p>Then print a line that contains the distance which the pendulum travels for completing one cycle of its periodic orbit. Do not count the distance travelled to reach the starting point of the orbit. (Adhere to the format shown in the output sample.) The distance should be exact to two digits to the right of the decimal point.</p>
+<p>Output a blank line after each test case.</p>]]></output>
+<sample_input><![CDATA[2 16.0
+3 -4
+-3 -4
+1 18.0
+5 -12
+0 0]]></sample_input>
+<sample_output><![CDATA[Pendulum #1
+Length of periodic orbit = 87.66
+
+Pendulum #2
+Length of periodic orbit = 31.42]]></sample_output>
+<test_input><![CDATA[2 16.0
+3 -4
+-3 -4
+1 18.0
+5 -12
+1 10.0
+0 -4
+1 7.0
+0 -4
+1 3.0
+0 -4
+1 11.0
+-4 -3
+1 9.0
+-4 -3
+1 7.0
+-4 -3
+1 4.0
+-4 -3
+1 10.0
+4 -3
+1 7.0
+4 -3
+1 2.0
+4 -3
+2 12.0
+3 -4
+-3 -4
+2 10.5
+3 -4
+-3 -4
+2 6.0
+3 -4
+-3 -4
+2 4.5
+3 -4
+-3 -4
+2 6.0
+3 -4
+-5 -4
+2 9.5
+3 -4
+-7 -7
+1 16.0
+0 -6
+2 16.0
+0 -6
+4 -3
+2 50.0
+0 -19
+0 -20
+2 39.5
+0 -19
+0 -20
+2 42.0
+1 -19
+-2 -20
+2 19.1
+0 -19
+0 -20
+3 16.0
+-3 -4
+0 -4
+3 -4
+3 10.5
+-3 -4
+0 -4
+3 -4
+3 27.0
+0 -12
+3 -8
+6 -4
+3 35.0
+-1 -12
+3 -10
+9 -5
+3 6.0
+0 -2
+-3 -4
+3 -6
+3 10.0
+0 -2
+-3 -4
+3 -6
+3 13.0
+0 -2
+-3 -4
+3 -6
+3 17.0
+0 -2
+-3 -4
+3 -6
+3 18.0
+0 -2
+-3 -4
+3 -6
+5 41.2
+-5 -20
+5 -20
+5 -18
+4 -18
+4 -19
+9 399
+-64 -128
+0 -128
+16 -128
+20 -128
+21 -128
+22 -128
+24 -128
+32 -128
+64 -128
+9 400
+-64 -128
+0 -128
+16 -128
+20 -128
+21 -128
+22 -128
+24 -128
+32 -128
+64 -128
+5 100.0
+5 7
+-6 -9
+2 3
+20 9
+4 7
+100 2500.0
+488 229
+-476 472
+370 -333
+57 333
+-140 -362
+-341 172
+-248 -439
+394 -138
+-490 198
+121 -97
+-30 337
+181 -445
+-473 -26
+-404 238
+409 -95
+18 -441
+442 -268
+-37 -130
+-3 -427
+-451 491
+171 -298
+-104 215
+-497 136
+140 -495
+317 -315
+-128 -22
+-131 372
+-465 -267
+-203 -393
+-448 456
+309 178
+-456 -468
+492 -395
+170 18
+186 -317
+-345 -106
+-358 204
+-153 492
+-336 -326
+360 318
+-4 -67
+493 181
+-27 -423
+-114 -338
+330 -19
+275 -170
+-275 61
+-20 -214
+-241 170
+486 155
+76 55
+366 312
+475 -485
+-33 474
+-303 -400
+-490 419
+-99 160
+202 -421
+453 474
+352 437
+7 290
+-427 229
+414 7
+-238 -93
+483 -62
+265 -458
+310 -177
+-446 -82
+-242 239
+-211 141
+-157 -493
+36 -237
+377 -199
+113 104
+314 359
+244 406
+100 327
+-40 -350
+-123 467
+199 -203
+175 -461
+-106 32
+363 305
+-254 -170
+-343 -271
+469 271
+8 -70
+-184 -397
+284 4
+-173 215
+-376 -356
+206 -293
+399 383
+-162 -84
+-280 -299
+335 445
+-363 423
+89 457
+-188 198
+-248 267
+0 0
+]]></test_input>
+<test_output><![CDATA[Pendulum #1
+Length of periodic orbit = 87.66
+
+Pendulum #2
+Length of periodic orbit = 31.42
+
+Pendulum #3
+Length of periodic orbit = 59.02
+
+Pendulum #4
+Length of periodic orbit = 18.85
+
+Pendulum #5
+Length of periodic orbit = 18.85
+
+Pendulum #6
+Length of periodic orbit = 50.42
+
+Pendulum #7
+Length of periodic orbit = 38.35
+
+Pendulum #8
+Length of periodic orbit = 12.57
+
+Pendulum #9
+Length of periodic orbit = 25.13
+
+Pendulum #10
+Length of periodic orbit = 62.83
+
+Pendulum #11
+Length of periodic orbit = 12.57
+
+Pendulum #12
+Length of periodic orbit = 12.57
+
+Pendulum #13
+Length of periodic orbit = 6.28
+
+Pendulum #14
+Length of periodic orbit = 52.79
+
+Pendulum #15
+Length of periodic orbit = 6.28
+
+Pendulum #16
+Length of periodic orbit = 28.27
+
+Pendulum #17
+Length of periodic orbit = 6.28
+
+Pendulum #18
+Length of periodic orbit = 60.27
+
+Pendulum #19
+Length of periodic orbit = 94.55
+
+Pendulum #20
+Length of periodic orbit = 94.55
+
+Pendulum #21
+Length of periodic orbit = 295.11
+
+Pendulum #22
+Length of periodic orbit = 3.14
+
+Pendulum #23
+Length of periodic orbit = 18.39
+
+Pendulum #24
+Length of periodic orbit = 0.63
+
+Pendulum #25
+Length of periodic orbit = 87.66
+
+Pendulum #26
+Length of periodic orbit = 15.71
+
+Pendulum #27
+Length of periodic orbit = 159.77
+
+Pendulum #28
+Length of periodic orbit = 205.36
+
+Pendulum #29
+Length of periodic orbit = 6.28
+
+Pendulum #30
+Length of periodic orbit = 8.76
+
+Pendulum #31
+Length of periodic orbit = 10.53
+
+Pendulum #32
+Length of periodic orbit = 4.24
+
+Pendulum #33
+Length of periodic orbit = 101.80
+
+Pendulum #34
+Length of periodic orbit = 1.07
+
+Pendulum #35
+Length of periodic orbit = 5.60
+
+Pendulum #36
+Length of periodic orbit = 2305.57
+
+Pendulum #37
+Length of periodic orbit = 599.65
+
+Pendulum #38
+Length of periodic orbit = 12487.85
+
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+</item>
+<item>
+<title><![CDATA[Border]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<img><src><![CDATA[http://d620/v3-htm01/320img1.gif]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p>You are to write a program that draws a border around a closed path into a bitmap, as displayed in the following figure:</p>
+<p></p>
+<center><img src="http://d620/v3-htm01/320img1.gif" alt="" /></center>
+<p>The path is closed and runs along the grid lines, i.e. between the squares of the grid. The path runs counter-clockwise, so if following the path is considered as going ``forward'', the border pixels are always to the ``right'' of the path. The bitmap always covers 32 by 32 squares and has its lower left corner at (0,0). You can safely assume that the path never touches the bounding rectangle of the bitmap and never touches or crosses itself. Note that a bit gets set if it is on the outside of the area surrounded by the path and if at least one of its edges belongs to the path, but not if only one of its corners is in the path. (A look at the convex corners in the figure should clarify that statement.)</p>]]></description>
+<input><![CDATA[<p>The first line of the input file contains the number of test cases in the file. Each test case that follows consists of two lines. The first line of each case contains two integer numbers <i>x</i> and <i>y</i> specifying the starting point of the path. The second line contains a string of variable length. Every letter in the string symbolizes a move of length one along the grid. Only the letters <tt>`W'</tt> (``west''), <tt>`E'</tt> (``east''), <tt>`N'</tt> (``north''), <tt>`S'</tt> (``south''), and <tt>`.'</tt> (``end of path'', no move) appear in the string. The end-of-path character (<tt>`.'</tt>) is immediately followed by the end of the line.</p>]]></input> 
+<output><![CDATA[<p>For each test case, output a line with the number of the case (<tt>`Bitmap #1'</tt>, <tt>`Bitmap #2'</tt>, etc.). For each row of the bitmap from top to bottom, print a line where you print a character for every bit in that row from left to right. Print an uppercase <tt>`X'</tt> for set bits and a period <tt>`.'</tt> for unset bits. Output a blank line after each bitmap.</p>]]></output>
+<sample_input><![CDATA[1
+2 1
+EENNWNENWWWSSSES.]]></sample_input>
+<sample_output><![CDATA[Bitmap #1
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+.XXX............................
+X...X...........................
+X..X............................
+X...X...........................
+.X..X...........................
+..XX............................]]></sample_output>
+<test_input><![CDATA[5
+2 1
+EENNWNENWWWSSSES.
+1 3
+SSEENNWW.
+2 12
+SSSSSSSWSSESEENNNESSSESEENENNNWNNNNWSWNNEEESSENNNNWWWWWWWW.
+1 1
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEENNNNNNNNNNNNNNNNNNNNNNNNNNNNNNWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWSSSSSSSSSSSSSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEEEEEEENNNNNNNNNNNNNNNNNNNNNNNNNNWWWWWWWWWWWWWWWWWWWWWWWWWWSSSSSSSSSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEEENNNNNNNNNNNNNNNNNNNNNNWWWWWWWWWWWWWWWWWWWWWWSSSSSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEEEEEENNNNNNNNNNNNNNNNNNWWWWWWWWWWWWWWWWWWSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEENNNNNNNNNNNNNNWWWWWWWWWWWWWWSSSSSSSSSSSSEEEEEEEEEEEENNNNNNNNNNWWWWWWWWWWSSSSSSSSEEEEEEEENNNNNNWWWWWWSSSSEEEENNWSWWNNEEEESSSSWWWWWWNNNNNNEEEEEEEESSSSSSSSWWWWWWWWWWNNNNNNNNNNEEEEEEEEEEEESSSSSSSSSSSSWWWWWWWWWWWWWWNNNNNNNNNNNNNNEEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSWWWWWWWWWWWWWWWWWWNNNNNNNNNNNNNNNNNNEEEEEEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSWWWWWWWWWWWWWWWWWWWWWWNNNNNNNNNNNNNNNNNNNNNNEEEEEEEEEEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSSSSSWWWWWWWWWWWWWWWWWWWWWWWWWWNNNNNNNNNNNNNNNNNNNNNNNNNNEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSSSSSSSSSWWWWWWWWWWWWWWWWWWWWWWWWWWWWWS.
+10 10
+SSEENNWW.
+]]></test_input>
+<test_output><![CDATA[Bitmap #1
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+.XXX............................
+X...X...........................
+X..X............................
+X...X...........................
+.X..X...........................
+..XX............................
+
+Bitmap #2
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+.XX.............................
+X..X............................
+X..X............................
+.XX.............................
+
+Bitmap #3
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+..XXXXXXXX......................
+.X........X.....................
+.X........X.....................
+.X....XXX.X.....................
+.X....X.X.X.....................
+.X......XX......................
+.X......X.......................
+.X......X.......................
+X...X....X......................
+X...X....X......................
+.X..X....X......................
+..XX.X..X.......................
+......XX........................
+
+Bitmap #4
+.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.
+X..............................X
+X.XXXXXXXXXXXXXXXXXXXXXXXXXXXX.X
+X.X..........................X.X
+X.X.XXXXXXXXXXXXXXXXXXXXXXXX.X.X
+X.X.X......................X.X.X
+X.X.X.XXXXXXXXXXXXXXXXXXXX.X.X.X
+X.X.X.X..................X.X.X.X
+X.X.X.X.XXXXXXXXXXXXXXXX.X.X.X.X
+X.X.X.X.X..............X.X.X.X.X
+X.X.X.X.X.XXXXXXXXXXXX.X.X.X.X.X
+X.X.X.X.X.X..........X.X.X.X.X.X
+X.X.X.X.X.X.XXXXXXXX.X.X.X.X.X.X
+X.X.X.X.X.X.X......X.X.X.X.X.X.X
+X.X.X.X.X.X.X.XXXX.X.X.X.X.X.X.X
+X.X.X.X.X.X.X.XX.X.X.X.X.X.X.X.X
+X.X.X.X.X.X.X....X.X.X.X.X.X.X.X
+X.X.X.X.X.X.XXXXXX.X.X.X.X.X.X.X
+X.X.X.X.X.X........X.X.X.X.X.X.X
+X.X.X.X.X.XXXXXXXXXX.X.X.X.X.X.X
+X.X.X.X.X............X.X.X.X.X.X
+X.X.X.X.XXXXXXXXXXXXXX.X.X.X.X.X
+X.X.X.X................X.X.X.X.X
+X.X.X.XXXXXXXXXXXXXXXXXX.X.X.X.X
+X.X.X....................X.X.X.X
+X.X.XXXXXXXXXXXXXXXXXXXXXX.X.X.X
+X.X........................X.X.X
+X.XXXXXXXXXXXXXXXXXXXXXXXXXX.X.X
+X............................X.X
+.XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.X
+X..............................X
+.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.
+
+Bitmap #5
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+..........XX....................
+.........X..X...................
+.........X..X...................
+..........XX....................
+................................
+................................
+................................
+................................
+................................
+................................
+................................
+
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+</item>
+</fps>

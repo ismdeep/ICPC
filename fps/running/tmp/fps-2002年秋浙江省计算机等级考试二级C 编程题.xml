@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[2002年秋浙江省计算机等级考试二级C 编程题(1)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>输入一行字符，分别统计出其中英文字母、空格、数字和其他字符的个数。</p>]]></description>
+<input><![CDATA[<p>一行字符</p>]]></input> 
+<output><![CDATA[<p>统计值</p>]]></output>
+<sample_input><![CDATA[aklsjflj123 sadf918u324 asdf91u32oasdf/.';123
+]]></sample_input>
+<sample_output><![CDATA[23 16 2 4]]></sample_output>
+<test_input><![CDATA[1qaz4rgb7ujk9ol-[p#$%^&  89uoijafsdflkj3123[pl.l;l,
+]]></test_input>
+<test_output><![CDATA[28 10 2 11
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include"stdio.h"  
+main()  
+{char c;int i=0,j=0,k=0,l=0;  
+while((c=getchar())!='\n')  
+{if(c>=65&&c<=90||c>=97&&c<=122) i++;  
+else if(c>=48&&c<=57) j++;  
+else if(c==32) k++;  
+else l++;}  
+printf("%d %d %d %d",i,j,k,l);  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[2002年秋浙江省计算机等级考试二级C 编程题(2)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>输入一个正整数n.求1+1/2!+1/3!+....+1/n!</p>
+<p>要求定义并调用函数fact(n)计算n的阶乘，函数返回值的类型是点单精度浮点型。</p>
+<p>* 输出保留4位小数</p>
+<p></p>]]></description>
+<input><![CDATA[<p>正整数n</p>
+<p></p>]]></input> 
+<output><![CDATA[<p>数列之和</p>
+<p></p>]]></output>
+<sample_input><![CDATA[2]]></sample_input>
+<sample_output><![CDATA[1.5000]]></sample_output>
+<test_input><![CDATA[10]]></test_input>
+<test_output><![CDATA[1.7183]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include<stdio.h>
+int main(){
+  int i,n;
+  float s=0.0;
+  float fact(int n);
+  do{
+     scanf("%d",&n);
+  }while(n<0);
+  for(i=1;i<=n;i++)
+	s+=1/fact(i);
+  printf("%.4f",s);
+
+}
+float fact(int n){
+  int i;
+  float f=1.0;
+  for(i=1;i<=n;i++)
+     f*=i;
+  return f;
+  
+}
+]]></solution>
+<![CDATA[]]>
+</item>
+</fps>

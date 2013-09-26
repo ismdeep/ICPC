@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.1]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[输入两个正整数m和n，求其最大公约数和最小公倍数。]]></description>
+<input><![CDATA[两个整数]]></input> 
+<output><![CDATA[最大公约数，最小公倍数]]></output>
+<sample_input><![CDATA[5 7]]></sample_input>
+<sample_output><![CDATA[1 35]]></sample_output>
+<test_input><![CDATA[81 87
+]]></test_input>
+<test_output><![CDATA[3 2349
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+int main()
+{
+	int p,r,n,m,temp;
+	scanf("%d %d",&m,&n);
+	if(n<m)
+	{
+		temp=n;
+		n=m;
+		m=temp;
+	}
+	p=n*m;
+	while(m!=0)
+	{
+		r=n%m;
+		n=m;
+		m=r;
+	}
+	printf("%d %d",n,p/n);
+return 0;
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.2]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[输入一行字符，分别统计出其中英文字母、空格、数字和其他字符的个数。]]></description>
+<input><![CDATA[一行字符]]></input> 
+<output><![CDATA[统计值]]></output>
+<sample_input><![CDATA[aklsjflj123 sadf918u324 asdf91u32oasdf/.';123
+]]></sample_input>
+<sample_output><![CDATA[23 16 2 4]]></sample_output>
+<test_input><![CDATA[1qaz4rgb7ujk9ol-[p#$%^&  89uoijafsdflkj3123[pl.l;l,
+]]></test_input>
+<test_output><![CDATA[28 10 2 11
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include"stdio.h"  
+main()  
+{char c;int i=0,j=0,k=0,l=0;  
+while((c=getchar())!='\n')  
+{if(c>=65&&c<=90||c>=97&&c<=122) i++;  
+else if(c>=48&&c<=57) j++;  
+else if(c==32) k++;  
+else l++;}  
+printf("%d %d %d %d",i,j,k,l);  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.3]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[求Sn=a+aa+aaa+…+aa…aaa（有n个a）之值，其中a是一个数字。
+例如：2+22+222+2222+22222（n=5），n由键盘输入。]]></description>
+<input><![CDATA[a]]></input> 
+<output><![CDATA[和]]></output>
+<sample_input><![CDATA[5]]></sample_input>
+<sample_output><![CDATA[24690]]></sample_output>
+<test_input><![CDATA[5
+]]></test_input>
+<test_output><![CDATA[24690
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include"stdio.h"  
+#include"math.h"  
+main()  
+{int n,sum=0,i=1,s=2;  
+scanf("%d",&n);  
+while(i<=n)  
+{sum=sum+s;s=s+2*pow(10,i);  
+i++;}  
+printf("%d",sum);  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.4]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[求Sn=1!+2!+3!+4!+5!+…+n!之值，其中n是一个数字。
+]]></description>
+<input><![CDATA[n]]></input> 
+<output><![CDATA[和]]></output>
+<sample_input><![CDATA[5]]></sample_input>
+<sample_output><![CDATA[153]]></sample_output>
+<test_input><![CDATA[20
+]]></test_input>
+<test_output><![CDATA[2561327494111820313
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include"stdio.h"  
+main()  
+{long n,i=1;long long sum=0,s=1;  
+scanf("%d",&n);  
+while(i<=n) {s=s*i;sum=sum+s;i++;}  
+printf("%lld\n",sum);  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.5]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[求以下三数的和,保留2位小数
+1~a之和
+1~b的平方和
+1~c的倒数和]]></description>
+<input><![CDATA[a b c]]></input> 
+<output><![CDATA[1+2+...+a + 1^2+2^2+...+b^2 + 1/1+1/2+...+1/c]]></output>
+<sample_input><![CDATA[100 50 10]]></sample_input>
+<sample_output><![CDATA[47977.93]]></sample_output>
+<test_input><![CDATA[20 30 40
+]]></test_input>
+<test_output><![CDATA[9669.28
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+main()  
+{double i=1,j=1,k=1,s1=0,s2=0,s3=0,sum; 
+int a,b,c;
+scanf("%d%d%d",&a,&b,&c);
+for(;i<=a;i++) s1=s1+i;  
+for(;j<=b;j++) s2=s2+j*j;  
+for(;k<=c;k++) s3=s3+1/k;  
+sum=s1+s2+s3;  
+printf("%.2f\n",sum);  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.6]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[打印出所有"水仙花数"，所谓"水仙花数"是指一个三位数，其各位数字立方和等于该本身。
+例如：153是一个水仙花数，因为153=1^3+5^3+3^3。
+Output:<pre>
+153
+???
+???
+??? </pre>]]></description>
+<input><![CDATA[无]]></input> 
+<output><![CDATA[所有的水仙花数，从小的开始。
+每行一个]]></output>
+<sample_input><![CDATA[]]></sample_input>
+<sample_output><![CDATA[]]></sample_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include"stdio.h"  
+#include"math.h"  
+main()  
+{int x=100,a,b,c;  
+while(x>=100&&x<1000) {a=0.01*x;b=10*(0.01*x-a);c=x-100*a-10*b;  
+if(x==(pow(a,3)+pow(b,3)+pow(c,3))) printf("%d\n",x);x++;}  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.7]]></title>
+<time_limit><![CDATA[10]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>一个数如果恰好等于它的因子之和，这个数就称为&quot;完数&quot;。 例如，6的因子为1、2、3，而6=1+2+3，因此6是&quot;完数&quot;。 编程序找出N之内的所有完数，并按下面格式输出其因子：</p>]]></description>
+<input><![CDATA[<p>N</p>]]></input> 
+<output><![CDATA[<p>? its factors are ? ? ?</p>]]></output>
+<sample_input><![CDATA[1000]]></sample_input>
+<sample_output><![CDATA[6 its factors are 1 2 3 
+28 its factors are 1 2 4 7 14 
+496 its factors are 1 2 4 8 16 31 62 124 248 ]]></sample_output>
+<test_input><![CDATA[20224
+]]></test_input>
+<test_output><![CDATA[6 its factors are 1 2 3 
+28 its factors are 1 2 4 7 14 
+496 its factors are 1 2 4 8 16 31 62 124 248 
+8128 its factors are 1 2 4 8 16 32 64 127 254 508 1016 2032 4064 
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include<stdio.h>
+main()  
+{int m,i,j,s;
+int N;
+scanf("%d",&N);  
+for(m=6;m<N;m++)  
+{s=1;  
+for(i=2;i<m;i++)  
+if(m%i==0) s=s+i;  
+if(m-s==0)  
+{printf("%d its factors are 1 ",m);for(j=2;j<m;j++) if(m%j==0)  
+printf("%d ",j);printf("\n");}  
+}  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.8]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[有一分数序列：  
+2/1 3/2 5/3 8/5 13/8 21/13......
+求出这个数列的前N项之和，保留两位小数。  ]]></description>
+<input><![CDATA[N]]></input> 
+<output><![CDATA[数列前N项和]]></output>
+<sample_input><![CDATA[10]]></sample_input>
+<sample_output><![CDATA[16.48]]></sample_output>
+<test_input><![CDATA[10
+]]></test_input>
+<test_output><![CDATA[16.48
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include<stdio.h>
+main()  
+{int i=1,n;double t,x=1,y=2,s,sum=0;  
+scanf("%ld",&n);  
+while(i<=n) {s=y/x;sum=sum+s;t=y;y=y+x;x=t;i++;}  
+printf("%.2f\n",sum);  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.9]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[一球从M米高度自由下落，每次落地后返回原高度的一半，再落下。
+它在第N次落地时反弹多高？共经过多少米？
+保留两位小数]]></description>
+<input><![CDATA[M N]]></input> 
+<output><![CDATA[它在第N次落地时反弹多高？共经过多少米？
+保留两位小数，空格隔开，放在一行]]></output>
+<sample_input><![CDATA[1000 5]]></sample_input>
+<sample_output><![CDATA[31.25 2875.00]]></sample_output>
+<test_input><![CDATA[1024 10
+]]></test_input>
+<test_output><![CDATA[1.00 3068.00
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include"stdio.h"  
+#include"math.h"
+main()  
+{int i,n;
+float h,s;  
+scanf("%f%d",&s,&n);
+h=s/2;
+for(i=2;i<=n;i++)  
+{s+=2*h;h/=2;}  
+printf("%.2f %.2f",h,s);  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.10]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[猴子吃桃问题。猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个。
+第二天早上又将剩下的桃子吃掉一半，又多吃一个。以后每天早上都吃了前一天剩下的一半零一个。
+到第N天早上想再吃时，见只剩下一个桃子了。求第一天共摘多少桃子。]]></description>
+<input><![CDATA[N]]></input> 
+<output><![CDATA[桃子总数]]></output>
+<sample_input><![CDATA[10]]></sample_input>
+<sample_output><![CDATA[1534]]></sample_output>
+<test_input><![CDATA[16
+]]></test_input>
+<test_output><![CDATA[98302
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include <stdio.h>
+main()  
+{int i=1,sum=1;  
+int n;
+scanf("%d",&n);
+for(;i<n;sum=2*(sum+1),i++);  
+printf("%d\n",sum);  
+}]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题6.11]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[用迭代法求 。求平方根的迭代公式为：  
+X[n+1]=1/2(X[n]+a/X[n])
+要求前后两次求出的得差的绝对值少于0.00001。
+输出保留3位小数]]></description>
+<input><![CDATA[X]]></input> 
+<output><![CDATA[X的平方根]]></output>
+<sample_input><![CDATA[4]]></sample_input>
+<sample_output><![CDATA[2.000]]></sample_output>
+<test_input><![CDATA[123456789
+]]></test_input>
+<test_output><![CDATA[11111.111
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[
+#include"stdio.h"  
+#include"math.h"
+ 
+main()  
+{float x0,x1,a;  
+scanf("%f",&a);  
+x1=a/2;  
+do  
+{x0=x1;x1=(x0+a/x0)/2;}  
+while(fabs(x0-x1)>=0.00001);  
+printf("%.3f\n",x1);  
+}]]></solution>
+<![CDATA[]]>
+</item>
+</fps>

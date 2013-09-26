@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[2000年秋浙江省计算机等级考试二级C 编程题(1)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>编制程序，输入n个整数（n从键盘输入,n&gt;0）,输出它们的偶数和。</p>
+<p></p>]]></description>
+<input><![CDATA[<p>n</p>
+<p>n个整数</p>
+<p></p>]]></input> 
+<output><![CDATA[<p>其中偶数的和</p>
+<p></p>]]></output>
+<sample_input><![CDATA[10
+1 2 3 4 5 6 7 8 9 10]]></sample_input>
+<sample_output><![CDATA[30]]></sample_output>
+<test_input><![CDATA[100
+80
+5
+74
+6
+65
+78
+87
+2
+7
+20
+63
+91
+77
+24
+33
+99
+18
+93
+54
+38
+1
+94
+68
+42
+26
+23
+35
+63
+33
+23
+65
+13
+29
+39
+20
+95
+18
+7
+97
+25
+27
+61
+17
+5
+86
+50
+5
+4
+43
+60
+42
+45
+55
+11
+87
+81
+35
+22
+45
+69
+46
+10
+83
+75
+50
+3
+70
+69
+10
+68
+94
+38
+29
+11
+44
+15
+36
+29
+33
+61
+84
+57
+60
+41
+21
+94
+59
+54
+19
+8
+40
+30
+40
+31
+55
+92
+37
+9
+88
+1
+]]></test_input>
+<test_output><![CDATA[1982]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[80
+0
+74
+6
+0
+78
+0
+2
+0
+20
+0
+0
+0
+24
+0
+0
+18
+0
+54
+38
+0
+94
+68
+42
+26
+0
+0
+0
+0
+0]]></source>
+<solution language="C++"><![CDATA[#include<stdio.h>
+int main(){
+  int n,i,x,sum=0;
+  while(scanf("%d",&n),n<=0);
+  //printf("请 输 入%d个数",n);
+  for(i=1;i<=n;i++){
+    scanf("%d",&x);
+    if(x%2==0) sum+=x;
+ 
+  }
+  printf("%d",sum);
+  return 0;
+}
+]]></solution>
+<![CDATA[]]>
+</item>
+<item>
+<title><![CDATA[2000年秋浙江省计算机等级考试二级C 编程题(2)]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p>编制函数del_char</p>
+<p>函数原型为 void del_char(char *,char),函数的功能是删除a指向的字符串中值为ch的字符，例如从字符串&quot;AscADef&quot;中删除'A'后，字符串为&quot;scDef&quot;。</p>
+<p></p>]]></description>
+<input><![CDATA[<p>需要删除的字符ch</p>
+<p>需要处理的字符串</p>
+<p></p>]]></input> 
+<output><![CDATA[<p>处理后的字符串</p>
+<p></p>]]></output>
+<sample_input><![CDATA[A
+AscADef]]></sample_input>
+<sample_output><![CDATA[scDef]]></sample_output>
+<test_input><![CDATA[B
+asBlkfiBwuejrnBsBdfkjBBasldBBuwBeiBBrBjsBadBBkfjlaBBsduwier]]></test_input>
+<test_output><![CDATA[aslkfiwuejrnsdfkjaslduweirjsadkfjlasduwier]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include<stdio.h>
+void del_char(char * a,char ch){
+   int i,j;
+   for(i=j=0;a[i]!='\0';i++)
+     if(a[i]!=ch){
+       a[j]=a[i];
+       j++;
+     }
+   a[j]='\0';
+}
+int main(){
+   char a[1024];
+   char ch;
+   scanf("%c",&ch);
+   scanf("%s",a);
+   del_char(a,ch);
+   printf("%s",a);
+   return 0;
+
+}]]></solution>
+<![CDATA[]]>
+</item>
+</fps>

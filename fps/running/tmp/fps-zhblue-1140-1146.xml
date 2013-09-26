@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fps version="1.0">
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题9.1]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[定义一个带参的宏，使两个参数的值互换，并写出程序，输入两个数作为使用宏时的实参。输出已交换后的两个值。  ]]></description>
+<input><![CDATA[两个数，空格隔开]]></input>
+<output><![CDATA[交换后的两个数，空格隔开]]></output>
+<sample_input><![CDATA[1 2]]></sample_input>
+<sample_output><![CDATA[2 1]]></sample_output>
+<test_input><![CDATA[100 99]]></test_input>
+<test_output><![CDATA[99 100]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#define CHANGE(a,b,t) t=a;a=b;b=t;  
+main()  
+{int c,d,s;  
+scanf("%d%d",&c,&d);  
+CHANGE(c,d,s);  
+printf("%d %d",c,d);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题9.2]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[输入两个整数，求他们相除的余数。用带参的宏来实现，编程序。  ]]></description>
+<input><![CDATA[a b两个数]]></input>
+<output><![CDATA[a/b的余数]]></output>
+<sample_input><![CDATA[3 2]]></sample_input>
+<sample_output><![CDATA[1]]></sample_output>
+<test_input><![CDATA[39 10]]></test_input>
+<test_output><![CDATA[9]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#define Q(a,b) a%b  
+main()  
+{int c,d,t;  
+scanf("%d%d",&c,&d);  
+t=Q(c,d);  
+printf("%d\n",t);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题9.3]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[三角形面积=SQRT(S*(S-a)*(S-b)*(S-c))
+其中S=(a+b+c)/2，a、b、c为三角形的三边。
+定义两个带参的宏，一个用来求area，
+另一个宏用来求S。
+
+写程序，在程序中用带实参的宏名来求面积area。 ]]></description>
+<input><![CDATA[a b c三角形的三条边,可以是小数。]]></input>
+<output><![CDATA[三角形面积，保留3位小数]]></output>
+<sample_input><![CDATA[3 4 5]]></sample_input>
+<sample_output><![CDATA[6.000]]></sample_output>
+<test_input><![CDATA[70 90 100]]></test_input>
+<test_output><![CDATA[3059.412]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#include"math.h"  
+#define SSS(m,n,k) (m+n+k)/2  
+#define AQRT(m,n,k) sqrt(SSS(m,n,k)*(SSS(m,n,k)-m)*(SSS(m,n,k)-n)*(SSS(m,n,k)-k))  
+main()  
+{float a,b,c,s,area;  
+scanf("%f%f%f",&a,&b,&c);  
+s=SSS(a,b,c);  
+area=AQRT(a,b,c);  
+printf("%.3f\n",area);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题9.4]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[给年份year，定义一个宏，以判别该年份是否闰年。提示：宏名可以定义为LEAP_YEAR，形参为y，既定义宏的形式为  
+#define LEAP_YEAR(y) （读者设计的字符串）]]></description>
+<input><![CDATA[一个年份]]></input>
+<output><![CDATA[根据是否闰年输出，是输出"L",否输出"N"]]></output>
+<sample_input><![CDATA[2000]]></sample_input>
+<sample_output><![CDATA[L]]></sample_output>
+<test_input><![CDATA[1900]]></test_input>
+<test_output><![CDATA[N]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#define LEAPYEAR(y) !(y%4)&&((y%100)||!(y%400))  
+main()  
+{int y;  
+scanf("%d",&y);  
+if(LEAPYEAR(y)) printf("L");  
+else printf("N");  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题9.6]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[请设计输出实数的格式，包括：⑴一行输出一个实数；⑵一行内输出两个实数；⑶一行内输出三个实数。实数用"6.2f"格式输出。]]></description>
+<input><![CDATA[一个实数，float范围]]></input>
+<output><![CDATA[输出3行，第一行打印一遍输入的数，第二行打印两遍，第三行打印三遍。
+第二行和第三行，用空格分隔同一行的数字。
+实数用"6.2f"格式输出。]]></output>
+<sample_input><![CDATA[0.618]]></sample_input>
+<sample_output><![CDATA[  0.62
+  0.62   0.62
+  0.62   0.62   0.62
+]]></sample_output>
+<test_input><![CDATA[0.61]]></test_input>
+<test_output><![CDATA[  0.61
+  0.61   0.61
+  0.61   0.61   0.61
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#define PR1(x) printf("%6.2f\n",x)  
+#define PR2(x) printf("%6.2f %6.2f\n",x,x)  
+#define PR3(x) printf("%6.2f %6.2f %6.2f\n",x,x,x)  
+main()  
+{float a;scanf("%f",&a);  
+PR1(a);PR2(a);PR3(a);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题9.8]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[分别用函数和带参的宏，从三个数中找出最大的数。]]></description>
+<input><![CDATA[3个实数]]></input>
+<output><![CDATA[最大的数,输出两遍，先用函数，再用宏。
+保留3位小数。]]></output>
+<sample_input><![CDATA[1 2 3]]></sample_input>
+<sample_output><![CDATA[3.000
+3.000]]></sample_output>
+<test_input><![CDATA[4 5 6]]></test_input>
+<test_output><![CDATA[6.000
+6.000
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#define MAX(a,b,c) (a>((b>c)? b:c))? a:((b>c)? b:c)  
+main()  
+{float x,y,z,t;  
+scanf("%f%f%f",&x,&y,&z);  
+t=MAX(x,y,z);  
+printf("%.3f\n",t);  
+printf("%.3f",t);  
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+<item>
+<title><![CDATA[C语言程序设计教程（第三版）课后习题9.10]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+<description><![CDATA[输入一行电报文字，将字母变成其下一字母（如’a’变成’b’……’z’变成’ａ’其它字符不变）。]]></description>
+<input><![CDATA[一行字符]]></input>
+<output><![CDATA[加密处理后的字符]]></output>
+<sample_input><![CDATA[a b]]></sample_input>
+<sample_output><![CDATA[b c]]></sample_output>
+<test_input><![CDATA[askdjflaksdjfoiweroi190283 0912  ladkj f923 lfkad
+
+]]></test_input>
+<test_output><![CDATA[btlekgmbltekgpjxfspj190283 0912  mbelk g923 mglbe
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[
+#define CHANGE 1
+main()
+{char str[80],c;int i=0;
+gets(str);
+while(str[i]!='\0')
+{
+#if CHANGE
+if(str[i]==90||str[i]==122) str[i]=str[i]-25;
+else if(str[i]>=65&&str[i]<90||str[i]>=97&&str[i]<122) str[i]=str[i]+1;
+#endif
+i++;
+}
+puts(str);
+}]]></solution>
+<spj><![CDATA[]]></spj>
+</item>
+</fps>

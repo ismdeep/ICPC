@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[C二级辅导-水仙花数]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">打印出所有符合其各位数字立方和等于该数本身的三位数。</font></p>
+<p style="margin-bottom: 0cm;"><font color="#000000">每行一个</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[]]></sample_input>
+<sample_output><![CDATA[]]></sample_output>
+<test_input><![CDATA[?
+]]></test_input>
+<test_output><![CDATA[153
+370
+371
+407
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C"><![CDATA[#include<stdio.h>
+int main()
+{ int i,j,k,n;
+  for(n=100;n<1000;n++)
+  {
+    i=n/100;
+    j=n/10-i*10;
+    k=n%10;
+    if(n==i*i*i+j*j*j+k*k*k)
+     printf("%d\n",n);
+  }
+}]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-质数因子]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style></p>
+<p style="margin-bottom: 0cm;"><font color="#000000">输入一个正整数，输出它的所有质数的因子（如<font>180</font></font><font color="#000000">的质数因子为<font>2</font></font><font color="#000000">、<font>2</font></font><font color="#000000">、<font>3</font></font><font color="#000000">、<font>3</font></font><font color="#000000">、<font>5</font></font><font color="#000000">）</font></p>
+<p></p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[180
+]]></sample_input>
+<sample_output><![CDATA[2 2 3 3 5 
+]]></sample_output>
+<test_input><![CDATA[20090613
+]]></test_input>
+<test_output><![CDATA[3 6696871 
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include"stdio.h"
+int main()
+{ int m,i=2;
+  scanf("%d",&m);
+  while(m!=1)
+if(m%i==0) 
+ {printf("%d ",i);
+m/=i; }  
+else  i++;
+  printf("\n");
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-求解方程]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">已知三位整数<font>x</font></font><font color="#000000">和<font>y</font></font><font color="#000000">满足<font>x+y=1333</font></font><font color="#000000">，其中<font>x</font></font><font color="#000000">的个位数是<font>y</font></font><font color="#000000">的百位数，<font>y</font></font><font color="#000000">的个位数是<font>x</font></font><font color="#000000">的百位数，它们的十位数一样。求满足这样条件的<font>x</font></font><font color="#000000">和<font>y</font></font><font color="#000000">。</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[<p>419+914=1333<br />
+......<br />
+按X从小到大输出，每个等式一行</p>]]></output>
+<sample_input><![CDATA[]]></sample_input>
+<sample_output><![CDATA[]]></sample_output>
+<test_input><![CDATA[?
+]]></test_input>
+<test_output><![CDATA[419+914=1333
+518+815=1333
+617+716=1333
+716+617=1333
+815+518=1333
+914+419=1333
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include"stdio.h"
+int main( )
+{
+  int i,j,k,x,y;
+  for(i=1;i<=9;i++)
+	for(j=1;j<=9;j++)
+		for(k=1;k<=9;k++)
+			if((i+k)*101+j*20==1333)
+				{ x=i*100+j*10+k;
+				  y=k*100+j*10+i;				
+     			  printf("%d+%d=1333\n",x,y);
+				}
+}]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-打印图形]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">打印出以下图形。</font></p>
+<p style="margin-bottom: 0cm;"></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[4]]></sample_input>
+<sample_output><![CDATA[   *
+  ***
+ *****
+*******
+]]></sample_output>
+<test_input><![CDATA[4]]></test_input>
+<test_output><![CDATA[   *
+  ***
+ *****
+*******
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include<stdio.h>
+int main()
+{ int i,j,k;
+  for(i=0;i<=3;i++)
+  {
+    for(j=0;j<=2-i;j++)
+      printf(" ");
+    for(k=0;k<=2*i;k++)
+      printf("*");
+    printf("\n");
+  }
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-寻找完数]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[<p>1=1<br />
+6=1+2+3<br />
+......</p>]]></output>
+<sample_input><![CDATA[]]></sample_input>
+<sample_output><![CDATA[]]></sample_output>
+<test_input><![CDATA[?]]></test_input>
+<test_output><![CDATA[1=1
+6=1+2+3
+28=1+2+4+7+14
+496=1+2+4+8+16+31+62+124+248
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include"stdio.h"
+int main()
+{ int i,j,s=1;
+  for(i=1;i<=1000;i++,s=1) {
+   for(j=2;j<=i/2;j++) 
+ if(i%j==0)  s+=j;
+   if(s==i) {
+     printf("%d=1",i);
+for(j=2;j<=i/2;j++)   
+if(i%j==0)  printf("+%d",j);
+     printf("\n");
+    }
+  }
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-选择半径]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-right: -0.14cm; margin-bottom: 0cm;"><font color="#000000">编写一个程序，打印输出半径为<font>1</font></font><font color="#000000">到<font>10</font></font><font color="#000000">的圆的面积，若面积在<font>40</font></font><font color="#000000">到<font>90</font></font><font color="#000000">之间则予以打印，否则，不予打印。</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[<p>r=? area=??.??<br />
+....</p>
+<p>保留两位小数</p>]]></output>
+<sample_input><![CDATA[]]></sample_input>
+<sample_output><![CDATA[]]></sample_output>
+<test_input><![CDATA[?
+]]></test_input>
+<test_output><![CDATA[r=4 area=50.27
+r=5 area=78.54
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include<stdio.h>
+int main( )
+{  int   r;
+   float  area;
+   //printf("radius area\n");
+   for(r=1;r<=10;r++)
+   {
+     area=3.141593*r*r;
+     if(area<40.0)
+	   continue;
+     if(area>90.0)
+	   break;
+     printf("r=%d area=%.2f\n",r,area);
+   }
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-选择排序]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">用选择法对<font>10</font></font><font color="#000000">个整数排序。</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[9 8 7 6 5 4 3 2 1 0
+]]></sample_input>
+<sample_output><![CDATA[0
+1
+2
+3
+4
+5
+6
+7
+8
+9]]></sample_output>
+<test_input><![CDATA[12 312 45  5 46  65 345  23 4 6
+]]></test_input>
+<test_output><![CDATA[4
+5
+6
+12
+23
+45
+46
+65
+312
+345
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include"stdio.h"
+int main()
+{ int i,j,min,temp,a[10];
+  //printf("请输入十个整数：");
+  for(i=0;i<10;i++)
+  { //printf("a[%d]=",i);
+   scanf("%d",&a[i]);}
+  //printf("\n");
+  for(i=0;i<9;i++)
+  { min=i;
+    for(j=i+1;j<10;j++)
+      if(a[min]>a[j]) min=j;
+    temp=a[i];
+    a[i]=a[min];
+    a[min]=temp;
+   }
+  //printf("\n排序结果如下：\n");
+  for(i=0;i<10;i++)
+    printf("%d\n",a[i]);
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-局部求合]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">输入<font>20</font></font><font color="#000000">个整数，输出其中能被数组中其它元素整除的那些数组元素。</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21]]></sample_input>
+<sample_output><![CDATA[4
+6
+8
+9
+10
+12
+14
+15
+16
+18
+20
+21
+]]></sample_output>
+<test_input><![CDATA[2 3 5 6 7 8 9 12 43 37 49 91 23 44 55 66 22 99 88 1932     
+]]></test_input>
+<test_output><![CDATA[6
+8
+9
+12
+49
+91
+44
+55
+66
+22
+99
+88
+1932
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include"stdio.h"
+#define N 20
+int main()
+ { int a[N], i,j;
+   for(i=0;i<N;i++) 
+ scanf("%d",&a[i]);
+   for(i=0;i<N;i++)
+     for(j=0;j<N;j++)
+if(a[i]%a[j]==0&&i!=j)  
+{ printf("%d\n",a[i]); 
+break;
+}
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-对角线和]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">求一个<font>3&times;3</font></font><font color="#000000">矩阵对角线元素之和。</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[1 2 3
+4 5 6
+7 8 9
+]]></sample_input>
+<sample_output><![CDATA[15
+]]></sample_output>
+<test_input><![CDATA[123 323 45  
+4356 345 2342
+345 345 9895
+]]></test_input>
+<test_output><![CDATA[10363
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include"stdio.h"
+int main()
+{ int a[3][3],sum=0;
+  int i,j;
+  for(i=0;i<3;i++)
+   for(j=0;j<3;j++)
+    scanf("%d",&a[i][j]);
+  for(i=0;i<3;i++)
+   sum=sum+a[i][i];
+  printf("%d\n",sum);
+}
+]]></solution>
+</item>
+<item>
+<title><![CDATA[C二级辅导-求同存异]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<p><style type="text/css">p { margin-bottom: 0.21cm; }</style>
+<p style="margin-bottom: 0cm;"><font color="#000000">输入两个数组（数组元素个数6和8），输出在两个数组中都出现的元素（如<font>a[6]={2,3,4,5,6,7},b[8]={3,5,7,9,11,13,15,19},</font></font><font color="#000000">则输出<font>3</font></font><font color="#000000">、<font>5</font></font><font color="#000000">、<font>7</font></font><font color="#000000">）。</font></p>
+</p>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[2 3 4 5 6 7
+3 5 7 9 11 13 15 19]]></sample_input>
+<sample_output><![CDATA[3
+5
+7
+]]></sample_output>
+<test_input><![CDATA[1 2 3 4 5 6 7 8
+5 6 4 3 9 10 
+]]></test_input>
+<test_output><![CDATA[3
+4
+5
+6
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+<solution language="C++"><![CDATA[#include"stdio.h"
+#define NA  6
+#define NB  8
+int main()
+{ int a[NA],b[NB]; int i,j;
+  for(i=0;i<NA;i++)
+    scanf("%d",&a[i]);
+  for(i=0;i<NB;i++)
+    scanf("%d",&b[i]);
+  for(i=0;i<NA;i++)
+   for(j=0;j<NB;j++)
+     if(a[i]==b[j])
+      {printf("%d\n",a[i]); break;}
+}
+]]></solution>
+</item>
+</fps>
