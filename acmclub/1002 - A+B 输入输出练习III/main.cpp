@@ -33,8 +33,13 @@ using namespace std;
 
 int main () 
 { 
+<<<<<<< HEAD
+	long long int a, b;
+	while (cin >> a >> b && a + b)
+=======
 	int a, b;
 	while (cin >> a >> b , a != 0 && b != 0)
+>>>>>>> d18053fa9a44ad1967fabcdb4daa92c046f2fa64
 	{
 		cout << a + b << endl;
 	}
