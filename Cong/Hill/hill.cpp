@@ -129,7 +129,6 @@ bool show_encode_matrix_mul_decode_matrix ()
 	return iFlag;
 }
 
-
 //-------------------------------------------------------------------------------------//
 void init_src_matrix ()
 {
