@@ -8,7 +8,7 @@ using namespace std;
 
 // #define _ISM_DEBUG_
 
-// 来堆全局变量
+// all this are global var
 int i_argc;
 string i_argv[100];
 
