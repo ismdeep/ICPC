@@ -64,6 +64,7 @@ void init_map_set()
 }
 
 
+//---- This is the WTF, what the fuck main function.
 int main ()
 {
 	bool shit_flag = false;
@@ -89,7 +90,6 @@ int main ()
 				}
 			}
 		}
-
 		// --- count it 
 		for (int i = 1; i <= n; i++)
 		{
